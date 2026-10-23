@@ -41,9 +41,12 @@ type Day struct {
 	Kata     bool   `json:"kata"`
 }
 
+// done[i] is whether SYLLABUS.md marks day i+1 as Done.
+var done []bool
+
 var (
 	phaseHead = regexp.MustCompile(`^## Phase (\d+): (.+)$`)
-	row       = regexp.MustCompile(`^\| (\d+) \| (.+?) \| (.*?) \|$`)
+	row       = regexp.MustCompile(`^\| (\d+) \| (.+?) \| (.*?) \| (Done|Planned) \|$`)
 	dayHead   = regexp.MustCompile(`(?m)^# Day (\d+): (.+)$`)
 )
 
@@ -79,6 +82,16 @@ func main() {
 		d.Path = w.Dir
 		d.Brief = brief(string(readme))
 		d.Kata = course.Exists(filepath.Join(root, w.Dir, "kata"))
+	}
+
+	// The Status column has to match the repo: Done means the day's folder exists.
+	for i, d := range days {
+		if done[i] && d.Path == "" {
+			fail("SYLLABUS.md marks day %d as Done, but there's no folder for it", d.Day)
+		}
+		if !done[i] && d.Path != "" {
+			fail("day %d is written (%s); mark it Done in SYLLABUS.md", d.Day, d.Path)
+		}
 	}
 
 	var b bytes.Buffer
@@ -118,6 +131,7 @@ func parseSyllabus(path string) ([]Phase, []Day, error) {
 	defer f.Close()
 	var phases []Phase
 	var days []Day
+	done = nil
 	sc := bufio.NewScanner(f)
 	for sc.Scan() {
 		line := strings.TrimSpace(sc.Text())
@@ -146,6 +160,7 @@ func parseSyllabus(path string) ([]Phase, []Day, error) {
 			}
 			title, capstone := strings.CutPrefix(m[2], "Capstone: ")
 			days = append(days, Day{Day: n, Phase: cur.N, Title: title, Topic: m[3], Capstone: capstone})
+			done = append(done, m[4] == "Done")
 			if cur.First == 0 {
 				cur.First = n
 			}
