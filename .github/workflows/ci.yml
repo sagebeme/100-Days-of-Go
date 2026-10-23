@@ -1,0 +1,43 @@
+# CI: proves the course still works on every push and pull request to main.
+# Same checks you can run locally, in the same order.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: gofmt
+        run: |
+          unformatted="$(gofmt -l .)"
+          if [ -n "$unformatted" ]; then
+            echo "These files need gofmt -w:"
+            echo "$unformatted"
+            exit 1
+          fi
+
+      - name: go vet
+        run: go vet ./...
+
+      - name: Test the course tools
+        run: go test ./tools/...
+
+      - name: Solutions and katas pass, starters fail
+        run: go run ./tools/verify -starters
+
+      - name: Site day list is up to date
+        run: go run ./tools/sitedata -check
