@@ -84,7 +84,7 @@ h3 { font-size: 21px }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font: 500 16px/1 var(--body); text-decoration: none; border: 0; cursor: pointer }
 .btn-go { background: var(--plate); color: var(--plate-ink); box-shadow: inset 0 0 0 2px rgba(0,0,0,.85) }
 .btn-go:hover { background: #ffd24a }
-.btn-ghost { color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink) }
+.btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink) }
 .btn-ghost:hover { background: var(--sheet) }
 
 /* nav */
@@ -110,12 +110,12 @@ h3 { font-size: 21px }
 .term .bar { display: flex; align-items: center; gap: 7px; padding: 11px 14px; background: var(--night-2); font: 400 12px/1 var(--mono); color: var(--night-muted) }
 .term .bar i { width: 10px; height: 10px; border-radius: 50%; background: #3b3a58 }
 .term .bar b { font-weight: 400; margin-left: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
-.term pre { margin: 0; padding: 18px 20px 20px; font: 400 13.5px/1.7 var(--mono); overflow-x: auto; white-space: pre }
+.term pre { margin: 0; padding: 18px 20px 20px; font: 400 12.5px/1.7 var(--mono); overflow-x: auto; white-space: pre }
 .term .p { color: var(--night-muted) }
 .term .ok { color: #7ee2a8 }
 .term .bad { color: #ff9a8f }
 .term .y { color: var(--plate) }
-.k { color: #c3b8ff } .s { color: #ffd98a } .c { color: #7f7d9c; font-style: italic } .f { color: #8fd6ff } .n { color: #ffb38a } .t { color: #9ff0d2 }
+.term .k { color: #c3b8ff } .term .s { color: #ffd98a } .term .c { color: #7f7d9c; font-style: italic } .term .f { color: #8fd6ff } .term .n { color: #ffb38a } .term .t { color: #9ff0d2 }
 
 /* the numbers strip */
 .facts { border-block: 1px solid var(--line) }
@@ -242,7 +242,7 @@ summary { cursor: pointer; font: 500 13px/1.6 var(--mono); color: var(--route) }
 .lesson { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 32px; padding: 36px 0 24px; align-items: start }
 @media (max-width: 960px) { .lesson { grid-template-columns: 1fr } }
 .panel { background: var(--sheet); border: 1px solid var(--line); border-radius: 12px; padding: 28px }
-.sidebar { position: sticky; top: calc(80px + env(safe-area-inset-top, 0px)); display: grid; gap: 18px }
+.sidebar { min-width: 0; position: sticky; top: calc(80px + env(safe-area-inset-top, 0px)); display: grid; gap: 18px }
 .sidebar .panel { padding: 22px }
 .sidebar h2 { font-size: 13px; font: 500 12px/1.4 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px }
 @media (max-width: 960px) { .sidebar { position: static } }
@@ -252,10 +252,11 @@ summary { cursor: pointer; font: 500 13px/1.6 var(--mono); color: var(--route) }
 .checklist input { appearance: none; width: 22px; height: 22px; margin: 0; border: 1.5px solid var(--muted); border-radius: 5px; background: var(--sheet); display: grid; place-items: center; cursor: pointer }
 .checklist input:checked { background: var(--plate); border-color: var(--ink) }
 .checklist input:checked::after { content: ""; width: 11px; height: 6px; border-left: 2.5px solid var(--plate-ink); border-bottom: 2.5px solid var(--plate-ink); transform: translateY(-2px) rotate(-45deg) }
+.checklist code { overflow-wrap: anywhere }
 .checklist input:checked + span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--muted) }
 .meter-row { display: flex; align-items: center; gap: 10px; margin-top: 16px; font: 12px/1 var(--mono); color: var(--muted) }
 .done-msg { margin: 14px 0 0; font-size: 15px }
-.cmd { font: 12.5px/1.6 var(--mono); background: var(--night); color: var(--night-ink); padding: 10px 12px; border-radius: 8px; overflow-x: auto; white-space: pre }
+.cmd { font: 12px/1.6 var(--mono); white-space: pre-wrap !important; overflow-wrap: anywhere; background: var(--night); color: var(--night-ink); padding: 10px 12px; border-radius: 8px; overflow-x: auto; white-space: pre }
 .cmd + .cmd { margin-top: 8px }
 .side-links { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 6px; font-size: 15px }
 
@@ -315,3 +316,5 @@ summary { cursor: pointer; font: 500 13px/1.6 var(--mono); color: var(--route) }
 .rows tr.planned .p a { color: var(--muted) }
 @media (max-width: 760px) { .rows .b { display: none } .syllabus-phase .top { flex-direction: column; gap: 6px } }
 .empty { text-align: center; color: var(--muted) }
+.kata-band :not(pre) > code { background: #34335a; color: var(--night-ink) }
+section[id], .syllabus-phase { scroll-margin-top: 76px }
