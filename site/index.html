@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>100 Days of Go</title>
+<meta name="description" content="One Go project a day for 100 days: pass HackerRank tests, build and secure APIs, put a React front end on them, and ship. Every day has tests and a kata.">
+<meta property="og:title" content="100 Days of Go">
+<meta property="og:description" content="One project and one kata a day for 100 days. From an M-Pesa SMS to a deployed, secured full-stack app.">
+<meta name="theme-color" content="#efede6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131219" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="navbar" aria-label="Main">
+  <div class="container">
+    <a class="brand" href="index.html"><span class="plate" aria-hidden="true">100</span><span>Days of Go</span><span class="sr-only">: home</span></a>
+    <ul class="nav-links">
+      <li><a href="#kata">The kata</a></li>
+      <li><a href="#route">The route</a></li>
+      <li class="keep"><a href="syllabus.html">Syllabus</a></li>
+      <li><a href="https://github.com/sagebeme/100-Days-of-Go">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+<header class="hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow">100 projects · 100 katas · about an hour a day</span>
+      <h1 style="margin-top:14px"><span class="plate">100</span> Days of Go</h1>
+      <p class="lede">Start with an M-Pesa confirmation text in your terminal. Finish as an engineer who passes timed coding tests, builds and secures a Go API, puts a React front end on it, and ships both.</p>
+      <div class="actions">
+        <a class="btn btn-go" id="cta" href="day.html?day=1">Start Day 1 →</a>
+        <a class="btn btn-ghost" href="#route">See the route</a>
+      </div>
+      <p class="resume" id="resume" hidden></p>
+    </div>
+    <div class="term" aria-label="A terminal running Day 1's tests">
+      <div class="bar" aria-hidden="true"><i></i><i></i><i></i><b>day-001-mpesa-sms/starter/sms.go</b></div>
+<pre><span class="c">// Day 1: your first Go function</span>
+<span class="k">func</span> <span class="f">BuildConfirmation</span>(code <span class="t">string</span>, amount <span class="t">int</span>, name <span class="t">string</span>) <span class="t">string</span> {
+	<span class="k">const</span> status = <span class="s">"Confirmed."</span>
+	message := code + <span class="s">" "</span> + status
+	<span class="k">return</span> message + fmt.<span class="f">Sprintf</span>(<span class="s">" Ksh%d.00 sent to %s."</span>, amount, name)
+}
+
+<span class="p">$</span> go test ./phase-1-terminal/day-001-mpesa-sms/starter
+<span class="ok">ok</span>  	.../day-001-mpesa-sms/starter	<span class="p">0.004s</span></pre>
+    </div>
+  </div>
+</header>
+
+<section class="facts" aria-label="The course in numbers">
+  <ul class="container">
+    <li><b>100</b><span>Projects</span></li>
+    <li><b>100</b><span>Katas</span></li>
+    <li><b>8</b><span>Capstones</span></li>
+    <li><b>2</b><span>Languages: Go, then TypeScript</span></li>
+  </ul>
+</section>
+
+<section class="band" id="how" aria-labelledby="how-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How each day works</span>
+      <h2 id="how-title">A project, then a kata</h2>
+      <p>The tests say when you're done, so you never compare your code with someone else's.</p>
+    </div>
+    <div class="tracks">
+      <div class="track">
+        <h3><span class="plate">1</span> The project</h3>
+        <ol>
+          <li><p><b>Read the brief.</b> Something real: matatu fares, a chama ledger, a booking API.</p></li>
+          <li><p><b>Write Go in <code>starter/</code>.</b> The function names are there; the body is yours.</p></li>
+          <li><p><b>Run <code>go test</code></b> until it says <code>ok</code>. A failing test shows what you returned next to what it wanted.</p></li>
+          <li><p><b>Then read <code>solution/</code></b>, commit, and tick the day off here.</p></li>
+        </ol>
+      </div>
+      <div class="track">
+        <h3><span class="plate">2</span> The kata</h3>
+        <ol>
+          <li><p><b>A 5–15 minute puzzle</b> in the format HackerRank uses: read stdin, print stdout.</p></li>
+          <li><p><b>Judge it locally</b> with <code>go run ./tools/kata 1</code>. Wrong answers and slow code both fail.</p></li>
+          <li><p><b>A hundred of them</b> later, timed tests are routine.</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kata-band" id="kata" aria-labelledby="kata-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The daily kata</span>
+      <h2 id="kata-title">Practise for the test before the test</h2>
+      <p>Same rules as HackerRank: exact output, a time limit, hidden big inputs. The judge runs on your machine, so you can try as often as you like.</p>
+    </div>
+    <div class="kata-grid">
+      <div class="kata-card">
+        <span class="eyebrow">Day 1 kata</span>
+        <h3 style="margin-top:8px">Till Total</h3>
+        <p>A duka's till adds up everything a customer buys. Read <code>n</code>, then <code>n</code> prices. Print the total.</p>
+<pre>Input        Output
+3            200
+50 120 30</pre>
+        <div class="judge-actions">
+          <button class="btn btn-ghost" type="button" id="run-judge">Run the judge</button>
+          <small id="judge-note">Plays a recorded run of the solution</small>
+        </div>
+      </div>
+      <div class="term">
+        <div class="bar" aria-hidden="true"><i></i><i></i><i></i><b>go run ./tools/kata 1</b></div>
+<pre id="judge-out" aria-live="polite"><span class="p">$</span> go run ./tools/kata 1
+  <span class="bad">FAIL</span>  case 1      2ms  line 1: expected "200", but your output ended
+  <span class="bad">FAIL</span>  case 2      2ms  line 1: expected "7", but your output ended
+  <span class="p">...</span>
+
+0 of 5 cases passed. Read the first failure, fix it, run again.</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="engineer" aria-labelledby="eng-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">More than syntax</span>
+      <h2 id="eng-title">What working engineers are expected to know</h2>
+      <p>Most courses stop at the language. This one covers the things you're asked about in your first code review.</p>
+    </div>
+    <div class="know">
+      <div><span class="eyebrow">Day 21</span><h3>Env variables and secrets</h3><p>Config from the environment, <code>.env</code> for local work, and what to do in the first hour after a key leaks.</p></div>
+      <div><span class="eyebrow">Days 50–51</span><h3>HTTP methods and status codes</h3><p>Which methods are safe and idempotent, PUT versus PATCH, and 401 versus 403.</p></div>
+      <div><span class="eyebrow">Days 57–61</span><h3>OWASP Top 10</h3><p>Injection, broken access control, password hashing, CORS and security headers, in Go.</p></div>
+      <div><span class="eyebrow">Days 27–40</span><h3>Algorithms</h3><p>Big-O, two pointers, binary search, graphs and dynamic programming, ending in a timed mock test.</p></div>
+      <div><span class="eyebrow">Days 41–48</span><h3>Concurrency</h3><p>Goroutines, channels and context, checked with the race detector.</p></div>
+      <div><span class="eyebrow">Days 62–63, 81</span><h3>Tests, CI and observability</h3><p>Integration tests against a real database, GitHub Actions, logs, metrics and traces.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band tone" id="route" aria-labelledby="route-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The route</span>
+      <h2 id="route-title">Eight stages from Day 1 to Day 100</h2>
+      <p>Each stage ends with a capstone that uses everything before it. From Phase 5 one app grows with you: a matatu booking service, back end first, then front end.</p>
+    </div>
+    <ol class="route" id="timeline"></ol>
+  </div>
+</section>
+
+<section class="cta" aria-labelledby="cta-title">
+  <div class="container">
+    <h2 id="cta-title">Day 1 takes about an hour</h2>
+    <p id="cta-text">You'll write one function and one kata. Install Go 1.25 or newer, clone the repo, and go.</p>
+    <a class="btn btn-go" id="cta-2" href="day.html?day=1">Start Day 1 →</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>100 Days of Go</h4>
+        <p>One project and one kata a day for 100 days, with tests that tell you when you got it right. Made in Nairobi, so expect matatus and M-Pesa.</p>
+      </div>
+      <div>
+        <h4>Course</h4>
+        <ul>
+          <li><a href="syllabus.html">Full syllabus</a></li>
+          <li><a href="day.html?day=1">Day 1: M-Pesa SMS Builder</a></li>
+          <li><a href="syllabus.html#setup">Set up</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Code</h4>
+        <ul>
+          <li><a href="https://github.com/sagebeme/100-Days-of-Go">Source on GitHub</a></li>
+          <li><a href="https://go.dev/dl/">Get Go</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>Made in Nairobi.</span>
+      <span>Progress is saved only in this browser.</span>
+    </div>
+  </div>
+</footer>
+<a class="to-top" href="#top" aria-label="Back to top">↑</a>
+
+<script src="assets/days.js"></script>
+<script src="assets/progress.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>
