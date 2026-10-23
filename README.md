@@ -25,7 +25,7 @@ The full day-by-day plan is in [SYLLABUS.md](SYLLABUS.md).
 
 | | |
 |---|---|
-| **Go** | 1.25 or newer ([go.dev/dl](https://go.dev/dl/)) |
+| **Go** | 1.26 or newer ([go.dev/dl](https://go.dev/dl/)) |
 | **An editor** | VS Code with the Go extension, GoLand, or whatever you already use |
 | **Git** | to clone this repo and save your work |
 | **Node.js** | 24 or newer, from Phase 6 only |
