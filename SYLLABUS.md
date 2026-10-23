@@ -1,6 +1,6 @@
 # Syllabus
 
-One hundred days, eight phases. Each phase ends with a capstone that uses everything before it. Days with a link are written; the rest are planned and arrive phase by phase.
+One hundred days, eight phases. Each phase ends with a capstone that uses everything before it. Phase 1 (Days 1–14) is written. The other phases are planned and arrive one phase at a time.
 
 Every day has two parts:
 
