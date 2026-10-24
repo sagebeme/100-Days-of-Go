@@ -67,7 +67,7 @@ Ends with: a timed mock HackerRank test
 | 35 | Recursion | factorials to permutations, base cases | Done |
 | 36 | Trees | binary search trees, traversals | Done |
 | 37 | Graphs | BFS and DFS on a matatu route map | Done |
-| 38 | Greedy | change-making and scheduling | Planned |
+| 38 | Greedy | change-making and scheduling | Done |
 | 39 | Dynamic Programming | memoisation, tabulation, classic problems | Planned |
 | 40 | Capstone: Mock HackerRank Test | six problems, 90 minutes, judged locally | Planned |
 
