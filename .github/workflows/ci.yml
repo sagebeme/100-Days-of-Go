@@ -36,6 +36,20 @@ jobs:
       - name: Test the course tools
         run: go test ./tools/...
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase-6-frontend/package-lock.json
+
+      - name: Install the front-end tools
+        working-directory: phase-6-frontend
+        run: npm ci
+
+      - name: TypeScript typecheck
+        working-directory: phase-6-frontend
+        run: npm run typecheck
+
       - name: Solutions and katas pass, starters fail
         run: go run ./tools/verify -starters
 
