@@ -1,0 +1,12 @@
+11
+SET float 4500 10
+SET till 247247 20
+GET float 15
+GET float 5
+SET float 3200 30
+GET float 30
+GET float 29
+DEL float 40
+GET float 45
+GET float 35
+GET till 1000

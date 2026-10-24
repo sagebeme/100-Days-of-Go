@@ -1,0 +1,12 @@
+11
+SET a x 1
+GET a 1
+GET a 0
+DEL a 2
+GET a 2
+SET a y 3
+GET a 2
+GET a 3
+GET a 1000000000
+DEL b 4
+GET b 5
