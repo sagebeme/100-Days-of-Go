@@ -97,7 +97,7 @@ Ends with: a deployed matatu-booking API
 | 49 | Hello, Server | net/http, handlers, ServeMux, ports | Done |
 | 50 | HTTP Methods | GET, POST, PUT, PATCH, DELETE, safety and idempotency | Done |
 | 51 | Status Codes | 2xx to 5xx, choosing the right one, error bodies | Done |
-| 52 | JSON API | encoding requests and responses, content types | Planned |
+| 52 | JSON API | encoding requests and responses, content types | Done |
 | 53 | Validation | rejecting bad input early, limiting body size | Planned |
 | 54 | Middleware | logging, recovery, request IDs, slog | Planned |
 | 55 | Postgres | database/sql, pgx, connection pools | Planned |
