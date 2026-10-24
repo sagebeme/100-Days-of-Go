@@ -1,0 +1,10 @@
+9
+JOIN a r
+JOIN a r
+JOIN b r
+SAY a r
+LEAVE c r
+LEAVE b r
+LEAVE b r
+SAY a r
+SAY b r
