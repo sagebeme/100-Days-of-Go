@@ -78,7 +78,7 @@ Ends with: a concurrent price scraper
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 41 | Goroutines | starting work concurrently, sync.WaitGroup | Planned |
+| 41 | Goroutines | starting work concurrently, sync.WaitGroup | Done |
 | 42 | Channels | sending, receiving, closing, ranging | Planned |
 | 43 | Select | timeouts, multiplexing, default cases | Planned |
 | 44 | Context | cancellation and deadlines | Planned |
