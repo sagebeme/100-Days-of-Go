@@ -1,0 +1,51 @@
+50
+refund 296
+card 527 3603
+refund 470
+failed wrong_pin
+refund 922
+cash 74
+failed wrong_pin
+cash 672
+refund 639
+mpesa 264 0715153518
+cash 542
+cash 817
+mpesa 141 0792628428
+card 377 9452
+card 633 3779
+cash 408
+refund 488
+mpesa 717 0720522241
+mpesa 799 0744891345
+card 991 5234
+card 9 2817
+refund 76
+card 992 8967
+mpesa 187 0721726095
+failed cancelled
+refund 135
+failed cancelled
+card 230 3894
+card 569 5820
+cash 380
+failed timeout
+card 685 1071
+card 296 7427
+cash 888
+cash 136
+mpesa 284 0795472421
+refund 608
+refund 663
+card 560 1321
+failed cancelled
+cash 167
+refund 892
+refund 642
+card 489 5414
+failed wrong_pin
+cash 863
+failed timeout
+mpesa 185 0769710014
+card 551 0518
+cash 272

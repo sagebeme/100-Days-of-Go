@@ -118,7 +118,7 @@ Ends with: a full-stack booking app
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 65 | TypeScript for Go Developers | types, interfaces, unions, async | Planned |
+| 65 | TypeScript for Go Developers | types, interfaces, unions, async | Done |
 | 66 | First React App | Vite, components, props | Planned |
 | 67 | State and Events | useState, lists, keys | Planned |
 | 68 | Talking to Go | fetch, loading and error states, CORS in practice | Planned |
