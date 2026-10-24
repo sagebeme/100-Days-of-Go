@@ -1,0 +1,9 @@
+8
+JOIN otieno route-125
+JOIN wanjiku route-125
+SAY otieno route-125
+JOIN kamau route-46K
+SAY kamau route-46K
+SAY kamau route-125
+LEAVE wanjiku route-125
+SAY otieno route-125

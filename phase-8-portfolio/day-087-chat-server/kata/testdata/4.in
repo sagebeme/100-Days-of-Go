@@ -1,0 +1,9 @@
+8
+JOIN a x
+JOIN a y
+JOIN b y
+SAY a x
+SAY a y
+LEAVE a x
+SAY a x
+SAY a y
