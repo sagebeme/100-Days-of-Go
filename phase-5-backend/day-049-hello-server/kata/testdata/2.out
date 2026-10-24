@@ -1,0 +1,6 @@
+DELETE /bookings/9001 0
+HEAD / 0
+OPTIONS /trips 0
+PATCH /trips/42 1
+PUT /trips/42 0
+400

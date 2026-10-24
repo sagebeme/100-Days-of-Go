@@ -1,0 +1,15 @@
+14
+GET  /trips HTTP/1.1
+GET /trips  HTTP/1.1
+GET /trips
+GET trips HTTP/1.1
+GET /trips HTTP/1.1 extra
+GET /trips HTTPS/1.1
+GET /trips HTTP/3
+GET /trips? HTTP/1.1
+GET /trips?&&a=1&& HTTP/1.1
+GET /a?b?c=1 HTTP/1.1
+ GET / HTTP/1.1
+GET / HTTP/1.1 
+GET /?= HTTP/1.1
+x

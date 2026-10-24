@@ -1,0 +1,7 @@
+6
+DELETE /bookings/9001 HTTP/1.0
+HEAD / HTTP/1.1
+OPTIONS /trips HTTP/1.1
+PATCH /trips/42?x=1 HTTP/1.1
+PUT /trips/42 HTTP/1.1
+BREW /pot HTTP/1.1

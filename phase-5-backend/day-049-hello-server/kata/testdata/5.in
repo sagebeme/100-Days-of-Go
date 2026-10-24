@@ -1,0 +1,5001 @@
+5000
+PATCH /trips? HTTP/
+POST / HTTP/1.0
+  HTTP/2.0
+OPTIONS /bookings HTTP/1.2
+CONNECT /routes/125?date=2026-11-02&date=2026-11-02&a=1 HTTP/1.2
+OPTIONS /bookings http/1.1
+POST /routes/125?seat=3 http/1.1
+POST  trips  HTTP/
+POST /trips/42? HTTP/1.1
+PATCH / HTTP/
+PATCH /health?&seat=3&q HTTP/1.1
+CONNECT trips http/1.1
+BREW /bookings http/1.1
+ /routes/125? HTTP/
+GET /bookings/9001 HTTP/1.1
+get  
+BREW /hello/Wanjiku?date=2026-11-02&a=1&seat=3 HTTP/1.1
+CONNECT /health http/1.1
+PATCH /bookings? HTTP/1.1
+GET  
+DELETE /trips HTTP/1.2
+POST /health?&&&date=2026-11-02 HTTP/2.0
+OPTIONS /health? HTTP/1.1
+POST  HTTP/1.0
+POST /bookings/9001? 
+OPTIONS /routes/125? 
+CONNECT /hello/Wanjiku HTTP/1.0
+CONNECT /bookings?a=1& HTTP/2.0
+get /bookings? HTTP/1.1
+PATCH trips 
+get /trips/42 HTTP/1.1
+CONNECT /bookings 
+BREW /trips/42? HTTP/1.1
+OPTIONS /trips/42 http/1.1
+PATCH /routes/125? HTTP/2.0
+  /bookings/9001?seat=3&a=1&  HTTP/1.2
+get /trips/42 HTTP/1.2
+ /?q&a=1&a=1 HTTP/1.0
+OPTIONS  HTTP/2.0
+ /bookings http/1.1
+get trips?&q&q&a=1 
+POST  HTTP/1.0
+BREW /bookings/9001?q&date=2026-11-02&&a=1 
+DELETE  HTTP/1.0 x
+get /bookings/9001?q&date=2026-11-02 
+PUT  HTTP/
+BREW  HTTP/1.1
+POST /bookings/9001 
+BREW /routes/125?seat=3&a=1&seat=3&q HTTP/2.0
+get /health HTTP/1.0
+PATCH /bookings/9001 HTTP/1.2
+ /hello/Wanjiku HTTP/
+get /health?a=1&seat=3&seat=3 HTTP/1.1
+PATCH /?seat=3&a=1&seat=3 HTTP/1.2
+POST  /hello/Wanjiku  HTTP/2.0
+PATCH /hello/Wanjiku http/1.1
+GET /bookings HTTP/
+DELETE /routes/125?seat=3 HTTP/1.1
+DELETE /trips/42?a=1&a=1&date=2026-11-02 http/1.1
+PATCH /trips/42 HTTP/1.2
+PUT trips HTTP/
+HEAD  
+HEAD  HTTP/1.0
+CONNECT /trips/42 HTTP/1.1
+DELETE /trips/42?date=2026-11-02&a=1 
+HEAD trips HTTP/1.0
+ /?&&&a=1 HTTP/1.2
+ /routes/125? HTTP/1.0
+ /health HTTP/1.0
+  HTTP/
+PUT /trips/42?a=1&&a=1 HTTP/2.0
+DELETE /trips?a=1&a=1&& 
+get / 
+ /health?seat=3& 
+get /trips/42 HTTP/
+CONNECT  HTTP/1.0
+PUT /health? 
+CONNECT /hello/Wanjiku http/1.1
+GET /hello/Wanjiku?seat=3 HTTP/1.1
+PUT /bookings HTTP/
+ trips? http/1.1
+CONNECT  HTTP/1.0
+POST /health HTTP/2.0
+CONNECT trips HTTP/
+BREW    http/1.1
+get /hello/Wanjiku HTTP/2.0
+OPTIONS /trips/42 HTTP/1.2
+ /? 
+get /health HTTP/1.0
+PUT /routes/125?q&date=2026-11-02&a=1&a=1 HTTP/2.0
+HEAD /trips HTTP/1.1
+POST /routes/125 HTTP/1.1
+BREW /bookings HTTP/1.0
+PUT /bookings/9001?date=2026-11-02&a=1&date=2026-11-02 HTTP/1.2
+ /hello/Wanjiku? http/1.1
+GET /trips? HTTP/
+GET /trips/42 HTTP/
+ /routes/125 HTTP/1.0
+DELETE /routes/125 HTTP/1.0
+OPTIONS  HTTP/
+POST /trips/42 http/1.1
+GET  HTTP/
+get /trips?&date=2026-11-02&a=1&seat=3 HTTP/1.2
+HEAD /trips/42?seat=3 HTTP/1.0
+PUT /trips?&a=1& http/1.1
+OPTIONS /routes/125? 
+get /bookings HTTP/1.0
+HEAD /bookings?a=1&q&date=2026-11-02 HTTP/1.0
+PUT /routes/125 HTTP/1.2
+PATCH trips HTTP/1.1
+BREW /trips HTTP/
+PATCH /trips/42?seat=3&&q HTTP/1.0
+ /?q HTTP/1.2
+get /trips/42 http/1.1
+BREW /trips?date=2026-11-02 
+POST /trips/42 HTTP/
+HEAD /health 
+DELETE /bookings 
+get trips HTTP/1.1
+GET /bookings/9001? HTTP/2.0
+POST /health 
+CONNECT  http/1.1
+CONNECT /health HTTP/1.0
+DELETE  /hello/Wanjiku  
+OPTIONS /health HTTP/1.0
+OPTIONS  HTTP/1.0
+PATCH  HTTP/1.0
+GET trips? http/1.1
+PATCH /hello/Wanjiku 
+GET  HTTP/2.0
+PUT /trips/42 HTTP/1.2
+DELETE trips? HTTP/1.2 x
+PATCH /routes/125?seat=3&date=2026-11-02&date=2026-11-02 HTTP/2.0
+DELETE /trips/42 HTTP/2.0
+ /?a=1&date=2026-11-02&seat=3 HTTP/1.2
+get /trips HTTP/1.1
+PATCH  /bookings/9001  HTTP/1.2
+GET /bookings HTTP/ x
+PUT trips?seat=3 HTTP/2.0
+BREW /health? HTTP/1.2
+PATCH /bookings/9001 HTTP/2.0
+PUT /bookings?a=1&a=1 HTTP/2.0
+DELETE /? HTTP/
+POST /trips/42 
+PUT /health?seat=3 HTTP/
+BREW /bookings/9001 HTTP/2.0
+HEAD  HTTP/1.0
+OPTIONS /health http/1.1
+PATCH /health?&seat=3 
+CONNECT /bookings/9001? HTTP/1.1
+OPTIONS /trips?seat=3&a=1&q 
+DELETE /trips HTTP/1.1
+get /hello/Wanjiku HTTP/1.0
+get /bookings?a=1&a=1&a=1&seat=3 HTTP/1.2
+HEAD /trips/42 
+POST /trips/42?a=1&a=1 HTTP/2.0
+GET  http/1.1
+HEAD  http/1.1
+DELETE /bookings/9001? 
+GET /?date=2026-11-02&seat=3&a=1 http/1.1
+PATCH /bookings/9001 HTTP/1.2
+PATCH /health?date=2026-11-02 HTTP/1.1
+PATCH /trips/42 HTTP/2.0 x
+CONNECT trips HTTP/1.0
+OPTIONS /routes/125 HTTP/1.2
+HEAD /trips?&a=1&a=1&a=1 http/1.1
+ / HTTP/2.0
+POST /health? HTTP/1.2
+PATCH  /bookings  HTTP/1.1
+OPTIONS /trips HTTP/2.0
+BREW /?q&&seat=3&q HTTP/1.1
+BREW /routes/125 HTTP/
+PUT /health HTTP/1.1
+OPTIONS /trips HTTP/1.1
+GET /trips/42? HTTP/1.0
+POST /trips/42 HTTP/1.2
+CONNECT trips? http/1.1
+OPTIONS /trips/42 HTTP/2.0
+POST /trips/42?& HTTP/1.2
+POST /routes/125?a=1&seat=3& HTTP/1.1
+OPTIONS /bookings/9001?&a=1&a=1& HTTP/1.0
+CONNECT /trips/42 http/1.1
+get  HTTP/
+GET /hello/Wanjiku?seat=3&a=1 HTTP/
+CONNECT /bookings? 
+BREW  HTTP/2.0
+BREW trips HTTP/2.0
+HEAD /hello/Wanjiku http/1.1
+DELETE /bookings/9001?date=2026-11-02&date=2026-11-02&q HTTP/1.2
+GET /bookings HTTP/1.1
+ /trips http/1.1
+GET / HTTP/
+BREW /trips HTTP/1.2
+PUT / HTTP/
+PATCH /hello/Wanjiku HTTP/1.0
+POST /trips HTTP/
+DELETE  http/1.1
+get /routes/125 
+PUT trips?q&seat=3&a=1 
+get /trips/42? HTTP/
+HEAD  /  HTTP/1.0
+OPTIONS /trips/42 HTTP/1.2
+OPTIONS  HTTP/1.2
+CONNECT /hello/Wanjiku 
+OPTIONS /bookings/9001?seat=3&q HTTP/
+PUT /routes/125?a=1&date=2026-11-02&q HTTP/1.2
+ /health HTTP/1.0
+PATCH /routes/125? HTTP/2.0
+BREW /bookings?&a=1& HTTP/2.0
+PUT /trips http/1.1
+CONNECT trips?seat=3&date=2026-11-02&a=1 HTTP/1.0
+get / HTTP/2.0
+OPTIONS /trips/42 HTTP/
+HEAD /bookings/9001 HTTP/1.1
+PATCH /health HTTP/1.2
+BREW  HTTP/1.0
+BREW /trips 
+BREW /health 
+DELETE trips http/1.1
+HEAD /bookings?seat=3&seat=3&q HTTP/1.1
+POST /health HTTP/1.1
+GET /? HTTP/1.1
+BREW  HTTP/1.1
+OPTIONS trips?date=2026-11-02&seat=3&q&a=1 HTTP/2.0
+POST  HTTP/1.2
+DELETE /trips?a=1&date=2026-11-02 HTTP/1.0
+HEAD /trips/42?date=2026-11-02&seat=3 HTTP/2.0 x
+GET /bookings/9001 HTTP/2.0
+CONNECT trips?date=2026-11-02&&a=1 HTTP/1.2
+CONNECT /hello/Wanjiku http/1.1
+CONNECT trips 
+HEAD  http/1.1
+OPTIONS trips HTTP/1.2
+HEAD trips HTTP/ x
+CONNECT /hello/Wanjiku? 
+CONNECT /routes/125?a=1&seat=3&a=1&seat=3 HTTP/1.0
+HEAD /bookings? HTTP/1.0
+ /bookings?&date=2026-11-02&a=1& 
+BREW /bookings/9001 
+ /bookings HTTP/1.0
+CONNECT / HTTP/1.0
+PUT /routes/125 HTTP/1.1
+HEAD /trips 
+OPTIONS / HTTP/1.2
+PUT /trips HTTP/1.0
+BREW /trips?date=2026-11-02&a=1&q HTTP/1.1
+BREW  /trips?  http/1.1
+POST /health?q&q HTTP/1.0
+POST /health HTTP/1.0
+HEAD /health?seat=3 
+OPTIONS /health HTTP/1.0 x
+BREW  /bookings  HTTP/1.0
+GET /bookings http/1.1
+get / HTTP/1.2
+HEAD /trips/42?q&q& HTTP/
+PATCH /trips/42 HTTP/1.2
+CONNECT /trips 
+PUT /?seat=3&a=1&a=1 HTTP/
+GET /health?q&&date=2026-11-02 
+get /bookings/9001 HTTP/1.1
+OPTIONS / HTTP/
+OPTIONS /health HTTP/1.1
+get /bookings/9001? 
+POST /trips/42? 
+PATCH /? HTTP/1.2
+get /trips 
+PUT /hello/Wanjiku?seat=3&q&a=1&date=2026-11-02 HTTP/1.2
+BREW /? HTTP/1.0
+GET /health HTTP/1.0
+GET /health?date=2026-11-02 http/1.1
+HEAD /bookings/9001 HTTP/1.2
+POST /bookings HTTP/1.1
+GET /bookings/9001 HTTP/1.0
+PATCH /hello/Wanjiku HTTP/2.0
+OPTIONS /?&date=2026-11-02 HTTP/1.2
+CONNECT /trips HTTP/1.2
+OPTIONS  http/1.1
+GET /bookings HTTP/1.0
+CONNECT trips HTTP/1.0
+GET /trips/42 HTTP/1.1
+PATCH /hello/Wanjiku http/1.1
+OPTIONS  HTTP/1.0 x
+HEAD /bookings/9001? http/1.1
+get /health HTTP/1.2
+ /routes/125 HTTP/1.0
+POST  HTTP/
+HEAD /bookings/9001 HTTP/1.2
+GET /health?q&q HTTP/
+PATCH /bookings/9001?&seat=3 HTTP/1.1
+DELETE /hello/Wanjiku HTTP/2.0
+CONNECT /? 
+HEAD /?q 
+DELETE /routes/125 HTTP/1.0
+OPTIONS /health HTTP/
+ /trips/42 HTTP/1.2
+ /health http/1.1
+POST /health?date=2026-11-02&date=2026-11-02&a=1 HTTP/2.0
+PATCH /bookings HTTP/2.0
+OPTIONS /trips/42?a=1&a=1&a=1 http/1.1
+POST    HTTP/1.2
+GET /trips/42 
+HEAD /trips/42 HTTP/1.1
+get /bookings HTTP/
+GET /trips/42?a=1&seat=3&seat=3&q HTTP/
+GET / 
+OPTIONS /routes/125 http/1.1
+CONNECT /bookings/9001?seat=3&date=2026-11-02 HTTP/1.2
+HEAD  /trips/42  HTTP/1.2  x
+PUT /trips/42? HTTP/2.0
+PUT /trips http/1.1
+HEAD  /routes/125  HTTP/2.0
+DELETE /trips/42 HTTP/1.2
+PUT /routes/125? HTTP/1.0
+PATCH /routes/125?q&seat=3 HTTP/
+CONNECT / HTTP/1.0
+PATCH  
+PUT /trips/42 HTTP/2.0
+OPTIONS /trips/42? HTTP/
+DELETE /hello/Wanjiku?date=2026-11-02 HTTP/1.2
+OPTIONS /trips/42 HTTP/2.0
+OPTIONS /trips/42?a=1& HTTP/1.0
+BREW /routes/125 HTTP/2.0
+ /health?seat=3&&a=1&date=2026-11-02 HTTP/1.2
+BREW /bookings/9001 HTTP/
+CONNECT /bookings HTTP/1.2
+GET /bookings HTTP/1.1
+CONNECT /health 
+PATCH / HTTP/2.0
+ /routes/125 HTTP/1.1
+HEAD /trips?a=1&a=1&seat=3 HTTP/1.1
+get trips 
+GET /routes/125 http/1.1
+HEAD /hello/Wanjiku HTTP/
+CONNECT /bookings HTTP/1.0
+CONNECT /trips/42?seat=3&&a=1&seat=3 HTTP/
+PATCH trips?a=1&&a=1&date=2026-11-02 HTTP/1.0
+BREW /bookings? HTTP/1.2
+POST /bookings? HTTP/1.2
+BREW /trips/42 HTTP/1.2 x
+HEAD / HTTP/1.0
+OPTIONS /trips HTTP/2.0
+PATCH  /health  http/1.1
+PATCH /health HTTP/1.1
+PUT  HTTP/1.1
+GET /hello/Wanjiku HTTP/1.2
+PATCH /health HTTP/1.0
+DELETE /?seat=3&seat=3&&q http/1.1
+get /bookings 
+GET  
+OPTIONS /bookings HTTP/1.0
+POST /bookings/9001 HTTP/2.0
+DELETE /trips/42?&seat=3&q http/1.1
+get /trips?seat=3 HTTP/1.2 x
+HEAD /routes/125 HTTP/1.1
+PUT  HTTP/1.1
+ /trips 
+  HTTP/
+PATCH /trips http/1.1
+PUT /trips/42?seat=3&date=2026-11-02&a=1 http/1.1
+PATCH /health http/1.1
+CONNECT /routes/125 HTTP/
+CONNECT / HTTP/1.0
+CONNECT  HTTP/1.1
+ /routes/125 HTTP/1.0
+GET /bookings HTTP/
+BREW  http/1.1
+POST /routes/125 
+get  HTTP/
+BREW /routes/125?date=2026-11-02 HTTP/1.2
+ /? HTTP/1.2
+CONNECT /bookings? HTTP/
+HEAD trips?date=2026-11-02&seat=3&a=1 HTTP/2.0
+BREW / HTTP/2.0
+PUT /health?seat=3&date=2026-11-02 http/1.1
+PATCH /routes/125?seat=3 HTTP/
+DELETE  HTTP/1.1
+  /trips?seat=3&&  HTTP/1.1
+DELETE /bookings/9001?date=2026-11-02&date=2026-11-02&seat=3&a=1 http/1.1
+GET /health 
+CONNECT /routes/125 HTTP/1.2
+DELETE /?a=1&date=2026-11-02 HTTP/1.0
+POST trips HTTP/1.1
+HEAD /routes/125 HTTP/1.0
+HEAD /hello/Wanjiku? HTTP/2.0 x
+BREW /routes/125 HTTP/1.1
+POST /bookings/9001 HTTP/1.2
+CONNECT trips?a=1&a=1&seat=3 http/1.1
+POST /trips http/1.1
+HEAD trips HTTP/
+GET /bookings?seat=3 HTTP/1.0
+ /trips? HTTP/
+PUT /bookings HTTP/1.2
+ /health HTTP/1.2
+DELETE /health HTTP/2.0
+POST /trips http/1.1 x
+OPTIONS /bookings/9001?seat=3&a=1&&date=2026-11-02 http/1.1
+BREW /routes/125 HTTP/1.0
+CONNECT trips? HTTP/2.0
+BREW /trips? HTTP/2.0
+OPTIONS /bookings HTTP/2.0
+OPTIONS  trips  
+DELETE /health http/1.1
+PUT /health?date=2026-11-02 HTTP/2.0
+get /trips/42 HTTP/
+CONNECT /bookings/9001 
+CONNECT / HTTP/2.0
+DELETE  
+OPTIONS /trips HTTP/1.1
+GET trips?seat=3&seat=3&q&date=2026-11-02 HTTP/1.1
+CONNECT trips? HTTP/1.0
+POST /hello/Wanjiku HTTP/
+PATCH /bookings/9001 HTTP/1.2
+DELETE /bookings?a=1 HTTP/1.1
+CONNECT  /trips/42  HTTP/2.0
+HEAD trips HTTP/2.0
+CONNECT /bookings/9001 HTTP/1.0
+PUT /?date=2026-11-02&date=2026-11-02 http/1.1
+ /health HTTP/1.2
+BREW  HTTP/2.0
+HEAD /routes/125 http/1.1
+PUT trips? HTTP/1.2
+OPTIONS trips?date=2026-11-02 HTTP/1.2
+GET    
+GET /trips HTTP/
+POST trips HTTP/1.1
+HEAD /trips/42?date=2026-11-02 HTTP/2.0
+BREW trips HTTP/
+get /bookings http/1.1
+get /trips?date=2026-11-02& http/1.1
+PUT /trips http/1.1
+GET /routes/125 http/1.1
+HEAD /routes/125 HTTP/1.1
+PATCH trips?date=2026-11-02&&q&date=2026-11-02 
+BREW /trips HTTP/1.1
+PATCH /health? HTTP/1.0
+CONNECT  http/1.1
+GET / HTTP/
+PATCH /trips/42?a=1 HTTP/1.0
+PUT /? HTTP/1.2
+CONNECT /trips http/1.1
+ /health HTTP/1.0
+HEAD /bookings HTTP/1.2
+  HTTP/
+HEAD /routes/125? http/1.1
+get /bookings/9001 http/1.1
+ /health? http/1.1
+GET / HTTP/1.0
+ /hello/Wanjiku HTTP/1.0
+GET trips HTTP/1.1
+HEAD /bookings  x
+ /bookings/9001 http/1.1
+POST  /bookings/9001  HTTP/
+DELETE /? HTTP/
+DELETE /bookings/9001?&&seat=3&date=2026-11-02 http/1.1
+BREW  HTTP/1.2
+get /hello/Wanjiku HTTP/2.0
+ /trips? http/1.1
+get /bookings HTTP/2.0
+PATCH  HTTP/1.1
+CONNECT  HTTP/2.0
+ /routes/125 HTTP/1.0
+POST  HTTP/1.1
+BREW /hello/Wanjiku HTTP/1.1
+PUT /trips/42 HTTP/1.1
+PATCH /bookings/9001? HTTP/ x
+get /trips/42 http/1.1
+HEAD /hello/Wanjiku? http/1.1
+BREW /bookings?q&a=1 HTTP/
+PATCH /routes/125 HTTP/2.0
+GET /bookings?a=1 HTTP/
+PUT /trips http/1.1
+GET /trips/42 HTTP/
+GET /trips/42 HTTP/
+GET /bookings/9001?&q&date=2026-11-02&q HTTP/
+CONNECT /routes/125?&date=2026-11-02&seat=3&seat=3 
+CONNECT trips HTTP/2.0
+CONNECT trips HTTP/1.2
+ /routes/125?&seat=3& HTTP/1.1
+BREW / HTTP/1.2
+PATCH  HTTP/1.0
+DELETE /routes/125?q&date=2026-11-02&&seat=3 HTTP/1.2
+DELETE trips? HTTP/2.0
+HEAD /health HTTP/1.1
+DELETE /bookings?seat=3 HTTP/
+PATCH trips HTTP/1.1
+get /bookings HTTP/1.2
+PUT /health HTTP/1.2
+BREW /bookings?seat=3&q&date=2026-11-02 http/1.1
+ /bookings http/1.1
+ /trips/42 HTTP/
+OPTIONS  http/1.1
+BREW trips http/1.1
+GET /hello/Wanjiku http/1.1
+OPTIONS trips?date=2026-11-02&seat=3 HTTP/2.0
+CONNECT /trips HTTP/
+DELETE /hello/Wanjiku? HTTP/1.0
+BREW /bookings HTTP/1.2
+HEAD /bookings/9001?date=2026-11-02&seat=3&q 
+POST /health?seat=3&seat=3&q&q http/1.1
+PUT /hello/Wanjiku HTTP/1.0
+ trips?date=2026-11-02 HTTP/2.0
+PUT  http/1.1
+BREW /trips/42 HTTP/ x
+PATCH trips HTTP/1.2
+GET / HTTP/1.2
+get /health?date=2026-11-02&a=1& HTTP/1.1
+PATCH / 
+HEAD trips HTTP/1.0
+POST trips HTTP/1.1
+ /trips?date=2026-11-02&a=1&date=2026-11-02&q HTTP/1.0
+BREW / HTTP/1.1
+BREW /trips/42 HTTP/
+BREW /bookings/9001 HTTP/ x
+OPTIONS /bookings/9001 HTTP/2.0
+BREW /hello/Wanjiku?q HTTP/
+DELETE /routes/125 
+ /trips/42 HTTP/
+  http/1.1
+BREW /trips?a=1&seat=3&a=1 HTTP/2.0
+get /hello/Wanjiku?&seat=3 http/1.1
+get /hello/Wanjiku?a=1&a=1&q&a=1 HTTP/2.0
+GET /hello/Wanjiku HTTP/
+ /routes/125 HTTP/1.2
+CONNECT /health?q&q& http/1.1
+get /trips/42 http/1.1
+HEAD /routes/125 HTTP/
+BREW /hello/Wanjiku?date=2026-11-02&date=2026-11-02 HTTP/1.1
+POST /bookings 
+GET /health HTTP/1.2
+OPTIONS  /hello/Wanjiku  
+BREW /trips/42 HTTP/1.0
+BREW /bookings/9001?q&seat=3 HTTP/1.1
+PUT /bookings/9001 HTTP/1.0
+DELETE / HTTP/1.1 x
+PUT /routes/125 HTTP/1.0
+DELETE /health? http/1.1
+HEAD trips HTTP/
+PUT /bookings/9001 HTTP/1.1
+  /hello/Wanjiku  http/1.1  x
+PATCH trips HTTP/2.0
+CONNECT trips?q&date=2026-11-02&&seat=3 HTTP/2.0
+get /trips/42 HTTP/
+ /routes/125 HTTP/1.2
+ /routes/125 http/1.1
+PATCH /trips HTTP/1.0
+HEAD /bookings/9001 HTTP/1.2
+DELETE /bookings?q&a=1&seat=3&date=2026-11-02 HTTP/1.0 x
+CONNECT trips HTTP/1.0
+PUT /?a=1 HTTP/2.0
+ trips HTTP/1.2
+GET /bookings/9001? HTTP/2.0
+GET /trips/42 HTTP/1.2
+POST trips 
+get /trips/42?seat=3 HTTP/1.0
+HEAD /?date=2026-11-02&date=2026-11-02&a=1&a=1 
+BREW /routes/125 HTTP/1.0
+POST /routes/125?&date=2026-11-02&a=1&a=1 http/1.1
+get /routes/125 HTTP/1.0
+ /health?a=1&&seat=3 HTTP/1.0
+OPTIONS  /health?seat=3  HTTP/1.1
+get /bookings HTTP/1.2
+BREW /bookings HTTP/ x
+PUT /trips?q HTTP/2.0
+ trips http/1.1
+get  trips  HTTP/
+DELETE /trips http/1.1
+ /health http/1.1
+GET /trips? 
+PUT  HTTP/1.0
+GET /trips/42? HTTP/1.0
+POST /bookings/9001 HTTP/1.1
+OPTIONS /bookings/9001?seat=3&q HTTP/2.0
+PATCH /hello/Wanjiku?&q&a=1& HTTP/1.0
+POST trips?q&q http/1.1
+GET /trips?date=2026-11-02&seat=3&date=2026-11-02 HTTP/
+BREW /bookings? HTTP/
+GET  HTTP/1.2
+HEAD /health?q&a=1&seat=3 HTTP/2.0
+DELETE  http/1.1
+POST / HTTP/1.1
+PUT /bookings/9001?date=2026-11-02&&date=2026-11-02 HTTP/1.1
+POST /health?seat=3&a=1 HTTP/1.0
+BREW /routes/125?a=1&&a=1&q HTTP/2.0
+BREW /routes/125 HTTP/1.1 x
+PUT /routes/125 HTTP/2.0
+DELETE /trips/42?date=2026-11-02 
+BREW /trips/42 HTTP/
+DELETE /? HTTP/1.1
+HEAD /trips? 
+ /hello/Wanjiku? HTTP/1.2
+OPTIONS /trips HTTP/2.0
+PATCH /bookings/9001 http/1.1
+HEAD /routes/125 HTTP/2.0
+CONNECT /routes/125?&date=2026-11-02&q&seat=3 HTTP/ x
+BREW /routes/125 HTTP/1.1
+PATCH /trips? http/1.1
+BREW  http/1.1
+PATCH /hello/Wanjiku http/1.1
+BREW /bookings HTTP/1.2
+PUT /hello/Wanjiku http/1.1
+ / http/1.1
+HEAD /bookings/9001 HTTP/1.0
+OPTIONS trips?q&q&date=2026-11-02 HTTP/1.1
+GET /health HTTP/1.0
+OPTIONS /health?&seat=3&a=1&seat=3 HTTP/1.0
+CONNECT /trips/42?date=2026-11-02&q HTTP/1.0
+PUT /bookings/9001? HTTP/1.1 x
+PATCH /?date=2026-11-02 HTTP/1.0
+GET  HTTP/1.0
+ trips?q&q&q&a=1 
+ trips?seat=3 
+HEAD /hello/Wanjiku? HTTP/2.0
+PATCH / HTTP/1.0
+get /trips HTTP/1.2
+CONNECT /bookings/9001?date=2026-11-02&q http/1.1
+ /bookings 
+POST trips?a=1 http/1.1
+GET /health?a=1&q&a=1&a=1 HTTP/1.0
+get  http/1.1
+get / HTTP/2.0
+BREW trips HTTP/
+CONNECT /routes/125?date=2026-11-02 http/1.1
+OPTIONS / HTTP/
+GET /bookings/9001 HTTP/1.0
+CONNECT trips HTTP/1.2
+POST /trips HTTP/1.1
+PATCH / HTTP/
+get /hello/Wanjiku HTTP/1.1
+PATCH /hello/Wanjiku HTTP/1.0
+BREW /trips?date=2026-11-02 
+get  HTTP/
+POST / http/1.1
+GET /routes/125 HTTP/1.2
+POST /trips/42 HTTP/1.1
+PATCH /trips/42 HTTP/2.0
+POST /health http/1.1
+OPTIONS / HTTP/1.1
+POST /trips http/1.1
+PATCH /bookings?seat=3&q&date=2026-11-02&date=2026-11-02 HTTP/1.0
+get /bookings/9001 HTTP/
+OPTIONS /bookings HTTP/
+BREW /routes/125 HTTP/1.1
+get trips HTTP/2.0
+DELETE /routes/125 http/1.1
+DELETE  /hello/Wanjiku?a=1&a=1&q&a=1  
+ trips HTTP/1.2
+POST /bookings HTTP/
+OPTIONS /?q&a=1 HTTP/1.0
+get  
+DELETE / 
+ /trips/42? HTTP/1.2
+HEAD  http/1.1
+BREW trips HTTP/1.0
+CONNECT /trips 
+HEAD trips HTTP/
+BREW /health 
+BREW /trips/42?date=2026-11-02&date=2026-11-02&a=1&date=2026-11-02 http/1.1
+ /bookings HTTP/1.2
+get /health? HTTP/2.0
+PUT /bookings/9001?a=1 HTTP/1.1
+get /health http/1.1
+POST trips HTTP/2.0
+DELETE /bookings? 
+get /bookings/9001?seat=3&seat=3 HTTP/2.0
+GET  /bookings  HTTP/
+ /hello/Wanjiku HTTP/1.0
+HEAD /trips/42 
+BREW  /trips/42?date=2026-11-02  http/1.1
+BREW /bookings  x
+DELETE /routes/125 HTTP/
+PATCH trips HTTP/2.0
+POST  HTTP/1.0
+POST /trips HTTP/1.0
+OPTIONS  HTTP/1.1
+POST /trips/42 HTTP/1.0
+PUT /health? http/1.1
+BREW /trips/42? 
+get /routes/125?a=1&&q HTTP/2.0
+BREW /bookings/9001 http/1.1
+ /trips http/1.1
+CONNECT /bookings HTTP/1.0
+CONNECT /health HTTP/1.2
+POST trips 
+POST trips 
+HEAD /trips?seat=3&date=2026-11-02&a=1 http/1.1
+HEAD /bookings HTTP/1.0 x
+GET /trips HTTP/1.0
+PATCH trips 
+HEAD trips?date=2026-11-02 HTTP/
+HEAD /bookings/9001?seat=3&date=2026-11-02& HTTP/1.0
+GET trips?&q HTTP/1.2
+HEAD /bookings?& HTTP/1.1
+ /bookings/9001 HTTP/1.2
+HEAD /health?seat=3&seat=3&seat=3&a=1 HTTP/1.2
+PUT /bookings/9001 
+DELETE /trips/42?q&seat=3&q HTTP/1.0
+BREW /health HTTP/1.2
+POST /?q&a=1&q&date=2026-11-02 HTTP/
+get trips HTTP/1.1
+OPTIONS /health 
+DELETE  HTTP/1.1
+HEAD /bookings/9001 HTTP/1.2
+CONNECT /trips/42?q&date=2026-11-02&seat=3 HTTP/2.0
+HEAD /trips?q&a=1&date=2026-11-02&seat=3 HTTP/1.2
+get /bookings/9001 http/1.1
+HEAD /bookings HTTP/
+get /routes/125 HTTP/1.0
+DELETE /bookings/9001 HTTP/2.0
+DELETE /health HTTP/1.1
+PUT  http/1.1
+ /?q HTTP/1.1
+PATCH  HTTP/1.1
+POST /hello/Wanjiku HTTP/2.0
+OPTIONS / HTTP/
+ /bookings? HTTP/2.0
+get /? HTTP/1.2
+get /hello/Wanjiku 
+ /bookings HTTP/1.1
+BREW  HTTP/
+DELETE  HTTP/1.2
+POST  HTTP/2.0
+CONNECT /health HTTP/1.0
+HEAD  HTTP/2.0
+HEAD /trips/42? 
+DELETE /? HTTP/1.2 x
+POST trips?q& HTTP/1.2 x
+GET /bookings?&seat=3&a=1 HTTP/2.0
+PATCH / HTTP/1.2
+PUT /trips/42 HTTP/ x
+OPTIONS /hello/Wanjiku?seat=3&q& HTTP/1.1
+BREW / HTTP/1.1
+get /health HTTP/1.0
+OPTIONS /trips/42?q&&date=2026-11-02& http/1.1
+PATCH /trips/42 HTTP/2.0
+ /hello/Wanjiku http/1.1
+HEAD /health? http/1.1
+PUT /health http/1.1
+ /trips?date=2026-11-02 HTTP/1.1
+CONNECT /trips/42? HTTP/1.2
+OPTIONS /health HTTP/1.2
+ /hello/Wanjiku HTTP/1.1
+BREW  HTTP/
+PUT /bookings/9001 
+CONNECT trips http/1.1
+PATCH  /routes/125?  HTTP/1.1
+GET /bookings/9001?a=1&date=2026-11-02&seat=3&q HTTP/2.0
+BREW /health HTTP/2.0
+PUT /hello/Wanjiku 
+GET trips?q&q& HTTP/
+DELETE  HTTP/1.0
+DELETE /?q http/1.1
+PATCH  HTTP/
+  /bookings?  HTTP/1.1
+HEAD /bookings HTTP/1.2
+POST trips http/1.1
+GET /bookings/9001 
+DELETE /trips HTTP/2.0
+DELETE /health HTTP/
+DELETE /hello/Wanjiku HTTP/1.2
+PATCH /trips/42?q&q&q HTTP/
+get /hello/Wanjiku HTTP/1.2
+ /hello/Wanjiku HTTP/1.0
+CONNECT trips? http/1.1
+CONNECT /trips/42 HTTP/2.0
+  HTTP/1.0
+GET  HTTP/1.2
+PATCH  HTTP/ x
+CONNECT /bookings/9001 HTTP/
+GET /trips/42 HTTP/
+GET /health http/1.1
+get /bookings/9001 HTTP/1.1
+BREW trips?q&q HTTP/2.0
+GET /bookings/9001?date=2026-11-02& 
+BREW /bookings HTTP/1.0
+HEAD /bookings 
+DELETE /bookings/9001?seat=3&&date=2026-11-02&q HTTP/1.1
+DELETE trips HTTP/
+DELETE /trips/42? HTTP/1.0
+POST /bookings/9001?a=1&q&q&q HTTP/2.0
+PUT /hello/Wanjiku 
+DELETE /health HTTP/
+PATCH /health 
+get  /bookings?&seat=3&date=2026-11-02&seat=3  
+OPTIONS /bookings HTTP/2.0
+BREW /?a=1&q&seat=3 HTTP/1.0
+BREW trips HTTP/2.0
+PATCH /routes/125 http/1.1 x
+get /bookings/9001?q&&a=1&seat=3 HTTP/1.2
+get /trips HTTP/1.2
+OPTIONS /? HTTP/2.0
+OPTIONS trips HTTP/1.0
+GET  HTTP/1.0
+CONNECT /hello/Wanjiku?seat=3 http/1.1
+OPTIONS /bookings/9001? http/1.1
+DELETE /trips?seat=3&date=2026-11-02 http/1.1
+GET /? HTTP/1.1
+PUT / http/1.1
+GET / 
+ /trips http/1.1
+HEAD trips  x
+HEAD /trips/42?seat=3 http/1.1
+HEAD /hello/Wanjiku?q&date=2026-11-02&q&q http/1.1 x
+OPTIONS /health?seat=3&seat=3 
+POST /trips?date=2026-11-02&&a=1 HTTP/1.0
+CONNECT  /bookings/9001?date=2026-11-02&a=1&q&q  HTTP/
+BREW  http/1.1
+BREW /trips/42 HTTP/
+DELETE  HTTP/1.2
+BREW  HTTP/1.1
+OPTIONS  http/1.1
+OPTIONS /bookings/9001? HTTP/2.0
+  HTTP/2.0
+DELETE /trips/42?&date=2026-11-02&a=1 HTTP/1.1
+GET /bookings?date=2026-11-02&a=1 HTTP/
+POST /trips/42?date=2026-11-02 HTTP/
+DELETE /hello/Wanjiku?q HTTP/1.1
+HEAD /routes/125 HTTP/1.2 x
+get trips HTTP/2.0
+CONNECT trips?date=2026-11-02&q&q 
+OPTIONS /trips HTTP/2.0
+CONNECT /trips/42 HTTP/2.0
+GET /trips?seat=3&a=1 http/1.1
+GET /routes/125?date=2026-11-02&q&seat=3 http/1.1
+HEAD /bookings? http/1.1
+PUT /hello/Wanjiku?q&&seat=3 HTTP/1.2
+DELETE /health 
+POST /health http/1.1
+GET  HTTP/1.2
+get /routes/125? http/1.1
+OPTIONS /bookings/9001 HTTP/1.1
+GET trips http/1.1
+PUT /bookings/9001 HTTP/2.0
+ /bookings?a=1&date=2026-11-02 HTTP/1.0
+POST /trips?a=1 
+HEAD / HTTP/1.2 x
+ /trips 
+get /health?a=1 HTTP/1.0
+GET /health 
+ / 
+POST / HTTP/
+BREW / HTTP/
+HEAD  trips  
+GET /trips/42?date=2026-11-02 HTTP/1.0
+CONNECT  HTTP/1.2
+ /bookings/9001 HTTP/2.0
+DELETE /bookings/9001?seat=3&date=2026-11-02 http/1.1
+GET trips HTTP/1.1
+get  HTTP/1.2
+PATCH /hello/Wanjiku 
+BREW /routes/125 http/1.1 x
+OPTIONS /bookings/9001 HTTP/1.0
+PATCH  /bookings/9001?a=1  HTTP/1.1
+PUT /routes/125?q& 
+CONNECT trips 
+PATCH  
+POST trips?q&date=2026-11-02 HTTP/2.0
+DELETE /bookings?q&seat=3& 
+CONNECT /routes/125 
+DELETE /health?q& HTTP/1.2
+DELETE / HTTP/2.0
+POST /routes/125 
+HEAD / http/1.1
+POST / 
+DELETE / HTTP/
+DELETE trips HTTP/2.0
+get  HTTP/2.0
+DELETE /routes/125 
+OPTIONS /hello/Wanjiku HTTP/1.0
+PATCH trips?q&q&seat=3&seat=3 HTTP/
+PATCH trips HTTP/1.2
+PUT /? http/1.1
+DELETE /hello/Wanjiku HTTP/1.1
+ /routes/125?q HTTP/1.0
+OPTIONS  HTTP/1.0
+CONNECT /bookings/9001 HTTP/1.0
+OPTIONS /hello/Wanjiku?q&seat=3&a=1 HTTP/1.1
+PATCH /bookings HTTP/
+PATCH /bookings/9001 HTTP/1.2
+HEAD  HTTP/1.0
+CONNECT /hello/Wanjiku http/1.1
+GET trips 
+PUT trips 
+HEAD /health?a=1&a=1&q& 
+POST /trips/42 HTTP/1.2
+POST /hello/Wanjiku http/1.1
+GET /hello/Wanjiku HTTP/1.1
+PUT /trips/42 HTTP/1.2
+CONNECT /hello/Wanjiku HTTP/2.0
+BREW /trips HTTP/
+CONNECT /bookings?a=1&seat=3&date=2026-11-02&q HTTP/2.0 x
+PUT /bookings/9001 HTTP/1.1
+BREW /routes/125 HTTP/
+DELETE  HTTP/
+GET trips 
+GET /hello/Wanjiku?q HTTP/2.0
+PUT /bookings? HTTP/1.2
+BREW /health HTTP/1.2
+BREW /hello/Wanjiku?q&a=1&a=1&seat=3 HTTP/1.0
+ /routes/125?seat=3&a=1 HTTP/1.1
+get trips http/1.1
+DELETE    HTTP/2.0
+POST /bookings HTTP/1.1
+HEAD /hello/Wanjiku?date=2026-11-02&q&date=2026-11-02 HTTP/1.0
+GET trips HTTP/1.2
+POST /hello/Wanjiku?seat=3 HTTP/1.2
+OPTIONS /bookings/9001?q&a=1&seat=3& http/1.1
+CONNECT /trips?seat=3&seat=3&a=1 HTTP/1.2
+PATCH / HTTP/
+ /bookings/9001 http/1.1
+get  HTTP/1.0
+PATCH /bookings/9001?q&date=2026-11-02 HTTP/1.0
+DELETE  /?date=2026-11-02  
+GET  HTTP/2.0
+DELETE /hello/Wanjiku?date=2026-11-02& 
+CONNECT trips? HTTP/1.1
+get  /hello/Wanjiku  
+BREW /trips? HTTP/1.0
+OPTIONS  HTTP/1.2
+ /hello/Wanjiku HTTP/1.2
+BREW  
+OPTIONS /routes/125 HTTP/1.1
+PATCH /bookings/9001? http/1.1
+PUT /trips http/1.1
+ /bookings/9001 HTTP/1.0
+PATCH /routes/125 HTTP/
+HEAD /bookings 
+get /? HTTP/
+PUT /trips/42?q 
+HEAD /routes/125 
+OPTIONS /trips HTTP/
+GET /routes/125?q&seat=3&q&seat=3 http/1.1
+PUT /trips HTTP/2.0
+HEAD /trips? HTTP/
+CONNECT /health HTTP/
+POST /bookings HTTP/2.0
+HEAD /trips HTTP/1.0
+HEAD /bookings HTTP/2.0
+DELETE /routes/125 HTTP/2.0
+CONNECT /bookings/9001 
+POST /bookings/9001 HTTP/2.0
+BREW / HTTP/
+POST / HTTP/
+PATCH /trips/42 HTTP/1.1
+GET /health HTTP/2.0
+HEAD /bookings/9001? HTTP/1.0
+DELETE trips?q&date=2026-11-02&seat=3& HTTP/1.1
+PUT /routes/125?a=1 HTTP/ x
+DELETE /bookings?a=1&&seat=3 HTTP/2.0
+GET trips HTTP/1.1
+HEAD / HTTP/1.0
+GET trips HTTP/1.1 x
+POST /hello/Wanjiku HTTP/1.2
+get  /hello/Wanjiku  HTTP/2.0
+BREW /? http/1.1
+OPTIONS  
+HEAD / HTTP/1.2
+PATCH trips?seat=3&a=1&q http/1.1
+ /?date=2026-11-02&&date=2026-11-02 HTTP/1.1
+CONNECT /trips http/1.1
+OPTIONS /trips/42?&seat=3&a=1&date=2026-11-02 HTTP/
+GET  /trips/42  HTTP/1.0
+CONNECT trips?seat=3&date=2026-11-02& HTTP/1.1
+GET /health HTTP/1.0
+PUT / http/1.1
+PUT /bookings HTTP/1.1
+ /trips/42? http/1.1
+OPTIONS /routes/125?seat=3&a=1&&seat=3 HTTP/1.0
+get /hello/Wanjiku http/1.1
+CONNECT /bookings/9001? HTTP/1.0
+DELETE  HTTP/2.0
+GET /hello/Wanjiku?q&a=1 HTTP/
+DELETE /bookings 
+GET /hello/Wanjiku HTTP/1.1
+PUT / HTTP/2.0
+BREW trips 
+DELETE trips HTTP/1.1
+DELETE /trips/42 HTTP/
+POST  HTTP/1.0
+DELETE /trips HTTP/1.2
+ /health?q&a=1&date=2026-11-02 HTTP/1.1
+CONNECT /bookings/9001? HTTP/2.0
+GET /hello/Wanjiku HTTP/1.2
+POST / HTTP/2.0
+PUT /bookings HTTP/
+OPTIONS /?a=1 HTTP/ x
+GET /trips/42 HTTP/
+PUT  http/1.1
+get  HTTP/1.0
+HEAD /bookings/9001 HTTP/
+BREW /routes/125 HTTP/1.1
+CONNECT trips HTTP/
+GET /bookings?seat=3 http/1.1
+CONNECT /hello/Wanjiku http/1.1
+PATCH /health HTTP/1.1 x
+OPTIONS /routes/125?q HTTP/
+GET / HTTP/2.0
+CONNECT /hello/Wanjiku? HTTP/1.1
+GET /bookings HTTP/1.0
+BREW /trips/42?&q HTTP/2.0
+GET /routes/125?q&a=1&q&seat=3 http/1.1
+POST  
+PATCH /trips/42 HTTP/2.0
+OPTIONS /health HTTP/2.0
+POST trips http/1.1
+HEAD /trips?date=2026-11-02&a=1 
+BREW /health HTTP/1.2
+DELETE  HTTP/1.1
+PUT /routes/125?date=2026-11-02&a=1&q HTTP/1.1
+DELETE /bookings/9001 
+CONNECT /routes/125 HTTP/2.0
+HEAD /bookings/9001? HTTP/1.0
+PATCH  HTTP/1.2
+ /routes/125? HTTP/ x
+get /trips?date=2026-11-02 
+GET /bookings? HTTP/1.1
+CONNECT /health HTTP/1.2
+CONNECT /trips/42 HTTP/
+DELETE /hello/Wanjiku http/1.1
+CONNECT /trips/42 HTTP/1.1
+PATCH /bookings/9001?seat=3&a=1&q HTTP/1.0
+HEAD  /bookings/9001?a=1&a=1&a=1&a=1  HTTP/1.1
+ /bookings/9001?seat=3 HTTP/
+get /bookings/9001?seat=3&&date=2026-11-02&q HTTP/1.1
+OPTIONS /health?q&date=2026-11-02&q HTTP/1.0
+CONNECT /trips/42?&seat=3&q&a=1 HTTP/
+CONNECT trips HTTP/1.2
+BREW /trips/42 HTTP/1.0
+PATCH /trips/42 HTTP/1.1 x
+HEAD /health http/1.1
+BREW /bookings/9001?a=1&date=2026-11-02&q&date=2026-11-02 http/1.1
+BREW /trips http/1.1
+POST /bookings?a=1& HTTP/1.2
+PUT  
+POST /?&q HTTP/
+POST trips HTTP/1.2
+BREW /trips/42 
+HEAD /bookings/9001?seat=3&a=1 HTTP/1.0
+POST /bookings HTTP/1.2 x
+get /?seat=3 
+OPTIONS /routes/125 http/1.1
+CONNECT /bookings/9001?q&a=1&q HTTP/1.1
+OPTIONS /trips HTTP/2.0
+PATCH /routes/125? HTTP/1.0
+CONNECT /bookings http/1.1
+PUT /hello/Wanjiku  x
+ / HTTP/2.0
+POST /health?&a=1&&a=1 HTTP/2.0
+BREW  /hello/Wanjiku?a=1&date=2026-11-02&seat=3&  
+HEAD / HTTP/1.1
+POST /routes/125? http/1.1
+BREW /trips/42?date=2026-11-02&&a=1& http/1.1
+PATCH /health HTTP/2.0
+POST trips HTTP/1.2
+DELETE /?q HTTP/1.2
+PUT /bookings HTTP/2.0
+OPTIONS / HTTP/2.0 x
+  /bookings/9001?  HTTP/1.0
+BREW trips HTTP/2.0
+GET  HTTP/1.0 x
+POST  HTTP/
+OPTIONS /trips http/1.1
+BREW /trips/42 HTTP/
+PATCH  /bookings  HTTP/1.2
+HEAD / HTTP/1.0
+GET /bookings HTTP/2.0
+get /trips http/1.1
+DELETE / HTTP/1.1
+POST /health 
+POST /trips?a=1 HTTP/1.1
+GET /bookings/9001?a=1&seat=3&seat=3&a=1 HTTP/1.2
+ /trips HTTP/2.0
+BREW /health HTTP/
+ /bookings/9001? http/1.1
+PATCH /health?a=1&date=2026-11-02&q& HTTP/
+GET /trips?a=1& 
+PATCH /routes/125 HTTP/1.1 x
+CONNECT /trips HTTP/2.0
+POST /hello/Wanjiku HTTP/1.2
+PUT /bookings?a=1&seat=3 HTTP/
+POST / HTTP/1.0
+BREW /bookings?&q&date=2026-11-02 HTTP/1.1
+BREW /trips 
+GET /bookings 
+PUT /health HTTP/
+ /? HTTP/1.0
+POST /hello/Wanjiku?date=2026-11-02&q HTTP/2.0 x
+ /health HTTP/1.2
+DELETE  HTTP/1.0
+PATCH trips? HTTP/1.0
+GET /trips?a=1& HTTP/2.0
+PUT /routes/125?a=1&q&q HTTP/1.2
+BREW /hello/Wanjiku HTTP/1.0
+OPTIONS /trips/42?seat=3&date=2026-11-02&q 
+GET /bookings/9001?date=2026-11-02& 
+POST /hello/Wanjiku HTTP/
+POST /health?date=2026-11-02&seat=3&date=2026-11-02&date=2026-11-02 HTTP/1.1
+POST /bookings/9001 HTTP/1.1
+OPTIONS  HTTP/1.2 x
+get  HTTP/
+PATCH trips?q&a=1&q http/1.1
+DELETE /trips HTTP/2.0
+HEAD /hello/Wanjiku HTTP/2.0
+DELETE /health?seat=3&a=1&a=1&a=1 HTTP/2.0
+BREW trips HTTP/
+POST /routes/125?q&q& HTTP/1.2
+PATCH /trips/42?q&a=1&a=1&seat=3 HTTP/1.0
+ / HTTP/2.0
+GET /bookings/9001?q&q&q HTTP/ x
+BREW /health? HTTP/1.1
+POST /bookings/9001?date=2026-11-02&a=1 http/1.1
+CONNECT /trips/42 HTTP/2.0
+OPTIONS  http/1.1
+HEAD /routes/125 HTTP/1.1
+PUT /trips/42 HTTP/1.2
+OPTIONS  HTTP/1.0
+  HTTP/2.0
+OPTIONS /trips/42?a=1&a=1 HTTP/1.2
+ /routes/125 
+GET /hello/Wanjiku HTTP/1.0
+GET /hello/Wanjiku HTTP/1.2
+OPTIONS /trips?date=2026-11-02 HTTP/2.0
+CONNECT /trips/42 http/1.1
+ / HTTP/2.0
+OPTIONS /health HTTP/1.1
+PATCH  HTTP/ x
+PATCH /trips/42 HTTP/1.1 x
+DELETE  HTTP/1.2
+ /trips HTTP/
+GET /hello/Wanjiku? http/1.1
+BREW /routes/125 HTTP/1.0
+PUT /routes/125 HTTP/1.0
+CONNECT /bookings HTTP/1.2
+HEAD /bookings/9001? 
+BREW /bookings/9001?a=1&q http/1.1
+PUT /routes/125 http/1.1
+BREW  HTTP/1.1
+PATCH /hello/Wanjiku HTTP/
+PUT /trips?seat=3&date=2026-11-02 
+BREW /bookings HTTP/2.0
+DELETE /health?seat=3&a=1 http/1.1
+CONNECT /bookings/9001 
+POST /bookings 
+GET /bookings/9001 
+get / HTTP/1.0
+DELETE /bookings/9001 HTTP/
+POST /health?q&a=1&a=1& HTTP/1.1
+PUT /trips HTTP/1.0
+CONNECT /bookings HTTP/
+PUT /trips/42 HTTP/1.0
+HEAD /health?seat=3&date=2026-11-02 HTTP/1.0
+BREW trips?seat=3&date=2026-11-02&seat=3 http/1.1
+ /bookings/9001?date=2026-11-02 http/1.1
+PATCH /health HTTP/1.1
+GET /routes/125?q&q 
+BREW trips?date=2026-11-02&a=1&date=2026-11-02&a=1 HTTP/1.2
+PATCH / HTTP/1.2
+OPTIONS /routes/125 HTTP/1.2
+CONNECT  http/1.1
+PATCH trips?a=1&a=1&a=1 HTTP/
+  
+ /hello/Wanjiku?seat=3&q&date=2026-11-02 HTTP/
+PUT /bookings 
+POST /hello/Wanjiku HTTP/1.2 x
+BREW /bookings 
+get /?a=1 HTTP/1.1
+ /routes/125 HTTP/1.0
+ /trips/42 HTTP/
+PUT /hello/Wanjiku 
+get /trips http/1.1
+GET /health?date=2026-11-02&& HTTP/1.2
+HEAD /bookings/9001 
+get /bookings HTTP/2.0
+CONNECT /trips/42 HTTP/1.1
+OPTIONS /trips http/1.1
+get / 
+GET /health?a=1&&&date=2026-11-02 HTTP/2.0
+DELETE /trips http/1.1
+PUT /routes/125 http/1.1
+PUT /trips?&&seat=3&q http/1.1
+ trips?date=2026-11-02&&a=1 
+PUT  HTTP/2.0
+GET trips HTTP/
+DELETE trips HTTP/
+DELETE /bookings? HTTP/1.0
+PATCH /trips HTTP/1.2
+HEAD trips?&a=1&seat=3&seat=3 HTTP/2.0
+BREW /?seat=3 HTTP/
+CONNECT /routes/125 HTTP/1.0
+PATCH /hello/Wanjiku HTTP/2.0
+POST /routes/125 
+POST /bookings HTTP/1.2
+CONNECT /routes/125?seat=3 HTTP/1.0 x
+DELETE /trips/42 HTTP/2.0
+PUT /bookings/9001 HTTP/
+BREW trips? HTTP/1.2
+GET  HTTP/2.0
+PUT trips? HTTP/1.0
+get /?&seat=3&q&q http/1.1
+get /bookings HTTP/1.2
+PATCH /hello/Wanjiku?date=2026-11-02&seat=3&date=2026-11-02 HTTP/
+GET /trips/42 HTTP/
+ / HTTP/1.1
+PUT / HTTP/
+DELETE  trips  HTTP/1.1
+ /trips http/1.1
+DELETE  /routes/125?a=1&q&seat=3&a=1  HTTP/2.0
+BREW /trips/42?date=2026-11-02&a=1&date=2026-11-02 HTTP/1.2
+PATCH /bookings/9001?date=2026-11-02 HTTP/1.1
+ /health HTTP/
+GET /hello/Wanjiku?q&&seat=3&date=2026-11-02 HTTP/
+PATCH /bookings/9001?date=2026-11-02&seat=3&q HTTP/2.0
+GET / HTTP/1.1
+HEAD /trips 
+HEAD /trips HTTP/1.0
+get /trips/42? HTTP/
+PATCH /health?date=2026-11-02&date=2026-11-02&q&a=1 
+CONNECT trips HTTP/1.2
+POST /routes/125?q HTTP/1.2
+GET  HTTP/2.0
+PUT trips HTTP/1.1
+OPTIONS / HTTP/1.0
+BREW  HTTP/1.0
+ /hello/Wanjiku http/1.1
+GET /trips?&a=1&a=1&a=1 
+HEAD  HTTP/1.2
+get /bookings/9001?seat=3&date=2026-11-02 HTTP/2.0
+BREW /bookings/9001?seat=3&date=2026-11-02&a=1&q HTTP/
+DELETE /health?a=1&date=2026-11-02&seat=3&q HTTP/1.1 x
+PATCH /trips/42 
+ /bookings 
+PATCH /trips?&a=1&seat=3&date=2026-11-02 HTTP/1.0
+get /hello/Wanjiku?a=1&date=2026-11-02&seat=3 HTTP/1.2
+ /trips/42 HTTP/2.0
+GET /bookings/9001 HTTP/1.2
+HEAD /routes/125 HTTP/
+PATCH  HTTP/1.2
+GET /bookings/9001?q&seat=3&a=1&date=2026-11-02 
+ /health HTTP/2.0
+POST /trips/42?seat=3&a=1&date=2026-11-02 HTTP/2.0 x
+GET  HTTP/1.2 x
+PATCH /trips http/1.1
+POST /bookings/9001 HTTP/1.2
+CONNECT /health HTTP/
+get /hello/Wanjiku HTTP/1.2
+get /routes/125? HTTP/1.1
+CONNECT /trips/42?a=1 HTTP/1.0
+HEAD /bookings/9001 HTTP/2.0
+OPTIONS  
+ /bookings/9001 HTTP/1.1
+PATCH /trips/42?date=2026-11-02&&&q HTTP/1.0
+BREW trips?date=2026-11-02 http/1.1
+PATCH /trips/42 HTTP/2.0
+DELETE /?seat=3&date=2026-11-02 HTTP/1.0
+HEAD /bookings?&seat=3&date=2026-11-02 http/1.1
+DELETE /trips/42?&q& HTTP/2.0
+BREW /trips?&a=1& HTTP/
+BREW  HTTP/1.1
+GET /trips/42 http/1.1
+CONNECT /trips/42 HTTP/1.1
+HEAD trips HTTP/1.2 x
+PATCH /trips HTTP/
+CONNECT / HTTP/1.0
+get /hello/Wanjiku HTTP/1.2
+BREW /health?seat=3&a=1&a=1& HTTP/1.2
+PATCH /hello/Wanjiku?a=1&a=1& http/1.1
+ /hello/Wanjiku?a=1&a=1 HTTP/1.2
+HEAD trips 
+get /hello/Wanjiku?q& http/1.1
+CONNECT /hello/Wanjiku?date=2026-11-02&q&date=2026-11-02&q http/1.1
+CONNECT  HTTP/1.0
+CONNECT /trips HTTP/
+BREW /health http/1.1
+PUT /bookings? HTTP/1.2
+HEAD /routes/125 HTTP/1.0
+PUT /trips HTTP/1.1
+GET  HTTP/1.2
+PUT /?&q HTTP/1.0
+OPTIONS /trips/42 
+DELETE /health?q HTTP/1.0
+GET /health HTTP/1.0
+OPTIONS /bookings http/1.1
+ trips HTTP/1.2
+GET /routes/125?a=1&a=1&seat=3 HTTP/1.0
+PATCH trips?seat=3&q&a=1&seat=3 
+OPTIONS /trips/42?&q&q&seat=3 
+OPTIONS / HTTP/1.0
+PUT / HTTP/1.2
+GET /routes/125 HTTP/2.0
+get  /routes/125?  HTTP/2.0
+CONNECT /bookings?&& HTTP/1.2
+DELETE  HTTP/2.0
+POST /?q&q&seat=3& HTTP/1.1
+ /bookings/9001?seat=3&date=2026-11-02 http/1.1
+HEAD /hello/Wanjiku HTTP/
+GET /bookings HTTP/2.0
+PATCH /hello/Wanjiku HTTP/2.0
+get /hello/Wanjiku HTTP/1.1
+ /bookings?date=2026-11-02& HTTP/1.2
+PATCH /trips HTTP/2.0
+PATCH /? 
+POST /hello/Wanjiku 
+PUT /bookings/9001 HTTP/1.1
+POST /bookings/9001 
+get /trips HTTP/1.0
+POST / HTTP/2.0
+OPTIONS /trips HTTP/2.0
+DELETE /bookings/9001 HTTP/
+get /trips/42?seat=3&a=1 HTTP/1.2
+GET / http/1.1
+PUT /hello/Wanjiku 
+CONNECT /trips/42?q HTTP/1.1
+BREW /health 
+PATCH  trips  HTTP/1.2
+ /bookings/9001 HTTP/
+DELETE  HTTP/
+PUT /routes/125 HTTP/2.0
+POST /hello/Wanjiku HTTP/1.0
+ /bookings HTTP/1.1
+OPTIONS /bookings/9001 HTTP/
+PUT /routes/125? HTTP/1.2
+BREW  HTTP/1.0
+DELETE trips? HTTP/
+get /bookings?&a=1&seat=3&q HTTP/
+PUT /bookings/9001?a=1&date=2026-11-02 http/1.1
+BREW trips HTTP/1.2
+PATCH /bookings HTTP/1.0
+BREW trips? HTTP/1.1
+PUT /trips/42 http/1.1
+ /health?seat=3 HTTP/1.2
+CONNECT /bookings/9001?seat=3&date=2026-11-02 HTTP/1.0
+PATCH /routes/125 HTTP/2.0
+get /routes/125?&&date=2026-11-02& 
+DELETE trips 
+HEAD /hello/Wanjiku?q&a=1 HTTP/
+ /?q http/1.1
+get /hello/Wanjiku http/1.1
+get /routes/125 HTTP/1.1
+PUT /bookings HTTP/1.2
+ / HTTP/1.1
+get /trips/42 HTTP/1.1
+POST /health HTTP/1.1
+CONNECT /health HTTP/
+CONNECT /bookings?date=2026-11-02 HTTP/1.1
+PATCH /health HTTP/1.1
+HEAD /hello/Wanjiku http/1.1
+HEAD /bookings/9001?q&a=1 
+PUT /routes/125 HTTP/1.1
+ /routes/125 HTTP/1.2
+DELETE / HTTP/1.0
+PATCH /hello/Wanjiku?&seat=3 HTTP/2.0
+POST  /routes/125  HTTP/1.0
+POST /hello/Wanjiku HTTP/1.2
+ trips 
+PATCH /health HTTP/1.1
+DELETE /trips/42 HTTP/
+POST /?a=1&a=1&q HTTP/
+BREW /hello/Wanjiku HTTP/1.2
+DELETE /trips/42?date=2026-11-02&a=1 HTTP/1.2
+CONNECT /routes/125 HTTP/1.0
+BREW /trips/42?a=1&q HTTP/1.1
+HEAD /hello/Wanjiku 
+CONNECT /trips/42 HTTP/2.0
+POST trips 
+OPTIONS  HTTP/1.1
+GET /routes/125 
+get /trips?&a=1&q HTTP/2.0
+BREW /bookings/9001 HTTP/
+ /routes/125 HTTP/2.0
+get trips?date=2026-11-02&&& HTTP/1.2
+BREW /trips/42? HTTP/1.1
+CONNECT  
+PUT  HTTP/1.0
+DELETE /trips http/1.1
+BREW trips HTTP/1.1
+BREW  HTTP/1.1
+PUT / http/1.1
+OPTIONS /?a=1&&& HTTP/
+DELETE /bookings/9001 HTTP/1.0
+CONNECT /?seat=3&seat=3 HTTP/1.0
+PATCH  HTTP/
+BREW /bookings HTTP/
+CONNECT /bookings http/1.1 x
+POST /hello/Wanjiku HTTP/
+POST / HTTP/1.1
+ /bookings?seat=3&seat=3&&date=2026-11-02 HTTP/1.0
+ /?date=2026-11-02& HTTP/1.0
+CONNECT  
+ /trips/42?seat=3&seat=3 HTTP/1.0
+HEAD / HTTP/
+BREW /health HTTP/1.0
+GET /trips HTTP/1.1
+get /routes/125 HTTP/1.0
+PUT /bookings? HTTP/1.0
+PATCH / HTTP/
+CONNECT /bookings/9001?a=1&date=2026-11-02&q& HTTP/1.1
+GET /health?q&seat=3 HTTP/2.0
+PUT /routes/125?date=2026-11-02&q&seat=3 HTTP/1.1
+OPTIONS /routes/125 HTTP/2.0
+get /bookings 
+BREW /bookings/9001 HTTP/1.0
+CONNECT  HTTP/
+BREW /trips 
+POST /health?q&seat=3&a=1 http/1.1 x
+DELETE /health? HTTP/2.0
+ /trips/42?q&date=2026-11-02&seat=3 
+BREW /bookings/9001 HTTP/
+GET /bookings HTTP/1.0
+DELETE /?date=2026-11-02&date=2026-11-02& 
+OPTIONS /trips 
+PUT / HTTP/
+PUT  /bookings/9001  HTTP/2.0
+PATCH trips http/1.1
+POST /hello/Wanjiku HTTP/1.2
+BREW / HTTP/1.1
+GET trips?q http/1.1
+get  http/1.1
+get  
+ /routes/125?date=2026-11-02 http/1.1
+OPTIONS  HTTP/1.0
+OPTIONS  /trips  HTTP/1.1
+PATCH /bookings 
+  HTTP/
+CONNECT /hello/Wanjiku HTTP/1.2
+BREW  HTTP/1.0
+CONNECT /routes/125 http/1.1
+PATCH /bookings/9001 HTTP/1.2 x
+HEAD / HTTP/ x
+BREW trips? HTTP/1.2
+DELETE / HTTP/1.0
+CONNECT /routes/125 HTTP/1.0
+get /bookings HTTP/1.0
+DELETE / HTTP/
+DELETE trips http/1.1
+CONNECT /hello/Wanjiku HTTP/2.0
+HEAD /bookings/9001?&&seat=3& http/1.1
+PUT /routes/125 HTTP/1.1
+CONNECT /hello/Wanjiku?&a=1&q&seat=3 HTTP/1.0
+HEAD /hello/Wanjiku 
+DELETE /bookings HTTP/
+BREW / 
+get /routes/125?seat=3&a=1 
+DELETE /?q&date=2026-11-02 HTTP/
+PATCH /routes/125 HTTP/1.2
+PUT /trips?date=2026-11-02&seat=3&date=2026-11-02&seat=3 http/1.1
+OPTIONS / 
+POST /hello/Wanjiku 
+POST /trips/42 HTTP/1.2
+get /bookings/9001?&seat=3&date=2026-11-02&q HTTP/2.0
+CONNECT /health? HTTP/1.0
+CONNECT  HTTP/ x
+get / http/1.1
+POST /bookings/9001?seat=3&a=1&date=2026-11-02& HTTP/1.0
+CONNECT /bookings?a=1&a=1&a=1&q 
+HEAD  HTTP/2.0 x
+HEAD /hello/Wanjiku?date=2026-11-02&a=1&a=1 HTTP/2.0
+GET /routes/125?q&seat=3&q&date=2026-11-02 HTTP/1.2
+GET /bookings/9001 
+HEAD /routes/125?q&date=2026-11-02& 
+HEAD trips? HTTP/
+HEAD /bookings/9001?seat=3 HTTP/
+get /trips?q http/1.1
+CONNECT /health?q http/1.1
+DELETE /trips? HTTP/2.0
+POST /routes/125 HTTP/1.2
+get  HTTP/1.0
+BREW /hello/Wanjiku? http/1.1
+POST /?q HTTP/
+BREW /health HTTP/1.0
+PUT  http/1.1
+ /routes/125 HTTP/1.1
+DELETE /trips HTTP/1.1 x
+PUT /routes/125 HTTP/2.0
+CONNECT trips?date=2026-11-02&q HTTP/1.1
+PUT /bookings/9001 HTTP/ x
+HEAD /trips?seat=3&date=2026-11-02&a=1&q 
+POST  HTTP/2.0
+PATCH /hello/Wanjiku HTTP/
+DELETE    
+BREW /trips/42 http/1.1
+POST /bookings/9001?q HTTP/2.0
+CONNECT /trips HTTP/2.0
+HEAD /?a=1 
+PATCH  HTTP/1.1
+PUT /routes/125 HTTP/
+CONNECT /? HTTP/
+GET /trips/42?seat=3&q HTTP/1.2
+HEAD /hello/Wanjiku?q&seat=3 HTTP/2.0
+BREW /trips/42 HTTP/2.0
+BREW /bookings?&&date=2026-11-02 HTTP/
+CONNECT /health?date=2026-11-02&q http/1.1
+ /hello/Wanjiku?a=1&date=2026-11-02&a=1 http/1.1
+OPTIONS /bookings?a=1&a=1 HTTP/1.2
+GET /bookings HTTP/1.1
+ /routes/125 HTTP/2.0
+DELETE /hello/Wanjiku? HTTP/1.2
+POST /bookings HTTP/1.0
+PUT /trips/42 
+PATCH /trips?seat=3&q&& HTTP/1.2
+OPTIONS /?seat=3 HTTP/1.2 x
+HEAD /routes/125 HTTP/1.1
+CONNECT / HTTP/2.0
+DELETE /hello/Wanjiku?date=2026-11-02&&a=1 HTTP/1.0
+CONNECT /bookings HTTP/1.0
+PUT /hello/Wanjiku HTTP/2.0
+PUT /health HTTP/1.1
+PUT  trips  http/1.1
+OPTIONS /health?q&date=2026-11-02 HTTP/1.0
+BREW /trips/42?date=2026-11-02&date=2026-11-02&& HTTP/
+HEAD /routes/125? HTTP/1.1
+HEAD /?a=1 HTTP/1.0
+POST /routes/125?q&a=1&date=2026-11-02&date=2026-11-02 HTTP/
+POST /trips? http/1.1 x
+ /hello/Wanjiku http/1.1
+CONNECT /trips/42? HTTP/1.1
+GET /routes/125?date=2026-11-02 
+get /bookings 
+CONNECT  HTTP/2.0
+BREW /hello/Wanjiku HTTP/1.1
+CONNECT /trips? HTTP/1.1
+PUT /routes/125 HTTP/1.0
+CONNECT /trips/42?&seat=3&a=1& HTTP/2.0
+  /trips/42  HTTP/1.2
+CONNECT /hello/Wanjiku?a=1 
+BREW /?seat=3&a=1 
+OPTIONS /trips HTTP/1.0
+GET /bookings HTTP/1.1
+ /bookings/9001?&a=1 http/1.1
+PATCH /trips/42 http/1.1
+PATCH /trips/42?q&date=2026-11-02&seat=3&date=2026-11-02 HTTP/1.2
+DELETE trips HTTP/2.0
+PATCH  
+CONNECT  trips?  HTTP/1.1
+PATCH  HTTP/1.0
+OPTIONS /bookings/9001 
+OPTIONS trips? HTTP/1.2
+BREW trips HTTP/1.1
+DELETE /bookings/9001 HTTP/
+CONNECT trips HTTP/1.1
+get /bookings http/1.1
+POST /bookings/9001? http/1.1
+GET  HTTP/2.0
+PATCH trips?a=1&seat=3&seat=3 
+BREW /trips http/1.1
+ /routes/125 HTTP/1.0
+HEAD trips http/1.1
+PATCH /bookings http/1.1
+HEAD /bookings?seat=3&date=2026-11-02&date=2026-11-02 HTTP/1.2
+PATCH /bookings HTTP/1.2
+PUT /hello/Wanjiku HTTP/
+OPTIONS /hello/Wanjiku http/1.1
+ trips?seat=3&&seat=3 
+CONNECT /routes/125?a=1&date=2026-11-02 HTTP/1.1
+CONNECT /trips/42?a=1&a=1 HTTP/
+get /hello/Wanjiku HTTP/1.0
+ /routes/125 http/1.1
+GET /trips/42?date=2026-11-02 HTTP/1.2
+PUT /hello/Wanjiku? HTTP/1.0
+POST /bookings HTTP/1.2
+PATCH / HTTP/2.0
+BREW /routes/125?seat=3&q HTTP/1.1
+HEAD trips?date=2026-11-02&q&a=1 HTTP/1.1
+PUT /bookings/9001 HTTP/1.0
+CONNECT  HTTP/2.0
+OPTIONS /bookings/9001 HTTP/1.2
+OPTIONS  /?q&date=2026-11-02&a=1  HTTP/1.0
+CONNECT trips HTTP/1.1
+GET /routes/125?seat=3 
+OPTIONS /trips/42 HTTP/1.1
+CONNECT  /  HTTP/2.0
+OPTIONS trips HTTP/
+PATCH /routes/125 HTTP/1.0
+CONNECT /hello/Wanjiku?q HTTP/1.0
+GET  http/1.1
+PATCH trips?a=1&&& HTTP/
+PATCH /health HTTP/1.1
+PATCH /bookings? HTTP/1.2
+POST / 
+PUT /bookings/9001 HTTP/1.2
+PATCH /hello/Wanjiku? HTTP/1.0
+get  HTTP/1.0
+GET /bookings?q&seat=3&&seat=3 HTTP/1.1
+get /hello/Wanjiku HTTP/
+ trips 
+OPTIONS /trips/42 
+get /trips?seat=3 
+OPTIONS trips HTTP/1.2
+ /trips? HTTP/1.1
+get /bookings/9001? HTTP/
+PUT /bookings HTTP/
+DELETE trips HTTP/1.0
+PATCH /bookings/9001 http/1.1
+CONNECT /trips/42? HTTP/1.2
+GET /health HTTP/1.0
+GET /health HTTP/1.2
+HEAD /routes/125?&date=2026-11-02&a=1&seat=3 HTTP/
+PUT /bookings/9001 HTTP/2.0
+get trips HTTP/2.0
+HEAD /hello/Wanjiku?seat=3&seat=3&q HTTP/
+PATCH trips HTTP/
+POST /bookings 
+BREW trips HTTP/1.1
+CONNECT /trips/42? HTTP/
+HEAD  HTTP/2.0
+GET / HTTP/2.0
+PUT trips HTTP/1.1
+CONNECT /bookings http/1.1
+ /bookings/9001 
+OPTIONS / HTTP/1.2
+HEAD trips HTTP/1.0
+CONNECT /trips/42? 
+CONNECT /routes/125?&& HTTP/1.0
+PATCH  HTTP/2.0 x
+DELETE /health http/1.1
+BREW trips?&date=2026-11-02&q HTTP/
+HEAD /routes/125 HTTP/1.2
+BREW /routes/125 HTTP/1.1 x
+HEAD /health?q& HTTP/1.0 x
+PUT  /trips?seat=3&seat=3  HTTP/
+POST / HTTP/
+get /routes/125 HTTP/1.0
+PUT /trips/42 HTTP/1.2
+PATCH /routes/125?&a=1&& HTTP/1.0
+ /routes/125?seat=3 http/1.1
+get /trips/42 HTTP/1.0
+get /health HTTP/2.0
+PATCH  /routes/125  HTTP/2.0
+OPTIONS /hello/Wanjiku HTTP/1.0
+PATCH /bookings/9001 HTTP/
+GET trips? HTTP/1.2
+POST /bookings?seat=3&date=2026-11-02 HTTP/1.0
+ /bookings? HTTP/2.0
+BREW  /bookings/9001  HTTP/2.0
+get / HTTP/1.1
+ / HTTP/1.2
+CONNECT /bookings HTTP/1.2
+PUT trips?date=2026-11-02&seat=3 HTTP/1.1
+CONNECT trips HTTP/1.0
+ /trips HTTP/1.1
+PATCH /trips 
+get /trips/42? HTTP/
+POST /bookings HTTP/1.2
+POST /trips?seat=3&q&a=1&q http/1.1
+PUT /routes/125?a=1&seat=3&a=1&date=2026-11-02 HTTP/1.1
+ /bookings HTTP/
+POST  HTTP/1.0
+ /hello/Wanjiku? HTTP/1.0
+CONNECT /routes/125?a=1&&date=2026-11-02 http/1.1
+OPTIONS /trips/42 HTTP/1.1
+PUT  /bookings/9001  HTTP/2.0
+PUT  HTTP/1.0
+GET /health?q&a=1&&q http/1.1
+HEAD /trips/42? HTTP/1.1
+ /bookings HTTP/1.1
+ /?seat=3 http/1.1
+PATCH  HTTP/
+HEAD /bookings/9001 HTTP/1.1
+GET /trips/42 HTTP/1.1 x
+OPTIONS /routes/125 HTTP/
+BREW /trips?q&date=2026-11-02 
+HEAD  
+BREW /bookings?a=1 HTTP/1.0 x
+BREW    
+POST /routes/125 HTTP/
+POST / HTTP/1.0
+CONNECT /trips HTTP/1.2
+get  HTTP/2.0
+HEAD /health?seat=3&a=1 HTTP/1.0
+DELETE /health 
+get /health? HTTP/2.0
+get /trips HTTP/1.1
+CONNECT /bookings?a=1&seat=3&a=1 HTTP/1.1
+CONNECT /trips/42?q&& HTTP/1.2
+get /trips 
+POST /trips HTTP/1.2
+DELETE trips HTTP/1.0
+get /hello/Wanjiku?seat=3&q&seat=3 http/1.1
+HEAD /bookings?seat=3&a=1&&date=2026-11-02 HTTP/
+DELETE /hello/Wanjiku?date=2026-11-02 
+PUT / HTTP/1.2
+GET /routes/125 
+DELETE /?q HTTP/ x
+OPTIONS /trips/42 http/1.1
+ /bookings?seat=3&q&date=2026-11-02&seat=3 http/1.1
+get /bookings HTTP/
+PATCH / HTTP/2.0
+DELETE /hello/Wanjiku?a=1&a=1&date=2026-11-02& HTTP/1.2
+PUT  /trips  HTTP/
+DELETE / HTTP/1.1
+GET /trips/42?seat=3&date=2026-11-02&q HTTP/2.0
+BREW /bookings? HTTP/1.0
+ /routes/125 http/1.1 x
+CONNECT  trips  HTTP/2.0
+POST /hello/Wanjiku 
+PUT /routes/125?q&seat=3 http/1.1
+OPTIONS /health?seat=3&& HTTP/1.2 x
+PATCH /health HTTP/1.0
+HEAD  HTTP/1.0
+CONNECT /trips/42?a=1&a=1&date=2026-11-02&a=1 HTTP/1.2
+GET / HTTP/2.0
+PUT /bookings/9001? HTTP/1.0
+OPTIONS trips HTTP/
+get /bookings/9001 HTTP/2.0
+get  HTTP/1.0
+CONNECT trips?a=1&&q HTTP/1.0
+ /hello/Wanjiku?seat=3 http/1.1
+HEAD  http/1.1
+HEAD /hello/Wanjiku HTTP/1.2
+OPTIONS /trips/42 HTTP/1.1
+GET /hello/Wanjiku HTTP/1.2
+POST /hello/Wanjiku?a=1&seat=3&q&q  x
+GET trips?date=2026-11-02&date=2026-11-02 HTTP/2.0
+DELETE /trips/42 HTTP/1.2
+POST /hello/Wanjiku?date=2026-11-02 http/1.1
+get /hello/Wanjiku?q HTTP/1.0
+HEAD /trips/42 http/1.1
+POST /routes/125?seat=3&a=1 HTTP/1.0
+CONNECT /bookings/9001?seat=3&seat=3 
+POST /trips 
+OPTIONS /bookings/9001 HTTP/ x
+DELETE /bookings? HTTP/2.0
+GET /bookings HTTP/
+GET  HTTP/1.0
+DELETE /trips/42 http/1.1
+GET /hello/Wanjiku HTTP/2.0
+PATCH /hello/Wanjiku? http/1.1
+OPTIONS  /  HTTP/1.0
+DELETE /trips/42?seat=3&q&q http/1.1
+OPTIONS /bookings/9001 http/1.1
+PUT /health HTTP/1.1
+DELETE /hello/Wanjiku?q&seat=3 HTTP/ x
+HEAD /bookings/9001?q& HTTP/1.0
+GET  HTTP/1.2
+PATCH /trips?a=1 HTTP/1.0
+PATCH /trips?&a=1&q&a=1 HTTP/2.0
+POST /trips?&date=2026-11-02&q HTTP/
+ /trips 
+GET /health?date=2026-11-02&seat=3&seat=3 
+POST  HTTP/1.2
+get /health?seat=3&& HTTP/1.1
+PUT /hello/Wanjiku http/1.1
+BREW / HTTP/1.1 x
+HEAD /routes/125 
+DELETE  HTTP/1.0
+POST /bookings/9001 
+PATCH  http/1.1
+ /bookings/9001 HTTP/1.2
+HEAD /trips? HTTP/2.0
+HEAD /health?a=1 HTTP/1.2
+HEAD /bookings HTTP/1.1
+GET /bookings/9001 
+get /health?date=2026-11-02 HTTP/1.2
+DELETE /?date=2026-11-02 HTTP/1.1
+CONNECT /trips? HTTP/1.0
+CONNECT /bookings http/1.1
+CONNECT /routes/125?date=2026-11-02& HTTP/
+HEAD /hello/Wanjiku?date=2026-11-02 HTTP/1.0
+BREW /hello/Wanjiku http/1.1
+DELETE /bookings HTTP/
+PUT trips HTTP/1.0
+DELETE /hello/Wanjiku? HTTP/1.2
+CONNECT /trips? HTTP/1.0
+PATCH /routes/125?&q&date=2026-11-02 HTTP/1.1
+get /routes/125 HTTP/1.2
+POST /hello/Wanjiku? 
+POST /routes/125?date=2026-11-02 HTTP/ x
+BREW / HTTP/1.1
+CONNECT /bookings/9001 HTTP/1.2
+PATCH /health?&& HTTP/1.1
+POST  HTTP/1.2
+OPTIONS /trips/42 HTTP/1.1
+OPTIONS /hello/Wanjiku? HTTP/1.2
+PUT /?seat=3&seat=3&date=2026-11-02&date=2026-11-02 HTTP/1.1
+get /bookings/9001 HTTP/2.0
+ /trips HTTP/2.0
+DELETE /bookings 
+PUT /bookings/9001?seat=3&seat=3&a=1 HTTP/1.0
+get /hello/Wanjiku HTTP/2.0
+get /?seat=3&date=2026-11-02 HTTP/1.2
+get /trips/42?&&q&date=2026-11-02 HTTP/2.0
+CONNECT /bookings HTTP/
+HEAD /routes/125 HTTP/
+ /hello/Wanjiku?a=1&a=1&q 
+  /bookings/9001  http/1.1
+PATCH /bookings/9001?seat=3 HTTP/
+GET /trips http/1.1
+HEAD /? http/1.1
+PUT /bookings/9001 HTTP/2.0
+PUT /?q&date=2026-11-02 HTTP/1.1
+CONNECT /health HTTP/2.0
+OPTIONS  HTTP/1.1
+get trips?date=2026-11-02 HTTP/
+HEAD /?&q&&q http/1.1
+OPTIONS /hello/Wanjiku HTTP/ x
+CONNECT /health?date=2026-11-02&a=1&&date=2026-11-02 HTTP/1.1
+DELETE /trips? HTTP/ x
+PATCH  HTTP/1.2
+PUT /trips/42?&a=1&date=2026-11-02 http/1.1
+OPTIONS / HTTP/1.1
+GET  HTTP/1.2
+CONNECT /bookings/9001 HTTP/1.0
+get trips?&a=1& HTTP/1.1
+get /hello/Wanjiku?a=1&a=1& HTTP/1.0
+CONNECT  /trips/42  HTTP/1.2
+ /routes/125 
+HEAD /health?q&date=2026-11-02&a=1 
+PATCH /bookings? HTTP/1.0
+HEAD /trips/42 http/1.1
+GET /hello/Wanjiku 
+OPTIONS /trips/42 HTTP/1.0
+  
+HEAD /bookings/9001 HTTP/1.0
+POST /bookings?a=1&seat=3&date=2026-11-02 http/1.1
+ /hello/Wanjiku?a=1&&date=2026-11-02 HTTP/2.0
+GET /trips/42 
+PUT /bookings/9001 HTTP/1.1
+GET /?seat=3&date=2026-11-02&seat=3 HTTP/1.0
+PATCH /routes/125?seat=3&q HTTP/
+get /health?date=2026-11-02&q& HTTP/1.1
+POST /health HTTP/2.0
+CONNECT  
+DELETE /trips/42 HTTP/
+DELETE /bookings/9001 HTTP/1.1
+OPTIONS /bookings HTTP/2.0
+POST / HTTP/2.0
+DELETE /bookings/9001 HTTP/
+PATCH /health HTTP/1.1
+PUT /bookings 
+PUT /trips HTTP/2.0
+BREW trips 
+CONNECT /routes/125 HTTP/2.0
+PATCH /hello/Wanjiku HTTP/2.0
+POST /hello/Wanjiku HTTP/
+DELETE trips HTTP/1.1 x
+PATCH /health HTTP/2.0
+get /bookings/9001?seat=3&seat=3 http/1.1
+OPTIONS trips?&seat=3&q&a=1 HTTP/1.0
+GET /bookings HTTP/1.1
+PUT /hello/Wanjiku?date=2026-11-02 HTTP/1.2
+HEAD /trips/42?q&date=2026-11-02&date=2026-11-02&seat=3 HTTP/1.2
+DELETE /hello/Wanjiku HTTP/
+DELETE /bookings HTTP/1.0
+GET /hello/Wanjiku HTTP/1.1 x
+HEAD /bookings  x
+get /health HTTP/1.1
+POST /bookings/9001 HTTP/1.1
+PUT /routes/125 http/1.1
+get /routes/125?date=2026-11-02&date=2026-11-02 HTTP/
+DELETE /bookings?seat=3&a=1&a=1 HTTP/
+HEAD /trips/42 
+CONNECT trips?date=2026-11-02&&a=1& HTTP/1.1
+HEAD /health HTTP/1.1
+OPTIONS /health http/1.1
+PUT /trips HTTP/1.1
+OPTIONS /trips/42 HTTP/1.0
+DELETE /?a=1&a=1 HTTP/1.2
+ /health 
+get /routes/125 http/1.1
+PUT /routes/125? 
+PUT /health?date=2026-11-02 HTTP/
+ /routes/125? http/1.1
+OPTIONS /health HTTP/2.0
+GET /bookings?&date=2026-11-02& HTTP/2.0
+PUT / HTTP/1.1
+BREW /health http/1.1
+BREW trips?&&date=2026-11-02&seat=3 HTTP/1.2
+HEAD /health? HTTP/1.2
+POST trips HTTP/
+ /routes/125 HTTP/
+GET /bookings HTTP/1.2
+POST /hello/Wanjiku? HTTP/1.0
+get  /bookings  HTTP/2.0
+PUT  HTTP/
+CONNECT /trips/42 http/1.1
+GET /hello/Wanjiku? HTTP/1.1
+get trips? HTTP/1.0
+PUT  HTTP/1.1
+ /bookings/9001 HTTP/2.0
+HEAD trips HTTP/2.0
+get /hello/Wanjiku http/1.1
+HEAD /bookings/9001?date=2026-11-02& HTTP/1.1
+BREW /routes/125 HTTP/2.0
+get /bookings http/1.1
+DELETE /health HTTP/2.0
+HEAD /bookings HTTP/1.2
+GET /trips?a=1&a=1& HTTP/2.0
+OPTIONS  http/1.1
+get /trips/42 
+CONNECT /routes/125?q&a=1&q HTTP/1.2
+GET trips? 
+PATCH /trips/42 http/1.1
+CONNECT /bookings/9001?a=1 HTTP/
+CONNECT /trips HTTP/
+DELETE /bookings?a=1 HTTP/1.1
+PUT /trips 
+GET /routes/125 
+HEAD /routes/125 HTTP/1.2
+ /bookings? HTTP/ x
+DELETE /hello/Wanjiku http/1.1
+DELETE /hello/Wanjiku 
+PATCH /bookings/9001 http/1.1
+DELETE /trips/42? HTTP/1.0
+get /bookings/9001 HTTP/1.2
+CONNECT  HTTP/1.0
+DELETE /routes/125? HTTP/1.2
+PUT trips HTTP/2.0
+GET /hello/Wanjiku HTTP/1.0
+GET /hello/Wanjiku?seat=3 http/1.1
+POST /trips/42? HTTP/1.1
+get /hello/Wanjiku? 
+get /bookings/9001?seat=3&q&date=2026-11-02 
+GET /bookings/9001 HTTP/1.1
+PATCH /trips?&date=2026-11-02& 
+HEAD trips HTTP/1.1
+PATCH /bookings HTTP/
+OPTIONS /hello/Wanjiku HTTP/1.0
+CONNECT /bookings/9001? http/1.1
+CONNECT trips? HTTP/2.0
+PATCH /health?&a=1 HTTP/2.0
+POST /trips/42 HTTP/1.1
+OPTIONS /hello/Wanjiku?q&&seat=3 HTTP/2.0
+GET /hello/Wanjiku? HTTP/1.2
+HEAD /trips HTTP/1.0
+PATCH /?q HTTP/
+DELETE  HTTP/1.0
+GET /routes/125 
+HEAD /routes/125?date=2026-11-02 HTTP/1.2
+OPTIONS /trips HTTP/
+GET /health HTTP/1.0
+get trips HTTP/1.0
+PATCH /routes/125 HTTP/2.0
+PATCH /bookings HTTP/1.1
+GET /bookings http/1.1
+HEAD  HTTP/1.0
+ /routes/125 http/1.1
+PUT  HTTP/1.0
+GET /bookings http/1.1 x
+HEAD  http/1.1
+PUT /routes/125 HTTP/1.0
+CONNECT /hello/Wanjiku HTTP/2.0
+DELETE /bookings HTTP/
+HEAD /trips?q HTTP/1.1
+get  HTTP/1.2
+PUT trips?a=1&a=1 
+CONNECT /trips HTTP/1.1
+ /hello/Wanjiku HTTP/1.0
+OPTIONS /health HTTP/2.0
+CONNECT /health? 
+BREW /bookings 
+GET trips HTTP/2.0
+get /hello/Wanjiku HTTP/
+get trips HTTP/2.0
+CONNECT /health HTTP/2.0
+PATCH /trips http/1.1
+get /bookings/9001 HTTP/1.2
+DELETE /trips  x
+ /hello/Wanjiku?seat=3& HTTP/1.2
+DELETE /routes/125 HTTP/
+GET /health HTTP/1.1
+PATCH /routes/125 HTTP/1.1
+BREW /trips/42 
+POST trips http/1.1
+PUT /trips/42 HTTP/1.2
+get /routes/125?a=1 HTTP/1.0
+GET /?seat=3&&seat=3 
+PATCH /bookings/9001 
+BREW /bookings?seat=3& HTTP/2.0
+PUT / HTTP/2.0
+ trips 
+HEAD /bookings/9001 HTTP/
+DELETE  HTTP/1.0
+GET /trips?a=1&q&seat=3 HTTP/1.2
+CONNECT  http/1.1
+CONNECT /?q&date=2026-11-02&seat=3 http/1.1
+OPTIONS /bookings/9001 HTTP/
+DELETE /trips/42 
+DELETE  HTTP/1.1
+ /health HTTP/1.0
+ trips?a=1 HTTP/1.2
+POST /bookings/9001? HTTP/1.0
+BREW /hello/Wanjiku http/1.1
+ /hello/Wanjiku HTTP/2.0
+OPTIONS /trips? HTTP/1.2
+DELETE /health?date=2026-11-02&q&q&date=2026-11-02 HTTP/1.1
+POST /bookings HTTP/1.2
+OPTIONS /trips/42 
+CONNECT /bookings HTTP/2.0
+PUT /trips/42 HTTP/2.0
+BREW /trips/42 HTTP/
+GET / HTTP/2.0
+CONNECT /?seat=3 HTTP/1.2
+GET /trips HTTP/2.0
+OPTIONS trips HTTP/1.2
+POST /bookings?seat=3 
+  HTTP/1.1
+HEAD  HTTP/1.1
+ /routes/125 HTTP/1.2
+DELETE /bookings http/1.1
+get /health? HTTP/1.1
+PATCH / HTTP/
+PATCH /trips?date=2026-11-02& http/1.1
+DELETE /health?date=2026-11-02&&a=1&date=2026-11-02 HTTP/1.2
+POST /bookings HTTP/
+PATCH /health http/1.1
+HEAD /hello/Wanjiku HTTP/2.0
+CONNECT /hello/Wanjiku HTTP/1.1
+GET trips HTTP/1.0
+get  /health  HTTP/2.0
+DELETE /bookings/9001 http/1.1
+OPTIONS /trips/42 HTTP/1.1
+get /health HTTP/1.0
+BREW /bookings 
+GET /trips/42 HTTP/
+BREW /hello/Wanjiku HTTP/
+PATCH /bookings/9001?a=1&&seat=3 http/1.1
+HEAD /bookings/9001? HTTP/2.0
+get  http/1.1
+get /health HTTP/1.1
+POST / HTTP/2.0
+GET /bookings/9001 HTTP/
+OPTIONS /health? HTTP/2.0
+ /trips http/1.1
+HEAD / http/1.1
+POST /trips/42 HTTP/1.2
+OPTIONS /?seat=3 HTTP/1.2
+HEAD /health http/1.1
+GET trips http/1.1
+PATCH trips HTTP/1.2
+PATCH trips HTTP/
+BREW /bookings?&date=2026-11-02 HTTP/
+BREW /trips? HTTP/1.0
+OPTIONS /health 
+OPTIONS trips http/1.1
+ /health HTTP/1.0
+DELETE  
+DELETE /trips/42?date=2026-11-02&seat=3 HTTP/1.0
+PATCH /bookings 
+get /bookings/9001 
+CONNECT /health HTTP/
+HEAD /bookings/9001?date=2026-11-02&q&a=1&q HTTP/1.0
+HEAD /?a=1&q&q HTTP/1.2
+PATCH trips?&date=2026-11-02 
+  HTTP/1.1
+CONNECT /trips?q&&seat=3&date=2026-11-02 http/1.1
+PUT  /bookings/9001  
+HEAD /health? HTTP/1.1
+BREW /hello/Wanjiku 
+get /bookings http/1.1
+PUT /hello/Wanjiku HTTP/2.0 x
+OPTIONS /hello/Wanjiku HTTP/2.0
+POST /trips/42 HTTP/1.0
+ / http/1.1
+PUT /bookings HTTP/1.1
+OPTIONS /bookings HTTP/
+BREW /hello/Wanjiku HTTP/
+GET /health?&q&a=1&q HTTP/1.1 x
+OPTIONS /bookings/9001 http/1.1
+CONNECT /bookings/9001?q&a=1&a=1 HTTP/
+get trips?seat=3&date=2026-11-02 HTTP/2.0
+DELETE /bookings/9001 http/1.1 x
+BREW /trips/42 HTTP/2.0
+DELETE /health http/1.1
+CONNECT trips http/1.1
+GET /trips HTTP/1.0
+BREW /?seat=3 HTTP/1.0
+PATCH  /bookings?date=2026-11-02  
+HEAD  HTTP/2.0
+PUT /health HTTP/2.0
+OPTIONS /bookings? HTTP/ x
+CONNECT /routes/125 HTTP/1.2
+OPTIONS /trips?q&a=1&&q http/1.1
+PUT /health 
+PATCH /?seat=3&seat=3&date=2026-11-02&seat=3 HTTP/
+HEAD  HTTP/1.1
+DELETE /hello/Wanjiku 
+HEAD /hello/Wanjiku HTTP/1.2
+ /?seat=3&seat=3 HTTP/1.2
+PATCH /hello/Wanjiku?date=2026-11-02 HTTP/
+  HTTP/1.2
+HEAD trips HTTP/2.0
+OPTIONS /bookings/9001 HTTP/1.2
+POST /? HTTP/1.1
+get /health HTTP/1.1
+POST /trips/42 HTTP/1.1 x
+OPTIONS / HTTP/
+CONNECT /trips HTTP/
+PATCH /hello/Wanjiku HTTP/1.2
+POST  HTTP/
+OPTIONS /trips HTTP/1.0
+PUT  HTTP/1.0 x
+  HTTP/2.0
+PUT /trips?a=1&date=2026-11-02&&a=1 HTTP/2.0
+BREW /trips HTTP/1.2
+POST trips?&seat=3&date=2026-11-02&q HTTP/1.1
+ /bookings HTTP/
+HEAD  /bookings  HTTP/2.0
+POST /trips HTTP/1.0
+DELETE /hello/Wanjiku?&seat=3&q HTTP/1.2
+HEAD  http/1.1
+ /hello/Wanjiku?seat=3&seat=3 http/1.1
+get trips HTTP/1.2
+CONNECT /trips/42? 
+PATCH trips HTTP/2.0
+PUT /health? 
+get /trips HTTP/1.1
+  HTTP/1.1 x
+DELETE /bookings/9001? HTTP/1.2
+POST /bookings http/1.1
+BREW /trips/42 http/1.1
+ /trips/42?seat=3 HTTP/1.0
+ / HTTP/1.2
+BREW /hello/Wanjiku?a=1  x
+OPTIONS /routes/125 HTTP/1.1
+POST /trips/42 HTTP/1.2
+DELETE /hello/Wanjiku 
+get /trips/42 http/1.1
+OPTIONS  
+PUT /trips/42 HTTP/1.1
+CONNECT /routes/125 HTTP/1.0
+OPTIONS /health HTTP/1.1
+DELETE /bookings/9001 
+DELETE /trips/42 http/1.1
+DELETE /bookings/9001 HTTP/1.0
+ /health HTTP/1.1
+get /bookings/9001 HTTP/ x
+DELETE  HTTP/
+BREW /trips/42?a=1 HTTP/1.1
+GET  HTTP/1.2
+PUT /routes/125 HTTP/2.0
+PUT /bookings/9001 HTTP/1.0
+get /bookings/9001 HTTP/
+PUT /trips/42?q&a=1&a=1&date=2026-11-02 HTTP/1.0
+PATCH /routes/125?a=1&q&q HTTP/
+ /trips?&date=2026-11-02&seat=3 HTTP/1.0
+OPTIONS /trips HTTP/1.2
+GET /bookings 
+DELETE trips HTTP/
+ /trips/42?date=2026-11-02 HTTP/1.0
+get /bookings/9001 HTTP/1.1
+GET /bookings/9001 HTTP/1.2
+PUT /bookings/9001 HTTP/2.0
+GET /routes/125?date=2026-11-02&q& HTTP/
+get /bookings 
+DELETE /trips/42? http/1.1
+OPTIONS  HTTP/1.2
+PATCH /trips HTTP/1.1
+PATCH / HTTP/1.0
+PATCH /health HTTP/
+BREW /bookings/9001?&&date=2026-11-02 HTTP/1.0
+DELETE trips HTTP/2.0
+HEAD /bookings/9001?q&&seat=3&seat=3 
+DELETE /bookings?a=1&a=1 
+PUT /trips http/1.1
+DELETE trips http/1.1
+BREW /health? http/1.1 x
+ /hello/Wanjiku?q&date=2026-11-02&a=1&seat=3 
+PUT / http/1.1 x
+POST / HTTP/1.1
+get /trips http/1.1
+get /?a=1 HTTP/1.0
+CONNECT /?date=2026-11-02&date=2026-11-02&q&date=2026-11-02 HTTP/2.0
+DELETE /routes/125?a=1 HTTP/1.1
+OPTIONS /trips/42?seat=3& HTTP/1.2
+CONNECT /routes/125  x
+OPTIONS /bookings? 
+ /trips HTTP/1.0
+PUT trips?a=1&a=1&q 
+ /bookings/9001 HTTP/1.2
+BREW /trips/42 HTTP/1.2
+GET  HTTP/ x
+OPTIONS / HTTP/1.1
+CONNECT  
+OPTIONS   x
+POST /health http/1.1
+ /trips? 
+get /bookings/9001? HTTP/1.1
+HEAD /?&q HTTP/1.0
+get /health?date=2026-11-02&a=1&date=2026-11-02 HTTP/2.0
+PUT  
+POST /trips http/1.1
+get /routes/125 
+PATCH  HTTP/1.0
+OPTIONS /trips?date=2026-11-02 http/1.1
+DELETE /?&seat=3&seat=3 
+HEAD /health?seat=3&q&a=1&date=2026-11-02 HTTP/2.0
+BREW /health?q&seat=3& HTTP/1.1
+CONNECT /trips?date=2026-11-02 
+OPTIONS /hello/Wanjiku? HTTP/1.2
+POST trips?q&date=2026-11-02&q& http/1.1
+get /?a=1 http/1.1
+ /trips 
+POST /hello/Wanjiku http/1.1 x
+PUT /trips HTTP/1.0
+HEAD trips http/1.1
+HEAD /bookings http/1.1
+BREW /routes/125 
+GET /trips HTTP/1.0
+OPTIONS /?a=1&&& HTTP/1.0
+get /trips/42? http/1.1
+DELETE /hello/Wanjiku HTTP/1.2
+OPTIONS /bookings HTTP/2.0
+HEAD /trips?seat=3&date=2026-11-02 HTTP/2.0
+POST /bookings/9001?&q HTTP/
+HEAD /?a=1&a=1&&seat=3 
+ /bookings? http/1.1
+HEAD  HTTP/1.2
+PUT trips HTTP/
+ /bookings/9001?date=2026-11-02&a=1&&date=2026-11-02 http/1.1
+ /routes/125 http/1.1
+OPTIONS /routes/125 HTTP/1.0
+PATCH /trips HTTP/
+OPTIONS /hello/Wanjiku HTTP/1.1
+get /hello/Wanjiku HTTP/
+PUT /routes/125 http/1.1
+CONNECT /trips/42 
+PUT /trips 
+ /? HTTP/
+get / HTTP/2.0
+POST /health 
+ trips HTTP/1.2 x
+get /bookings/9001 http/1.1
+BREW /?date=2026-11-02 http/1.1
+POST /bookings HTTP/
+POST /trips HTTP/1.0 x
+HEAD  HTTP/1.0
+get /routes/125 
+ /hello/Wanjiku 
+BREW /routes/125 HTTP/1.0
+PUT  HTTP/1.1
+PUT  HTTP/
+CONNECT /bookings/9001 http/1.1
+OPTIONS /bookings http/1.1
+HEAD trips HTTP/1.0
+CONNECT /trips http/1.1
+HEAD /bookings?a=1& HTTP/1.0
+HEAD / HTTP/1.2
+HEAD /routes/125?a=1&a=1 HTTP/1.2
+HEAD /health 
+PATCH /trips/42 HTTP/1.1
+GET /trips HTTP/1.1
+DELETE /bookings/9001?q HTTP/2.0
+CONNECT trips?q&date=2026-11-02&&q http/1.1
+get /hello/Wanjiku HTTP/1.0
+PUT /bookings? HTTP/1.1
+PUT /hello/Wanjiku http/1.1
+DELETE /bookings?date=2026-11-02&seat=3& HTTP/1.0
+BREW /bookings/9001? 
+GET /hello/Wanjiku HTTP/
+OPTIONS /bookings/9001?a=1&seat=3 
+DELETE  HTTP/
+ trips HTTP/1.1 x
+BREW /routes/125 HTTP/2.0
+OPTIONS trips HTTP/2.0
+BREW /trips HTTP/2.0
+OPTIONS /trips/42 http/1.1
+CONNECT /hello/Wanjiku http/1.1 x
+GET /health 
+CONNECT / HTTP/1.2
+CONNECT  /bookings  http/1.1
+CONNECT /bookings/9001 HTTP/2.0
+HEAD /bookings/9001?a=1&q 
+DELETE /routes/125 HTTP/1.0
+POST trips HTTP/1.2
+get trips HTTP/1.1
+ trips HTTP/1.2
+CONNECT / http/1.1
+ /trips/42? HTTP/2.0
+BREW trips 
+DELETE /health?&q&a=1&a=1 HTTP/1.1
+DELETE /health?date=2026-11-02&date=2026-11-02&date=2026-11-02&q HTTP/1.1
+DELETE /hello/Wanjiku? HTTP/2.0
+BREW  HTTP/1.2
+CONNECT trips http/1.1
+GET /bookings/9001 
+POST  HTTP/1.2
+get /health?seat=3 http/1.1
+PUT trips? 
+DELETE /trips/42 http/1.1
+ trips?seat=3 HTTP/
+ /bookings HTTP/
+PUT /routes/125?&seat=3 HTTP/2.0
+PATCH  HTTP/
+GET / HTTP/1.2
+CONNECT /routes/125? HTTP/1.1
+OPTIONS /health?seat=3&q&a=1 HTTP/1.2
+POST trips? HTTP/1.2
+get /trips?&&a=1& HTTP/1.1
+BREW /trips? 
+GET /health HTTP/1.2
+CONNECT /trips HTTP/
+OPTIONS /bookings/9001 HTTP/2.0
+HEAD  HTTP/
+PATCH /hello/Wanjiku HTTP/2.0
+ /trips HTTP/
+ trips http/1.1
+PUT /trips/42?seat=3&&a=1& HTTP/1.1
+DELETE /?a=1& 
+  /bookings/9001  HTTP/
+GET /bookings?seat=3 http/1.1
+ /routes/125 
+OPTIONS /hello/Wanjiku HTTP/2.0
+HEAD /health HTTP/1.0
+BREW    
+ /trips?seat=3&date=2026-11-02 HTTP/1.1
+get /hello/Wanjiku? 
+DELETE trips?date=2026-11-02 
+OPTIONS /bookings HTTP/1.1
+PATCH /bookings? http/1.1
+HEAD /health? HTTP/1.2
+PATCH /trips/42 http/1.1
+HEAD /hello/Wanjiku HTTP/1.0
+HEAD /trips/42? HTTP/1.0
+PATCH /health HTTP/1.0
+PATCH  http/1.1
+GET /trips HTTP/ x
+BREW trips?seat=3&a=1&& HTTP/
+PATCH /hello/Wanjiku?date=2026-11-02&&a=1 HTTP/1.1
+CONNECT trips HTTP/
+BREW /health HTTP/
+PUT /trips HTTP/
+DELETE trips 
+CONNECT / HTTP/2.0
+POST /trips/42 HTTP/1.1
+HEAD /trips http/1.1
+CONNECT /trips/42 HTTP/
+HEAD  http/1.1
+PUT /bookings/9001?date=2026-11-02&q&date=2026-11-02 HTTP/2.0 x
+HEAD /bookings http/1.1
+OPTIONS /bookings/9001?seat=3 HTTP/2.0 x
+DELETE /bookings/9001 
+GET /bookings HTTP/
+PUT  HTTP/1.2
+OPTIONS /routes/125?q&a=1&q& HTTP/1.2
+DELETE / HTTP/2.0
+CONNECT /bookings?&&a=1&a=1 http/1.1
+CONNECT /bookings/9001?&date=2026-11-02& HTTP/
+PUT /hello/Wanjiku? 
+DELETE /bookings?&date=2026-11-02&date=2026-11-02&date=2026-11-02 HTTP/
+OPTIONS /trips/42? HTTP/1.0
+BREW /bookings HTTP/1.1
+PUT trips HTTP/1.1
+PATCH /bookings? HTTP/1.0
+HEAD /health?date=2026-11-02&q&q HTTP/1.2
+POST  /bookings/9001?  HTTP/2.0
+HEAD /routes/125 
+OPTIONS / HTTP/1.2
+PATCH /trips/42 HTTP/1.0
+GET /health?seat=3&&date=2026-11-02&date=2026-11-02 HTTP/1.0
+ /bookings/9001 HTTP/1.2
+ /trips HTTP/1.2
+  HTTP/
+PUT /?date=2026-11-02&&&date=2026-11-02 HTTP/1.1
+DELETE /hello/Wanjiku HTTP/1.1
+PUT /hello/Wanjiku 
+BREW /trips HTTP/1.2
+POST /hello/Wanjiku?q&date=2026-11-02 HTTP/1.0
+POST /routes/125 HTTP/1.1
+PATCH /hello/Wanjiku HTTP/
+PATCH /trips 
+GET  HTTP/1.1
+CONNECT trips HTTP/1.0
+OPTIONS  HTTP/1.1
+DELETE  HTTP/1.1
+GET /?seat=3&a=1&q HTTP/1.0
+PUT /trips/42?&q HTTP/1.1
+GET /trips?& http/1.1
+PATCH /health?date=2026-11-02 HTTP/
+OPTIONS /health HTTP/
+ /trips 
+ /health HTTP/1.0
+ /trips/42?seat=3 
+POST  HTTP/1.1 x
+POST trips http/1.1
+BREW /routes/125? HTTP/
+CONNECT /hello/Wanjiku?a=1&q&q HTTP/1.1
+PUT  HTTP/
+CONNECT /bookings HTTP/1.0
+PUT /health HTTP/1.1
+OPTIONS  HTTP/1.2
+ /trips http/1.1
+GET / HTTP/2.0
+POST /trips/42?q&date=2026-11-02&&q HTTP/
+BREW /bookings/9001? http/1.1
+BREW /trips http/1.1
+OPTIONS trips?date=2026-11-02&seat=3&seat=3 HTTP/1.2
+get trips http/1.1
+HEAD /trips?&a=1&seat=3&a=1 HTTP/2.0
+ /trips/42 
+DELETE  
+POST /hello/Wanjiku?a=1&date=2026-11-02&date=2026-11-02&a=1 http/1.1
+POST /trips/42 HTTP/2.0
+ /routes/125 HTTP/
+PUT / HTTP/1.1 x
+POST /trips?date=2026-11-02&q&seat=3& http/1.1
+POST /bookings/9001?date=2026-11-02 
+OPTIONS /trips?seat=3 HTTP/2.0
+PATCH trips HTTP/1.1
+CONNECT / HTTP/1.2
+GET /bookings HTTP/2.0
+BREW /trips/42 HTTP/1.1
+PATCH /health 
+HEAD /trips?seat=3&seat=3&date=2026-11-02 HTTP/1.1
+DELETE  http/1.1
+HEAD /trips/42 HTTP/1.2
+  HTTP/2.0
+PUT / http/1.1
+POST /bookings/9001?seat=3&a=1 HTTP/
+DELETE /bookings/9001?date=2026-11-02& http/1.1
+GET /health HTTP/2.0
+OPTIONS /bookings?q& HTTP/1.1
+GET /health 
+OPTIONS  HTTP/1.2
+GET /health HTTP/1.2
+DELETE /?date=2026-11-02&a=1&date=2026-11-02&a=1 HTTP/1.1
+get /bookings http/1.1
+POST /bookings/9001?seat=3 HTTP/1.1
+PATCH /trips?date=2026-11-02&q HTTP/
+DELETE /trips/42 HTTP/1.0
+CONNECT trips?&seat=3 HTTP/1.2
+get /bookings?q HTTP/1.2
+GET /trips/42?q&seat=3&seat=3 HTTP/
+get /hello/Wanjiku? HTTP/2.0
+PUT /trips HTTP/1.0
+OPTIONS /bookings/9001?q&a=1 http/1.1
+HEAD  HTTP/
+get trips? 
+GET /trips?&date=2026-11-02&&q HTTP/
+CONNECT /routes/125?date=2026-11-02&a=1& HTTP/
+PUT / HTTP/
+BREW trips HTTP/1.2
+PUT /routes/125 http/1.1
+OPTIONS /routes/125 HTTP/1.1
+DELETE /routes/125 HTTP/2.0
+GET /bookings/9001?seat=3&seat=3&seat=3 HTTP/
+POST  HTTP/1.1
+ /trips?seat=3&date=2026-11-02& HTTP/1.2
+HEAD /hello/Wanjiku?date=2026-11-02&seat=3&q&q HTTP/1.0
+HEAD /routes/125?seat=3 HTTP/1.1
+GET  
+POST / HTTP/1.0 x
+PATCH /trips/42 
+CONNECT /bookings/9001 HTTP/1.2
+GET  http/1.1
+get /bookings HTTP/1.1
+HEAD trips 
+GET /bookings/9001 http/1.1
+PUT /trips/42 HTTP/1.1
+DELETE /routes/125?date=2026-11-02&date=2026-11-02&date=2026-11-02&a=1 HTTP/1.1
+BREW /bookings HTTP/1.2
+DELETE /routes/125 HTTP/1.2
+DELETE /hello/Wanjiku? HTTP/1.0
+PATCH /health HTTP/
+POST /?date=2026-11-02 HTTP/1.1
+HEAD /trips/42 HTTP/1.2
+PATCH /trips HTTP/
+POST /routes/125?&&seat=3&q 
+POST /hello/Wanjiku http/1.1
+BREW /trips 
+get trips http/1.1
+PUT /health http/1.1
+BREW /routes/125 
+PUT /bookings/9001 
+OPTIONS /bookings/9001 HTTP/1.0
+DELETE /bookings/9001? 
+BREW /bookings/9001?a=1&q&seat=3&q HTTP/2.0
+DELETE / HTTP/1.0
+HEAD /trips HTTP/1.1
+PUT  HTTP/2.0 x
+PATCH /bookings/9001 HTTP/2.0
+DELETE /routes/125 HTTP/
+get /bookings?seat=3 
+CONNECT trips HTTP/1.0
+PATCH / 
+HEAD /trips HTTP/2.0 x
+POST /trips HTTP/1.0
+OPTIONS /trips/42 HTTP/1.2
+ /bookings/9001?seat=3 HTTP/1.2
+OPTIONS /bookings/9001 HTTP/1.1
+GET /routes/125 HTTP/2.0
+ /routes/125?seat=3&a=1&seat=3 HTTP/1.2
+PUT /bookings/9001?q HTTP/
+PATCH /bookings/9001 HTTP/1.2
+DELETE  /trips/42  HTTP/1.0
+DELETE /health HTTP/1.2
+BREW / HTTP/
+BREW /bookings HTTP/2.0
+PATCH /?q HTTP/1.2
+PATCH /routes/125 HTTP/2.0
+PUT  http/1.1
+get /trips/42 http/1.1
+GET  /trips  HTTP/2.0
+OPTIONS /trips HTTP/1.0
+BREW /trips/42? HTTP/1.0
+CONNECT /bookings/9001 
+BREW /trips/42?q&& HTTP/1.0
+DELETE  HTTP/1.0
+HEAD /health HTTP/
+POST /hello/Wanjiku HTTP/1.2
+POST /trips?date=2026-11-02&a=1&q&date=2026-11-02 
+POST trips?date=2026-11-02&date=2026-11-02&seat=3 HTTP/1.0
+CONNECT /trips HTTP/
+get /trips HTTP/
+POST /routes/125 http/1.1
+DELETE /routes/125? HTTP/1.0
+get  HTTP/
+OPTIONS  
+DELETE /routes/125?a=1&seat=3&q HTTP/2.0
+PUT /routes/125 http/1.1
+BREW  
+CONNECT /bookings HTTP/2.0
+DELETE /?seat=3&seat=3 HTTP/1.2
+BREW / 
+HEAD /bookings HTTP/2.0
+DELETE /trips?seat=3&&date=2026-11-02 
+DELETE /trips/42?q 
+ /bookings HTTP/1.1
+get /routes/125?date=2026-11-02&q HTTP/1.1
+get trips HTTP/1.2
+DELETE /bookings/9001?a=1 http/1.1
+DELETE /trips? 
+PUT /hello/Wanjiku? HTTP/1.1
+PUT  HTTP/
+PATCH /health HTTP/2.0
+DELETE    HTTP/2.0
+BREW /bookings/9001 HTTP/1.0
+GET /?date=2026-11-02&q HTTP/
+CONNECT /bookings 
+HEAD /routes/125?&seat=3&seat=3&seat=3 HTTP/1.2
+OPTIONS /trips/42?q&date=2026-11-02&seat=3&a=1 HTTP/2.0 x
+POST /trips/42 http/1.1
+CONNECT /health?date=2026-11-02&q&a=1 HTTP/
+DELETE /bookings/9001 HTTP/2.0
+  HTTP/1.1
+PATCH / HTTP/1.2
+PUT /health?q&& HTTP/
+BREW /health HTTP/1.1
+POST / HTTP/1.1
+ trips HTTP/
+HEAD /trips/42?q&&seat=3 HTTP/1.0
+PATCH  
+PATCH /trips/42?q&&date=2026-11-02&q HTTP/2.0
+DELETE /trips/42 
+HEAD  HTTP/2.0
+POST /trips/42 HTTP/2.0
+BREW /hello/Wanjiku http/1.1
+HEAD /routes/125 
+GET trips?&a=1 HTTP/1.1
+PUT /hello/Wanjiku HTTP/1.0
+BREW trips 
+get /routes/125 HTTP/1.2
+PUT /routes/125 HTTP/1.1
+OPTIONS trips HTTP/
+POST /health HTTP/1.2 x
+POST /routes/125?q HTTP/2.0
+OPTIONS  HTTP/1.2
+PUT / HTTP/1.0 x
+DELETE /bookings/9001?date=2026-11-02&q HTTP/1.0
+CONNECT /hello/Wanjiku HTTP/1.1
+GET /trips/42? HTTP/1.1
+BREW  HTTP/1.2
+BREW /bookings/9001 http/1.1
+PATCH  
+HEAD / HTTP/1.1
+PATCH trips HTTP/2.0
+CONNECT /hello/Wanjiku http/1.1
+POST /bookings/9001 HTTP/2.0
+get /bookings HTTP/1.0
+ /routes/125 http/1.1
+CONNECT /hello/Wanjiku? http/1.1
+OPTIONS /hello/Wanjiku?seat=3 HTTP/1.1
+BREW /routes/125 HTTP/1.0
+BREW /bookings http/1.1
+OPTIONS / HTTP/2.0
+DELETE /trips/42 HTTP/
+POST /routes/125? HTTP/ x
+OPTIONS  /hello/Wanjiku?a=1&&date=2026-11-02  http/1.1
+CONNECT /health HTTP/1.2
+PUT /routes/125 HTTP/1.2
+OPTIONS /bookings HTTP/1.1
+OPTIONS /trips/42 HTTP/2.0
+CONNECT /bookings? 
+POST trips http/1.1
+HEAD /trips/42?a=1&seat=3& HTTP/2.0
+PUT /bookings/9001 HTTP/2.0
+get /bookings/9001 HTTP/2.0
+ /routes/125 HTTP/1.1
+PATCH /hello/Wanjiku? HTTP/1.2
+PATCH /routes/125?seat=3&date=2026-11-02 HTTP/1.0
+  /?seat=3&q&q&seat=3  HTTP/1.1
+CONNECT /trips/42?a=1& 
+CONNECT /trips/42 
+OPTIONS /health HTTP/1.1
+POST /trips?seat=3&date=2026-11-02&a=1& http/1.1
+DELETE  HTTP/ x
+GET trips 
+CONNECT /bookings HTTP/1.1
+PUT /health?q&seat=3& HTTP/1.1
+BREW /routes/125 HTTP/2.0
+POST /hello/Wanjiku? HTTP/
+HEAD /trips/42 HTTP/1.2
+OPTIONS /routes/125 http/1.1
+get / HTTP/1.2
+ /bookings http/1.1
+OPTIONS /routes/125?q&seat=3&date=2026-11-02 HTTP/1.2
+PUT /trips/42 HTTP/1.2
+POST /hello/Wanjiku HTTP/1.0
+HEAD /trips/42 HTTP/1.0
+OPTIONS  /health?seat=3  HTTP/2.0
+CONNECT trips HTTP/1.1
+PUT / HTTP/1.0
+DELETE /health http/1.1
+BREW /routes/125 HTTP/1.1
+GET  HTTP/
+BREW /hello/Wanjiku?date=2026-11-02&a=1 http/1.1
+get /bookings/9001?seat=3 HTTP/2.0
+OPTIONS /health HTTP/1.0
+OPTIONS /health?&q&seat=3  x
+OPTIONS /bookings http/1.1
+HEAD /bookings?&&date=2026-11-02& HTTP/
+get /bookings/9001?date=2026-11-02 http/1.1
+POST /routes/125?a=1 HTTP/1.0
+ trips HTTP/1.2
+GET  HTTP/1.0
+GET  HTTP/1.0
+BREW /trips? HTTP/1.1
+CONNECT /trips?a=1&q 
+PUT trips?a=1&&date=2026-11-02&q HTTP/1.2
+OPTIONS /trips?q&date=2026-11-02&date=2026-11-02&q 
+get /?seat=3 http/1.1
+PATCH /bookings?a=1&q&seat=3&q HTTP/2.0
+HEAD / HTTP/
+  /bookings  HTTP/1.0
+HEAD /trips?date=2026-11-02&&date=2026-11-02&q HTTP/2.0
+PATCH / HTTP/2.0
+PATCH  HTTP/
+GET /routes/125 HTTP/1.1
+PATCH  HTTP/1.1
+POST /bookings?seat=3&q&& HTTP/1.2
+get /routes/125 
+CONNECT /bookings/9001?date=2026-11-02&q&&a=1 
+get /bookings/9001 http/1.1
+DELETE /trips/42?&&date=2026-11-02 http/1.1
+ /bookings 
+BREW /trips/42 HTTP/1.1
+PATCH /routes/125?date=2026-11-02 HTTP/1.0
+OPTIONS /hello/Wanjiku?seat=3&&a=1&seat=3 HTTP/
+  HTTP/1.0
+CONNECT trips HTTP/
+CONNECT /bookings/9001?&a=1&q&q HTTP/2.0
+ /bookings/9001 HTTP/
+BREW / http/1.1
+DELETE /trips/42 
+PATCH /?a=1&q HTTP/
+CONNECT /hello/Wanjiku?q&&q&a=1 HTTP/2.0
+GET /routes/125 HTTP/1.2
+DELETE  HTTP/1.1
+ /bookings/9001?&&seat=3&a=1 HTTP/1.1
+  HTTP/2.0
+PUT /routes/125 HTTP/2.0
+DELETE / HTTP/
+get /hello/Wanjiku? HTTP/1.2
+DELETE /hello/Wanjiku http/1.1
+ /trips HTTP/2.0
+get /trips 
+OPTIONS /trips HTTP/1.1
+OPTIONS /routes/125 HTTP/1.0
+BREW /trips?seat=3 HTTP/1.0
+CONNECT / HTTP/2.0
+PUT / HTTP/1.2
+BREW /trips HTTP/
+HEAD  /routes/125?seat=3&seat=3  
+PUT / HTTP/1.2
+BREW trips?seat=3&seat=3&date=2026-11-02&seat=3 HTTP/1.1
+BREW /trips HTTP/1.2
+DELETE / 
+GET /bookings?&a=1&date=2026-11-02 
+  HTTP/2.0
+PATCH /bookings/9001? HTTP/2.0
+HEAD /trips/42?a=1&seat=3&seat=3 
+GET /hello/Wanjiku http/1.1
+POST trips HTTP/1.0
+GET /routes/125 HTTP/1.2
+PUT /trips 
+HEAD /routes/125? HTTP/1.0
+DELETE /bookings/9001? HTTP/
+CONNECT /routes/125 HTTP/1.0
+get /routes/125 HTTP/1.0
+DELETE /health?q HTTP/
+PATCH  HTTP/2.0
+get /trips?seat=3&q&q HTTP/2.0
+PUT trips?date=2026-11-02&q&seat=3 HTTP/1.0
+DELETE /bookings/9001 HTTP/1.1
+POST /trips HTTP/
+GET /hello/Wanjiku HTTP/2.0
+OPTIONS  /trips/42?&q  http/1.1
+CONNECT /routes/125 HTTP/1.0
+BREW /health http/1.1
+OPTIONS /routes/125 HTTP/1.2
+BREW /routes/125 
+DELETE  http/1.1
+CONNECT /hello/Wanjiku HTTP/1.0
+PATCH /routes/125 HTTP/1.1
+POST /trips/42 HTTP/1.2
+OPTIONS / HTTP/1.0
+GET trips?&q&date=2026-11-02 HTTP/
+HEAD  HTTP/2.0
+HEAD /bookings?date=2026-11-02& 
+POST /routes/125 HTTP/1.0
+PUT /health?a=1& 
+HEAD /bookings/9001? http/1.1
+POST /routes/125 HTTP/1.2
+BREW / 
+DELETE /trips HTTP/1.0
+get /trips?&a=1 HTTP/1.1
+HEAD /routes/125?&date=2026-11-02&a=1 HTTP/
+PUT trips HTTP/1.0
+BREW / HTTP/1.2
+PATCH /health http/1.1
+HEAD / HTTP/1.0
+CONNECT /trips?&seat=3 http/1.1
+OPTIONS /bookings HTTP/1.1
+PUT /trips/42? HTTP/
+get trips?date=2026-11-02&a=1&seat=3&seat=3 
+OPTIONS /routes/125 HTTP/1.1
+DELETE trips http/1.1
+POST /bookings HTTP/1.1
+PUT /bookings/9001 HTTP/1.1
+GET /health HTTP/1.2
+get /trips/42 HTTP/1.1
+PATCH /trips? HTTP/1.0
+OPTIONS /trips HTTP/1.0
+POST  HTTP/1.1
+ trips?a=1&seat=3&seat=3 HTTP/1.0
+ /bookings/9001 HTTP/2.0
+POST /?&q&seat=3 http/1.1
+HEAD trips http/1.1
+CONNECT /bookings HTTP/1.1
+CONNECT  /trips/42  HTTP/1.0  x
+GET /trips/42 http/1.1 x
+OPTIONS /hello/Wanjiku?a=1& HTTP/2.0
+PUT /routes/125 http/1.1
+HEAD /bookings/9001?a=1&q&a=1&seat=3 HTTP/1.1
+POST /hello/Wanjiku HTTP/1.0
+BREW /bookings HTTP/2.0
+HEAD /bookings/9001 HTTP/1.0
+PATCH /routes/125 http/1.1
+BREW /health?seat=3 HTTP/1.0
+PATCH /bookings/9001 
+POST  HTTP/
+CONNECT /health HTTP/
+POST  trips  
+HEAD /? HTTP/2.0
+CONNECT /health?q&&date=2026-11-02&q HTTP/
+HEAD /trips/42?&q& HTTP/
+get /health? HTTP/1.0
+GET trips http/1.1
+POST /bookings/9001 HTTP/2.0
+DELETE /bookings? HTTP/1.2
+BREW /health HTTP/2.0
+PATCH trips HTTP/1.1
+HEAD /?a=1 HTTP/1.1
+ /hello/Wanjiku HTTP/1.2
+get /bookings HTTP/2.0
+PUT /trips/42 HTTP/
+HEAD /?date=2026-11-02&seat=3 HTTP/1.0
+get /bookings/9001?q&seat=3 HTTP/1.2
+  
+GET /bookings/9001 HTTP/1.0
+CONNECT /health  x
+PATCH /hello/Wanjiku HTTP/
+PATCH /bookings/9001 HTTP/
+get /health HTTP/
+BREW /hello/Wanjiku HTTP/2.0
+BREW /bookings/9001?seat=3&seat=3 HTTP/1.2
+get /bookings HTTP/2.0
+ /routes/125 HTTP/2.0
+HEAD /hello/Wanjiku HTTP/1.2
+BREW /health HTTP/1.1
+POST    HTTP/2.0
+POST /bookings HTTP/1.0
+OPTIONS / HTTP/1.0
+DELETE /health?a=1 HTTP/1.0
+BREW /health?q HTTP/1.1 x
+DELETE /health?q& HTTP/1.0
+HEAD /bookings HTTP/1.1
+get  http/1.1
+POST /trips/42? HTTP/1.0
+CONNECT /routes/125 HTTP/1.1
+BREW trips HTTP/1.2
+PUT  HTTP/2.0
+ /health 
+PUT  HTTP/
+ trips? HTTP/
+ trips?q HTTP/1.0
+HEAD / HTTP/1.1
+OPTIONS /hello/Wanjiku HTTP/1.0
+GET  HTTP/1.0 x
+ /bookings/9001 HTTP/1.0
+DELETE /hello/Wanjiku?&a=1&a=1 
+GET /bookings/9001 HTTP/1.1
+GET trips? HTTP/1.0
+GET /health 
+HEAD /bookings?q&q&a=1&seat=3 HTTP/1.0
+DELETE /bookings/9001 HTTP/1.1
+get trips? HTTP/1.2
+BREW /bookings HTTP/1.2
+PUT trips http/1.1
+OPTIONS  HTTP/1.2
+DELETE /health?date=2026-11-02&a=1 HTTP/
+BREW  HTTP/2.0
+PUT /bookings/9001?date=2026-11-02&q HTTP/1.1
+HEAD /trips http/1.1
+POST /bookings?q&date=2026-11-02 HTTP/
+PUT /hello/Wanjiku?q&seat=3 
+DELETE /bookings/9001 HTTP/
+OPTIONS trips? HTTP/2.0
+get /trips/42 HTTP/1.1
+BREW /?seat=3&date=2026-11-02&date=2026-11-02 
+BREW trips HTTP/2.0
+get  HTTP/1.2
+GET /health?a=1&q&q http/1.1
+POST /?&a=1&date=2026-11-02&q http/1.1
+BREW /trips HTTP/1.1
+POST /trips/42 HTTP/
+BREW trips HTTP/1.2
+BREW trips? 
+GET /trips HTTP/1.1
+OPTIONS /health HTTP/2.0
+PUT /bookings/9001?seat=3& HTTP/1.0
+DELETE /hello/Wanjiku HTTP/
+BREW / HTTP/1.0
+HEAD /health HTTP/1.2
+HEAD /routes/125 HTTP/1.0
+PATCH trips HTTP/1.2
+OPTIONS trips HTTP/1.2
+ /routes/125?seat=3&q&a=1 http/1.1
+ trips http/1.1 x
+HEAD /bookings HTTP/1.1
+CONNECT /routes/125?seat=3& HTTP/1.1
+HEAD /bookings?seat=3&seat=3&&date=2026-11-02 http/1.1
+PATCH  http/1.1
+BREW / http/1.1
+HEAD /routes/125 HTTP/1.1
+HEAD / HTTP/1.2
+DELETE /health?a=1&a=1 HTTP/1.1
+GET /health 
+PUT /bookings HTTP/
+ /bookings/9001? HTTP/1.0
+OPTIONS  HTTP/1.2
+get /hello/Wanjiku? HTTP/
+GET trips?seat=3& HTTP/1.0
+PATCH trips HTTP/1.1
+PUT /health? HTTP/1.2
+PATCH /bookings HTTP/1.2
+POST  HTTP/1.2
+OPTIONS /? HTTP/1.1
+OPTIONS /bookings/9001?seat=3 HTTP/1.2
+HEAD trips HTTP/
+OPTIONS / HTTP/
+CONNECT /trips HTTP/2.0
+BREW /trips? 
+get /bookings HTTP/
+PUT  HTTP/2.0
+OPTIONS /hello/Wanjiku http/1.1
+BREW /trips HTTP/
+PUT /bookings/9001 HTTP/
+BREW /trips? HTTP/
+POST  HTTP/1.1
+BREW /health 
+POST  HTTP/1.2
+CONNECT trips 
+BREW /trips/42 HTTP/1.1
+POST /health?q&seat=3&q&a=1 HTTP/2.0
+get /bookings HTTP/1.2
+GET /health?a=1&q&seat=3 HTTP/1.1
+BREW /hello/Wanjiku?a=1&q 
+ /?q&a=1&seat=3& HTTP/1.0
+get /bookings?date=2026-11-02&a=1 HTTP/1.0
+CONNECT /hello/Wanjiku? HTTP/1.1
+get /bookings HTTP/
+CONNECT  HTTP/1.0
+DELETE /routes/125? HTTP/1.1
+HEAD  HTTP/1.0
+ /hello/Wanjiku HTTP/1.0
+HEAD / HTTP/1.1
+DELETE /bookings/9001 HTTP/1.1
+HEAD /bookings? HTTP/1.2
+OPTIONS trips 
+POST /trips?date=2026-11-02&q 
+get /bookings/9001 HTTP/2.0 x
+BREW /bookings/9001? 
+CONNECT /hello/Wanjiku?&date=2026-11-02&a=1&q HTTP/2.0
+PATCH /health HTTP/
+get /health?seat=3&date=2026-11-02 HTTP/
+GET trips?seat=3 HTTP/1.1
+get /hello/Wanjiku HTTP/
+BREW trips HTTP/2.0
+DELETE /trips/42? HTTP/1.1
+BREW /bookings?date=2026-11-02&q http/1.1
+HEAD /bookings?date=2026-11-02 http/1.1
+DELETE /?a=1 
+GET / HTTP/1.1
+get /bookings? http/1.1
+PATCH /health?seat=3 HTTP/1.1
+PUT /trips/42 HTTP/2.0
+OPTIONS /trips HTTP/1.2
+GET /trips/42 HTTP/1.0
+get /health?q& HTTP/1.2
+CONNECT /trips?seat=3&seat=3 HTTP/1.1
+OPTIONS /bookings HTTP/1.2
+OPTIONS / HTTP/1.1
+DELETE  
+CONNECT  http/1.1
+OPTIONS  HTTP/1.2
+PUT /hello/Wanjiku? HTTP/1.1
+OPTIONS /bookings?seat=3 HTTP/1.0
+POST /bookings/9001 
+PATCH /bookings/9001? HTTP/
+CONNECT /trips/42 HTTP/2.0
+ /trips/42?q&a=1& HTTP/1.2
+OPTIONS  HTTP/1.1
+GET /hello/Wanjiku 
+PATCH  trips  HTTP/2.0
+PATCH  HTTP/1.0
+PATCH / HTTP/1.0
+OPTIONS /trips HTTP/2.0
+CONNECT  /bookings/9001?  http/1.1
+POST trips?&date=2026-11-02&q HTTP/2.0
+CONNECT / http/1.1
+PUT /hello/Wanjiku 
+OPTIONS /trips HTTP/1.0
+POST /bookings?seat=3 HTTP/
+BREW /health HTTP/
+PATCH trips http/1.1 x
+PATCH  HTTP/1.0
+ trips http/1.1
+DELETE /trips HTTP/1.2
+PATCH /trips?date=2026-11-02 HTTP/1.2
+get / http/1.1
+BREW /bookings/9001?seat=3&a=1&seat=3&seat=3 HTTP/1.2
+CONNECT /trips/42? HTTP/2.0
+GET /routes/125 HTTP/2.0
+get /health HTTP/1.0
+CONNECT /health HTTP/ x
+ /trips HTTP/2.0
+get /routes/125 HTTP/1.0
+POST /bookings/9001 HTTP/1.0
+ /bookings/9001?q&a=1&q& HTTP/1.2
+get trips? HTTP/2.0
+CONNECT /trips/42 HTTP/1.2
+get /bookings/9001 HTTP/1.0
+PUT /health?q&a=1&a=1 HTTP/1.2
+PATCH /bookings/9001 HTTP/
+BREW /trips HTTP/1.1
+OPTIONS  HTTP/1.1
+get /trips/42?date=2026-11-02&date=2026-11-02&q&date=2026-11-02 HTTP/2.0
+ /bookings?date=2026-11-02&a=1&seat=3 HTTP/1.1
+DELETE /?a=1&&a=1 
+get /health HTTP/
+CONNECT /hello/Wanjiku HTTP/1.2
+HEAD /hello/Wanjiku HTTP/1.2
+DELETE  HTTP/
+OPTIONS /trips/42? HTTP/1.0
+HEAD /health HTTP/1.2
+OPTIONS /routes/125 
+CONNECT /routes/125?date=2026-11-02&a=1&&q HTTP/
+PATCH  HTTP/1.0
+get /bookings HTTP/
+DELETE / 
+HEAD /hello/Wanjiku 
+PUT  /?q&date=2026-11-02  HTTP/1.2
+DELETE /bookings/9001?q&q HTTP/1.1
+POST /trips/42? 
+GET /health HTTP/1.1
+HEAD /?seat=3 HTTP/
+HEAD  HTTP/
+PATCH /hello/Wanjiku HTTP/2.0
+BREW /hello/Wanjiku HTTP/1.2
+ /routes/125?date=2026-11-02&a=1& HTTP/1.0
+PATCH /trips/42 HTTP/2.0
+POST /trips/42 HTTP/1.0
+HEAD  
+DELETE  
+GET trips 
+HEAD trips HTTP/1.1
+HEAD /bookings? HTTP/
+OPTIONS /trips? HTTP/
+DELETE /bookings/9001 HTTP/
+ /routes/125 HTTP/1.1 x
+PATCH /trips/42 HTTP/1.1
+POST / HTTP/1.0
+ /health?a=1&a=1 HTTP/1.2
+GET /trips?q&seat=3&q 
+get /? http/1.1
+POST trips? HTTP/
+CONNECT /trips/42?q&&& http/1.1
+POST /hello/Wanjiku?seat=3 HTTP/1.0
+HEAD /routes/125 HTTP/1.0
+POST trips HTTP/1.1 x
+PATCH /trips HTTP/1.0
+DELETE trips http/1.1
+CONNECT /health HTTP/1.2
+BREW / HTTP/2.0
+DELETE /trips/42 HTTP/2.0
+get trips?a=1&a=1&q HTTP/1.2
+BREW /bookings HTTP/1.2
+PUT /health  x
+DELETE /trips HTTP/1.1
+OPTIONS  HTTP/1.0
+POST /trips/42 HTTP/1.0
+PATCH /bookings HTTP/
+PATCH /bookings/9001?seat=3 HTTP/2.0
+POST /routes/125 HTTP/1.0
+GET /bookings HTTP/1.0
+get / HTTP/
+OPTIONS /health HTTP/1.0
+PATCH  HTTP/ x
+PUT /routes/125?a=1&a=1 http/1.1
+DELETE /hello/Wanjiku http/1.1
+BREW  HTTP/
+GET /bookings?&seat=3&q&q HTTP/2.0
+POST /hello/Wanjiku HTTP/1.2 x
+CONNECT /trips?q HTTP/1.2
+DELETE /bookings HTTP/1.0
+BREW /bookings?seat=3&seat=3  x
+BREW /hello/Wanjiku?date=2026-11-02 HTTP/2.0
+HEAD /health?q HTTP/
+HEAD /routes/125 HTTP/2.0
+ / HTTP/
+DELETE /?q& HTTP/2.0
+CONNECT /? HTTP/1.1
+ /trips/42 HTTP/2.0
+HEAD /routes/125? HTTP/1.2
+get  HTTP/1.2
+BREW /trips/42 HTTP/1.0
+DELETE /hello/Wanjiku? http/1.1
+ /bookings HTTP/1.1
+GET /routes/125 HTTP/
+HEAD /health HTTP/
+ /trips/42 http/1.1
+PATCH /bookings/9001?q&date=2026-11-02&q&seat=3 
+get /bookings/9001?&date=2026-11-02 
+DELETE /bookings?q http/1.1
+get /bookings/9001 HTTP/1.1
+BREW /health?q&q&q 
+HEAD /trips?date=2026-11-02 HTTP/1.2
+CONNECT / HTTP/1.2
+get /trips HTTP/1.2
+BREW / HTTP/1.2
+BREW  HTTP/1.0
+POST  HTTP/
+PUT trips HTTP/2.0
+PUT / HTTP/1.2
+get /trips/42 HTTP/1.1
+PUT /hello/Wanjiku HTTP/1.2
+DELETE /health?q&&q&a=1 http/1.1
+ trips?date=2026-11-02 HTTP/1.2
+CONNECT  HTTP/1.2
+get  http/1.1
+HEAD /bookings/9001 
+OPTIONS trips http/1.1
+HEAD /trips/42? HTTP/1.0
+get / HTTP/1.1
+POST /bookings/9001 HTTP/1.0
+GET trips HTTP/1.1
+DELETE / HTTP/1.0
+GET /hello/Wanjiku?&seat=3 HTTP/1.0
+ /routes/125?  x
+DELETE /routes/125 HTTP/1.0
+GET /trips? HTTP/1.0
+PUT / HTTP/1.0
+get /bookings/9001?date=2026-11-02&&&date=2026-11-02 HTTP/2.0
+GET /health 
+OPTIONS  /trips?  HTTP/
+PUT /trips?&q&seat=3&a=1 HTTP/
+OPTIONS  HTTP/1.2
+PUT trips HTTP/1.2
+BREW / HTTP/1.2
+POST /bookings HTTP/1.2
+HEAD trips?q&q& 
+POST /bookings/9001 
+POST /trips 
+PUT /bookings/9001?seat=3&seat=3 HTTP/2.0
+BREW  HTTP/1.1
+OPTIONS  
+ /? HTTP/2.0
+GET /bookings http/1.1
+ /hello/Wanjiku? HTTP/1.0
+OPTIONS /hello/Wanjiku?q&a=1&a=1& HTTP/1.2
+POST /routes/125?seat=3&q HTTP/1.1
+PATCH /health? HTTP/1.0
+BREW /routes/125?a=1&&a=1&q HTTP/1.0
+HEAD /hello/Wanjiku HTTP/1.1
+PATCH /routes/125 
+ /? HTTP/1.1
+CONNECT  HTTP/1.1
+HEAD /hello/Wanjiku HTTP/
+GET /bookings http/1.1
+PATCH /routes/125?date=2026-11-02&a=1&a=1&a=1 HTTP/1.2
+HEAD /trips HTTP/1.2
+get /health HTTP/1.2
+CONNECT /health?seat=3&seat=3 HTTP/
+CONNECT /health HTTP/1.2
+DELETE /trips HTTP/1.1
+ /routes/125 HTTP/1.0
+PUT /bookings/9001 http/1.1
+POST /hello/Wanjiku?&seat=3&date=2026-11-02&seat=3 HTTP/1.2
+PUT /routes/125 
+HEAD trips HTTP/1.2
+PATCH / HTTP/ x
+HEAD /bookings?date=2026-11-02&q&q HTTP/1.0
+  http/1.1
+ /trips/42?date=2026-11-02&date=2026-11-02& HTTP/2.0
+ /hello/Wanjiku http/1.1
+BREW /trips/42? http/1.1
+OPTIONS /hello/Wanjiku http/1.1
+get /bookings?a=1&seat=3 HTTP/1.0
+PATCH /trips 
+get /trips/42?&date=2026-11-02&a=1 
+HEAD trips? http/1.1
+HEAD /bookings? HTTP/1.1
+PUT /routes/125? HTTP/2.0
+CONNECT /trips HTTP/1.2
+BREW /routes/125 HTTP/1.1
+DELETE trips?a=1 HTTP/2.0
+PUT /bookings/9001? HTTP/1.2
+ /hello/Wanjiku?date=2026-11-02&&q&q HTTP/2.0
+GET /routes/125 HTTP/2.0 x
+HEAD /bookings?date=2026-11-02& 
+OPTIONS  http/1.1
+CONNECT /health?seat=3&q&a=1& HTTP/1.1
+GET /bookings? HTTP/1.2
+HEAD  HTTP/1.2
+HEAD /hello/Wanjiku 
+CONNECT /routes/125 HTTP/1.2
+PATCH /bookings HTTP/1.2
+get /health?seat=3&&q HTTP/1.1
+get /hello/Wanjiku?date=2026-11-02&date=2026-11-02&q 
+POST /hello/Wanjiku?a=1 HTTP/
+  HTTP/1.2
+get /bookings?seat=3 HTTP/
+GET /?date=2026-11-02 http/1.1
+ /?a=1&& HTTP/2.0
+POST trips HTTP/1.1
+CONNECT /trips?seat=3&q& 
+CONNECT /routes/125 HTTP/
+PATCH /?q HTTP/1.2
+HEAD /bookings 
+ / http/1.1
+DELETE /bookings?seat=3& http/1.1
+get /health HTTP/
+DELETE  
+get /hello/Wanjiku?q&a=1 HTTP/2.0 x
+PUT /routes/125?q HTTP/
+PATCH /bookings/9001?seat=3 
+CONNECT /bookings HTTP/1.2 x
+PATCH / HTTP/2.0 x
+DELETE /routes/125 http/1.1
+GET /? http/1.1
+DELETE  HTTP/1.1
+HEAD / HTTP/1.2
+OPTIONS /trips/42 
+GET /bookings/9001 HTTP/
+HEAD /hello/Wanjiku?seat=3&a=1 HTTP/2.0
+PUT /trips/42?seat=3&&&seat=3 
+PATCH /bookings HTTP/
+PUT /trips?&a=1&seat=3&date=2026-11-02 HTTP/1.2
+PATCH  /bookings/9001?  
+GET / HTTP/1.2
+GET /trips HTTP/2.0
+PATCH /health?q http/1.1
+ /health?q&date=2026-11-02&q HTTP/
+ /trips/42 HTTP/1.1
+PATCH /health?q&date=2026-11-02&a=1 HTTP/2.0
+CONNECT /hello/Wanjiku?seat=3&&date=2026-11-02 HTTP/ x
+PATCH /trips/42 HTTP/1.2
+DELETE  HTTP/
+POST  HTTP/1.2
+get /bookings HTTP/1.0
+DELETE /hello/Wanjiku HTTP/1.2
+POST /bookings?a=1 HTTP/1.0
+ /bookings/9001 HTTP/1.0
+get /trips/42? http/1.1
+BREW /routes/125 http/1.1
+PUT /routes/125?date=2026-11-02& HTTP/1.0
+POST /trips/42? HTTP/1.1 x
+  HTTP/1.1
+BREW / HTTP/
+PUT /bookings?date=2026-11-02&seat=3 HTTP/2.0
+get /hello/Wanjiku 
+DELETE trips http/1.1
+GET /trips/42 HTTP/2.0
+get  
+CONNECT /routes/125 http/1.1
+PUT /trips/42 HTTP/1.1
+POST / 
+PATCH /trips/42 
+BREW  HTTP/2.0
+OPTIONS /trips/42 HTTP/1.0
+OPTIONS /trips HTTP/1.1
+  HTTP/1.2 x
+BREW trips 
+get trips http/1.1
+CONNECT / http/1.1
+POST /health HTTP/
+POST /hello/Wanjiku?date=2026-11-02 HTTP/
+PUT  
+get /health 
+GET /bookings HTTP/2.0
+OPTIONS /hello/Wanjiku?q& http/1.1
+CONNECT /health?&seat=3&seat=3&date=2026-11-02 HTTP/1.2
+DELETE  HTTP/
+HEAD /hello/Wanjiku http/1.1
+HEAD  HTTP/1.0 x
+GET /hello/Wanjiku? HTTP/2.0
+POST / HTTP/2.0
+HEAD /trips/42?q&q&seat=3 HTTP/
+BREW /routes/125?seat=3&a=1 HTTP/
+CONNECT /trips/42 HTTP/1.0
+get /hello/Wanjiku HTTP/1.2
+HEAD /trips?date=2026-11-02&q HTTP/
+  HTTP/1.1
+OPTIONS /bookings http/1.1
+PUT /bookings? HTTP/1.1
+OPTIONS  http/1.1
+PATCH /trips HTTP/
+ / HTTP/
+PATCH /bookings HTTP/2.0
+PATCH /bookings/9001? http/1.1
+ /routes/125 http/1.1
+DELETE /bookings/9001 HTTP/
+PUT  /trips  HTTP/
+OPTIONS / HTTP/1.1
+get /trips HTTP/1.0
+PATCH /routes/125 http/1.1 x
+OPTIONS / HTTP/1.1
+PATCH  /bookings  HTTP/1.1
+OPTIONS /routes/125 HTTP/1.1
+DELETE /bookings/9001 HTTP/2.0
+PATCH /bookings/9001 HTTP/1.1
+DELETE  HTTP/
+CONNECT trips 
+BREW  HTTP/
+POST /routes/125 
+HEAD /routes/125 HTTP/1.2
+CONNECT /trips?seat=3 
+DELETE  /trips/42  HTTP/1.1
+get  HTTP/1.0
+DELETE /bookings? HTTP/1.1
+get /health 
+OPTIONS /bookings/9001 http/1.1
+POST /bookings/9001?&q&q HTTP/
+POST /health http/1.1
+ /bookings HTTP/1.2
+GET /bookings? HTTP/1.1 x
+BREW  HTTP/
+DELETE /health HTTP/1.0
+HEAD  
+DELETE /health?seat=3&q&seat=3&q http/1.1
+PATCH /hello/Wanjiku HTTP/1.2
+CONNECT trips  x
+HEAD /trips?&&date=2026-11-02& 
+BREW /trips HTTP/1.0
+DELETE /health http/1.1
+HEAD  HTTP/1.2
+get /health HTTP/1.2
+HEAD /hello/Wanjiku?date=2026-11-02&q& http/1.1
+ /health HTTP/1.2
+DELETE  HTTP/1.2
+CONNECT /bookings/9001 HTTP/1.2
+POST /health?date=2026-11-02&seat=3&a=1 http/1.1
+POST /bookings?a=1&seat=3&date=2026-11-02 HTTP/1.2
+BREW trips HTTP/2.0
+PATCH /?q HTTP/1.1
+PATCH /bookings HTTP/
+get /health HTTP/1.0
+CONNECT trips http/1.1
+HEAD trips?q 
+BREW  /bookings  HTTP/1.1
+CONNECT /bookings/9001 HTTP/1.0
+GET / HTTP/1.1
+ /trips 
+ /? http/1.1
+ /trips/42?q http/1.1
+DELETE /trips?a=1 HTTP/2.0
+DELETE /trips HTTP/
+DELETE /bookings/9001?date=2026-11-02&date=2026-11-02 HTTP/
+PATCH /hello/Wanjiku?a=1&q HTTP/1.1
+OPTIONS /bookings http/1.1 x
+DELETE trips HTTP/1.1
+PATCH  HTTP/1.2
+get /hello/Wanjiku http/1.1
+DELETE /hello/Wanjiku HTTP/1.1
+ trips HTTP/1.1
+OPTIONS /bookings HTTP/
+OPTIONS /routes/125 HTTP/
+OPTIONS / 
+POST /hello/Wanjiku  x
+PUT /trips?a=1 http/1.1
+BREW  /trips/42?seat=3&date=2026-11-02&date=2026-11-02  
+get /routes/125 http/1.1
+GET /routes/125 HTTP/
+POST /trips?seat=3 HTTP/1.0
+get / HTTP/1.0
+HEAD /trips/42 HTTP/1.2
+GET /routes/125? HTTP/1.2 x
+PUT /trips/42?q HTTP/1.0
+GET /health http/1.1 x
+POST /health? http/1.1
+PATCH /routes/125 HTTP/
+GET /?seat=3 
+PUT /hello/Wanjiku?&a=1 
+get /routes/125 http/1.1
+PATCH  HTTP/1.2
+ /trips HTTP/1.0
+get /hello/Wanjiku HTTP/1.1
+CONNECT  /bookings  http/1.1  x
+BREW /trips/42 HTTP/1.0
+PUT /routes/125 HTTP/
+CONNECT trips?date=2026-11-02 HTTP/
+DELETE /?a=1&a=1&q& http/1.1
+ trips HTTP/1.2
+POST /bookings/9001?date=2026-11-02&seat=3&a=1&a=1 http/1.1
+PATCH /hello/Wanjiku HTTP/1.2
+HEAD trips HTTP/2.0
+BREW trips?a=1&date=2026-11-02 HTTP/
+PUT trips HTTP/1.0
+PUT  HTTP/1.2
+POST trips?date=2026-11-02&q&seat=3 HTTP/1.1
+PUT / HTTP/1.0
+POST /trips? HTTP/1.2
+DELETE / HTTP/
+OPTIONS / HTTP/2.0
+OPTIONS /bookings?date=2026-11-02&seat=3& HTTP/2.0
+get /trips HTTP/2.0
+HEAD  /trips?&q&seat=3  
+OPTIONS trips?q&seat=3&date=2026-11-02 HTTP/1.0
+HEAD /bookings? HTTP/1.1
+get  
+HEAD  
+POST  HTTP/ x
+DELETE / HTTP/2.0
+POST /health 
+DELETE /bookings/9001? HTTP/
+HEAD /trips HTTP/1.0
+GET /trips http/1.1 x
+ trips?&seat=3 http/1.1
+HEAD  HTTP/2.0
+PUT /trips HTTP/
+GET /routes/125 HTTP/1.0
+HEAD /trips/42?date=2026-11-02&date=2026-11-02 HTTP/1.0
+ /trips HTTP/2.0
+POST /routes/125 http/1.1
+GET trips? 
+BREW /trips/42 http/1.1
+DELETE /routes/125 
+PUT trips?&date=2026-11-02 
+HEAD  /trips/42?  
+PATCH / HTTP/2.0
+BREW /hello/Wanjiku?q HTTP/
+HEAD /trips HTTP/1.1
+POST /hello/Wanjiku?a=1&seat=3&date=2026-11-02&seat=3 HTTP/
+OPTIONS /bookings HTTP/
+CONNECT /bookings?a=1& HTTP/1.2
+BREW /bookings HTTP/1.1
+CONNECT /health HTTP/1.1
+HEAD /bookings/9001?&seat=3&& HTTP/1.2
+get /routes/125?q HTTP/
+CONNECT /trips HTTP/
+HEAD /hello/Wanjiku? HTTP/1.0
+DELETE /trips/42 HTTP/2.0
+DELETE /hello/Wanjiku?q HTTP/
+BREW /trips?date=2026-11-02&seat=3 HTTP/
+ / 
+GET /hello/Wanjiku http/1.1
+PATCH /bookings?date=2026-11-02 HTTP/2.0 x
+DELETE /trips HTTP/1.1 x
+GET trips http/1.1
+POST /routes/125?date=2026-11-02 HTTP/
+BREW / HTTP/1.0
+ /health http/1.1
+POST /bookings 
+PUT /health? HTTP/2.0
+get / HTTP/
+DELETE /bookings?&date=2026-11-02&date=2026-11-02 
+GET trips HTTP/1.1
+POST /routes/125 
+DELETE /?date=2026-11-02 http/1.1
+ trips?&seat=3 HTTP/2.0 x
+OPTIONS trips? HTTP/1.1
+get /bookings 
+HEAD /hello/Wanjiku HTTP/2.0 x
+HEAD /health 
+PUT /health 
+get /trips/42?seat=3 HTTP/
+DELETE /health?seat=3&a=1&a=1 HTTP/1.0
+POST / http/1.1
+DELETE /bookings/9001 http/1.1
+OPTIONS /trips/42 HTTP/
+OPTIONS /routes/125?&a=1&a=1 HTTP/1.2
+POST /trips?date=2026-11-02 http/1.1
+DELETE /health HTTP/1.2
+HEAD /hello/Wanjiku?q& HTTP/1.2
+BREW /hello/Wanjiku? 
+PUT trips?a=1 
+CONNECT /health HTTP/1.0
+ trips?q HTTP/1.0 x
+OPTIONS /routes/125 HTTP/
+get  /trips/42?a=1&date=2026-11-02&date=2026-11-02&  HTTP/2.0
+DELETE /hello/Wanjiku?date=2026-11-02 HTTP/
+PATCH /hello/Wanjiku HTTP/1.0
+OPTIONS /bookings?q&q&date=2026-11-02&date=2026-11-02 
+BREW trips 
+PUT /bookings?seat=3&date=2026-11-02&q HTTP/1.1
+DELETE /trips?&a=1&date=2026-11-02&q HTTP/1.1
+get /health HTTP/2.0
+  HTTP/1.2 x
+BREW /trips/42? HTTP/
+POST trips?seat=3&a=1&seat=3 HTTP/2.0
+BREW /bookings/9001 HTTP/2.0
+CONNECT /trips/42 HTTP/1.1
+PATCH /trips HTTP/
+CONNECT /trips?a=1 http/1.1
+BREW /hello/Wanjiku?date=2026-11-02& http/1.1
+PATCH /hello/Wanjiku?a=1 http/1.1
+get /trips HTTP/
+BREW  
+BREW /bookings/9001 http/1.1
+HEAD /hello/Wanjiku HTTP/
+DELETE  /routes/125?seat=3&&  HTTP/1.2
+GET /trips/42? HTTP/2.0
+BREW  
+BREW /trips/42?seat=3&seat=3&seat=3& HTTP/1.0
+DELETE  HTTP/1.2
+CONNECT /?  x
+GET  HTTP/
+OPTIONS /trips?seat=3&seat=3&date=2026-11-02&a=1 HTTP/
+DELETE /bookings/9001 http/1.1
+PUT /bookings HTTP/1.1 x
+POST /bookings HTTP/1.2
+DELETE /health HTTP/
+get /routes/125? 
+DELETE /trips/42 
+BREW /hello/Wanjiku HTTP/
+HEAD /routes/125?a=1 HTTP/2.0
+GET trips 
+CONNECT /trips 
+get trips HTTP/1.2
+OPTIONS /trips?date=2026-11-02&a=1&seat=3 
+PATCH /trips?q HTTP/1.1 x
+ /routes/125 HTTP/1.1
+ /health?seat=3&date=2026-11-02&a=1  x
+CONNECT /trips?q&a=1 HTTP/1.1
+CONNECT /trips/42?a=1&&date=2026-11-02 HTTP/1.2
+GET trips? 
+HEAD /trips? HTTP/2.0
+BREW   x
+GET /health HTTP/1.2
+PUT /health? HTTP/1.1
+POST /health HTTP/1.0 x
+PATCH /trips/42 HTTP/2.0
+HEAD trips http/1.1
+POST  /  HTTP/1.1
+DELETE /bookings?seat=3&date=2026-11-02&date=2026-11-02&seat=3 HTTP/2.0
+get /hello/Wanjiku 
+ /health  x
+get /routes/125?seat=3&a=1&date=2026-11-02 
+get /routes/125 HTTP/
+PATCH /trips HTTP/1.0
+get /routes/125? HTTP/1.2
+PATCH  
+GET /routes/125 HTTP/
+PATCH /trips?seat=3&date=2026-11-02 HTTP/1.2
+PATCH  http/1.1
+POST / HTTP/1.2
+CONNECT /hello/Wanjiku?date=2026-11-02&date=2026-11-02&seat=3&date=2026-11-02 HTTP/1.2
+DELETE /trips/42?seat=3&seat=3&q HTTP/
+GET /health HTTP/
+DELETE  HTTP/1.1
+PATCH /health 
+POST /bookings/9001?seat=3&date=2026-11-02 HTTP/2.0
+GET /trips/42 http/1.1
+OPTIONS /routes/125 
+POST /hello/Wanjiku HTTP/1.1
+ /routes/125?seat=3&&seat=3 HTTP/1.0
+GET /trips HTTP/1.1
+BREW /routes/125 HTTP/1.2
+GET / 
+HEAD /bookings/9001 HTTP/
+PUT /hello/Wanjiku HTTP/2.0
+BREW /bookings HTTP/1.1
+OPTIONS /hello/Wanjiku HTTP/1.1
+BREW /health?a=1 HTTP/1.2
+POST /bookings/9001?date=2026-11-02 HTTP/1.1
+PATCH /health HTTP/1.1
+DELETE /health HTTP/1.1
+DELETE /routes/125 http/1.1
+GET /bookings HTTP/1.2
+HEAD /health?date=2026-11-02&q&a=1& http/1.1
+BREW  HTTP/1.1
+ /trips/42 HTTP/
+PATCH /health HTTP/
+CONNECT / HTTP/1.2 x
+DELETE /?date=2026-11-02 HTTP/1.0
+PUT /trips/42?a=1&seat=3 HTTP/1.2
+OPTIONS  /bookings  HTTP/
+PATCH /routes/125 
+CONNECT  http/1.1
+BREW /trips/42 HTTP/
+POST /health 
+GET /bookings?a=1&a=1&date=2026-11-02 HTTP/1.1
+OPTIONS /trips http/1.1 x
+CONNECT /bookings HTTP/1.0
+POST /bookings HTTP/2.0
+PATCH /bookings? http/1.1
+POST  HTTP/1.1
+PATCH /routes/125 
+DELETE /trips/42 
+PATCH /bookings HTTP/1.0
+get /trips/42?a=1&date=2026-11-02 HTTP/1.1 x
+HEAD /hello/Wanjiku?a=1&date=2026-11-02&a=1 
+OPTIONS /trips 
+OPTIONS /trips?seat=3&a=1&seat=3& 
+BREW trips HTTP/1.1
+  HTTP/2.0
+DELETE /trips/42?date=2026-11-02&&seat=3 HTTP/1.2
+PATCH /hello/Wanjiku http/1.1
+HEAD /health HTTP/2.0
+DELETE /trips?date=2026-11-02&&a=1&q HTTP/1.2
+CONNECT /trips?&q&& http/1.1
+OPTIONS /health HTTP/2.0
+ /bookings/9001?&q HTTP/1.0
+ /routes/125 
+BREW trips?q&a=1 HTTP/1.2
+BREW /trips/42 HTTP/
+PATCH /routes/125 HTTP/2.0
+get /hello/Wanjiku? HTTP/2.0
+BREW /health HTTP/2.0
+POST /health http/1.1
+PATCH / 
+GET /hello/Wanjiku http/1.1
+  
+get /trips/42?seat=3 HTTP/2.0
+GET /bookings/9001 
+BREW /health HTTP/1.1
+DELETE /?q&a=1&date=2026-11-02 HTTP/1.1
+POST /bookings/9001 HTTP/1.0
+PATCH /hello/Wanjiku HTTP/1.0 x
+OPTIONS / HTTP/2.0
+PUT /health HTTP/1.0
+PUT  HTTP/1.1
+CONNECT /health?a=1&date=2026-11-02 HTTP/1.2
+DELETE /bookings HTTP/1.0
+PATCH /trips/42?&date=2026-11-02&date=2026-11-02 
+BREW /routes/125 HTTP/ x
+PUT /bookings/9001 HTTP/2.0
+DELETE  /bookings?date=2026-11-02&seat=3&a=1&q  
+  /hello/Wanjiku  
+POST trips? HTTP/
+OPTIONS /trips/42 HTTP/2.0
+BREW /hello/Wanjiku?q HTTP/1.0
+get /hello/Wanjiku http/1.1
+DELETE /routes/125 HTTP/1.0
+DELETE  HTTP/1.0
+ trips?&seat=3&a=1 HTTP/2.0
+DELETE /health?q HTTP/2.0
+BREW / HTTP/1.2
+PATCH /?&&seat=3&seat=3 HTTP/1.1
+OPTIONS /routes/125? HTTP/2.0
+PATCH trips HTTP/1.0
+ /bookings HTTP/
+PATCH /trips/42 HTTP/1.2
+ /trips/42 HTTP/1.1
+CONNECT /trips HTTP/
+DELETE /hello/Wanjiku?&a=1&&seat=3 
+POST /bookings HTTP/1.2
+HEAD /hello/Wanjiku 
+ /health HTTP/1.1
+HEAD /?  x
+GET trips?date=2026-11-02&seat=3&date=2026-11-02 HTTP/1.2
+PUT /routes/125 http/1.1 x
+get /routes/125 HTTP/2.0
+OPTIONS / HTTP/1.1
+  HTTP/1.0
+BREW /bookings 
+HEAD /trips HTTP/2.0
+PUT trips 
+BREW /hello/Wanjiku 
+GET  HTTP/2.0
+PATCH /bookings/9001?a=1&seat=3&seat=3&a=1 http/1.1
+ /bookings/9001? HTTP/1.2
+PUT trips http/1.1
+get /trips?seat=3&date=2026-11-02 HTTP/
+get /health HTTP/1.0
+PUT /bookings?seat=3&q 
+ /bookings HTTP/1.0
+CONNECT /bookings/9001?seat=3 HTTP/1.1
+get  HTTP/1.2 x
+HEAD /trips/42 HTTP/
+DELETE /bookings/9001?date=2026-11-02&date=2026-11-02&seat=3 HTTP/1.2
+PATCH /trips HTTP/1.2
+get trips HTTP/1.2
+POST /health 
+ /bookings? HTTP/1.1
+PUT /routes/125?a=1 HTTP/
+ /bookings?q&seat=3&date=2026-11-02 HTTP/1.0
+PUT trips 
+OPTIONS /?& http/1.1
+PUT /?date=2026-11-02&q& HTTP/
+BREW /trips HTTP/1.1
+DELETE /health? HTTP/1.1
+GET /trips/42 HTTP/1.2
+BREW /trips/42? http/1.1
+ / 
+OPTIONS /?date=2026-11-02&&q&seat=3 http/1.1
+BREW /hello/Wanjiku HTTP/1.2 x
+CONNECT /trips?seat=3&a=1 HTTP/1.2
+BREW /trips/42 
+BREW  http/1.1
+ /bookings HTTP/1.2
+HEAD  HTTP/1.1
+  HTTP/2.0
+BREW /trips/42?seat=3&q&a=1 HTTP/1.0
+OPTIONS /trips/42?seat=3 HTTP/
+BREW /health HTTP/2.0
+PATCH /trips HTTP/1.2
+get  
+ /bookings 
+PATCH /bookings/9001?seat=3&date=2026-11-02&seat=3&seat=3 
+ /bookings/9001 
+PUT / HTTP/1.1
+PUT /hello/Wanjiku HTTP/2.0
+GET /hello/Wanjiku HTTP/2.0
+PATCH trips?q&seat=3&a=1 
+POST /bookings?a=1 http/1.1
+get /health?&seat=3&seat=3 http/1.1
+PUT trips?q 
+PATCH /trips/42 HTTP/1.2
+GET /trips/42 
+DELETE trips HTTP/1.2
+HEAD /hello/Wanjiku HTTP/1.2
+CONNECT /trips?date=2026-11-02&q&q&date=2026-11-02 HTTP/1.0
+POST  /?seat=3  HTTP/2.0
+OPTIONS /bookings/9001 HTTP/
+PATCH  HTTP/1.1
+HEAD /trips http/1.1
+HEAD /routes/125 HTTP/1.1
+GET /health HTTP/1.0
+CONNECT /bookings/9001 
+CONNECT / HTTP/
+PATCH /bookings?seat=3 HTTP/1.0
+  HTTP/1.2
+CONNECT  HTTP/ x
+DELETE trips?seat=3&&seat=3 HTTP/
+BREW  http/1.1
+PATCH /health HTTP/1.2
+CONNECT /bookings/9001 HTTP/2.0
+PUT /bookings HTTP/
+get / HTTP/2.0
+ /bookings HTTP/2.0
+GET trips HTTP/1.0
+BREW trips HTTP/2.0
+POST /health?q&a=1&seat=3 http/1.1
+ /trips?seat=3&q http/1.1
+PUT /health?seat=3 HTTP/1.0
+PUT /trips/42 HTTP/1.0
+POST /health HTTP/
+ /bookings/9001? HTTP/1.2
+GET trips?q& HTTP/ x
+HEAD /hello/Wanjiku 
+POST /routes/125?&seat=3& 
+CONNECT trips?seat=3&date=2026-11-02 http/1.1
+OPTIONS /trips HTTP/1.1
+PATCH trips HTTP/1.1
+PUT  HTTP/2.0
+get /hello/Wanjiku 
+PUT /routes/125 HTTP/2.0
+PATCH / HTTP/
+get /hello/Wanjiku?&seat=3 http/1.1
+DELETE /routes/125 HTTP/
+DELETE /bookings/9001 HTTP/1.2
+BREW /routes/125 HTTP/1.2
+POST /bookings HTTP/1.0
+HEAD /bookings http/1.1
+OPTIONS /hello/Wanjiku?a=1& HTTP/2.0
+ /bookings/9001 HTTP/1.2
+OPTIONS /trips/42 
+ /hello/Wanjiku? HTTP/2.0
+DELETE /trips/42 HTTP/1.1
+PATCH  HTTP/2.0
+BREW / HTTP/1.0
+get /health?seat=3&q HTTP/2.0
+DELETE /health?a=1 HTTP/1.2
+CONNECT /bookings/9001 HTTP/1.1
+get /routes/125 HTTP/
+HEAD /routes/125 HTTP/1.2
+DELETE /trips HTTP/1.0
+ /bookings/9001 HTTP/2.0
+get  HTTP/1.2
+BREW /trips HTTP/
+PATCH  
+CONNECT /trips/42? HTTP/2.0
+OPTIONS /hello/Wanjiku http/1.1
+CONNECT  HTTP/2.0
+GET /bookings? HTTP/1.1
+get /hello/Wanjiku 
+CONNECT /health http/1.1
+GET  HTTP/1.0
+ /trips HTTP/
+PATCH /hello/Wanjiku? HTTP/1.1
+CONNECT /trips/42 HTTP/
+PATCH /hello/Wanjiku? HTTP/
+BREW /bookings?date=2026-11-02&date=2026-11-02 HTTP/1.1
+POST /bookings HTTP/2.0
+CONNECT /trips/42 HTTP/1.0
+ /routes/125?q&date=2026-11-02 HTTP/1.2
+PUT /bookings http/1.1
+OPTIONS /health?seat=3&a=1 http/1.1
+HEAD trips http/1.1
+PATCH /bookings?a=1&a=1 HTTP/1.0
+get /hello/Wanjiku HTTP/
+HEAD  HTTP/1.2
+CONNECT / HTTP/2.0
+OPTIONS /routes/125?a=1&&&q HTTP/1.0
+get /hello/Wanjiku? HTTP/
+BREW /health HTTP/1.2
+PUT /bookings/9001 HTTP/1.1
+HEAD /hello/Wanjiku HTTP/2.0
+get / HTTP/1.1
+CONNECT /routes/125 http/1.1
+OPTIONS  HTTP/1.2
+PATCH / 
+OPTIONS trips HTTP/1.1
+DELETE / HTTP/
+HEAD  /routes/125?date=2026-11-02&date=2026-11-02&seat=3  HTTP/
+HEAD /trips HTTP/1.2
+PATCH /health 
+get /health?date=2026-11-02& HTTP/1.1
+ /bookings/9001?date=2026-11-02&date=2026-11-02&date=2026-11-02&q 
+BREW trips?a=1&q&q HTTP/1.0
+OPTIONS /routes/125 HTTP/1.1
+OPTIONS /routes/125 HTTP/1.1
+PUT /health? HTTP/1.0
+GET /hello/Wanjiku http/1.1
+PUT trips http/1.1
+GET /trips/42 
+DELETE  /  HTTP/2.0
+ /routes/125?q&a=1 HTTP/1.1
+PATCH /bookings HTTP/1.2
+ /trips/42 HTTP/1.0
+PATCH /trips HTTP/1.1
+POST trips HTTP/
+POST /trips?date=2026-11-02&a=1&date=2026-11-02&seat=3 HTTP/2.0
+CONNECT /routes/125 HTTP/1.1 x
+OPTIONS /routes/125?a=1&a=1&q&a=1 HTTP/2.0
+PATCH /health HTTP/
+ /hello/Wanjiku? HTTP/
+POST /hello/Wanjiku HTTP/1.0 x
+GET /?a=1&seat=3&date=2026-11-02 HTTP/1.0
+OPTIONS /trips/42 
+BREW trips?&a=1&&seat=3 HTTP/1.1
+PUT / HTTP/1.2
+get / HTTP/1.0
+HEAD  HTTP/1.2 x
+BREW /trips/42 HTTP/2.0
+HEAD /trips 
+BREW /trips?seat=3&seat=3& 
+PUT /health?a=1&date=2026-11-02&date=2026-11-02&seat=3 
+POST /hello/Wanjiku HTTP/1.2
+PATCH /health HTTP/
+POST /hello/Wanjiku?q&date=2026-11-02&seat=3&a=1 HTTP/2.0
+GET /bookings?a=1&seat=3&date=2026-11-02&a=1 HTTP/2.0
+ /bookings/9001 HTTP/1.0
+PUT /bookings/9001?&date=2026-11-02&a=1&q HTTP/1.2
+get trips?a=1&date=2026-11-02&a=1 HTTP/2.0
+DELETE /health?q&q http/1.1
+DELETE /bookings HTTP/2.0
+OPTIONS /bookings HTTP/ x
+PATCH /trips?seat=3 HTTP/1.0
+PATCH /?date=2026-11-02 HTTP/2.0
+HEAD  HTTP/2.0
+BREW /bookings?&&date=2026-11-02 HTTP/1.2
+ /bookings HTTP/1.1
+BREW /bookings/9001 HTTP/1.2
+  HTTP/
+PATCH  HTTP/1.0
+OPTIONS /bookings? HTTP/1.2
+POST /bookings http/1.1 x
+DELETE /trips 
+GET /trips? HTTP/1.0
+CONNECT /hello/Wanjiku? http/1.1
+POST  HTTP/
+OPTIONS /bookings 
+DELETE /bookings 
+BREW /bookings HTTP/2.0
+HEAD /trips HTTP/1.0
+OPTIONS /bookings/9001 HTTP/1.0
+OPTIONS /trips? HTTP/1.2
+CONNECT /routes/125 HTTP/2.0
+ /bookings HTTP/1.2
+PATCH /routes/125?seat=3 HTTP/1.2
+BREW / 
+CONNECT /routes/125 HTTP/1.0
+ /hello/Wanjiku? HTTP/1.0
+OPTIONS / HTTP/1.1
+  HTTP/1.2 x
+HEAD  HTTP/2.0
+DELETE /bookings/9001 HTTP/1.1
+OPTIONS /?date=2026-11-02 http/1.1
+GET / HTTP/
+DELETE /bookings http/1.1
+POST /routes/125 HTTP/ x
+POST /health?a=1 
+DELETE / HTTP/1.0
+PATCH  /bookings?q&seat=3  HTTP/1.0
+BREW /bookings HTTP/1.1
+CONNECT /hello/Wanjiku HTTP/1.0
+HEAD /trips HTTP/1.0
+PATCH  HTTP/
+DELETE /? HTTP/1.0 x
+GET /trips/42?date=2026-11-02&q& HTTP/2.0
+HEAD  HTTP/
+ /health?seat=3&seat=3 
+CONNECT /bookings/9001? HTTP/2.0
+ /hello/Wanjiku?seat=3&a=1&seat=3 HTTP/2.0
+ /health  x
+PUT /bookings/9001 HTTP/1.0
+GET /health?seat=3&q http/1.1
+POST /health HTTP/
+PUT /bookings/9001?a=1&q&q& HTTP/1.2
+PATCH /bookings http/1.1
+DELETE trips HTTP/2.0
+get / HTTP/
+ /bookings?a=1&a=1&seat=3&q http/1.1
+POST /bookings?date=2026-11-02&a=1 HTTP/2.0
+  /hello/Wanjiku?a=1&date=2026-11-02&&q  
+ /bookings/9001 
+BREW  HTTP/2.0
+POST /hello/Wanjiku HTTP/1.2
+OPTIONS /trips/42 http/1.1
+POST / HTTP/1.2
+BREW /routes/125 HTTP/1.0
+PATCH /bookings?a=1&a=1&seat=3 HTTP/1.0
+PATCH /bookings/9001 http/1.1
+POST /health?q&q&q HTTP/1.1
+PATCH /bookings? 
+get / HTTP/2.0
+POST  HTTP/1.1
+POST /bookings/9001?q&&&a=1 HTTP/1.2
+BREW /trips?date=2026-11-02&seat=3&seat=3&q HTTP/2.0 x
+get trips?date=2026-11-02 HTTP/1.0
+OPTIONS trips 
+CONNECT /trips/42?q&a=1 HTTP/1.0
+BREW /hello/Wanjiku HTTP/
+GET /?a=1&date=2026-11-02&a=1 HTTP/
+PATCH  HTTP/1.1
+BREW /bookings/9001?seat=3&q http/1.1
+PUT trips HTTP/1.1
+POST /trips HTTP/2.0
+DELETE trips?q HTTP/
+POST /?seat=3&&a=1 HTTP/1.0
+DELETE trips HTTP/1.0
+BREW /trips/42 HTTP/1.0
+PUT / 
+HEAD /health HTTP/1.2
+DELETE trips 
+ /trips/42 HTTP/2.0
+POST /bookings HTTP/ x
+CONNECT trips http/1.1
+POST /trips/42 
+ trips?a=1&a=1& HTTP/1.0
+HEAD /trips/42? 
+HEAD /trips/42 
+DELETE  /hello/Wanjiku  HTTP/2.0
+PATCH /bookings?a=1 HTTP/
+HEAD /bookings HTTP/2.0
+get trips HTTP/2.0 x
+POST /trips HTTP/1.0
+get /trips/42?&date=2026-11-02& HTTP/1.2
+DELETE trips HTTP/1.2
+DELETE  /trips/42  HTTP/1.0
+PATCH /?a=1&date=2026-11-02&&date=2026-11-02 HTTP/1.2
+OPTIONS /trips/42 HTTP/1.0
+PATCH  /routes/125  HTTP/1.1
+POST  HTTP/1.1
+get  HTTP/1.0
+ /routes/125 
+PATCH /routes/125?a=1&a=1 HTTP/2.0
+HEAD /health http/1.1
+HEAD /trips/42? HTTP/1.0
+PATCH /trips/42 HTTP/1.0
+DELETE /bookings/9001 HTTP/
+ /bookings HTTP/2.0 x
+CONNECT /bookings/9001 http/1.1
+DELETE  HTTP/2.0
+HEAD  HTTP/2.0
+PATCH trips HTTP/
+CONNECT /trips? http/1.1
+ /?q&a=1&&date=2026-11-02 http/1.1
+CONNECT /hello/Wanjiku HTTP/2.0
+ /trips HTTP/1.0
+get /health?date=2026-11-02&&date=2026-11-02&a=1 HTTP/1.0
+OPTIONS /hello/Wanjiku http/1.1
+PATCH /health? HTTP/
+DELETE /health HTTP/1.0
+POST /trips 
+PATCH /health?date=2026-11-02&q&q&seat=3 HTTP/1.2
+POST /bookings HTTP/1.0
+PUT  /bookings/9001  HTTP/1.0
+  HTTP/
+GET /hello/Wanjiku?seat=3&a=1 HTTP/
+PUT trips 
+get /trips/42 HTTP/
+get /hello/Wanjiku HTTP/
+get /hello/Wanjiku HTTP/1.1
+PATCH trips HTTP/2.0
+GET trips?seat=3 http/1.1
+OPTIONS /health HTTP/
+POST  HTTP/1.1
+get /trips/42 
+CONNECT trips HTTP/
+BREW /health HTTP/2.0
+PATCH trips HTTP/1.2
+BREW  http/1.1 x
+PUT /trips/42 HTTP/1.1
+ /health HTTP/1.2
+CONNECT  
+DELETE /routes/125 
+BREW /trips?q&a=1&seat=3&date=2026-11-02 HTTP/
+ /bookings http/1.1
+PUT /bookings HTTP/1.1
+ /bookings/9001 HTTP/2.0
+PUT / HTTP/
+GET /bookings HTTP/2.0
+HEAD /trips HTTP/
+CONNECT /trips HTTP/1.1
+DELETE /bookings 
+BREW /bookings?seat=3 HTTP/
+POST /bookings HTTP/1.1
+ trips? HTTP/2.0
+get /routes/125 HTTP/1.0
+ /hello/Wanjiku http/1.1
+get trips?a=1&&date=2026-11-02& HTTP/1.0
+BREW  /?  http/1.1
+GET  
+HEAD /hello/Wanjiku HTTP/2.0
+ / http/1.1
+PUT /routes/125 HTTP/1.0
+PUT /trips HTTP/2.0
+HEAD /bookings/9001?date=2026-11-02&a=1&seat=3&date=2026-11-02 HTTP/1.2
+PUT / HTTP/
+get /trips/42?date=2026-11-02& HTTP/1.0
+GET /hello/Wanjiku http/1.1
+POST /routes/125 http/1.1
+HEAD trips 
+BREW /routes/125?seat=3&a=1& http/1.1
+CONNECT /bookings/9001?a=1 HTTP/1.0
+get trips 
+POST /routes/125?q HTTP/1.0
+POST /hello/Wanjiku HTTP/2.0
+DELETE /trips 
+ trips?a=1&date=2026-11-02& 
+GET trips?q& HTTP/1.1
+PATCH /?date=2026-11-02&&&a=1 HTTP/1.2
+OPTIONS trips?a=1&date=2026-11-02&q HTTP/1.1
+HEAD /trips HTTP/1.1
+PUT /trips/42 HTTP/
+POST /bookings 
+OPTIONS /hello/Wanjiku?q&date=2026-11-02&q&a=1 
+POST  HTTP/1.2
+PATCH /trips?seat=3&seat=3&q HTTP/2.0
+PUT /bookings?date=2026-11-02&a=1&seat=3 
+OPTIONS /?date=2026-11-02&seat=3&date=2026-11-02& http/1.1
+POST /hello/Wanjiku?date=2026-11-02 HTTP/
+HEAD /routes/125 HTTP/1.1
+DELETE /health HTTP/1.1
+DELETE /bookings HTTP/1.1
+DELETE /?date=2026-11-02&&seat=3&date=2026-11-02  x
+BREW /trips HTTP/1.1
+PATCH /hello/Wanjiku http/1.1
+PUT  HTTP/1.1
+CONNECT /routes/125?date=2026-11-02 http/1.1
+BREW /trips?date=2026-11-02 HTTP/
+PATCH /routes/125 http/1.1
+ /hello/Wanjiku HTTP/2.0
+  HTTP/2.0
+CONNECT /trips HTTP/1.0
+HEAD /trips/42 http/1.1
+PUT trips HTTP/1.0
+DELETE /bookings?date=2026-11-02&a=1 HTTP/1.2
+OPTIONS /trips/42?date=2026-11-02 http/1.1
+PATCH /hello/Wanjiku HTTP/
+GET /bookings/9001 HTTP/1.0
+BREW /health HTTP/1.0
+PATCH /routes/125 HTTP/1.2 x
+CONNECT /routes/125 http/1.1
+POST /trips/42?a=1&seat=3&q&seat=3 HTTP/1.2
+HEAD trips HTTP/2.0
+ /health http/1.1
+BREW trips http/1.1
+ /bookings HTTP/1.0
+BREW /bookings/9001?seat=3&q&a=1 HTTP/1.1
+CONNECT /health HTTP/1.2
+HEAD /bookings?&a=1 
+DELETE /bookings? HTTP/1.2
+CONNECT trips?a=1 HTTP/2.0
+get /trips 
+GET /hello/Wanjiku 
+get trips HTTP/1.0
+HEAD  HTTP/
+PUT /trips/42 HTTP/1.0
+OPTIONS /trips/42 HTTP/
+CONNECT  HTTP/1.0
+get /bookings?q&seat=3&q&a=1 HTTP/
+get /health?seat=3&&seat=3 
+BREW  HTTP/1.2
+HEAD /trips http/1.1
+POST trips HTTP/2.0
+get /trips? HTTP/2.0
+BREW /health?date=2026-11-02&date=2026-11-02 HTTP/1.1
+GET trips? HTTP/1.1 x
+GET /trips HTTP/1.2
+PUT /trips/42 HTTP/1.1
+ /routes/125 HTTP/1.2
+PATCH  HTTP/1.0
+BREW /trips HTTP/1.2
+GET /bookings/9001?q&seat=3 http/1.1
+GET / HTTP/1.2
+POST trips?a=1&&seat=3&seat=3 HTTP/
+get trips HTTP/1.1
+BREW  HTTP/1.1
+PUT trips?a=1&&seat=3& HTTP/1.0
+get /trips http/1.1
+PATCH /?q&date=2026-11-02 HTTP/1.0
+OPTIONS trips HTTP/1.0
+PATCH / http/1.1
+get /bookings/9001?&a=1 HTTP/1.1
+HEAD trips HTTP/1.2
+BREW /hello/Wanjiku?q& 
+DELETE trips?&a=1& HTTP/1.2
+DELETE  http/1.1
+ /routes/125?seat=3&q HTTP/2.0
+ /health HTTP/1.0
+BREW /?&seat=3 HTTP/1.2
+POST /routes/125?seat=3& HTTP/1.1
+OPTIONS / HTTP/2.0
+BREW /bookings HTTP/2.0
+PUT trips HTTP/1.1
+PUT /bookings?a=1&a=1&date=2026-11-02 HTTP/1.2
+CONNECT /?date=2026-11-02 HTTP/1.0
+DELETE /routes/125?a=1 http/1.1
+POST /bookings 
+OPTIONS trips http/1.1
+DELETE /health?date=2026-11-02&seat=3 HTTP/1.1
+POST / 
+BREW  HTTP/1.2
+OPTIONS / http/1.1
+HEAD /trips/42 
+DELETE trips HTTP/1.2
+OPTIONS /hello/Wanjiku http/1.1
+DELETE /hello/Wanjiku?q&q&q&seat=3 
+get /hello/Wanjiku http/1.1
+GET /trips?seat=3&a=1 HTTP/2.0 x
+HEAD /health HTTP/1.1
+OPTIONS /hello/Wanjiku 
+PUT /bookings/9001? HTTP/
+POST /bookings/9001?q&q&q HTTP/1.1
+OPTIONS  HTTP/1.1
+ /bookings/9001?seat=3&date=2026-11-02&a=1&a=1 HTTP/1.2
+ /bookings?date=2026-11-02&&date=2026-11-02&a=1 HTTP/1.1
+CONNECT /bookings/9001? 
+get /hello/Wanjiku HTTP/1.2
+OPTIONS trips 
+BREW /trips?a=1 HTTP/1.0
+HEAD trips HTTP/
+OPTIONS /routes/125?&date=2026-11-02&seat=3 http/1.1
+get /hello/Wanjiku HTTP/1.0
+GET / HTTP/
+OPTIONS  HTTP/2.0
+DELETE /trips HTTP/1.1
+POST  HTTP/2.0
+CONNECT /health http/1.1
+GET /hello/Wanjiku 
+POST /health HTTP/
+PATCH /bookings/9001 http/1.1
+get /trips HTTP/1.1
+POST trips? 
+CONNECT /bookings? http/1.1
+get /bookings HTTP/1.1
+OPTIONS  HTTP/
+POST /trips HTTP/
+DELETE /routes/125?a=1&seat=3 HTTP/1.0
+BREW / HTTP/
+DELETE /routes/125? HTTP/2.0
+HEAD /bookings/9001 HTTP/1.1
+GET /hello/Wanjiku HTTP/1.1
+BREW / HTTP/2.0
+PUT /trips?&& HTTP/1.1
+DELETE /bookings/9001 http/1.1
+POST /bookings HTTP/
+PATCH trips HTTP/1.2
+HEAD /trips/42 HTTP/1.0
+HEAD /trips/42?&q&date=2026-11-02& HTTP/2.0
+get /bookings HTTP/1.0
+DELETE /health 
+OPTIONS  HTTP/1.0
+PUT /trips HTTP/1.2
+HEAD trips HTTP/1.2
+OPTIONS /health?a=1&q&q&q 
+get / HTTP/1.0
+PUT /bookings HTTP/1.2
+CONNECT /hello/Wanjiku HTTP/1.1
+PATCH /bookings HTTP/1.0
+OPTIONS /trips HTTP/
+HEAD  HTTP/2.0
+BREW /bookings HTTP/2.0
+HEAD /routes/125? HTTP/1.1
+PATCH /trips/42 HTTP/
+PATCH trips HTTP/1.0
+CONNECT /trips?seat=3&a=1&q 
+BREW /bookings?date=2026-11-02&a=1 HTTP/2.0
+PATCH /trips/42?q&&date=2026-11-02& HTTP/2.0
+GET /? HTTP/
+BREW /bookings HTTP/1.2
+HEAD  HTTP/
+POST /bookings?date=2026-11-02&q&&date=2026-11-02 
+BREW /hello/Wanjiku HTTP/1.1
+get /trips/42?q&date=2026-11-02 http/1.1
+PUT /hello/Wanjiku?date=2026-11-02&a=1&&seat=3 HTTP/1.2
+OPTIONS /hello/Wanjiku HTTP/1.2
+ /routes/125 http/1.1
+get /routes/125?seat=3 HTTP/1.2
+HEAD trips HTTP/
+DELETE /hello/Wanjiku? 
+GET /?seat=3&seat=3&q 
+POST /routes/125 HTTP/1.0
+GET  HTTP/1.1
+GET /routes/125 HTTP/1.2
+HEAD /trips? HTTP/1.0
+ /trips HTTP/1.1
+get /routes/125 HTTP/1.1
+OPTIONS trips?a=1&date=2026-11-02 http/1.1
+BREW /health HTTP/
+CONNECT /bookings/9001?a=1 HTTP/2.0
+POST /bookings/9001 HTTP/
+get /hello/Wanjiku HTTP/1.2 x
+get /?a=1&q HTTP/
+BREW /hello/Wanjiku?q&a=1&seat=3&seat=3 HTTP/1.2
+get /hello/Wanjiku? HTTP/1.0
+  http/1.1
+HEAD /trips? HTTP/
+PUT trips HTTP/1.1
+OPTIONS / HTTP/1.1
+get /health HTTP/2.0
+PUT /health HTTP/2.0
+OPTIONS /routes/125?date=2026-11-02 HTTP/1.0
+PUT  HTTP/1.2
+ /health? HTTP/1.0
+get trips HTTP/1.0
+GET /health http/1.1
+OPTIONS /bookings? HTTP/1.0
+get /hello/Wanjiku HTTP/
+POST /routes/125?& 
+CONNECT /health?seat=3&date=2026-11-02&a=1 HTTP/1.0
+get /trips http/1.1
+PUT /health?a=1&seat=3 HTTP/
+PUT /trips? HTTP/
+ trips HTTP/1.0
+CONNECT /hello/Wanjiku?&date=2026-11-02&seat=3&a=1 HTTP/
+BREW /bookings/9001 http/1.1
+PUT / HTTP/
+BREW / 
+PUT  HTTP/1.0
+PUT    HTTP/1.2
+HEAD trips HTTP/1.1
+OPTIONS /trips/42 http/1.1
+POST /?date=2026-11-02&seat=3 HTTP/1.1
+GET /routes/125 HTTP/
+HEAD /?a=1 HTTP/
+HEAD /bookings/9001 http/1.1
+HEAD /routes/125 HTTP/1.2
+OPTIONS /health http/1.1
+BREW /hello/Wanjiku?q&a=1 HTTP/2.0
+GET trips?a=1 HTTP/
+POST /hello/Wanjiku HTTP/1.2
+CONNECT /?a=1&q HTTP/
+GET /trips/42?q&seat=3&q 
+GET /routes/125 HTTP/1.2
+BREW /routes/125 http/1.1
+DELETE /health?q& HTTP/1.2 x
+CONNECT /?seat=3&&seat=3&date=2026-11-02 http/1.1
+PATCH /health? HTTP/2.0
+PUT /hello/Wanjiku HTTP/1.1
+POST /health HTTP/2.0
+ /bookings 
+PUT /trips HTTP/2.0
+POST /bookings HTTP/
+ /health HTTP/1.1
+BREW /trips/42 
+ /?a=1&a=1&seat=3&seat=3 HTTP/1.2
+get /routes/125 HTTP/1.2
+HEAD /trips?a=1&seat=3&date=2026-11-02&seat=3 HTTP/2.0
+HEAD /trips 
+HEAD /hello/Wanjiku HTTP/1.2
+ / HTTP/1.2
+OPTIONS /health?&date=2026-11-02&& HTTP/2.0
+OPTIONS /hello/Wanjiku HTTP/1.1
+POST /bookings?q&&a=1 HTTP/1.0
+POST /bookings?date=2026-11-02&&&a=1 HTTP/1.0
+get /trips HTTP/1.2
+OPTIONS /trips HTTP/2.0
+OPTIONS /hello/Wanjiku http/1.1
+GET /bookings/9001 HTTP/1.0
+get trips? HTTP/
+HEAD  HTTP/1.0
+ /trips 
+HEAD /trips http/1.1
+OPTIONS trips?&date=2026-11-02&seat=3&q HTTP/1.1
+POST /bookings/9001?&seat=3&&q HTTP/2.0
+HEAD /trips?date=2026-11-02&a=1& http/1.1
+PUT /trips/42 HTTP/1.2
+CONNECT /health http/1.1
+BREW /trips HTTP/1.0
+BREW /health HTTP/1.0
+HEAD / http/1.1
+BREW  http/1.1
+PATCH /hello/Wanjiku HTTP/1.0
+get /trips/42 HTTP/1.1
+BREW /bookings/9001 HTTP/
+GET /hello/Wanjiku HTTP/1.0
+GET /hello/Wanjiku HTTP/
+CONNECT /health HTTP/1.2 x
+CONNECT /bookings/9001?q&q& HTTP/
+GET  HTTP/1.1
+BREW /bookings/9001 http/1.1
+OPTIONS trips?a=1&date=2026-11-02 HTTP/1.2
+get / HTTP/2.0
+get /bookings HTTP/1.2
+POST /bookings?q&date=2026-11-02 
+DELETE /routes/125 
+CONNECT trips? http/1.1
+POST /bookings HTTP/1.2
+DELETE /bookings HTTP/1.1
+GET /bookings HTTP/1.2
+DELETE /routes/125?&a=1 HTTP/1.2
+get /hello/Wanjiku HTTP/2.0
+DELETE /bookings/9001?seat=3&q http/1.1
+GET /trips/42? HTTP/1.2
+OPTIONS /routes/125?q&date=2026-11-02&date=2026-11-02&date=2026-11-02 HTTP/1.0
+get /bookings? HTTP/1.1 x
+get /hello/Wanjiku?a=1&a=1&date=2026-11-02&seat=3 HTTP/1.2
+HEAD /trips HTTP/1.1
+ /bookings HTTP/2.0
+POST  /bookings/9001?seat=3&date=2026-11-02&date=2026-11-02&a=1  HTTP/1.2
+POST  HTTP/
+GET /bookings/9001? HTTP/1.2
+get /routes/125 HTTP/1.1
+POST /hello/Wanjiku HTTP/2.0
+GET /routes/125 HTTP/
+PATCH / HTTP/1.0
+ /health HTTP/1.1
+HEAD /bookings?date=2026-11-02&a=1 
+OPTIONS /health?&&&date=2026-11-02 HTTP/1.0
+GET trips HTTP/2.0
+get /hello/Wanjiku HTTP/1.0
+DELETE /trips?&a=1 HTTP/2.0
+HEAD /?a=1&q&a=1 HTTP/
+ /routes/125?seat=3&seat=3 
+PATCH / HTTP/
+POST /trips HTTP/ x
+OPTIONS /hello/Wanjiku HTTP/2.0
+POST / HTTP/1.2
+POST / http/1.1 x
+BREW /?a=1 HTTP/1.0 x
+POST / HTTP/1.2
+BREW /bookings?q&date=2026-11-02&seat=3 HTTP/1.0
+PUT /hello/Wanjiku?a=1&a=1 http/1.1
+get /health HTTP/1.2
+get /?&a=1&q HTTP/2.0
+DELETE /trips HTTP/1.0
+ /health HTTP/1.2
+OPTIONS /bookings?a=1&&date=2026-11-02&q HTTP/
+GET /health?seat=3&date=2026-11-02&q HTTP/1.1
+PUT trips?&&date=2026-11-02 HTTP/2.0
+PATCH /hello/Wanjiku HTTP/1.0
+HEAD  HTTP/1.2
+GET /bookings 
+DELETE /trips/42?q&q http/1.1
+DELETE /bookings 
+HEAD /hello/Wanjiku HTTP/1.1
+GET  
+HEAD /bookings?date=2026-11-02 HTTP/2.0
+get trips? HTTP/1.2
+HEAD /bookings HTTP/
+get trips?seat=3& 
+PATCH  HTTP/1.2
+GET / HTTP/1.0
+ /hello/Wanjiku?q&&date=2026-11-02&date=2026-11-02 http/1.1
+HEAD /hello/Wanjiku?seat=3&date=2026-11-02 http/1.1
+GET /routes/125 HTTP/2.0 x
+OPTIONS trips HTTP/1.1
+BREW /bookings/9001?q HTTP/
+ /bookings?date=2026-11-02&a=1 HTTP/1.1
+get /health?&a=1 HTTP/1.1
+PATCH /bookings/9001 
+PUT  HTTP/2.0
+OPTIONS /routes/125?&a=1&q HTTP/2.0
+HEAD /bookings/9001 http/1.1
+DELETE /trips 
+PATCH  http/1.1
+OPTIONS /trips/42 HTTP/1.0
+PATCH /hello/Wanjiku? HTTP/1.1
+PATCH  HTTP/2.0
+GET /bookings/9001 HTTP/
+get  
+PUT /hello/Wanjiku?date=2026-11-02 HTTP/
+PUT /bookings/9001 HTTP/1.1
+CONNECT /bookings http/1.1
+POST /routes/125 HTTP/1.2
+ /trips/42 HTTP/
+DELETE / HTTP/
+DELETE /routes/125 HTTP/2.0
+OPTIONS /trips/42 HTTP/1.1
+BREW  http/1.1
+PUT /bookings http/1.1
+get /bookings?seat=3&a=1 HTTP/1.0
+BREW /trips/42?q&&date=2026-11-02& http/1.1
+CONNECT /bookings/9001?seat=3&seat=3 HTTP/1.0
+POST /hello/Wanjiku?seat=3&date=2026-11-02&seat=3& HTTP/2.0
+PATCH / HTTP/1.0
+CONNECT /hello/Wanjiku?q&&&date=2026-11-02 HTTP/1.2
+BREW /hello/Wanjiku HTTP/
+OPTIONS /health HTTP/1.0
+CONNECT /routes/125? HTTP/1.0
+BREW  
+PATCH /trips 
+OPTIONS  HTTP/2.0
+GET /health?date=2026-11-02&date=2026-11-02&a=1&q HTTP/1.1
+OPTIONS /routes/125? HTTP/2.0
+POST /routes/125 
+PUT /bookings HTTP/1.0
+GET  HTTP/1.1
+ /health?q&seat=3 HTTP/1.1
+PUT /bookings HTTP/
+HEAD  /  HTTP/2.0
+OPTIONS /trips/42?&seat=3&q&q http/1.1 x
+DELETE  http/1.1
+HEAD /health? HTTP/1.1
+GET /trips/42? HTTP/1.0
+PUT /trips?date=2026-11-02&q HTTP/1.2
+BREW trips HTTP/
+BREW /bookings? HTTP/1.2
+CONNECT /trips HTTP/2.0
+DELETE / HTTP/1.2
+ /bookings/9001?seat=3&seat=3&q http/1.1
+OPTIONS /hello/Wanjiku?a=1 HTTP/1.2
+DELETE /trips/42 HTTP/2.0
+GET /trips?a=1&a=1&seat=3&date=2026-11-02 http/1.1
+ / HTTP/1.2
+PATCH /health HTTP/1.2
+BREW /trips/42?a=1 HTTP/1.1
+POST /bookings HTTP/
+get /trips HTTP/1.2
+BREW /bookings/9001?q HTTP/2.0
+DELETE /trips/42 HTTP/2.0
+DELETE /trips/42 HTTP/1.2
+CONNECT trips?q http/1.1
+DELETE  HTTP/1.2
+get trips HTTP/1.0
+PATCH /?date=2026-11-02&a=1 
+ /hello/Wanjiku HTTP/2.0
+HEAD  HTTP/1.0
+BREW /hello/Wanjiku? HTTP/1.1
+POST /bookings?&a=1 HTTP/1.0 x
+POST /routes/125?seat=3& HTTP/1.1
+BREW /trips/42 HTTP/
+GET  /bookings/9001?  HTTP/1.1
+POST /bookings HTTP/2.0
+PATCH /health HTTP/2.0
+PUT /trips?date=2026-11-02 HTTP/1.2
+GET /trips/42?date=2026-11-02 
+GET /hello/Wanjiku HTTP/1.1
+DELETE  HTTP/2.0 x
+ /?a=1 
+PATCH /bookings/9001?seat=3&a=1&a=1&date=2026-11-02 HTTP/
+PATCH trips 
+CONNECT /hello/Wanjiku HTTP/
+POST /health?q&a=1 HTTP/2.0
+PATCH /trips/42?&&a=1&q http/1.1
+OPTIONS /routes/125 HTTP/1.0
+POST  HTTP/1.0
+OPTIONS /routes/125?q&a=1&&q HTTP/1.1
+HEAD /bookings/9001 HTTP/
+OPTIONS /trips?seat=3&&date=2026-11-02& HTTP/2.0
+get /trips/42?seat=3&a=1 
+POST  HTTP/1.2
+POST /trips/42 HTTP/1.2
+ /routes/125 HTTP/
+CONNECT /trips/42?&&&a=1 HTTP/2.0
+CONNECT /health? HTTP/2.0
+HEAD  HTTP/1.1
+OPTIONS / 
+PATCH /trips?a=1&a=1 http/1.1
+POST trips? HTTP/2.0
+GET /health?a=1&&&seat=3 HTTP/1.0
+CONNECT /bookings/9001?q&q&&q HTTP/
+get /trips HTTP/2.0
+GET /trips HTTP/1.0 x
+HEAD /routes/125 HTTP/
+DELETE trips?date=2026-11-02 HTTP/1.1
+ /bookings/9001 HTTP/1.1
+POST trips HTTP/1.0
+HEAD /routes/125 HTTP/2.0
+ /routes/125 HTTP/1.2
+HEAD /trips/42 HTTP/1.1 x
+GET /bookings/9001?seat=3&seat=3 
+PUT  /routes/125?  HTTP/2.0
+CONNECT /health?&a=1&q&date=2026-11-02 HTTP/1.2
+PUT trips HTTP/1.2
+get /hello/Wanjiku HTTP/2.0
+POST  HTTP/1.2
+ trips?seat=3&&&seat=3 
+OPTIONS /bookings/9001?q&a=1 HTTP/1.2
+OPTIONS /routes/125 HTTP/1.2
+get /trips/42 HTTP/1.2
+CONNECT  HTTP/1.0
+PATCH  /bookings/9001  HTTP/1.0
+PATCH /bookings/9001 HTTP/
+HEAD /trips/42 HTTP/1.1
+CONNECT /bookings/9001 
+DELETE /hello/Wanjiku?&&q 
+GET /trips/42 HTTP/2.0
+POST trips?seat=3 HTTP/
+DELETE  HTTP/1.2
+DELETE /health?date=2026-11-02&seat=3&date=2026-11-02&date=2026-11-02 HTTP/1.1
+BREW /hello/Wanjiku HTTP/1.1
+DELETE /hello/Wanjiku? HTTP/1.0
+get /bookings?a=1&&q HTTP/
+ /trips/42 http/1.1
+HEAD /trips/42?a=1&a=1&date=2026-11-02& 
+PUT /hello/Wanjiku? HTTP/1.2
+PUT /bookings HTTP/
+DELETE trips?date=2026-11-02& 
+OPTIONS /routes/125 HTTP/
+BREW /trips HTTP/1.1
+BREW /health? HTTP/1.0
+HEAD /bookings?q&date=2026-11-02&q&q http/1.1
+OPTIONS /routes/125 HTTP/1.1
+PUT  
+DELETE trips http/1.1
+GET trips http/1.1
+PUT /trips? 
+CONNECT /bookings/9001?seat=3&&q&date=2026-11-02 HTTP/
+GET / HTTP/2.0
+PUT  HTTP/
+BREW  HTTP/
+PUT trips http/1.1
+POST /bookings/9001?a=1 HTTP/
+get /health?a=1&q&date=2026-11-02 HTTP/1.1
+BREW /routes/125?seat=3&q&q&date=2026-11-02 HTTP/1.0
+PATCH / 
+PATCH /bookings HTTP/1.2
+GET /bookings HTTP/
+ /trips? http/1.1
+PUT /bookings?seat=3&seat=3 HTTP/2.0
+get /bookings? 
+POST /trips/42 HTTP/2.0
+POST / HTTP/
+get /routes/125 HTTP/1.2
+PATCH /bookings/9001 HTTP/2.0
+CONNECT  HTTP/1.1
+OPTIONS /trips/42?date=2026-11-02& HTTP/
+GET /trips/42? HTTP/2.0
+OPTIONS /bookings HTTP/1.1
+POST /health 
+OPTIONS  HTTP/1.1
+get /hello/Wanjiku?a=1&date=2026-11-02 HTTP/
+DELETE /routes/125 HTTP/
+PATCH /trips/42 HTTP/1.0
+DELETE /bookings/9001 HTTP/1.1
+  HTTP/2.0 x
+HEAD /routes/125 
+DELETE /?a=1 HTTP/1.2
+DELETE /bookings?date=2026-11-02&date=2026-11-02&q&q http/1.1
+PATCH /trips/42 HTTP/1.2
+DELETE  HTTP/
+DELETE trips?seat=3&a=1&a=1 
+POST  HTTP/1.1 x
+ / HTTP/1.2
+BREW /health?seat=3 http/1.1
+PATCH /routes/125 HTTP/
+PATCH /hello/Wanjiku?a=1&date=2026-11-02&a=1&date=2026-11-02 
+PUT trips?date=2026-11-02&seat=3 HTTP/
+HEAD /trips/42?date=2026-11-02 HTTP/1.0
+PATCH trips?q& HTTP/2.0
+DELETE / 
+get  HTTP/1.1
+DELETE /bookings?date=2026-11-02&q& http/1.1
+GET / HTTP/1.2
+PUT  HTTP/1.1
+BREW  HTTP/
+BREW /routes/125 HTTP/1.2
+get /bookings HTTP/1.1
+CONNECT  HTTP/1.2
+POST /bookings/9001? HTTP/ x
+DELETE trips?&q&date=2026-11-02&a=1 HTTP/1.2
+CONNECT /trips HTTP/1.2 x
+OPTIONS trips HTTP/
+GET /health HTTP/
+ / HTTP/
+GET  /hello/Wanjiku  HTTP/  x
+PUT /routes/125 HTTP/1.1
+BREW trips HTTP/
+BREW /bookings/9001 HTTP/1.1
+POST /health? HTTP/1.1
+PUT /trips? HTTP/1.0
+get trips http/1.1
+PUT /bookings?&seat=3&date=2026-11-02 HTTP/1.1
+POST  HTTP/1.1
+POST trips?q&&a=1& HTTP/1.2
+OPTIONS /bookings/9001?a=1&seat=3&date=2026-11-02&a=1 
+POST /trips 
+OPTIONS /trips HTTP/1.0
+PATCH /health HTTP/1.2
+get /bookings/9001 HTTP/
+CONNECT /bookings? HTTP/1.1
+HEAD trips http/1.1
+PUT /bookings HTTP/1.1
+PUT  HTTP/1.2
+OPTIONS /trips/42 HTTP/
+ /trips?date=2026-11-02 HTTP/1.0 x
+POST trips?seat=3&&&seat=3 http/1.1
+OPTIONS /health? HTTP/1.2
+CONNECT    HTTP/
+CONNECT /trips?q&date=2026-11-02&seat=3 
+DELETE trips? HTTP/
+ /?seat=3&seat=3&q&a=1 HTTP/
+POST /bookings/9001?a=1&date=2026-11-02&seat=3 HTTP/1.2
+HEAD trips HTTP/1.0
+GET /bookings? HTTP/
+  
+PATCH /bookings/9001 HTTP/
+ / HTTP/1.2
+PUT trips?seat=3 HTTP/1.1
+GET trips HTTP/1.0
+HEAD /health http/1.1
+OPTIONS /bookings/9001 HTTP/1.0
+GET /health 
+CONNECT /trips/42 http/1.1
+PUT /bookings/9001 HTTP/2.0
+ /trips HTTP/2.0
+PATCH  /trips  HTTP/1.1
+PUT /routes/125 http/1.1
+BREW trips http/1.1
+OPTIONS /bookings/9001 HTTP/
+PUT /trips/42 HTTP/
+HEAD /trips HTTP/1.1
+DELETE /bookings/9001? http/1.1
+PUT / HTTP/1.2
+GET /trips/42 HTTP/
+PUT /bookings?a=1&seat=3&seat=3&date=2026-11-02 HTTP/1.2
+PATCH trips http/1.1
+PUT /routes/125?seat=3 HTTP/
+  HTTP/2.0
+BREW  HTTP/1.2 x
+POST /trips?q&a=1&date=2026-11-02 HTTP/1.2
+BREW /bookings/9001?q&&seat=3&seat=3 HTTP/1.2
+CONNECT trips? HTTP/1.1
+PUT  /bookings  HTTP/1.1
+BREW /health?date=2026-11-02&a=1&date=2026-11-02& http/1.1
+CONNECT trips HTTP/1.1
+POST /health http/1.1
+POST /bookings? http/1.1
+PUT  HTTP/1.0
+HEAD /bookings/9001 HTTP/2.0
+PUT  HTTP/1.0
+DELETE /routes/125 HTTP/1.2
+POST  HTTP/
+POST / HTTP/
+BREW /? http/1.1
+HEAD /bookings HTTP/
+HEAD /bookings/9001 HTTP/1.2
+PATCH /bookings HTTP/2.0 x
+OPTIONS /health http/1.1
+PATCH /hello/Wanjiku HTTP/
+GET /bookings/9001 HTTP/1.0
+ /bookings/9001?a=1 HTTP/1.1
+get /bookings/9001 HTTP/1.2
+get / HTTP/1.1
+HEAD /bookings/9001 HTTP/1.2
+POST /trips/42 
+CONNECT /bookings http/1.1
+DELETE /trips/42 http/1.1
+GET /health?date=2026-11-02&seat=3&q HTTP/1.2 x
+get /routes/125?seat=3&seat=3 HTTP/1.0
+HEAD  HTTP/1.1
+OPTIONS /?q&&a=1 HTTP/2.0
+get /routes/125? HTTP/1.0
+BREW trips HTTP/1.1
+BREW  
+GET /hello/Wanjiku HTTP/1.2
+ /routes/125 http/1.1
+  /trips/42?&q&  
+CONNECT / HTTP/1.0
+ /health?date=2026-11-02&seat=3 HTTP/2.0
+get /health?a=1&date=2026-11-02&date=2026-11-02& HTTP/
+PUT /bookings HTTP/1.0
+HEAD /bookings/9001 HTTP/2.0
+BREW /trips HTTP/1.1
+POST trips HTTP/1.0
+POST /hello/Wanjiku?&a=1&seat=3 http/1.1
+DELETE /health 
+get /bookings?&seat=3&seat=3&seat=3 HTTP/2.0
+get  HTTP/1.2
+get /routes/125?a=1&&date=2026-11-02&seat=3 http/1.1 x
+ /hello/Wanjiku HTTP/1.0
+HEAD /trips?a=1&&q& HTTP/1.1
+ /trips/42 HTTP/2.0
+POST /trips HTTP/2.0
+POST /bookings? HTTP/2.0
+BREW  http/1.1
+ /health?a=1&date=2026-11-02 HTTP/1.1
+OPTIONS /bookings/9001 HTTP/
+DELETE /trips/42 HTTP/2.0
+GET /hello/Wanjiku? HTTP/1.2
+PUT /trips/42 HTTP/
+HEAD /health HTTP/1.1
+GET /bookings HTTP/1.1
+get /hello/Wanjiku?date=2026-11-02 HTTP/1.2
+get /routes/125 HTTP/1.1
+PUT /hello/Wanjiku HTTP/1.2
+HEAD trips?a=1&&& 
+POST /health HTTP/
+PATCH /routes/125?&&seat=3 HTTP/2.0
+POST /bookings HTTP/1.2
+POST / HTTP/2.0
+get  /bookings  
+POST /health HTTP/
+OPTIONS /routes/125 HTTP/
+PATCH  
+POST /health?&q&a=1&q 
+PUT /health HTTP/1.1
+DELETE /trips HTTP/1.2
+POST /?date=2026-11-02 HTTP/2.0
+GET /health?&a=1&a=1 HTTP/2.0
+OPTIONS /trips/42?q HTTP/1.0
+    HTTP/1.1
+DELETE  HTTP/1.0
+DELETE / HTTP/2.0
+DELETE  HTTP/
+OPTIONS /trips/42 http/1.1
+OPTIONS /?date=2026-11-02& HTTP/1.1
+HEAD /bookings/9001?q HTTP/
+BREW /bookings HTTP/1.1
+get /bookings?seat=3&a=1&q&a=1 HTTP/1.1
+HEAD  http/1.1
+PUT /bookings/9001 
+get /trips/42 HTTP/2.0
+GET /routes/125 HTTP/1.2
+ trips?q&seat=3&a=1 HTTP/
+HEAD /bookings?seat=3&seat=3&q HTTP/2.0 x
+get  http/1.1
+get /trips 
+OPTIONS /routes/125 HTTP/1.2
+PATCH  HTTP/
+DELETE /routes/125?seat=3&a=1 HTTP/1.1
+CONNECT /routes/125 
+POST /bookings 
+BREW /trips http/1.1
+ /trips/42?date=2026-11-02&date=2026-11-02 HTTP/1.1
+DELETE /hello/Wanjiku HTTP/1.2
+GET /routes/125?date=2026-11-02&seat=3& HTTP/1.2
+PUT /hello/Wanjiku HTTP/ x
+ /hello/Wanjiku HTTP/
+DELETE /health?seat=3 HTTP/1.0
+BREW /hello/Wanjiku?seat=3 
+PUT /routes/125? HTTP/2.0
+  /health?  http/1.1
+PUT  
+ /trips/42 HTTP/1.1
+ /bookings/9001 HTTP/
+get /routes/125?q&&a=1 http/1.1
+HEAD  trips  http/1.1
+HEAD /bookings/9001 HTTP/2.0
+DELETE / 
+get /bookings/9001 HTTP/
+GET /routes/125 
+CONNECT /trips?seat=3&&date=2026-11-02&q http/1.1
+get /hello/Wanjiku HTTP/2.0
+CONNECT /bookings/9001 http/1.1
+DELETE trips HTTP/2.0
+OPTIONS /bookings/9001 http/1.1
+BREW /trips?seat=3 
+DELETE /hello/Wanjiku HTTP/1.1
+OPTIONS /routes/125?&a=1 HTTP/1.2
+OPTIONS /trips/42 HTTP/1.1
+CONNECT /?q HTTP/
+POST /trips/42?q&date=2026-11-02 
+PATCH /trips/42 
+DELETE /bookings?&&seat=3 HTTP/1.1
+CONNECT trips HTTP/
+CONNECT /hello/Wanjiku? HTTP/2.0
+DELETE /health HTTP/2.0
+OPTIONS /trips/42 
+PUT    HTTP/1.0
+PATCH /bookings/9001 HTTP/2.0
+PUT /trips/42 HTTP/1.2
+OPTIONS trips HTTP/1.1
+HEAD /routes/125?date=2026-11-02 HTTP/1.2
+GET /bookings/9001?date=2026-11-02&seat=3&date=2026-11-02&seat=3 HTTP/1.1
+CONNECT /trips?date=2026-11-02&a=1&q&a=1 HTTP/2.0
+BREW trips? HTTP/1.1
+OPTIONS trips HTTP/1.0
+BREW trips?q HTTP/2.0
+PATCH /hello/Wanjiku 
+GET /trips/42?a=1&seat=3&a=1 HTTP/1.2
+BREW /trips?date=2026-11-02&seat=3&a=1&a=1 
+HEAD /hello/Wanjiku HTTP/1.1
+BREW /hello/Wanjiku HTTP/2.0
+OPTIONS /trips/42 HTTP/1.2
+HEAD /bookings/9001?seat=3&seat=3 HTTP/2.0
+POST /bookings/9001?q&q HTTP/
+POST /?q&q&q&a=1 HTTP/1.1
+ /health HTTP/1.0
+ /hello/Wanjiku HTTP/
+BREW /bookings? HTTP/1.1
+BREW /bookings http/1.1
+PATCH /routes/125 HTTP/ x
+ /trips http/1.1 x
+POST /health? HTTP/1.2
+HEAD trips?seat=3&q HTTP/1.1
+PATCH /routes/125 
+get /routes/125 HTTP/1.0 x
+DELETE /trips?seat=3& HTTP/1.2
+POST /bookings/9001 HTTP/1.2
+get /trips HTTP/1.1
+BREW /bookings/9001 HTTP/1.2
+HEAD /health? HTTP/
+POST  HTTP/1.1
+CONNECT /trips/42 HTTP/1.2
+CONNECT /bookings/9001 HTTP/2.0
+get /hello/Wanjiku?q HTTP/1.2
+BREW trips HTTP/1.2
+get /bookings HTTP/
+CONNECT /health?seat=3&date=2026-11-02&&seat=3 HTTP/1.0
+PUT /bookings HTTP/2.0
+PATCH /trips/42 HTTP/2.0
+ /bookings/9001?q&seat=3&date=2026-11-02&seat=3 HTTP/1.0
+ /trips/42?q&seat=3&a=1&q 
+ /routes/125 
+OPTIONS /bookings/9001 HTTP/2.0
+CONNECT trips HTTP/1.1
+DELETE /hello/Wanjiku HTTP/2.0
+POST /trips/42 HTTP/1.0
+ /bookings/9001? HTTP/1.1
+HEAD /bookings HTTP/1.0
+OPTIONS  HTTP/1.1
+get /?seat=3&seat=3& http/1.1
+CONNECT / HTTP/1.0
+PUT /health 
+CONNECT /trips/42?date=2026-11-02&& HTTP/2.0
+HEAD trips HTTP/2.0
+OPTIONS /routes/125 HTTP/
+OPTIONS /trips HTTP/
+  HTTP/
+POST / 
+PUT /hello/Wanjiku?date=2026-11-02&seat=3 HTTP/1.1
+GET /bookings/9001 HTTP/1.2
+BREW /bookings?q HTTP/2.0
+PATCH /health HTTP/2.0
+ /trips?q&date=2026-11-02&a=1& HTTP/
+PUT /hello/Wanjiku?q&date=2026-11-02&a=1&date=2026-11-02 http/1.1
+ /trips/42 http/1.1
+GET /health HTTP/1.1
+GET /bookings/9001 HTTP/1.2
+GET /trips HTTP/1.2
+ /bookings/9001?seat=3 
+PUT /health?date=2026-11-02&&&seat=3 HTTP/1.0
+  HTTP/
+PUT  
+DELETE trips HTTP/1.0
+BREW /health?a=1 HTTP/1.2 x
+POST /trips/42 HTTP/2.0
+BREW  /trips?date=2026-11-02&seat=3&seat=3  HTTP/
+HEAD  HTTP/1.2
+CONNECT /health HTTP/1.2
+HEAD /routes/125?date=2026-11-02&seat=3&q&date=2026-11-02 HTTP/1.0
+DELETE  HTTP/
+PUT /hello/Wanjiku 
+DELETE  HTTP/1.2
+PUT /trips/42 HTTP/
+get /trips/42 HTTP/1.1
+DELETE /hello/Wanjiku?q HTTP/1.0
+POST /trips?seat=3&a=1&&a=1 HTTP/1.2
+HEAD  HTTP/2.0
+CONNECT /trips HTTP/1.1
+CONNECT trips HTTP/1.0
+PATCH /trips/42 HTTP/1.0
+BREW /trips 
+GET /trips/42?date=2026-11-02&a=1 HTTP/1.2
+POST /trips?q HTTP/2.0
+BREW trips HTTP/1.1
+POST /health?date=2026-11-02&a=1&date=2026-11-02 HTTP/ x
+OPTIONS /routes/125 HTTP/1.0
+HEAD /trips?seat=3&date=2026-11-02&date=2026-11-02&date=2026-11-02 HTTP/
+HEAD /routes/125?a=1&a=1&q&seat=3 HTTP/1.1
+CONNECT /health? HTTP/1.2
+POST /routes/125?date=2026-11-02&q http/1.1
+BREW /hello/Wanjiku?a=1&date=2026-11-02 HTTP/1.2
+GET /trips/42?q&a=1&a=1&a=1 HTTP/1.2
+PUT /bookings/9001 http/1.1
+ trips HTTP/1.0
+DELETE trips 
+GET /bookings http/1.1
+ /routes/125?q HTTP/2.0 x
+PUT /routes/125?&date=2026-11-02&date=2026-11-02 
+GET  HTTP/1.0
+get /bookings/9001?seat=3&a=1 HTTP/2.0
+BREW /bookings/9001? HTTP/1.1
+PATCH  HTTP/1.2
+BREW trips?q&q http/1.1
+DELETE /health HTTP/
+PUT /hello/Wanjiku HTTP/1.2
+PATCH / 
+get /bookings/9001 HTTP/2.0
+get /bookings http/1.1
+OPTIONS /hello/Wanjiku HTTP/1.0
+ /routes/125 HTTP/
+get /trips?date=2026-11-02&&q HTTP/
+HEAD /routes/125 HTTP/1.0
+ /trips/42? HTTP/2.0
+POST /?q&date=2026-11-02&seat=3&date=2026-11-02 HTTP/1.1
+POST /health HTTP/1.1
+HEAD /health HTTP/
+POST /health HTTP/1.2
+CONNECT / HTTP/2.0
+POST /routes/125 HTTP/1.0
+ /routes/125 HTTP/2.0
+GET  HTTP/1.2
+POST trips? 
+BREW /hello/Wanjiku HTTP/1.2
+OPTIONS /trips/42 
+DELETE /bookings/9001 http/1.1
+BREW /bookings/9001?a=1 HTTP/2.0
+PUT  HTTP/1.1
+HEAD  HTTP/
+ trips HTTP/2.0 x
+get /hello/Wanjiku HTTP/1.2
+PATCH  /health  HTTP/1.1
+  
+HEAD /hello/Wanjiku?&&a=1 HTTP/
+BREW  http/1.1
+ trips HTTP/1.1
+OPTIONS /hello/Wanjiku HTTP/1.0
+HEAD / http/1.1
+DELETE  HTTP/
+CONNECT  HTTP/1.0
+get /health HTTP/1.0
+OPTIONS /trips HTTP/2.0
+get  HTTP/1.1
+DELETE trips HTTP/1.1
+POST / HTTP/2.0
+POST  HTTP/1.2
+OPTIONS /bookings/9001 HTTP/1.0
+HEAD /bookings/9001?seat=3&seat=3&date=2026-11-02&a=1 
+BREW /hello/Wanjiku 
+GET /trips HTTP/
+DELETE /routes/125? HTTP/1.0
+DELETE /bookings/9001 HTTP/1.0
+get  trips?q&&q&q  HTTP/1.1
+get /? HTTP/1.2
+GET /health 
+ /trips/42 HTTP/1.1
+PUT /health 
+GET /health?q&seat=3& HTTP/1.2
+ /health http/1.1
+CONNECT /health HTTP/1.0
+PATCH /health HTTP/1.0
+DELETE /bookings/9001?a=1&seat=3&seat=3&a=1 http/1.1
+ /bookings/9001 HTTP/1.1
+OPTIONS trips?a=1 HTTP/1.0
+PATCH  /bookings/9001  HTTP/2.0
+PUT  HTTP/2.0
+ /trips HTTP/
+get /trips/42 HTTP/2.0
+CONNECT /bookings?a=1&date=2026-11-02 HTTP/1.2
+OPTIONS /?a=1&date=2026-11-02&q HTTP/
+POST /health?seat=3&seat=3&&seat=3 HTTP/1.0
+PATCH /?seat=3&q&& HTTP/1.0
+get  
+CONNECT /bookings/9001?date=2026-11-02&seat=3&q&a=1 HTTP/2.0
+PATCH  HTTP/2.0
+PATCH /hello/Wanjiku HTTP/1.0
+POST /bookings/9001 HTTP/1.1
+get /routes/125? HTTP/
+BREW /trips HTTP/2.0
+PUT /bookings?seat=3 
+PATCH / HTTP/1.0
+get /hello/Wanjiku HTTP/2.0
+GET /hello/Wanjiku HTTP/1.2
+PUT /hello/Wanjiku HTTP/1.0
+BREW /bookings?q 
+GET /health 
+BREW / HTTP/1.0
+get / HTTP/2.0
+get /trips HTTP/1.2
+PATCH /trips HTTP/1.2
+OPTIONS /hello/Wanjiku?date=2026-11-02&seat=3 
+ /bookings/9001?&date=2026-11-02&q HTTP/
+BREW /bookings/9001 HTTP/
+PUT /routes/125?date=2026-11-02&q&date=2026-11-02 HTTP/
+POST /bookings?date=2026-11-02&a=1&date=2026-11-02 HTTP/1.1
+BREW /trips? HTTP/2.0
+OPTIONS /hello/Wanjiku HTTP/1.2
+DELETE /trips/42?&seat=3&a=1 HTTP/
+HEAD /bookings 
+BREW /hello/Wanjiku?q&q HTTP/1.2
+get /health HTTP/1.1
+POST / HTTP/1.2
+DELETE /trips/42 http/1.1
+POST trips?&q&& http/1.1
+POST /health HTTP/1.1
+ /health?q HTTP/1.2
+POST /health 
+get /trips/42 HTTP/1.1
+HEAD /bookings/9001?&seat=3&seat=3&a=1 http/1.1 x
+OPTIONS trips?&q&date=2026-11-02 HTTP/1.2
+BREW /health?&a=1&date=2026-11-02 HTTP/
+ /health?a=1&q&&date=2026-11-02 
+POST /trips HTTP/1.2
+PUT /trips/42?q&seat=3&a=1&date=2026-11-02 
+get /trips/42 HTTP/1.2
+get trips HTTP/1.0
+DELETE  /health  HTTP/2.0
+HEAD /trips?q&date=2026-11-02 
+PUT /hello/Wanjiku HTTP/
+OPTIONS /trips/42 
+DELETE /hello/Wanjiku http/1.1
+HEAD /trips/42 HTTP/1.2
+HEAD /bookings/9001 HTTP/1.0
+PATCH / 
+GET trips http/1.1
+ /bookings 
+DELETE /hello/Wanjiku? 
+BREW trips?seat=3& 
+HEAD /routes/125?seat=3&a=1&seat=3 HTTP/1.2
+PATCH /routes/125?date=2026-11-02& HTTP/1.2
+HEAD trips HTTP/1.2
+HEAD  HTTP/1.0
+BREW /trips/42?a=1 
+BREW  /trips  HTTP/2.0
+DELETE  /bookings  HTTP/
+ /routes/125?date=2026-11-02&q& HTTP/1.2
+POST /?a=1&seat=3 HTTP/1.2
+PATCH / HTTP/1.0
+DELETE /bookings/9001?&q&q HTTP/1.0
+CONNECT /trips?&a=1 HTTP/
+GET trips HTTP/2.0
+ /bookings HTTP/
+POST / HTTP/
+CONNECT  HTTP/1.0
+get trips HTTP/1.1
+BREW /hello/Wanjiku  x
+GET /trips/42?a=1&q&a=1 HTTP/
+DELETE /routes/125 HTTP/
+OPTIONS /hello/Wanjiku HTTP/
+CONNECT /trips HTTP/1.1
+GET trips http/1.1 x
+HEAD /? HTTP/1.0
+OPTIONS  HTTP/2.0
+BREW /bookings/9001 HTTP/1.1
+GET / HTTP/1.0
+GET  HTTP/1.2
+POST  HTTP/1.0
+DELETE  /health  HTTP/1.0
+POST / HTTP/
+PUT /trips? 
+DELETE /bookings HTTP/2.0
+GET /trips HTTP/1.1
+ /health?&a=1 HTTP/2.0
+PUT /trips/42 http/1.1
+ /trips 
+PUT / HTTP/1.0
+get /bookings/9001?seat=3&seat=3&q HTTP/1.1
+PATCH trips http/1.1
+HEAD /bookings?q 
+get /bookings/9001 HTTP/1.1
+PUT  http/1.1
+GET / HTTP/
+GET /bookings? HTTP/
+OPTIONS /health HTTP/
+PATCH /trips HTTP/2.0
+CONNECT  HTTP/
+DELETE trips HTTP/2.0
+DELETE /hello/Wanjiku HTTP/
+PUT /hello/Wanjiku?seat=3 HTTP/
+BREW /health HTTP/ x
+DELETE /?&q&a=1&a=1 HTTP/
+OPTIONS trips HTTP/2.0
+PATCH /trips/42  x
+PATCH /health HTTP/2.0

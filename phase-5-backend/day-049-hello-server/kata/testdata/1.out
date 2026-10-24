@@ -1,0 +1,4 @@
+GET /trips 2
+POST /bookings 0
+400
+505

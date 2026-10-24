@@ -94,7 +94,7 @@ Ends with: a deployed matatu-booking API
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 49 | Hello, Server | net/http, handlers, ServeMux, ports | Planned |
+| 49 | Hello, Server | net/http, handlers, ServeMux, ports | Done |
 | 50 | HTTP Methods | GET, POST, PUT, PATCH, DELETE, safety and idempotency | Planned |
 | 51 | Status Codes | 2xx to 5xx, choosing the right one, error bodies | Planned |
 | 52 | JSON API | encoding requests and responses, content types | Planned |

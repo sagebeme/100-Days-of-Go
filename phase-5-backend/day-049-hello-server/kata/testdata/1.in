@@ -1,0 +1,5 @@
+4
+GET /trips?route=125&date=2026-11-02 HTTP/1.1
+POST /bookings HTTP/1.1
+get /trips HTTP/1.1
+GET /trips HTTP/2.0
