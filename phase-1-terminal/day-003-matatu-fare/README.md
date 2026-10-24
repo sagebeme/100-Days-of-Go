@@ -25,7 +25,7 @@ Route("Rongai")      →  "125"
 Route("Mombasa")     →  "unknown"
 ```
 
-*The fares are made up, and real makangas don't follow a table. The route numbers are the ones painted on Nairobi matatus.*
+*The fares are made up, and real makangas don't follow a table. The route numbers are real: 46K (Citi Hoppa, Kencom to Kawangware), 111 (Ngong), 125 (Rongai), 45 (Githurai) and 58 (Buruburu), checked on [nishukishe.com](https://nishukishe.com/directions) in October 2026. Routes change, so confirm with the conductor.*
 
 ## What you'll use
 
@@ -60,7 +60,7 @@ case km <= 15:
 3. Use a `switch` with no value to set the base fare from the distance table. Order matters: check the smallest band first.
 4. Add 30 if the hour is in either rush hour. One `if` with `||` between the morning and evening checks is enough.
 5. Add 20 if `raining` is true. You can write `if raining`, because it's already a `bool`.
-6. In `Route`, `switch` on the destination. Kawangware is `"46"`, Ngong is `"111"`, Rongai and Ongata Rongai are both `"125"`, Githurai is `"45"`, Buruburu is `"58"`, and anything else is `"unknown"`.
+6. In `Route`, `switch` on the destination. Kawangware is `"46K"`, Ngong is `"111"`, Rongai and Ongata Rongai are both `"125"`, Githurai is `"45"`, Buruburu is `"58"`, and anything else is `"unknown"`.
 7. Run the tests from the repo root:
 
 ```bash

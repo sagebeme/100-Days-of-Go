@@ -40,7 +40,7 @@ func TestRoute(t *testing.T) {
 		destination string
 		want        string
 	}{
-		{"Kawangware", "46"},
+		{"Kawangware", "46K"},
 		{"Ngong", "111"},
 		{"Rongai", "125"},
 		{"Ongata Rongai", "125"},

@@ -43,7 +43,7 @@ func Fare(distanceKm, hour int, raining bool) int {
 func Route(destination string) string {
 	switch destination {
 	case "Kawangware":
-		return "46"
+		return "46K"
 	case "Ngong":
 		return "111"
 	case "Rongai", "Ongata Rongai":
