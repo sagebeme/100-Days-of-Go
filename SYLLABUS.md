@@ -42,7 +42,7 @@ Ends with: a CLI M-Pesa budget tracker
 | 18 | Typed Inventory | generics: type parameters and constraints | Done |
 | 19 | Table-Driven Tests | t.Run, subtests, test helpers, coverage | Done |
 | 20 | Go Modules | go.mod, semantic versions, adding and upgrading a dependency | Done |
-| 21 | Config Loader | env variables, 12-factor config, .env files, never committing secrets | Planned |
+| 21 | Config Loader | env variables, 12-factor config, .env files, never committing secrets | Done |
 | 22 | CLI Flags | the flag package, subcommands, exit codes | Planned |
 | 23 | Save and Load | files, encoding/json, struct tags | Planned |
 | 24 | CSV Statements | encoding/csv, parsing a real M-Pesa statement | Planned |

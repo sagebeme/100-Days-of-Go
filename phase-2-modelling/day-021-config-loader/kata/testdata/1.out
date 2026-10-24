@@ -1,0 +1,4 @@
+DATABASE_URL=postgres://chama@localhost:5432/chama
+DB_HOST=localhost
+DB_USER=chama
+GREETING=Habari 

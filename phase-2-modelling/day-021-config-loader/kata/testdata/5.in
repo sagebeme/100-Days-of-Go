@@ -1,0 +1,3 @@
+PATH_PART=/usr/bin
+PATH=${PATH_PART}:${PATH}
+  SPACED  =  a b  
