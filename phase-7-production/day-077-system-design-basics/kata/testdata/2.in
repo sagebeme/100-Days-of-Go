@@ -1,0 +1,16 @@
+15
+get 0
+remove ghost
+add only 0
+get 0
+get 4294967295
+get 1
+add top 4294967295
+get 4294967295
+get 4294967294
+get 1
+remove only
+get 0
+remove only
+remove top
+get 7

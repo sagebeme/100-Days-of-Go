@@ -138,7 +138,7 @@ Ends with: a design doc and a hardened service
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 77 | System Design Basics | load, latency, bottlenecks, drawing the system | Planned |
+| 77 | System Design Basics | load, latency, bottlenecks, drawing the system | Done |
 | 78 | Caching | Redis, cache-aside, invalidation | Planned |
 | 79 | Background Jobs | queues, retries, idempotent workers | Planned |
 | 80 | gRPC | protobuf, service contracts, streaming | Planned |

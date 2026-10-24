@@ -1,0 +1,15 @@
+14
+add a 10
+add b 20
+add c 30
+get 10
+get 20
+get 30
+get 11
+get 31
+get 9
+remove b
+get 20
+add b 25
+get 20
+get 26

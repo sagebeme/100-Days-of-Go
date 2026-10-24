@@ -1,0 +1,10 @@
+9
+add cache-a 100
+add cache-b 2000
+add cache-a 3000000000
+get 150
+get 4000000000
+remove cache-b
+get 150
+remove cache-a
+get 5
