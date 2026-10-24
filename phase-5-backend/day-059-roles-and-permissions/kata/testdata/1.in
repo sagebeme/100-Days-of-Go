@@ -1,0 +1,17 @@
+9
+GRANT passenger trips:list
+GRANT passenger bookings:create
+GRANT conductor bookings:checkin
+INHERIT conductor passenger
+INHERIT admin conductor
+GRANT admin trips:create
+USER wanjiku passenger
+USER kamau conductor
+USER amina admin
+6
+wanjiku trips:list
+wanjiku bookings:checkin
+kamau bookings:create
+kamau trips:create
+amina bookings:create
+otieno trips:list

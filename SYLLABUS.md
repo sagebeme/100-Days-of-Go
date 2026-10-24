@@ -104,7 +104,7 @@ Ends with: a deployed matatu-booking API
 | 56 | Migrations | versioned schema changes, rolling back | Planned |
 | 57 | Passwords | hashing with bcrypt and argon2, never storing plain text | Done |
 | 58 | Sessions and JWTs | cookies vs tokens, expiry, refresh rotation | Done |
-| 59 | Roles and Permissions | 401 vs 403, authorisation checks in one place | Planned |
+| 59 | Roles and Permissions | 401 vs 403, authorisation checks in one place | Done |
 | 60 | OWASP Top 10 | injection, broken access control, SSRF, and how Go code avoids them | Planned |
 | 61 | CORS and Security Headers | origins, preflight, CSP, HSTS | Planned |
 | 62 | Integration Tests | httptest, a real test database, testing the whole request | Planned |

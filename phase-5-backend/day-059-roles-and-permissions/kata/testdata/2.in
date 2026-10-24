@@ -1,0 +1,10 @@
+5
+INHERIT a b
+INHERIT b c
+INHERIT c a
+GRANT c x
+USER u a
+3
+u x
+u y
+v x

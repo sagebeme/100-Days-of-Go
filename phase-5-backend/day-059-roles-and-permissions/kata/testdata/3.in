@@ -1,0 +1,9 @@
+4
+USER mama boss
+GRANT boss pay
+USER mama clerk
+GRANT clerk view
+3
+mama pay
+mama view
+mama PAY

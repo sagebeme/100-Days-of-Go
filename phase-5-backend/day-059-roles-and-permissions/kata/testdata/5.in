@@ -1,0 +1,270 @@
+68
+USER user5 role7
+GRANT role0 act12
+USER user28 role4
+GRANT role7 act15
+GRANT role3 act14
+GRANT role9 act3
+GRANT role8 act7
+USER user10 role9
+INHERIT role6 role2
+USER user16 role3
+GRANT role8 act0
+USER user4 role0
+USER user13 role2
+USER user3 role7
+GRANT role6 act0
+USER user21 role3
+GRANT role4 act7
+USER user18 role3
+USER user7 role4
+GRANT role5 act7
+USER user23 role8
+USER user19 role8
+GRANT role6 act19
+GRANT role0 act14
+GRANT role5 act16
+GRANT role4 act3
+GRANT role4 act18
+USER user2 role5
+USER user9 role9
+USER user24 role5
+USER user15 role8
+GRANT role6 act6
+GRANT role1 act15
+USER user26 role5
+GRANT role1 act15
+INHERIT role1 role2
+USER user20 role8
+GRANT role5 act0
+GRANT role6 act6
+GRANT role1 act8
+USER user0 role8
+GRANT role7 act16
+GRANT role4 act0
+USER user6 role0
+USER user1 role6
+USER user8 role9
+INHERIT role5 role8
+USER user29 ghostrole
+USER user12 ghostrole
+USER user14 role2
+GRANT role6 act17
+INHERIT role0 role7
+USER user25 role9
+INHERIT role3 role6
+GRANT role0 act0
+INHERIT role5 role1
+INHERIT role7 role8
+GRANT role1 act5
+USER user17 role0
+INHERIT role6 role9
+GRANT role7 act15
+USER user22 role6
+GRANT role3 act9
+GRANT role6 act16
+GRANT role8 act7
+USER user27 role7
+USER user11 role6
+GRANT role2 act18
+200
+user19 act12
+user21 act13
+user12 act8
+user6 act8
+user32 act6
+user27 act0
+user14 act0
+user25 act4
+user2 act5
+user28 act16
+user27 act17
+user14 act16
+user28 act7
+user33 act0
+user25 act18
+user20 act13
+user3 act9
+user8 act6
+user3 act9
+user4 act2
+user19 act9
+user10 act13
+user16 act4
+user0 act17
+user2 act18
+user13 act18
+user29 act5
+user32 act1
+user24 act6
+user22 act3
+user13 act18
+user27 act18
+user12 act15
+user6 act12
+user18 act16
+user31 act0
+user20 act19
+user25 act9
+user1 act5
+user12 act10
+user8 act10
+user27 act6
+user17 act3
+user24 act17
+user22 act17
+user31 act17
+user15 act2
+user2 act2
+user8 act5
+user10 act17
+user13 act8
+user21 act19
+user32 act8
+user23 act10
+user21 act3
+user18 act7
+user31 act4
+user6 act10
+user2 act13
+user4 act12
+user9 act4
+user21 act3
+user24 act2
+user14 act18
+user5 act8
+user23 act9
+user34 act3
+user29 act8
+user6 act1
+user18 act0
+user0 act2
+user26 act3
+user2 act6
+user15 act18
+user26 act5
+user7 act14
+user10 act7
+user10 act3
+user27 act12
+user34 act9
+user16 act15
+user20 act3
+user13 act10
+user2 act0
+user0 act9
+user20 act14
+user25 act10
+user25 act2
+user4 act10
+user29 act3
+user16 act6
+user34 act15
+user22 act8
+user11 act17
+user13 act9
+user12 act7
+user23 act2
+user17 act2
+user28 act2
+user21 act7
+user24 act9
+user2 act10
+user11 act10
+user19 act7
+user21 act3
+user34 act19
+user5 act7
+user14 act0
+user15 act12
+user4 act8
+user4 act2
+user1 act0
+user18 act11
+user31 act15
+user9 act3
+user32 act10
+user4 act16
+user11 act5
+user9 act4
+user20 act9
+user6 act16
+user18 act4
+user13 act4
+user34 act1
+user20 act19
+user13 act5
+user19 act13
+user34 act5
+user3 act7
+user16 act2
+user28 act13
+user16 act17
+user28 act17
+user29 act0
+user25 act10
+user10 act8
+user31 act0
+user26 act18
+user1 act1
+user22 act18
+user8 act18
+user8 act4
+user16 act8
+user25 act18
+user25 act5
+user5 act7
+user31 act0
+user11 act16
+user20 act16
+user28 act7
+user15 act10
+user31 act15
+user14 act13
+user21 act17
+user17 act7
+user3 act2
+user32 act11
+user10 act16
+user13 act9
+user19 act9
+user23 act5
+user29 act19
+user5 act3
+user32 act18
+user24 act5
+user9 act8
+user27 act6
+user3 act15
+user25 act11
+user24 act16
+user10 act17
+user2 act16
+user5 act8
+user6 act8
+user5 act4
+user5 act14
+user15 act12
+user27 act12
+user10 act10
+user28 act4
+user31 act6
+user7 act13
+user34 act13
+user7 act9
+user17 act7
+user24 act17
+user0 act6
+user33 act14
+user1 act0
+user15 act8
+user13 act5
+user18 act4
+user34 act6
+user17 act9
+user16 act14
+user10 act17
+user22 act15
+user26 act3
+user13 act18
+user24 act6

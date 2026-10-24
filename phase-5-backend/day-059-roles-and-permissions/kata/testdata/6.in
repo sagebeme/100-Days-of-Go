@@ -1,0 +1,7622 @@
+3620
+USER user1997 role25
+GRANT role60 act216
+GRANT role14 act156
+USER user454 role27
+USER user161 role73
+GRANT role69 act115
+USER user1825 role44
+GRANT role69 act36
+INHERIT role91 role31
+GRANT role49 act145
+USER user803 role47
+GRANT role71 act253
+GRANT role83 act92
+USER user1169 role14
+GRANT role89 act63
+USER user1215 role52
+GRANT role39 act11
+GRANT role59 act0
+USER user807 role96
+GRANT role65 act137
+GRANT role95 act81
+GRANT role46 act214
+USER user1569 role41
+USER user1575 role40
+GRANT role80 act12
+USER user1868 role82
+USER user420 role86
+GRANT role93 act291
+GRANT role46 act99
+USER user1834 role41
+USER user1393 role2
+USER user1449 role50
+GRANT role69 act216
+GRANT role25 act255
+USER user875 role54
+GRANT role81 act157
+GRANT role45 act39
+GRANT role62 act263
+GRANT role28 act88
+USER user1600 role46
+USER user487 role50
+INHERIT role20 role29
+GRANT role88 act272
+USER user1433 role2
+GRANT role98 act102
+GRANT role98 act136
+USER user1005 role98
+USER user211 role19
+GRANT role50 act77
+GRANT role91 act79
+USER user1561 role22
+USER user367 role2
+GRANT role15 act230
+USER user926 role59
+GRANT role5 act223
+GRANT role66 act142
+USER user1927 role30
+GRANT role20 act192
+GRANT role20 act56
+INHERIT role6 role78
+GRANT role94 act122
+USER user1544 role83
+USER user1917 role79
+USER user452 role53
+USER user561 role10
+USER user73 role63
+GRANT role48 act158
+GRANT role74 act35
+INHERIT role34 role99
+USER user1513 role31
+GRANT role62 act262
+USER user849 role54
+GRANT role50 act165
+USER user901 role0
+GRANT role5 act10
+USER user1097 role74
+GRANT role30 act84
+USER user1788 role71
+USER user1715 role37
+USER user537 role79
+GRANT role78 act177
+GRANT role67 act60
+GRANT role7 act185
+USER user1483 role86
+USER user1951 role55
+USER user1880 role94
+USER user1553 role3
+GRANT role23 act228
+GRANT role31 act179
+GRANT role95 act51
+GRANT role82 act119
+USER user1298 role2
+GRANT role78 act97
+USER user1940 role60
+INHERIT role54 role81
+USER user1266 role41
+USER user1156 role28
+GRANT role3 act269
+GRANT role2 act10
+GRANT role75 act26
+USER user1177 role22
+USER user923 role43
+GRANT role46 act109
+GRANT role17 act216
+GRANT role48 act62
+GRANT role23 act292
+GRANT role58 act284
+GRANT role33 act127
+USER user824 role39
+GRANT role66 act0
+GRANT role66 act252
+USER user1567 role34
+GRANT role90 act258
+USER user788 role32
+INHERIT role68 role44
+USER user945 role92
+GRANT role93 act23
+GRANT role23 act157
+USER user1536 ghostrole
+USER user313 role9
+USER user1324 role47
+USER user1115 role49
+USER user756 role39
+USER user1371 role38
+GRANT role10 act216
+INHERIT role46 role0
+USER user559 role46
+USER user705 role19
+GRANT role12 act36
+GRANT role79 act236
+GRANT role51 act218
+GRANT role63 act234
+USER user660 role13
+GRANT role38 act32
+USER user1291 role71
+GRANT role61 act10
+GRANT role51 act153
+USER user188 role81
+USER user78 role24
+USER user550 role82
+GRANT role13 act111
+GRANT role81 act142
+GRANT role15 act154
+USER user659 role61
+USER user1724 role93
+USER user741 role92
+USER user1303 role36
+USER user1387 role35
+GRANT role9 act175
+GRANT role69 act24
+USER user497 role9
+USER user936 role31
+USER user1229 role6
+USER user719 role41
+USER user419 role5
+GRANT role94 act223
+GRANT role76 act236
+USER user805 role0
+INHERIT role22 role19
+GRANT role40 act24
+GRANT role21 act298
+GRANT role3 act40
+USER user1607 role38
+USER user527 role79
+USER user1490 role18
+GRANT role94 act113
+GRANT role59 act242
+USER user880 role39
+USER user151 role97
+GRANT role56 act149
+USER user360 role10
+GRANT role24 act79
+USER user1870 role83
+USER user1484 role68
+USER user1823 role1
+USER user1103 role87
+USER user1550 role52
+USER user446 role24
+USER user228 role36
+GRANT role0 act278
+USER user302 role84
+GRANT role28 act14
+USER user817 role11
+USER user1176 role60
+USER user1320 role56
+GRANT role93 act279
+USER user189 role14
+GRANT role55 act206
+USER user1216 role30
+USER user1964 role6
+USER user1051 role90
+USER user1904 role99
+USER user1136 role78
+GRANT role0 act67
+GRANT role83 act69
+USER user413 role32
+USER user1879 role27
+USER user1322 role66
+USER user213 role41
+USER user759 role34
+USER user1065 role50
+USER user1243 role59
+GRANT role91 act13
+GRANT role93 act200
+GRANT role91 act104
+USER user1623 role57
+USER user312 role39
+USER user1189 role76
+GRANT role47 act23
+GRANT role4 act268
+USER user779 role22
+GRANT role61 act9
+GRANT role32 act69
+USER user1306 role36
+USER user1702 role90
+GRANT role51 act231
+GRANT role13 act173
+USER user1197 role87
+USER user1454 role89
+USER user551 role64
+GRANT role38 act50
+GRANT role17 act136
+USER user762 role5
+USER user250 role44
+USER user1650 role48
+USER user1665 role61
+USER user1978 role89
+GRANT role84 act179
+USER user69 role43
+USER user1268 role2
+USER user812 role24
+USER user1383 role91
+GRANT role66 act47
+GRANT role19 act107
+GRANT role77 act178
+USER user1210 role51
+USER user909 role17
+USER user1257 role33
+GRANT role32 act271
+GRANT role34 act112
+USER user41 role53
+GRANT role61 act144
+GRANT role36 act125
+GRANT role36 act86
+GRANT role46 act9
+USER user331 role50
+USER user889 role20
+GRANT role53 act165
+USER user1167 role90
+GRANT role57 act105
+USER user499 role1
+USER user883 role49
+GRANT role50 act118
+USER user505 role29
+GRANT role81 act110
+GRANT role28 act28
+USER user905 role77
+USER user40 role10
+GRANT role40 act155
+USER user1631 role37
+USER user546 role9
+USER user29 role45
+GRANT role32 act211
+GRANT role33 act150
+USER user856 role74
+USER user269 role63
+USER user1736 role96
+USER user1426 role60
+INHERIT role19 role52
+USER user1673 ghostrole
+USER user299 role16
+USER user1863 role47
+GRANT role9 act16
+GRANT role27 act182
+USER user783 role61
+GRANT role49 act22
+GRANT role36 act13
+USER user1293 role80
+USER user947 role6
+GRANT role71 act31
+USER user1704 ghostrole
+GRANT role98 act297
+GRANT role62 act3
+GRANT role74 act164
+GRANT role23 act203
+USER user1511 role87
+GRANT role1 act213
+USER user22 role27
+USER user799 role48
+USER user1104 ghostrole
+GRANT role74 act294
+USER user1263 role27
+USER user1109 role73
+GRANT role79 act184
+GRANT role9 act88
+INHERIT role74 role34
+GRANT role59 act108
+GRANT role6 act198
+USER user669 role9
+USER user1502 role85
+USER user1447 role63
+GRANT role78 act139
+INHERIT role89 role99
+USER user196 role56
+GRANT role75 act37
+GRANT role35 act274
+GRANT role36 act285
+GRANT role81 act236
+USER user1164 role46
+GRANT role56 act57
+USER user1812 role45
+GRANT role81 act228
+GRANT role74 act235
+GRANT role44 act57
+GRANT role77 act263
+USER user448 role76
+USER user1811 role3
+GRANT role10 act63
+USER user672 role84
+USER user301 role21
+USER user314 role12
+GRANT role82 act123
+USER user1161 role56
+GRANT role41 act295
+GRANT role48 act82
+USER user986 role93
+INHERIT role71 role47
+GRANT role3 act53
+USER user950 role27
+USER user240 role45
+USER user1883 role93
+GRANT role54 act116
+GRANT role81 act139
+GRANT role5 act66
+GRANT role92 act164
+GRANT role42 act265
+USER user1479 role84
+USER user381 role79
+GRANT role69 act30
+GRANT role80 act215
+USER user166 role13
+GRANT role73 act90
+USER user1424 role40
+GRANT role80 act77
+USER user1480 role95
+USER user221 role12
+USER user1501 role42
+USER user1045 role95
+USER user1247 role59
+USER user91 role55
+GRANT role81 act30
+USER user2 role43
+USER user758 role70
+GRANT role82 act50
+USER user1621 role34
+GRANT role24 act117
+USER user1784 role88
+USER user1574 role71
+USER user1976 role18
+USER user1570 role93
+USER user730 role96
+USER user1514 role36
+USER user1299 role23
+GRANT role49 act212
+GRANT role88 act276
+GRANT role33 act205
+GRANT role37 act277
+USER user25 role9
+USER user1694 role61
+USER user483 role77
+USER user1144 role9
+GRANT role98 act248
+GRANT role29 act289
+USER user321 role14
+USER user110 role29
+GRANT role54 act100
+USER user1486 role7
+GRANT role71 act265
+USER user447 role75
+GRANT role82 act105
+GRANT role31 act55
+USER user688 role46
+GRANT role82 act204
+USER user1149 role57
+USER user340 role90
+GRANT role7 act216
+USER user1762 role55
+GRANT role32 act62
+USER user1699 role4
+USER user21 role47
+USER user1042 role20
+GRANT role92 act15
+USER user1649 role27
+USER user724 role37
+USER user1408 role26
+GRANT role81 act5
+USER user1038 role55
+USER user1099 role5
+USER user49 role98
+USER user1564 role66
+USER user556 role57
+GRANT role21 act99
+GRANT role77 act192
+INHERIT role93 role41
+USER user1063 role92
+GRANT role60 act276
+USER user156 role68
+GRANT role45 act77
+GRANT role5 act172
+USER user109 role41
+GRANT role96 act240
+INHERIT role9 role58
+GRANT role9 act107
+USER user1456 role8
+USER user1874 role86
+USER user827 role74
+GRANT role3 act206
+USER user620 role24
+GRANT role24 act191
+USER user1732 role67
+USER user143 role42
+USER user1912 role69
+USER user767 role3
+GRANT role70 act286
+GRANT role58 act4
+USER user921 role45
+USER user101 role80
+GRANT role29 act103
+USER user711 role48
+USER user359 role7
+GRANT role13 act124
+USER user1192 role96
+USER user1656 role76
+USER user1652 role51
+GRANT role2 act194
+GRANT role23 act161
+GRANT role74 act296
+USER user1859 role87
+INHERIT role70 role43
+USER user1211 role0
+USER user71 role51
+USER user251 role42
+USER user1754 role62
+USER user1585 role0
+USER user1596 role91
+GRANT role24 act245
+GRANT role21 act175
+USER user1678 role37
+GRANT role61 act214
+GRANT role0 act207
+USER user364 role99
+USER user962 role89
+USER user1609 role16
+USER user1943 role82
+GRANT role6 act243
+GRANT role9 act7
+GRANT role30 act71
+USER user1926 role7
+USER user1081 role94
+USER user1207 role29
+USER user769 role63
+GRANT role26 act239
+USER user1118 role56
+GRANT role81 act295
+GRANT role62 act262
+GRANT role1 act222
+USER user344 role59
+USER user1072 ghostrole
+GRANT role64 act222
+USER user1205 role28
+USER user1804 role30
+USER user1946 role35
+GRANT role99 act48
+USER user1577 role49
+USER user716 role46
+USER user1816 role49
+GRANT role6 act247
+USER user1506 role84
+GRANT role54 act214
+GRANT role97 act10
+USER user1931 role7
+USER user1907 role26
+GRANT role80 act0
+USER user1734 role64
+USER user33 role56
+USER user1680 role16
+GRANT role83 act19
+GRANT role75 act81
+USER user451 role90
+USER user1731 role15
+GRANT role40 act118
+USER user934 role78
+USER user858 role83
+GRANT role9 act157
+USER user1287 role87
+USER user646 role66
+USER user1246 role80
+USER user1860 role35
+USER user144 role32
+INHERIT role77 role98
+GRANT role23 act126
+USER user1143 role79
+GRANT role58 act185
+USER user852 role61
+GRANT role43 act71
+USER user1520 role89
+USER user532 role73
+GRANT role34 act202
+USER user1628 role90
+GRANT role57 act8
+USER user1578 role82
+USER user45 role29
+GRANT role82 act32
+USER user370 role60
+GRANT role76 act8
+USER user338 role5
+GRANT role23 act264
+USER user963 role45
+GRANT role39 act155
+USER user1016 role17
+USER user1905 role16
+USER user1950 role73
+GRANT role76 act228
+USER user1002 role47
+USER user1595 role67
+USER user870 role85
+USER user306 role0
+USER user967 role55
+GRANT role40 act292
+USER user1849 role74
+USER user468 role32
+GRANT role36 act169
+GRANT role94 act58
+USER user751 role16
+USER user793 role95
+USER user1729 role13
+GRANT role43 act201
+GRANT role17 act158
+INHERIT role85 role87
+GRANT role86 act69
+GRANT role78 act70
+GRANT role66 act16
+GRANT role0 act43
+INHERIT role95 role71
+USER user844 role72
+GRANT role89 act175
+USER user782 role17
+USER user1485 role56
+USER user142 role52
+GRANT role89 act55
+USER user1988 role93
+USER user1853 role98
+GRANT role7 act163
+GRANT role67 act250
+GRANT role44 act1
+GRANT role88 act173
+USER user300 role6
+USER user1523 role51
+USER user884 role60
+USER user768 role95
+USER user914 role38
+GRANT role34 act145
+USER user633 role15
+GRANT role52 act76
+GRANT role25 act5
+GRANT role95 act103
+USER user1339 role80
+GRANT role49 act42
+GRANT role93 act222
+USER user949 role14
+GRANT role93 act39
+USER user1113 role43
+GRANT role13 act213
+USER user164 role28
+USER user1098 role15
+USER user1114 role5
+USER user661 role9
+USER user1829 role19
+USER user1395 role46
+GRANT role52 act162
+USER user1839 role91
+GRANT role1 act230
+GRANT role98 act150
+USER user1555 role93
+INHERIT role95 role58
+USER user549 role9
+USER user917 role32
+USER user969 role91
+GRANT role10 act116
+USER user785 role81
+USER user1011 role89
+USER user1775 role87
+GRANT role86 act69
+USER user1935 role39
+USER user19 role29
+INHERIT role37 role31
+GRANT role11 act263
+USER user1651 role8
+GRANT role99 act194
+GRANT role66 act274
+USER user1220 role42
+USER user1093 role32
+USER user1445 role9
+USER user675 role37
+USER user1050 role32
+GRANT role29 act27
+GRANT role45 act143
+GRANT role26 act169
+GRANT role0 act58
+USER user818 role24
+INHERIT role76 role27
+GRANT role55 act61
+GRANT role38 act72
+USER user158 role48
+USER user382 role77
+GRANT role88 act164
+USER user555 role4
+GRANT role24 act194
+GRANT role28 act100
+GRANT role86 act134
+USER user1908 role85
+USER user930 role35
+GRANT role67 act170
+USER user739 role38
+USER user797 role81
+USER user125 role83
+USER user726 role64
+GRANT role87 act270
+USER user784 role47
+GRANT role72 act125
+USER user703 role88
+GRANT role41 act149
+GRANT role96 act103
+USER user1753 role86
+GRANT role60 act268
+USER user416 role62
+GRANT role0 act101
+USER user383 role98
+GRANT role32 act139
+USER user310 role44
+GRANT role45 act146
+GRANT role10 act242
+GRANT role76 act42
+USER user1204 role62
+USER user948 role43
+USER user1683 role19
+USER user1571 role14
+GRANT role84 act99
+USER user461 role38
+GRANT role1 act168
+GRANT role20 act235
+GRANT role19 act233
+USER user305 role26
+GRANT role91 act227
+GRANT role29 act164
+GRANT role5 act122
+GRANT role24 act259
+GRANT role69 act236
+USER user702 role69
+GRANT role11 act158
+USER user435 role15
+GRANT role2 act180
+GRANT role7 act105
+GRANT role46 act17
+USER user1610 role0
+USER user553 role69
+USER user1587 role29
+GRANT role32 act14
+USER user215 role49
+USER user43 role22
+USER user117 role86
+USER user1771 role15
+USER user209 role8
+USER user865 role19
+USER user1262 role8
+GRANT role52 act248
+USER user1594 role14
+USER user790 role79
+USER user336 role48
+USER user1129 role89
+USER user1718 role12
+USER user978 role6
+GRANT role17 act69
+USER user610 role39
+USER user626 role33
+GRANT role68 act297
+USER user1538 role88
+USER user1244 role1
+USER user828 role65
+USER user699 role2
+GRANT role27 act77
+GRANT role75 act284
+USER user1029 role58
+GRANT role20 act226
+GRANT role8 act12
+USER user1018 role90
+USER user1977 role10
+USER user1598 role94
+USER user1188 role32
+USER user816 role34
+GRANT role22 act63
+USER user374 role12
+USER user262 role85
+GRANT role65 act286
+USER user1627 role10
+GRANT role52 act230
+USER user533 role52
+GRANT role9 act171
+GRANT role53 act2
+GRANT role84 act1
+USER user988 role44
+USER user792 role88
+USER user886 role87
+USER user390 role74
+USER user1237 role20
+USER user998 role66
+USER user1452 role62
+GRANT role58 act158
+USER user811 role81
+USER user1712 role79
+USER user1179 role90
+USER user1770 role96
+GRANT role62 act272
+USER user743 role73
+USER user1619 role46
+USER user1316 role58
+USER user1337 role63
+GRANT role9 act70
+USER user1900 role47
+USER user103 role5
+USER user1290 role20
+USER user1911 role94
+USER user565 role12
+USER user1062 role27
+USER user1672 role94
+USER user908 role18
+USER user903 role90
+USER user1325 role10
+USER user1777 role79
+USER user1540 role54
+USER user1504 role95
+USER user723 role89
+GRANT role53 act268
+USER user157 role96
+GRANT role79 act115
+USER user1833 role99
+USER user798 role82
+USER user1601 role20
+USER user1664 role18
+USER user1647 role93
+USER user833 role52
+GRANT role64 act74
+INHERIT role77 role62
+USER user171 role73
+USER user1370 role20
+USER user701 role10
+USER user910 role93
+USER user882 role55
+GRANT role51 act32
+USER user1202 role85
+USER user847 role59
+GRANT role90 act138
+GRANT role42 act190
+USER user694 role95
+GRANT role45 act225
+USER user1808 role33
+USER user1067 role92
+USER user1071 role12
+USER user291 role36
+GRANT role69 act59
+USER user680 role63
+GRANT role89 act207
+USER user599 role69
+USER user593 role7
+USER user1150 role98
+USER user997 role64
+USER user0 role30
+GRANT role75 act65
+USER user1427 role90
+USER user118 role70
+GRANT role36 act70
+USER user813 role13
+USER user704 role79
+USER user1159 role9
+USER user1301 role60
+USER user713 role60
+USER user1079 role50
+GRANT role20 act204
+GRANT role25 act194
+USER user233 role38
+USER user1938 role37
+USER user821 role19
+USER user1919 role81
+USER user1936 role6
+USER user294 role36
+USER user1401 role94
+GRANT role13 act231
+USER user46 role90
+GRANT role76 act245
+USER user1116 role81
+GRANT role51 act129
+GRANT role58 act46
+GRANT role79 act171
+GRANT role51 act20
+USER user608 role34
+GRANT role0 act49
+GRANT role47 act137
+USER user933 role10
+GRANT role23 act287
+USER user831 role84
+USER user5 role28
+USER user135 role12
+GRANT role3 act282
+GRANT role27 act217
+GRANT role36 act155
+USER user198 role58
+INHERIT role4 role19
+USER user1021 role33
+USER user696 role78
+GRANT role25 act115
+USER user755 role13
+GRANT role54 act235
+GRANT role13 act201
+USER user1866 role14
+USER user10 role85
+GRANT role41 act60
+GRANT role26 act232
+USER user1776 role43
+GRANT role20 act61
+USER user15 role59
+GRANT role58 act190
+USER user1128 role61
+GRANT role23 act107
+USER user579 role56
+GRANT role47 act130
+USER user392 role86
+USER user494 role49
+USER user588 role86
+USER user1885 role12
+USER user1690 role1
+GRANT role41 act103
+USER user968 role0
+USER user727 role1
+GRANT role89 act280
+USER user94 role90
+USER user1171 role81
+USER user80 role25
+USER user1589 role61
+USER user733 role26
+USER user1020 role73
+USER user309 role83
+USER user595 role56
+INHERIT role81 role98
+USER user477 role45
+GRANT role1 act28
+GRANT role61 act288
+GRANT role24 act54
+USER user625 ghostrole
+GRANT role94 act16
+USER user1750 role50
+USER user576 role69
+GRANT role63 act288
+GRANT role90 act24
+USER user1388 role90
+USER user1464 role21
+GRANT role40 act151
+GRANT role94 act94
+GRANT role93 act87
+USER user1462 role46
+GRANT role16 act151
+GRANT role99 act201
+GRANT role29 act137
+GRANT role53 act70
+GRANT role34 act224
+GRANT role43 act21
+USER user1700 role36
+USER user492 role75
+GRANT role90 act235
+GRANT role67 act238
+USER user757 role98
+GRANT role69 act145
+GRANT role85 act35
+GRANT role54 act165
+USER user445 role1
+USER user1841 role65
+USER user1865 role66
+USER user328 role60
+USER user7 role87
+USER user1716 role76
+GRANT role22 act73
+GRANT role34 act272
+USER user1120 role71
+USER user37 role19
+USER user896 role52
+USER user1925 role55
+GRANT role71 act88
+USER user912 role24
+GRANT role45 act90
+USER user1034 role61
+GRANT role55 act201
+GRANT role42 act219
+USER user800 role11
+INHERIT role57 role87
+USER user651 role36
+GRANT role70 act26
+INHERIT role56 role36
+USER user72 role11
+GRANT role24 act59
+GRANT role47 act54
+GRANT role63 act195
+GRANT role69 act75
+USER user1195 role41
+USER user192 role2
+GRANT role29 act82
+USER user335 role28
+USER user674 role60
+INHERIT role89 role32
+GRANT role39 act26
+USER user1277 role37
+GRANT role0 act42
+GRANT role63 act88
+USER user1503 role67
+GRANT role37 act295
+USER user744 role99
+USER user698 role60
+USER user578 ghostrole
+USER user564 role2
+USER user1068 role4
+USER user622 role32
+USER user149 role42
+USER user1947 role33
+USER user1481 role47
+USER user393 role36
+GRANT role65 act26
+GRANT role81 act108
+GRANT role84 act12
+USER user1579 role15
+GRANT role18 act160
+GRANT role54 act235
+USER user3 role50
+USER user1448 role12
+GRANT role93 act124
+USER user1199 role12
+USER user1819 role24
+USER user1217 role72
+INHERIT role3 role85
+USER user1787 role18
+USER user480 role97
+GRANT role10 act257
+USER user1817 role66
+GRANT role17 act261
+USER user490 role50
+USER user65 role97
+GRANT role0 act248
+GRANT role54 act261
+GRANT role16 act193
+USER user535 role37
+USER user655 role39
+GRANT role3 act22
+GRANT role79 act179
+USER user602 role74
+USER user1142 role48
+USER user1471 role85
+USER user1618 role89
+USER user481 role14
+GRANT role93 act204
+GRANT role92 act260
+GRANT role6 act110
+USER user955 role51
+GRANT role34 act53
+GRANT role41 act73
+GRANT role47 act36
+GRANT role13 act134
+GRANT role0 act23
+GRANT role61 act71
+USER user1695 role1
+USER user1515 role97
+GRANT role35 act269
+USER user570 role4
+USER user1580 role37
+USER user652 role1
+USER user246 role73
+GRANT role83 act115
+USER user1187 role58
+USER user1592 role52
+USER user773 role20
+GRANT role93 act53
+GRANT role44 act207
+USER user1297 role93
+GRANT role37 act183
+USER user385 role14
+USER user478 role11
+USER user1392 role18
+GRANT role43 act144
+USER user105 role49
+GRANT role2 act284
+GRANT role81 act278
+USER user200 role81
+USER user1648 role54
+USER user1419 role56
+USER user1557 role11
+GRANT role4 act100
+USER user39 role54
+USER user1295 role20
+USER user591 role46
+GRANT role76 act74
+USER user1671 role56
+INHERIT role33 role97
+USER user714 role46
+GRANT role17 act93
+GRANT role40 act111
+GRANT role83 act215
+GRANT role45 act279
+USER user32 role52
+USER user1125 role6
+USER user670 role14
+USER user796 role44
+USER user1307 role14
+USER user268 role48
+USER user1726 role51
+GRANT role13 act3
+GRANT role64 act285
+USER user1832 role29
+USER user1605 role32
+USER user462 role10
+GRANT role36 act61
+GRANT role91 act236
+GRANT role86 act101
+USER user1415 role51
+GRANT role34 act162
+USER user81 role52
+USER user1895 role18
+GRANT role0 act46
+GRANT role83 act9
+GRANT role41 act85
+GRANT role20 act111
+USER user274 role44
+INHERIT role6 role22
+GRANT role51 act195
+USER user1086 role39
+GRANT role43 act157
+USER user1529 role35
+GRANT role27 act195
+GRANT role36 act272
+USER user1228 role4
+USER user1878 role92
+USER user915 role89
+USER user666 role57
+GRANT role51 act139
+GRANT role97 act7
+GRANT role4 act215
+GRANT role44 act85
+GRANT role26 act109
+GRANT role93 act23
+GRANT role72 act112
+USER user1766 role72
+USER user511 role46
+USER user1140 role36
+USER user1318 role18
+GRANT role68 act268
+GRANT role86 act1
+GRANT role37 act17
+USER user1344 role80
+GRANT role6 act214
+USER user1273 role12
+GRANT role17 act26
+USER user1807 role7
+USER user795 role64
+GRANT role81 act137
+GRANT role68 act96
+GRANT role29 act292
+USER user1014 role91
+USER user1779 role74
+USER user396 role34
+USER user1077 role98
+GRANT role83 act271
+USER user1633 role23
+USER user614 role17
+GRANT role45 act286
+USER user245 role88
+USER user70 role37
+GRANT role70 act208
+USER user809 role29
+USER user874 role38
+GRANT role71 act41
+USER user471 role50
+USER user1047 ghostrole
+USER user1855 role36
+USER user1183 role35
+GRANT role12 act48
+USER user387 role8
+USER user776 role16
+GRANT role22 act207
+GRANT role17 act200
+GRANT role46 act88
+USER user438 role76
+USER user1717 role52
+USER user1957 role25
+USER user489 role80
+USER user935 role19
+GRANT role22 act137
+USER user1311 role93
+USER user265 role37
+USER user327 role18
+USER user1365 role17
+USER user502 role62
+USER user508 role46
+USER user512 role74
+GRANT role66 act76
+USER user1898 role11
+USER user1796 role8
+USER user486 role83
+USER user1091 role10
+USER user123 role57
+USER user260 role9
+USER user68 role1
+USER user1342 role61
+GRANT role69 act46
+USER user1675 role38
+GRANT role93 act23
+GRANT role15 act232
+GRANT role21 act210
+GRANT role50 act237
+GRANT role70 act274
+INHERIT role47 role66
+GRANT role52 act141
+USER user987 role80
+USER user943 role27
+USER user1356 role50
+GRANT role36 act172
+GRANT role57 act250
+INHERIT role28 role56
+GRANT role99 act159
+USER user760 role87
+USER user1061 role59
+USER user400 role72
+USER user297 role23
+USER user6 role94
+GRANT role90 act178
+GRANT role26 act274
+USER user1952 role49
+GRANT role1 act185
+USER user1423 role56
+USER user1653 role16
+GRANT role20 act23
+INHERIT role40 role89
+USER user1559 role61
+USER user1409 role81
+GRANT role51 act110
+GRANT role76 act196
+GRANT role92 act37
+USER user1317 role22
+USER user352 role62
+GRANT role47 act267
+USER user1007 role45
+USER user613 role9
+USER user1310 role3
+GRANT role58 act72
+GRANT role5 act71
+GRANT role2 act83
+USER user745 role28
+GRANT role49 act64
+GRANT role48 act66
+USER user1924 role18
+GRANT role14 act175
+USER user1916 role89
+GRANT role14 act173
+GRANT role39 act229
+GRANT role16 act45
+INHERIT role62 role96
+USER user1764 role71
+GRANT role21 act63
+GRANT role87 act90
+USER user283 role82
+USER user1640 role15
+USER user408 role64
+USER user395 role69
+USER user1510 role65
+USER user1422 role68
+GRANT role50 act156
+USER user1256 role57
+USER user1713 role17
+USER user1053 role80
+USER user737 ghostrole
+USER user942 role44
+USER user1249 role57
+USER user931 role59
+USER user286 role45
+GRANT role66 act212
+USER user1429 role51
+USER user1170 role3
+GRANT role84 act21
+GRANT role88 act151
+USER user691 role27
+GRANT role34 act71
+GRANT role12 act10
+USER user1406 role85
+USER user1519 role57
+USER user1119 role89
+GRANT role7 act226
+GRANT role11 act136
+USER user1411 role35
+INHERIT role57 role71
+GRANT role90 act220
+USER user777 role3
+GRANT role54 act47
+USER user184 role37
+GRANT role44 act140
+USER user1404 role84
+GRANT role69 act75
+GRANT role68 act93
+USER user1814 role13
+GRANT role65 act184
+USER user664 role55
+USER user1492 role41
+USER user1687 role60
+USER user191 ghostrole
+USER user966 role39
+USER user690 role0
+GRANT role28 act105
+GRANT role66 act172
+GRANT role3 act280
+USER user1537 role63
+GRANT role79 act271
+USER user202 role13
+GRANT role22 act166
+USER user345 role91
+INHERIT role30 role45
+GRANT role36 act247
+GRANT role64 act125
+USER user1498 role98
+USER user241 role27
+GRANT role88 act207
+USER user1105 role60
+USER user1831 role16
+USER user1271 role52
+USER user804 role35
+GRANT role21 act49
+USER user1025 role57
+USER user1230 role61
+USER user842 role52
+GRANT role4 act97
+USER user524 role93
+USER user128 role27
+USER user890 role91
+USER user1638 role89
+USER user1054 role34
+USER user1083 role11
+GRANT role26 act124
+USER user1272 role28
+GRANT role31 act122
+USER user885 role95
+USER user940 role17
+USER user1679 role83
+USER user999 role47
+GRANT role59 act171
+GRANT role89 act43
+GRANT role79 act266
+USER user876 role58
+GRANT role90 act221
+USER user1399 role32
+GRANT role97 act46
+GRANT role57 act91
+GRANT role8 act220
+USER user1073 role60
+USER user1613 role99
+GRANT role75 act213
+GRANT role92 act103
+USER user175 role27
+USER user972 role14
+USER user944 role42
+GRANT role30 act93
+USER user684 role11
+USER user252 role86
+GRANT role30 act41
+USER user636 role2
+GRANT role64 act137
+GRANT role19 act192
+USER user108 role95
+USER user1194 role55
+GRANT role88 act42
+INHERIT role67 role63
+GRANT role10 act256
+USER user941 role22
+GRANT role96 act221
+GRANT role50 act296
+GRANT role84 act270
+USER user1218 role60
+USER user1368 role4
+USER user1706 role87
+USER user54 role63
+USER user1121 role28
+GRANT role6 act106
+GRANT role99 act158
+USER user193 role79
+USER user1366 role40
+GRANT role22 act132
+USER user1877 role15
+GRANT role95 act215
+GRANT role59 act3
+INHERIT role15 role41
+GRANT role50 act88
+USER user1742 role32
+USER user1151 role71
+GRANT role53 act281
+USER user1711 role64
+USER user1760 role30
+USER user51 role66
+GRANT role30 act203
+GRANT role35 act253
+INHERIT role33 role26
+USER user1430 role37
+USER user457 role40
+GRANT role83 act127
+USER user460 role46
+GRANT role95 act227
+GRANT role78 act62
+USER user514 role43
+GRANT role44 act43
+USER user1709 role31
+USER user1326 role91
+USER user407 role9
+USER user667 role34
+USER user960 role69
+USER user1542 role22
+GRANT role46 act280
+GRANT role28 act129
+GRANT role77 act18
+GRANT role91 act279
+USER user1551 role58
+GRANT role84 act87
+USER user1667 role55
+USER user1327 role13
+USER user1343 role96
+USER user1755 role1
+GRANT role55 act71
+USER user1139 role95
+USER user1030 role45
+USER user1163 role99
+USER user1955 role95
+USER user23 role55
+INHERIT role9 role38
+GRANT role19 act250
+USER user1584 role15
+USER user177 role70
+USER user423 role79
+USER user1178 role53
+USER user1198 role88
+GRANT role48 act14
+GRANT role46 act141
+GRANT role12 act168
+USER user866 role67
+USER user119 role64
+USER user232 role2
+USER user951 role17
+GRANT role72 act18
+GRANT role79 act0
+USER user493 role79
+USER user1896 role8
+USER user366 role94
+USER user1530 role46
+USER user1642 role41
+USER user939 role60
+USER user927 role43
+USER user82 role41
+GRANT role30 act240
+USER user1987 role28
+GRANT role27 act293
+USER user371 role34
+USER user855 role23
+GRANT role24 act185
+USER user220 role53
+USER user1882 role19
+USER user1857 role24
+USER user1248 role5
+USER user710 role23
+GRANT role4 act292
+USER user1752 role63
+GRANT role3 act90
+USER user1763 role25
+GRANT role13 act124
+USER user846 role15
+USER user990 role17
+GRANT role28 act114
+USER user518 role43
+USER user1400 role25
+USER user1425 role85
+USER user1494 role84
+USER user957 role6
+USER user838 role39
+INHERIT role60 role73
+USER user449 role75
+GRANT role19 act275
+GRANT role96 act149
+GRANT role76 act34
+USER user1231 role26
+USER user526 role53
+USER user495 role26
+USER user1358 role45
+GRANT role92 act45
+USER user850 role90
+GRANT role83 act113
+GRANT role35 act291
+GRANT role3 act240
+USER user911 role97
+USER user163 role59
+GRANT role11 act191
+GRANT role70 act218
+GRANT role3 act129
+GRANT role83 act72
+USER user264 role0
+USER user897 role54
+GRANT role32 act54
+USER user1944 role34
+GRANT role65 act53
+USER user515 role20
+GRANT role23 act166
+GRANT role95 act102
+USER user1748 role15
+GRANT role79 act216
+GRANT role31 act250
+GRANT role97 act174
+USER user1182 role79
+GRANT role86 act233
+USER user1620 role76
+GRANT role66 act98
+USER user887 role30
+USER user1397 role2
+USER user1543 role28
+USER user130 role57
+GRANT role80 act263
+GRANT role71 act181
+INHERIT role52 role45
+USER user754 role70
+USER user1107 role81
+INHERIT role54 role40
+GRANT role61 act229
+GRANT role30 act211
+GRANT role86 act89
+USER user937 role86
+USER user1909 role99
+GRANT role2 act260
+USER user1384 role9
+USER user1591 role8
+INHERIT role68 role74
+USER user145 role21
+USER user1505 role52
+USER user1354 role3
+GRANT role68 act195
+GRANT role33 act275
+USER user920 role42
+GRANT role84 act217
+GRANT role82 act200
+USER user1803 role22
+USER user271 role60
+GRANT role32 act134
+USER user653 role28
+USER user249 role64
+GRANT role72 act153
+GRANT role83 act287
+USER user1242 role25
+GRANT role52 act218
+USER user810 role1
+USER user778 role48
+GRANT role65 act184
+USER user279 role86
+USER user1472 role19
+USER user1203 role2
+GRANT role8 act291
+USER user1886 role24
+USER user794 role40
+USER user79 role57
+GRANT role39 act39
+USER user1963 role17
+GRANT role65 act82
+USER user738 role81
+USER user197 role31
+USER user1209 ghostrole
+USER user1313 role50
+GRANT role23 act47
+USER user639 role36
+USER user212 role85
+USER user74 role58
+USER user1887 role77
+USER user365 role81
+GRANT role24 act215
+USER user1884 role32
+USER user1252 role83
+USER user583 role68
+INHERIT role82 role31
+GRANT role80 act157
+GRANT role46 act228
+GRANT role14 act132
+USER user1440 role46
+USER user519 role92
+GRANT role54 act61
+USER user1891 role68
+GRANT role24 act151
+USER user1122 role14
+GRANT role56 act188
+USER user974 role90
+USER user975 role95
+USER user1516 role8
+USER user1685 role43
+USER user1286 role42
+USER user1507 role33
+USER user1769 role77
+GRANT role68 act131
+GRANT role64 act207
+USER user425 role30
+USER user1743 role97
+GRANT role67 act251
+USER user1720 role86
+USER user1259 role11
+USER user1389 role35
+USER user1385 role17
+GRANT role35 act297
+USER user235 role69
+GRANT role71 act118
+GRANT role75 act201
+USER user399 role71
+GRANT role53 act183
+USER user808 role11
+GRANT role25 act201
+GRANT role99 act22
+INHERIT role36 role36
+USER user1914 role24
+USER user1703 ghostrole
+USER user1846 role51
+USER user350 role94
+USER user1357 role59
+GRANT role94 act167
+GRANT role94 act185
+USER user742 role12
+GRANT role23 act118
+USER user1689 role29
+USER user712 role62
+USER user1410 role92
+GRANT role43 act220
+GRANT role73 act191
+USER user682 role10
+USER user938 role9
+GRANT role18 act186
+GRANT role80 act105
+USER user1444 role3
+GRANT role87 act16
+GRANT role51 act120
+GRANT role4 act270
+USER user1302 role42
+GRANT role82 act202
+USER user1546 role37
+USER user631 role21
+GRANT role28 act124
+INHERIT role72 role60
+GRANT role29 act234
+GRANT role64 act114
+USER user1881 role94
+GRANT role45 act283
+USER user57 role58
+GRANT role17 act141
+GRANT role68 act184
+USER user440 role63
+USER user1375 role31
+USER user506 role16
+USER user1780 role80
+GRANT role25 act251
+GRANT role42 act46
+USER user1793 role46
+GRANT role7 act123
+GRANT role98 act245
+GRANT role88 act124
+GRANT role92 act117
+GRANT role16 act203
+GRANT role75 act217
+GRANT role11 act243
+USER user1031 role60
+USER user227 role62
+GRANT role84 act61
+USER user1956 role79
+USER user87 ghostrole
+USER user1969 role33
+USER user671 role36
+GRANT role91 act154
+USER user1308 role38
+USER user427 role15
+GRANT role46 act87
+GRANT role1 act88
+GRANT role97 act293
+GRANT role97 act218
+USER user645 role47
+USER user611 role38
+GRANT role58 act118
+GRANT role55 act97
+GRANT role14 act65
+USER user573 role65
+USER user1124 role12
+GRANT role59 act225
+GRANT role2 act103
+GRANT role10 act58
+USER user488 role78
+USER user263 role77
+GRANT role6 act102
+GRANT role4 act130
+USER user467 role16
+USER user394 role15
+USER user1070 role20
+GRANT role86 act164
+USER user1004 role68
+USER user272 role14
+USER user1102 role4
+GRANT role13 act153
+USER user1253 role68
+USER user1684 role83
+GRANT role91 act233
+GRANT role77 act184
+GRANT role66 act56
+USER user1201 role24
+USER user1774 role44
+GRANT role97 act209
+GRANT role42 act41
+USER user953 role77
+USER user543 role53
+GRANT role50 act261
+USER user1923 role40
+GRANT role64 act208
+USER user261 role36
+GRANT role30 act275
+GRANT role19 act258
+USER user195 role83
+GRANT role46 act241
+INHERIT role20 role52
+USER user1948 role94
+GRANT role54 act222
+GRANT role35 act42
+GRANT role79 act67
+USER user1758 role10
+GRANT role49 act209
+USER user1436 role5
+USER user541 role39
+USER user860 role79
+GRANT role71 act16
+USER user1478 role71
+USER user60 role41
+GRANT role97 act158
+GRANT role16 act157
+USER user1765 role82
+USER user1191 role28
+GRANT role83 act25
+INHERIT role97 role61
+USER user351 role22
+GRANT role58 act269
+GRANT role71 act178
+USER user1979 role77
+GRANT role57 act65
+USER user1094 ghostrole
+GRANT role72 act226
+GRANT role32 act61
+GRANT role26 act80
+GRANT role15 act264
+USER user1233 role40
+GRANT role53 act240
+GRANT role33 act267
+INHERIT role83 role41
+GRANT role82 act135
+GRANT role53 act288
+GRANT role60 act24
+GRANT role85 act95
+USER user1353 role77
+USER user341 role44
+USER user1088 role63
+GRANT role15 act14
+USER user1795 role92
+USER user465 role12
+USER user1069 role73
+USER user1468 role43
+USER user347 role3
+GRANT role23 act153
+USER user1193 role89
+USER user829 role64
+GRANT role39 act202
+GRANT role87 act37
+GRANT role62 act162
+USER user404 role98
+USER user186 role74
+USER user616 role22
+GRANT role34 act131
+USER user355 role55
+USER user1374 role93
+GRANT role72 act285
+GRANT role49 act221
+USER user459 role41
+USER user1036 role35
+USER user96 role86
+GRANT role6 act289
+USER user891 role78
+GRANT role86 act92
+GRANT role61 act151
+USER user995 role1
+GRANT role67 act146
+USER user47 role90
+GRANT role48 act216
+GRANT role87 act237
+USER user48 role13
+USER user1323 role14
+INHERIT role36 role43
+GRANT role15 act237
+INHERIT role42 role80
+USER user1521 role33
+USER user787 role68
+USER user256 role39
+USER user722 role0
+USER user1548 role14
+USER user1894 role2
+USER user640 role13
+USER user285 role79
+GRANT role79 act94
+USER user1961 role5
+GRANT role56 act98
+GRANT role75 act261
+GRANT role16 act79
+INHERIT role54 role83
+USER user1630 role5
+USER user324 role14
+USER user1552 role57
+USER user1654 role41
+GRANT role90 act143
+INHERIT role8 role78
+GRANT role32 act211
+GRANT role76 act25
+GRANT role56 act256
+GRANT role1 act14
+USER user1074 role72
+GRANT role18 act180
+USER user1275 role92
+GRANT role63 act14
+USER user1636 role7
+GRANT role43 act222
+GRANT role26 act164
+USER user1693 role35
+USER user1132 role74
+GRANT role65 act179
+USER user484 role68
+GRANT role29 act169
+USER user1666 role75
+GRANT role91 act268
+GRANT role58 act100
+USER user618 ghostrole
+USER user236 role64
+GRANT role83 act264
+USER user634 role55
+USER user1522 role84
+INHERIT role13 role67
+USER user1616 role53
+USER user1469 role8
+USER user900 role38
+GRANT role8 act211
+USER user204 role60
+GRANT role96 act2
+USER user1160 role8
+INHERIT role80 role75
+USER user764 role85
+GRANT role59 act106
+USER user1437 role10
+GRANT role64 act277
+USER user567 role18
+USER user12 role81
+GRANT role70 act254
+USER user187 role85
+USER user1727 role90
+USER user981 role82
+GRANT role16 act80
+GRANT role11 act17
+USER user1024 role50
+USER user1421 role88
+INHERIT role30 role65
+USER user1222 role7
+USER user693 role53
+USER user1145 role59
+USER user281 role14
+USER user373 role55
+GRANT role98 act93
+GRANT role92 act130
+GRANT role96 act267
+GRANT role67 act242
+USER user1999 role7
+USER user230 role4
+GRANT role91 act226
+USER user122 role22
+USER user1617 role63
+GRANT role73 act117
+USER user266 role82
+GRANT role91 act9
+USER user1822 role65
+USER user1692 role39
+USER user558 role16
+GRANT role27 act51
+USER user214 role52
+USER user529 role8
+USER user34 role21
+GRANT role19 act18
+USER user619 role55
+USER user632 role22
+USER user1274 role86
+USER user770 role90
+INHERIT role91 role11
+INHERIT role31 role42
+USER user1509 role80
+GRANT role88 act87
+GRANT role84 act235
+GRANT role54 act154
+GRANT role92 act233
+GRANT role16 act164
+USER user504 role75
+USER user1615 role68
+USER user1582 role24
+USER user332 role62
+GRANT role53 act184
+GRANT role54 act294
+USER user1281 role71
+USER user333 role88
+USER user1146 role49
+GRANT role56 act14
+USER user139 role15
+USER user431 role18
+GRANT role23 act14
+GRANT role97 act245
+GRANT role34 act78
+GRANT role12 act72
+USER user585 role57
+USER user115 role77
+USER user1458 role3
+GRANT role57 act94
+USER user1844 role44
+USER user1254 role52
+USER user134 role60
+USER user1345 role54
+USER user206 role64
+GRANT role49 act170
+USER user1048 role22
+USER user1111 role39
+USER user415 role17
+GRANT role0 act0
+USER user542 role60
+USER user789 role12
+GRANT role24 act172
+GRANT role68 act253
+GRANT role34 act116
+USER user1526 role57
+GRANT role56 act48
+GRANT role40 act153
+GRANT role17 act176
+USER user1602 role93
+USER user182 role58
+USER user552 role7
+USER user1101 role97
+GRANT role31 act72
+USER user548 role43
+USER user658 role88
+USER user129 role11
+INHERIT role75 role92
+GRANT role58 act262
+GRANT role2 act128
+USER user1972 role28
+USER user1913 role98
+GRANT role63 act197
+USER user1688 ghostrole
+USER user554 role82
+USER user172 role14
+GRANT role30 act245
+GRANT role44 act3
+GRANT role26 act111
+USER user1858 role29
+GRANT role85 act168
+USER user343 role86
+GRANT role21 act75
+GRANT role1 act287
+GRANT role50 act279
+GRANT role30 act118
+USER user181 role80
+INHERIT role26 role6
+GRANT role35 act117
+USER user1783 role95
+USER user1174 role62
+GRANT role89 act65
+USER user1493 role17
+USER user348 role62
+GRANT role7 act154
+USER user781 role42
+USER user1893 role74
+GRANT role14 act17
+USER user190 role23
+GRANT role43 act25
+USER user1815 role83
+USER user1826 role27
+GRANT role1 act184
+GRANT role21 act202
+GRANT role61 act269
+USER user1351 role21
+GRANT role59 act221
+USER user1735 role97
+USER user257 role55
+USER user303 role85
+GRANT role19 act182
+USER user63 role27
+USER user956 role65
+USER user695 role74
+INHERIT role66 role27
+USER user35 role0
+GRANT role63 act18
+GRANT role19 act5
+USER user1614 role14
+USER user1830 role11
+USER user766 role59
+GRANT role82 act175
+USER user668 role31
+GRANT role54 act66
+USER user127 role50
+USER user1329 role73
+USER user93 role67
+GRANT role95 act204
+GRANT role43 act267
+USER user1206 role93
+GRANT role12 act242
+GRANT role97 act186
+USER user1697 role51
+USER user1208 role34
+GRANT role90 act168
+USER user959 role59
+USER user1531 role86
+USER user357 role31
+USER user677 role49
+GRANT role19 act211
+USER user30 role98
+USER user1127 role80
+USER user1721 role99
+GRANT role44 act196
+GRANT role87 act158
+USER user740 role51
+USER user641 role42
+GRANT role23 act147
+GRANT role85 act237
+USER user1901 role9
+INHERIT role74 role38
+USER user1723 role95
+USER user1213 role56
+USER user1821 role91
+GRANT role51 act232
+GRANT role27 act198
+USER user50 role11
+USER user1792 role68
+GRANT role12 act36
+USER user205 role76
+USER user1655 role30
+GRANT role61 act294
+USER user1767 role70
+GRANT role57 act170
+GRANT role44 act177
+USER user928 role50
+USER user1147 role24
+USER user434 role4
+USER user14 role28
+INHERIT role20 role97
+USER user276 role90
+GRANT role61 act15
+GRANT role47 act251
+USER user819 role12
+USER user83 role24
+USER user1108 role59
+USER user17 role33
+USER user378 role31
+USER user1338 role76
+GRANT role59 act269
+USER user994 role21
+GRANT role87 act238
+GRANT role92 act280
+GRANT role60 act220
+USER user1626 role98
+USER user918 role83
+USER user1363 role96
+GRANT role75 act269
+GRANT role6 act127
+GRANT role98 act158
+GRANT role12 act11
+USER user326 role62
+GRANT role11 act278
+GRANT role60 act269
+INHERIT role24 role38
+USER user482 role46
+USER user1255 role46
+GRANT role82 act285
+GRANT role77 act134
+GRANT role93 act223
+USER user1219 role81
+USER user1212 role53
+USER user162 role41
+USER user278 role28
+USER user1235 role97
+USER user574 role64
+GRANT role80 act66
+GRANT role60 act166
+USER user1309 role9
+GRANT role53 act234
+USER user1576 role62
+USER user243 role32
+GRANT role75 act181
+USER user433 role20
+USER user765 role29
+GRANT role51 act137
+USER user1265 role30
+GRANT role6 act273
+USER user1568 role36
+GRANT role16 act82
+GRANT role52 act270
+GRANT role4 act208
+GRANT role3 act245
+GRANT role15 act256
+INHERIT role81 role72
+USER user391 role79
+GRANT role69 act16
+USER user1396 role14
+USER user1196 role46
+GRANT role77 act241
+INHERIT role35 role67
+GRANT role33 act257
+GRANT role51 act170
+USER user225 role3
+USER user1705 role51
+GRANT role25 act207
+USER user642 role14
+USER user432 role22
+USER user1854 role14
+GRANT role43 act4
+GRANT role6 act49
+USER user692 role66
+GRANT role3 act13
+USER user1744 role11
+GRANT role39 act190
+GRANT role27 act110
+GRANT role3 act79
+USER user609 role93
+GRANT role88 act243
+USER user1285 role45
+USER user362 role90
+GRANT role20 act250
+USER user116 role73
+USER user1241 role7
+USER user1282 role91
+GRANT role11 act208
+USER user606 role56
+USER user1906 role81
+GRANT role39 act101
+USER user1682 role20
+USER user224 role8
+GRANT role27 act221
+GRANT role64 act263
+INHERIT role98 role67
+GRANT role73 act141
+USER user1382 role48
+USER user295 role64
+GRANT role67 act75
+USER user1937 role84
+USER user1168 role26
+USER user718 role80
+USER user509 role71
+USER user1391 role89
+USER user1451 role96
+USER user1701 role79
+GRANT role43 act238
+USER user238 role16
+GRANT role42 act13
+GRANT role58 act200
+GRANT role43 act190
+GRANT role88 act224
+USER user1657 role54
+GRANT role36 act35
+GRANT role57 act232
+USER user1973 role50
+USER user1954 role58
+USER user165 role80
+GRANT role86 act36
+USER user1420 role62
+GRANT role59 act9
+GRANT role44 act273
+USER user568 role62
+USER user517 role11
+USER user254 role50
+USER user1076 role92
+USER user584 role27
+GRANT role9 act205
+USER user120 role40
+USER user1959 role44
+GRANT role30 act111
+USER user1634 role90
+INHERIT role78 role25
+GRANT role55 act102
+GRANT role82 act185
+INHERIT role74 role6
+USER user247 role87
+USER user686 role22
+GRANT role30 act121
+GRANT role82 act151
+USER user841 role48
+USER user1496 role18
+INHERIT role78 role42
+USER user1006 role66
+USER user1305 role9
+USER user437 role58
+GRANT role39 act36
+USER user470 role41
+USER user1214 role6
+GRANT role36 act227
+USER user1100 role3
+USER user607 role86
+GRANT role31 act101
+GRANT role55 act70
+USER user1332 role67
+USER user234 role21
+USER user1461 role21
+GRANT role19 act116
+GRANT role71 act206
+USER user1747 role54
+GRANT role68 act115
+USER user1012 role2
+GRANT role88 act199
+GRANT role62 act15
+GRANT role24 act283
+USER user194 role15
+GRANT role53 act64
+GRANT role59 act163
+GRANT role36 act156
+USER user38 role63
+USER user1534 role43
+GRANT role83 act163
+GRANT role46 act38
+USER user155 role36
+USER user1876 role89
+GRANT role53 act159
+USER user648 role33
+GRANT role80 act219
+USER user721 role60
+USER user150 role76
+GRANT role8 act164
+USER user456 role28
+USER user52 role30
+GRANT role10 act73
+GRANT role28 act102
+USER user601 role56
+GRANT role12 act94
+USER user1791 ghostrole
+GRANT role53 act64
+GRANT role56 act240
+USER user1597 role11
+USER user544 role53
+GRANT role31 act132
+USER user1560 role39
+USER user424 role11
+USER user185 role10
+GRANT role73 act67
+USER user1820 role35
+GRANT role72 act143
+USER user154 role94
+GRANT role39 act283
+USER user605 role71
+USER user1800 role57
+GRANT role52 act174
+USER user1934 role92
+USER user1487 role94
+USER user1152 role83
+GRANT role49 act141
+GRANT role57 act172
+USER user862 role33
+GRANT role40 act224
+USER user1581 role63
+USER user582 role49
+USER user104 role73
+USER user290 role70
+USER user763 role73
+GRANT role86 act207
+GRANT role8 act134
+USER user1663 role63
+GRANT role21 act157
+USER user95 role63
+GRANT role72 act4
+USER user1333 role39
+USER user873 role57
+GRANT role46 act56
+GRANT role98 act269
+USER user603 role9
+GRANT role85 act299
+USER user984 role20
+USER user1518 role60
+USER user1049 role81
+USER user1862 role63
+USER user1646 role56
+USER user1096 role79
+GRANT role31 act77
+USER user1055 role41
+GRANT role50 act40
+USER user1092 role5
+USER user587 role76
+USER user1360 role48
+GRANT role0 act53
+USER user907 role30
+USER user1524 role17
+GRANT role96 act258
+USER user1674 role81
+USER user292 role10
+USER user1463 role10
+INHERIT role91 role62
+GRANT role79 act136
+INHERIT role54 role19
+GRANT role10 act269
+USER user1677 role1
+GRANT role36 act238
+USER user894 role2
+USER user647 role23
+INHERIT role47 role59
+USER user222 role52
+GRANT role80 act194
+USER user237 role42
+GRANT role5 act126
+USER user1264 role45
+USER user53 role73
+USER user1838 role19
+USER user218 role36
+USER user253 role54
+USER user153 role38
+USER user388 role4
+GRANT role25 act152
+USER user863 role71
+GRANT role80 act4
+USER user418 role98
+GRANT role28 act283
+USER user1867 role79
+GRANT role94 act94
+USER user217 role60
+GRANT role89 act23
+USER user859 role64
+GRANT role20 act236
+USER user284 role51
+USER user1035 role63
+USER user1141 role32
+USER user729 role83
+USER user376 role87
+INHERIT role62 role81
+USER user66 role13
+USER user223 role51
+GRANT role16 act261
+USER user1612 role5
+USER user1000 role56
+GRANT role4 act158
+GRANT role3 act266
+USER user835 role68
+USER user1533 role89
+USER user1377 role26
+INHERIT role4 role63
+USER user1292 role92
+GRANT role11 act19
+GRANT role80 act45
+USER user44 role37
+GRANT role66 act291
+USER user498 role32
+USER user845 role51
+USER user1532 role27
+USER user1583 role87
+GRANT role55 act65
+USER user1960 role87
+GRANT role75 act76
+GRANT role96 act13
+GRANT role70 act142
+GRANT role6 act110
+USER user267 role60
+INHERIT role76 role78
+USER user523 role1
+GRANT role89 act218
+USER user826 role77
+GRANT role3 act187
+USER user1782 ghostrole
+GRANT role2 act101
+USER user600 role29
+USER user881 role16
+GRANT role37 act190
+GRANT role37 act6
+USER user1668 role61
+USER user1261 role36
+USER user617 role8
+USER user318 role43
+USER user147 role12
+USER user9 role18
+USER user1467 role71
+USER user132 role41
+GRANT role32 act216
+GRANT role22 act15
+USER user1123 role82
+GRANT role3 act190
+USER user1980 role96
+GRANT role9 act132
+GRANT role26 act114
+USER user1563 role26
+USER user1001 role66
+INHERIT role91 role76
+USER user1746 role92
+GRANT role34 act167
+USER user148 role22
+GRANT role47 act131
+USER user571 role65
+USER user1340 role65
+GRANT role21 act66
+USER user1604 role44
+USER user1359 role16
+GRANT role44 act74
+USER user386 role24
+GRANT role98 act114
+GRANT role64 act130
+GRANT role43 act114
+GRANT role72 act248
+GRANT role76 act190
+GRANT role36 act296
+USER user980 role87
+USER user1482 role75
+USER user1157 role95
+GRANT role41 act192
+USER user183 role32
+GRANT role7 act294
+USER user1586 role55
+GRANT role90 act120
+USER user952 role60
+USER user1386 role31
+USER user503 role64
+GRANT role41 act88
+GRANT role30 act33
+USER user869 role6
+USER user1625 role14
+USER user1497 role68
+GRANT role14 act163
+GRANT role13 act12
+USER user1786 role7
+GRANT role39 act20
+USER user106 role60
+USER user199 role95
+GRANT role39 act9
+GRANT role57 act185
+GRANT role89 act285
+USER user1968 role16
+GRANT role38 act290
+USER user1632 role90
+GRANT role55 act154
+GRANT role8 act157
+USER user922 role65
+USER user273 role44
+USER user453 role69
+USER user1708 role69
+USER user1075 role91
+USER user906 role62
+GRANT role32 act45
+GRANT role39 act34
+USER user429 role90
+GRANT role44 act15
+USER user1971 role22
+USER user993 role25
+USER user1749 role42
+GRANT role97 act59
+GRANT role98 act242
+USER user1608 role24
+GRANT role97 act37
+GRANT role36 act200
+USER user1828 role13
+GRANT role96 act248
+USER user627 role3
+GRANT role90 act177
+USER user1407 role63
+GRANT role65 act289
+USER user1314 role27
+USER user734 role6
+GRANT role61 act197
+GRANT role13 act23
+GRANT role27 act53
+USER user1138 role59
+GRANT role38 act289
+USER user1173 role69
+GRANT role92 act191
+USER user1166 role14
+USER user823 role28
+GRANT role72 act157
+GRANT role59 act108
+GRANT role12 act287
+USER user466 role87
+GRANT role50 act242
+INHERIT role86 role32
+GRANT role50 act271
+GRANT role77 act197
+GRANT role87 act273
+USER user1495 role82
+GRANT role94 act85
+GRANT role26 act210
+USER user1773 role42
+USER user774 role87
+USER user18 role34
+GRANT role50 act40
+GRANT role34 act18
+GRANT role71 act15
+USER user1234 role80
+USER user1347 role96
+USER user1611 role28
+USER user1993 role33
+USER user138 role0
+USER user1084 role76
+GRANT role49 act57
+GRANT role32 act72
+USER user500 role24
+USER user598 role2
+GRANT role33 act75
+GRANT role23 act223
+USER user1126 role95
+USER user1059 role33
+USER user621 role3
+GRANT role13 act122
+USER user683 role92
+USER user1756 role78
+USER user469 role12
+GRANT role1 act242
+GRANT role26 act37
+GRANT role46 act123
+GRANT role50 act199
+USER user180 role10
+GRANT role24 act250
+GRANT role31 act12
+GRANT role53 act17
+INHERIT role44 role85
+GRANT role32 act24
+USER user520 role25
+USER user522 role88
+GRANT role65 act5
+GRANT role1 act65
+GRANT role90 act149
+GRANT role90 act95
+GRANT role35 act255
+USER user802 role80
+USER user1058 role56
+USER user1155 role55
+GRANT role45 act232
+GRANT role50 act14
+USER user572 role16
+INHERIT role27 role96
+GRANT role86 act274
+GRANT role56 act257
+GRANT role65 act4
+USER user98 role16
+GRANT role42 act27
+GRANT role74 act120
+GRANT role37 act10
+USER user749 role11
+GRANT role51 act175
+USER user1225 role65
+USER user501 role93
+USER user1060 role33
+GRANT role81 act139
+GRANT role80 act149
+USER user1106 role49
+USER user1267 role14
+GRANT role36 act91
+INHERIT role2 role27
+USER user146 role69
+GRANT role80 act32
+GRANT role14 act79
+GRANT role26 act272
+USER user1043 role16
+USER user1558 role1
+USER user1707 role87
+GRANT role95 act62
+USER user1903 role47
+USER user1508 role24
+GRANT role49 act179
+GRANT role93 act93
+USER user126 ghostrole
+USER user656 role55
+GRANT role42 act284
+GRANT role12 act8
+USER user361 role81
+GRANT role39 act288
+USER user772 role59
+GRANT role50 act247
+USER user528 role89
+USER user1027 role11
+USER user1714 role51
+INHERIT role68 role16
+USER user107 role46
+GRANT role65 act76
+GRANT role17 act29
+GRANT role48 act65
+USER user1328 role25
+GRANT role27 act99
+USER user1861 role29
+USER user1566 role37
+GRANT role6 act176
+GRANT role71 act65
+USER user1135 role51
+GRANT role3 act57
+USER user334 role13
+GRANT role8 act283
+USER user1186 role25
+USER user174 role11
+GRANT role58 act152
+GRANT role71 act90
+GRANT role41 act141
+GRANT role53 act279
+USER user575 role71
+USER user330 role37
+GRANT role83 act235
+GRANT role50 act243
+INHERIT role51 role1
+USER user55 role34
+GRANT role9 act128
+GRANT role0 act145
+INHERIT role91 role12
+USER user970 role4
+USER user4 role70
+USER user989 role52
+GRANT role85 act179
+GRANT role33 act138
+GRANT role15 act41
+GRANT role30 act155
+USER user1517 role85
+USER user590 role8
+INHERIT role30 role89
+USER user1381 role96
+USER user1438 role89
+GRANT role68 act37
+USER user1431 role15
+USER user560 role24
+GRANT role11 act282
+GRANT role9 act236
+USER user1733 role88
+USER user1629 role87
+GRANT role90 act164
+USER user27 role15
+GRANT role74 act251
+USER user255 role54
+USER user1413 role97
+GRANT role73 act247
+GRANT role31 act107
+GRANT role70 act31
+GRANT role90 act22
+USER user320 role54
+GRANT role61 act111
+GRANT role97 act27
+USER user1691 role14
+GRANT role3 act75
+USER user1942 role62
+USER user1418 role74
+USER user700 role27
+USER user635 role15
+USER user368 role35
+USER user1967 role73
+USER user717 role75
+USER user750 role48
+USER user547 role15
+USER user1982 role29
+USER user1840 role0
+GRANT role30 act229
+USER user628 role90
+INHERIT role49 role75
+USER user1660 role23
+USER user586 role73
+GRANT role38 act252
+USER user1789 role63
+USER user753 role99
+USER user1974 role95
+INHERIT role89 role75
+USER user1023 role41
+GRANT role92 act122
+USER user629 role80
+USER user1998 role69
+GRANT role83 act72
+GRANT role66 act125
+USER user946 role79
+GRANT role23 act104
+USER user124 role93
+USER user832 role78
+USER user1165 role5
+GRANT role75 act81
+USER user1983 role63
+INHERIT role10 role46
+USER user1842 role33
+GRANT role48 act11
+USER user748 role6
+USER user239 role61
+USER user1283 role94
+GRANT role20 act271
+USER user280 role45
+USER user1334 role93
+GRANT role27 act123
+USER user1466 role41
+GRANT role50 act76
+USER user1475 role46
+USER user678 role92
+USER user1080 role40
+USER user1928 role82
+USER user1824 role70
+USER user1835 role51
+GRANT role87 act211
+USER user650 role87
+GRANT role67 act208
+GRANT role20 act189
+GRANT role65 act16
+USER user1696 ghostrole
+USER user1798 role0
+GRANT role23 act196
+USER user1335 role10
+GRANT role92 act33
+GRANT role70 act83
+USER user270 role82
+USER user1453 role2
+GRANT role19 act271
+GRANT role26 act150
+USER user1547 role26
+USER user1991 role90
+GRANT role46 act161
+GRANT role35 act207
+GRANT role34 act75
+GRANT role64 act272
+USER user337 role44
+GRANT role69 act149
+GRANT role28 act295
+USER user1810 role37
+GRANT role96 act8
+USER user1892 role70
+GRANT role94 act92
+USER user1336 role88
+GRANT role40 act237
+USER user402 role2
+GRANT role18 act218
+INHERIT role69 role11
+INHERIT role76 role1
+USER user1759 role63
+GRANT role9 act244
+USER user1276 role62
+USER user86 role24
+GRANT role29 act89
+USER user1154 role1
+USER user377 role95
+INHERIT role54 role44
+GRANT role91 act145
+USER user1457 role47
+USER user173 role93
+USER user1350 role3
+USER user1994 role29
+GRANT role62 act94
+USER user1044 role82
+USER user141 role41
+USER user1133 role77
+USER user1902 role17
+GRANT role74 act102
+USER user463 role48
+GRANT role18 act90
+USER user720 role21
+GRANT role6 act83
+USER user1294 role44
+USER user1805 role52
+GRANT role60 act115
+USER user1606 role44
+GRANT role32 act108
+USER user1432 role49
+GRANT role62 act272
+GRANT role4 act158
+USER user1637 role51
+GRANT role79 act240
+GRANT role41 act162
+GRANT role74 act92
+USER user1930 role97
+GRANT role14 act175
+GRANT role52 act4
+INHERIT role68 role31
+USER user248 role71
+USER user317 ghostrole
+GRANT role17 act102
+USER user1953 role76
+USER user996 role19
+GRANT role63 act245
+USER user1845 role66
+GRANT role66 act158
+GRANT role96 act253
+GRANT role66 act60
+GRANT role9 act105
+GRANT role31 act238
+INHERIT role24 role93
+GRANT role34 act58
+USER user1474 role17
+USER user349 role12
+USER user1761 role61
+USER user316 role53
+GRANT role94 act199
+USER user592 role69
+USER user1528 role62
+GRANT role17 act299
+USER user964 role29
+USER user1730 role45
+USER user679 role56
+GRANT role61 act275
+GRANT role76 act65
+GRANT role52 act135
+USER user1847 role51
+USER user1172 role86
+GRANT role90 act222
+USER user843 role58
+USER user820 role19
+GRANT role56 act88
+GRANT role9 act269
+GRANT role57 act30
+USER user848 role45
+GRANT role27 act107
+GRANT role31 act120
+USER user1757 role0
+USER user697 role56
+GRANT role50 act138
+INHERIT role59 role86
+USER user476 role45
+USER user1224 role85
+USER user1046 role81
+GRANT role16 act257
+GRANT role26 act39
+USER user179 role94
+USER user913 role74
+USER user1875 role34
+USER user1572 role0
+USER user932 role9
+GRANT role3 act151
+GRANT role26 act157
+USER user1929 role10
+GRANT role69 act24
+USER user1362 role36
+GRANT role3 act186
+GRANT role85 act160
+USER user958 role48
+USER user88 role67
+GRANT role56 act299
+USER user853 role71
+USER user1741 role53
+USER user1698 role91
+USER user1827 role97
+GRANT role62 act151
+GRANT role91 act279
+GRANT role64 act69
+GRANT role32 act86
+GRANT role38 act53
+USER user596 role53
+USER user436 role19
+USER user1768 role53
+GRANT role68 act297
+USER user1985 role79
+USER user925 role8
+GRANT role56 act36
+USER user1250 role89
+GRANT role33 act214
+USER user325 role5
+USER user516 role16
+USER user304 role11
+USER user1681 role19
+GRANT role71 act135
+GRANT role58 act31
+USER user472 role63
+USER user1641 role47
+USER user1251 role90
+GRANT role61 act44
+USER user455 role19
+USER user100 role28
+GRANT role35 act297
+USER user1175 role2
+GRANT role99 act159
+USER user1809 role43
+GRANT role46 act267
+USER user1443 role60
+USER user864 role7
+GRANT role7 act57
+USER user1416 role40
+GRANT role50 act140
+GRANT role20 act50
+GRANT role2 act125
+GRANT role38 act74
+USER user207 role88
+USER user1238 role55
+INHERIT role47 role68
+GRANT role30 act142
+USER user401 ghostrole
+GRANT role13 act57
+USER user1836 role89
+USER user1565 role38
+USER user229 role26
+USER user421 role95
+USER user296 role95
+GRANT role69 act3
+GRANT role22 act239
+USER user1009 role17
+USER user904 role64
+USER user75 role18
+USER user474 role38
+USER user24 role93
+GRANT role84 act39
+USER user1489 role95
+USER user375 role31
+GRANT role28 act251
+GRANT role19 act298
+USER user577 role52
+GRANT role69 act44
+GRANT role59 act150
+GRANT role34 act222
+GRANT role59 act179
+USER user929 role75
+USER user801 role95
+USER user961 role38
+INHERIT role99 role39
+GRANT role94 act114
+USER user1888 role58
+GRANT role81 act268
+USER user1801 role25
+USER user715 role96
+USER user369 role79
+USER user615 role4
+GRANT role74 act16
+USER user379 role93
+USER user170 role40
+USER user1039 role70
+GRANT role13 act256
+GRANT role39 act106
+USER user1848 role61
+USER user1603 role76
+GRANT role30 act109
+GRANT role75 act45
+USER user1459 role31
+USER user1032 role9
+USER user475 role9
+USER user322 role99
+USER user898 role91
+USER user168 role65
+USER user1066 role34
+USER user665 role53
+USER user736 role2
+USER user1090 role92
+GRANT role53 act56
+GRANT role50 act126
+GRANT role31 act67
+GRANT role94 act135
+GRANT role63 act286
+INHERIT role82 role99
+GRANT role18 act299
+USER user676 role92
+USER user59 role47
+USER user1593 role5
+USER user1352 role69
+USER user1017 role9
+USER user136 role66
+USER user397 role92
+USER user815 role50
+USER user426 role34
+GRANT role66 act127
+INHERIT role71 role61
+GRANT role47 act278
+GRANT role47 act156
+USER user353 role56
+GRANT role12 act58
+USER user1945 role37
+USER user1740 role92
+USER user687 role50
+GRANT role24 act221
+GRANT role10 act156
+USER user1158 role68
+GRANT role59 act143
+USER user113 role58
+GRANT role21 act189
+GRANT role52 act31
+USER user1033 role72
+GRANT role14 act194
+USER user1013 role73
+USER user1556 role11
+USER user786 role33
+USER user1728 role72
+USER user1869 role67
+GRANT role85 act60
+GRANT role70 act121
+USER user521 role97
+USER user208 role34
+USER user1321 role92
+GRANT role77 act9
+GRANT role19 act10
+GRANT role72 act111
+USER user1372 role99
+GRANT role0 act135
+GRANT role70 act6
+GRANT role44 act15
+GRANT role68 act160
+GRANT role65 act139
+GRANT role92 act23
+GRANT role50 act62
+USER user1488 role5
+USER user868 role32
+USER user1725 role66
+USER user307 role32
+USER user219 role72
+INHERIT role34 role87
+USER user20 role52
+USER user1057 role27
+USER user1719 role94
+GRANT role23 act182
+USER user771 role66
+USER user242 role70
+USER user1134 role32
+GRANT role13 act71
+GRANT role35 act257
+GRANT role51 act70
+USER user954 role64
+GRANT role64 act71
+GRANT role1 act277
+GRANT role84 act21
+GRANT role52 act285
+GRANT role94 act100
+INHERIT role55 role42
+USER user747 role36
+GRANT role56 act41
+USER user1813 role55
+USER user133 role23
+GRANT role97 act243
+USER user464 role94
+GRANT role54 act271
+GRANT role35 act88
+USER user1710 role35
+GRANT role22 act160
+GRANT role33 act271
+GRANT role53 act255
+GRANT role59 act96
+USER user1450 role96
+GRANT role32 act152
+USER user1785 role35
+USER user372 role31
+USER user1082 role62
+USER user1296 role11
+GRANT role32 act175
+USER user1181 role35
+GRANT role58 act54
+USER user982 role88
+USER user867 ghostrole
+GRANT role59 act111
+USER user1599 role43
+GRANT role42 act281
+GRANT role74 act53
+GRANT role8 act76
+GRANT role51 act197
+USER user822 role31
+USER user275 role73
+GRANT role73 act172
+GRANT role35 act12
+USER user1095 role24
+GRANT role77 act290
+USER user643 role34
+GRANT role87 act49
+GRANT role82 act1
+USER user1539 role93
+GRANT role41 act6
+USER user1269 role24
+GRANT role42 act159
+GRANT role77 act65
+USER user1330 role36
+GRANT role38 act200
+GRANT role43 act96
+USER user580 role65
+USER user152 role31
+GRANT role78 act11
+USER user623 role57
+GRANT role77 act273
+GRANT role35 act278
+GRANT role86 act66
+USER user1802 role59
+USER user589 role63
+USER user121 role43
+USER user441 role16
+GRANT role58 act72
+USER user1659 role99
+GRANT role84 act62
+GRANT role65 act44
+USER user1087 role71
+GRANT role76 act217
+USER user531 role35
+GRANT role2 act109
+INHERIT role98 role0
+GRANT role34 act104
+USER user569 ghostrole
+USER user85 role89
+GRANT role68 act194
+USER user871 role8
+GRANT role11 act161
+USER user1052 role11
+USER user1185 role88
+USER user1037 role78
+GRANT role2 act297
+USER user422 role52
+USER user315 role33
+GRANT role87 act267
+GRANT role15 act116
+USER user1476 role89
+USER user1278 role2
+USER user1040 role86
+GRANT role92 act254
+USER user654 role88
+USER user417 role54
+USER user62 role55
+USER user1941 role63
+USER user406 role76
+USER user725 role87
+USER user1240 role29
+GRANT role32 act17
+USER user1996 role86
+USER user491 role11
+GRANT role51 act118
+INHERIT role28 role96
+GRANT role14 act221
+USER user1279 role99
+USER user1992 role97
+USER user662 role30
+USER user839 role33
+USER user857 role29
+GRANT role41 act121
+GRANT role33 act194
+INHERIT role24 role73
+USER user131 role38
+USER user430 role37
+GRANT role40 act79
+GRANT role78 act276
+GRANT role0 act147
+USER user1843 role32
+USER user991 role23
+GRANT role51 act187
+GRANT role65 act184
+USER user851 role8
+GRANT role70 act193
+GRANT role42 act13
+INHERIT role14 role27
+GRANT role68 act76
+USER user1380 role39
+USER user624 role81
+GRANT role83 act2
+USER user706 role40
+USER user888 role68
+GRANT role45 act42
+USER user735 role80
+USER user169 role44
+GRANT role96 act210
+GRANT role51 act183
+USER user1781 role31
+USER user1920 role36
+GRANT role97 act115
+GRANT role72 act127
+USER user354 role71
+GRANT role80 act203
+USER user1889 role65
+GRANT role87 act115
+GRANT role45 act150
+USER user1117 role33
+GRANT role46 act148
+GRANT role53 act268
+GRANT role85 act121
+GRANT role97 act275
+USER user1417 role7
+USER user1394 role84
+GRANT role2 act25
+USER user1041 role22
+GRANT role87 act54
+GRANT role83 act90
+GRANT role93 act74
+USER user339 role92
+USER user1995 role75
+GRANT role94 act113
+USER user216 role24
+USER user992 role76
+GRANT role30 act77
+USER user1549 role86
+USER user1439 role46
+INHERIT role73 role7
+GRANT role72 act166
+GRANT role10 act211
+USER user1364 role15
+GRANT role57 act73
+GRANT role76 act128
+USER user1403 role87
+GRANT role20 act253
+GRANT role30 act255
+GRANT role82 act31
+GRANT role85 act33
+INHERIT role9 role84
+USER user563 role10
+GRANT role13 act127
+USER user1361 role68
+USER user1525 role70
+GRANT role21 act150
+GRANT role99 act138
+GRANT role66 act295
+USER user358 role92
+GRANT role89 act243
+USER user384 role99
+GRANT role91 act30
+USER user1661 role92
+USER user649 role19
+USER user1738 role14
+INHERIT role76 role52
+USER user731 role88
+GRANT role2 act271
+USER user167 role67
+USER user746 role29
+GRANT role72 act124
+USER user510 role70
+USER user298 role80
+USER user428 role36
+USER user1470 role49
+GRANT role92 act95
+GRANT role97 act52
+GRANT role93 act207
+GRANT role16 act151
+GRANT role13 act184
+GRANT role59 act68
+USER user1500 role7
+USER user450 role26
+USER user545 role58
+GRANT role20 act237
+USER user1778 role63
+USER user67 role58
+USER user329 role73
+USER user1990 role14
+USER user1402 role51
+USER user761 role93
+USER user709 role58
+USER user485 role63
+GRANT role85 act220
+USER user971 role50
+GRANT role22 act193
+USER user536 role91
+USER user507 role40
+USER user538 role45
+INHERIT role17 role11
+GRANT role86 act171
+USER user244 role1
+GRANT role61 act291
+GRANT role74 act238
+USER user1554 role21
+GRANT role66 act270
+GRANT role10 act70
+USER user1477 role7
+USER user1965 role61
+GRANT role62 act95
+USER user1008 role36
+USER user1922 role99
+GRANT role31 act119
+USER user311 role5
+USER user1794 role31
+GRANT role28 act76
+USER user1428 role95
+GRANT role65 act107
+USER user1056 role42
+GRANT role19 act13
+GRANT role66 act299
+GRANT role61 act275
+USER user1562 role45
+USER user1527 role23
+GRANT role62 act113
+USER user412 role83
+USER user1162 role73
+USER user1739 role68
+USER user1284 role72
+USER user289 role5
+USER user308 role68
+USER user1639 role62
+USER user287 role81
+USER user1236 role45
+USER user612 role82
+USER user1110 role10
+USER user1590 role85
+USER user539 role70
+USER user1897 role42
+USER user1367 role42
+USER user1442 role72
+USER user259 role31
+USER user1398 role73
+USER user1645 role97
+USER user965 role90
+USER user689 role88
+USER user226 role86
+USER user1349 role6
+USER user825 role0
+USER user1465 role14
+USER user1722 role68
+USER user201 role86
+USER user1226 role24
+GRANT role72 act233
+USER user1341 role82
+USER user1184 role70
+USER user11 role20
+USER user1227 role15
+USER user288 role60
+GRANT role11 act1
+USER user231 role96
+GRANT role96 act263
+GRANT role10 act142
+USER user1624 role73
+USER user681 role25
+INHERIT role33 role66
+USER user356 role1
+GRANT role95 act134
+USER user1260 role72
+GRANT role47 act157
+USER user398 role77
+USER user530 role64
+USER user61 role52
+GRANT role36 act185
+USER user814 role35
+USER user1806 role3
+GRANT role58 act108
+GRANT role84 act53
+GRANT role6 act108
+USER user1232 role13
+GRANT role64 act83
+GRANT role43 act41
+GRANT role58 act21
+USER user1790 role61
+USER user557 role21
+USER user806 role30
+USER user1670 role56
+GRANT role7 act6
+USER user1245 role75
+GRANT role12 act126
+GRANT role59 act36
+USER user405 role32
+USER user410 role83
+GRANT role7 act251
+USER user1319 role31
+GRANT role8 act236
+USER user1751 role41
+USER user1315 role72
+GRANT role12 act186
+GRANT role91 act16
+USER user638 role56
+USER user1989 role70
+USER user707 role75
+GRANT role44 act94
+USER user1899 role61
+GRANT role52 act60
+USER user1131 role92
+USER user1644 role53
+USER user414 role27
+USER user458 role90
+USER user775 role69
+USER user443 role94
+GRANT role75 act200
+GRANT role31 act119
+USER user31 role50
+USER user1852 role16
+USER user1856 role45
+GRANT role70 act28
+USER user1280 role93
+USER user363 role63
+USER user84 role31
+USER user1304 role89
+USER user1180 role14
+USER user1949 role80
+USER user479 role62
+GRANT role27 act100
+USER user644 role58
+USER user92 role61
+USER user1958 role76
+USER user1797 role32
+USER user1346 role19
+GRANT role68 act198
+GRANT role66 act203
+USER user319 role27
+GRANT role44 act67
+GRANT role45 act16
+GRANT role74 act137
+USER user685 role98
+GRANT role86 act298
+GRANT role53 act67
+USER user99 role6
+USER user496 role85
+USER user1799 role12
+USER user878 role71
+GRANT role60 act130
+USER user1890 role87
+USER user1130 role28
+GRANT role80 act225
+USER user1003 role16
+GRANT role27 act246
+USER user1872 role27
+USER user983 role3
+USER user1910 role62
+GRANT role95 act198
+GRANT role27 act289
+GRANT role30 act52
+USER user1966 role55
+GRANT role63 act141
+USER user76 role19
+USER user203 role45
+USER user1223 role68
+GRANT role65 act244
+GRANT role97 act91
+USER user403 role1
+GRANT role62 act201
+GRANT role60 act77
+GRANT role12 act232
+GRANT role20 act254
+USER user277 role65
+USER user1348 role36
+GRANT role55 act0
+USER user111 role43
+USER user513 role0
+GRANT role7 act115
+USER user919 role68
+GRANT role86 act275
+USER user1643 role0
+GRANT role17 act140
+USER user1635 role58
+GRANT role97 act38
+USER user861 role64
+USER user112 role93
+USER user1772 role48
+USER user258 role2
+USER user1289 role4
+GRANT role98 act154
+GRANT role51 act244
+GRANT role17 act257
+USER user1405 role77
+USER user657 role3
+USER user159 role92
+USER user893 role90
+USER user637 role1
+USER user985 role98
+GRANT role88 act166
+USER user840 role63
+USER user1022 role79
+GRANT role23 act289
+USER user902 role36
+GRANT role64 act235
+USER user780 role39
+GRANT role81 act4
+GRANT role20 act223
+GRANT role76 act132
+USER user1112 role52
+GRANT role11 act255
+USER user1369 role5
+USER user1221 role76
+USER user1986 role41
+GRANT role13 act164
+USER user597 role10
+USER user663 role7
+GRANT role25 act145
+USER user752 role19
+GRANT role90 act241
+GRANT role51 act245
+GRANT role1 act103
+GRANT role76 act199
+GRANT role30 act172
+GRANT role21 act170
+USER user210 role35
+GRANT role79 act78
+USER user877 role33
+USER user137 role79
+GRANT role51 act93
+GRANT role91 act25
+USER user837 role16
+USER user1355 role24
+USER user439 role96
+GRANT role74 act81
+GRANT role53 act33
+USER user534 role52
+GRANT role6 act269
+USER user8 role93
+USER user1288 role23
+GRANT role20 act13
+GRANT role83 act201
+GRANT role56 act223
+USER user282 role17
+GRANT role85 act5
+USER user1460 role84
+USER user102 role32
+USER user1573 role57
+INHERIT role38 role87
+GRANT role89 act28
+USER user1026 role7
+GRANT role53 act213
+GRANT role88 act248
+GRANT role78 act187
+INHERIT role46 role6
+USER user1588 role36
+GRANT role78 act171
+GRANT role66 act284
+USER user976 role95
+USER user1019 role30
+USER user1658 role87
+GRANT role23 act228
+USER user1379 role7
+USER user1864 role15
+USER user1737 role64
+GRANT role88 act246
+USER user1491 role74
+USER user176 role42
+GRANT role43 act76
+USER user708 role45
+GRANT role99 act8
+USER user389 role67
+GRANT role67 act84
+USER user872 role97
+INHERIT role99 role3
+USER user604 role46
+USER user42 role71
+USER user473 role57
+USER user1662 role74
+GRANT role49 act268
+GRANT role74 act124
+USER user895 role30
+USER user673 role68
+USER user1970 role64
+GRANT role98 act232
+GRANT role13 act3
+GRANT role49 act83
+GRANT role24 act199
+USER user409 role29
+GRANT role25 act37
+USER user1939 role6
+GRANT role70 act23
+GRANT role91 act263
+GRANT role58 act136
+USER user1190 role47
+GRANT role55 act256
+GRANT role91 act16
+GRANT role25 act44
+USER user1376 role84
+GRANT role97 act297
+GRANT role6 act42
+USER user581 role15
+USER user899 role34
+USER user1473 role39
+GRANT role13 act178
+USER user1373 role39
+USER user1921 role69
+USER user1975 role42
+USER user1390 role54
+USER user1622 role28
+USER user977 role64
+USER user160 role78
+GRANT role61 act224
+USER user1441 role1
+USER user1434 role11
+USER user1676 role63
+GRANT role58 act212
+USER user732 role32
+GRANT role74 act243
+USER user525 role93
+GRANT role83 act236
+USER user1962 role99
+USER user1915 role57
+GRANT role69 act111
+GRANT role72 act119
+USER user1932 role35
+USER user1850 role20
+USER user834 role43
+GRANT role14 act200
+GRANT role7 act46
+USER user1300 role96
+USER user1085 role27
+GRANT role73 act213
+GRANT role93 act68
+GRANT role24 act108
+USER user854 role7
+INHERIT role40 role15
+GRANT role31 act120
+GRANT role2 act288
+INHERIT role1 role54
+USER user1270 role67
+GRANT role19 act170
+GRANT role88 act267
+GRANT role10 act184
+USER user1435 role4
+USER user562 role99
+USER user1981 role12
+USER user64 role23
+GRANT role24 act273
+USER user1137 role46
+GRANT role86 act95
+GRANT role25 act160
+GRANT role56 act139
+USER user36 role58
+USER user979 role15
+USER user1258 role88
+GRANT role61 act129
+USER user1871 role45
+USER user1918 role55
+GRANT role23 act123
+INHERIT role23 role75
+USER user1378 role54
+GRANT role38 act249
+GRANT role17 act252
+USER user1499 role90
+GRANT role49 act285
+GRANT role47 act150
+GRANT role14 act139
+USER user89 role33
+GRANT role6 act74
+USER user1745 role8
+USER user728 role87
+USER user1686 role39
+GRANT role67 act248
+GRANT role57 act23
+USER user140 role47
+USER user630 role68
+USER user178 role35
+GRANT role43 act132
+USER user1545 role6
+GRANT role26 act295
+GRANT role68 act95
+USER user346 role0
+USER user90 role74
+INHERIT role46 role78
+USER user1455 role5
+USER user892 role73
+GRANT role76 act213
+GRANT role12 act53
+USER user1331 role58
+GRANT role50 act296
+GRANT role74 act174
+USER user1200 role76
+USER user1541 role81
+USER user1028 role78
+USER user444 role92
+GRANT role63 act68
+GRANT role50 act247
+USER user380 role68
+USER user836 role64
+GRANT role4 act2
+USER user594 role30
+USER user916 role84
+USER user791 role20
+USER user924 role99
+USER user540 role43
+USER user1984 role20
+USER user13 role39
+GRANT role13 act274
+USER user1873 role37
+GRANT role81 act67
+USER user566 role26
+INHERIT role50 role24
+GRANT role59 act101
+GRANT role84 act126
+GRANT role98 act2
+USER user58 role73
+GRANT role72 act128
+GRANT role23 act228
+GRANT role82 act177
+GRANT role34 act129
+USER user16 role99
+GRANT role89 act88
+GRANT role14 act216
+GRANT role78 act137
+USER user342 role36
+USER user28 role20
+GRANT role32 act162
+USER user1239 role38
+USER user1089 role65
+GRANT role18 act215
+GRANT role49 act118
+GRANT role12 act245
+USER user1933 role78
+USER user1412 role91
+USER user1064 role95
+USER user1312 role95
+GRANT role0 act106
+USER user1818 role97
+USER user442 role74
+GRANT role6 act292
+USER user879 role11
+USER user1148 role80
+USER user1446 role38
+USER user97 role29
+USER user1512 role61
+GRANT role23 act74
+GRANT role21 act254
+GRANT role97 act154
+USER user1010 role46
+GRANT role67 act104
+INHERIT role89 role23
+USER user1153 role47
+GRANT role71 act273
+GRANT role77 act42
+GRANT role52 act248
+USER user1837 role26
+GRANT role5 act70
+USER user1851 role97
+USER user830 role91
+GRANT role86 act153
+GRANT role13 act198
+GRANT role22 act39
+GRANT role90 act152
+GRANT role26 act242
+USER user293 role20
+USER user1414 role30
+USER user973 role93
+GRANT role7 act82
+GRANT role53 act34
+USER user1 role23
+GRANT role46 act190
+INHERIT role69 role94
+USER user77 role39
+GRANT role48 act145
+GRANT role92 act175
+GRANT role55 act173
+USER user1015 role12
+USER user1078 role10
+GRANT role53 act170
+GRANT role40 act182
+USER user1535 role44
+USER user1669 role51
+GRANT role70 act97
+USER user411 role49
+USER user26 role9
+USER user56 role31
+USER user114 ghostrole
+USER user323 role20
+4000
+user87 act103
+user125 act102
+user229 act23
+user1276 act42
+user8 act183
+user501 act129
+user839 act156
+user135 act230
+user1493 act268
+user418 act65
+user135 act111
+user1113 act59
+user323 act137
+user319 act193
+user1691 act237
+user1659 act169
+user1420 act204
+user1080 act170
+user1513 act224
+user310 act265
+user89 act283
+user660 act100
+user57 act64
+user1317 act179
+user1927 act26
+user1430 act24
+user1615 act159
+user120 act21
+user1472 act250
+user1129 act222
+user340 act58
+user1215 act20
+user1002 act152
+user87 act271
+user1218 act188
+user1886 act7
+user330 act69
+user1477 act5
+user1283 act235
+user589 act178
+user1307 act264
+user375 act39
+user1853 act4
+user68 act112
+user222 act180
+user1835 act192
+user751 act194
+user757 act35
+user175 act290
+user823 act81
+user260 act76
+user1179 act149
+user1397 act78
+user115 act68
+user518 act188
+user853 act165
+user710 act217
+user1084 act199
+user859 act193
+user704 act61
+user448 act42
+user1061 act6
+user457 act284
+user263 act33
+user1594 act88
+user43 act31
+user1112 act169
+user516 act105
+user180 act52
+user896 act50
+user1985 act97
+user1474 act179
+user1884 act186
+user440 act18
+user669 act125
+user1214 act170
+user1075 act178
+user1717 act3
+user1048 act263
+user696 act4
+user1156 act269
+user1038 act63
+user61 act98
+user1982 act257
+user92 act119
+user1492 act208
+user244 act104
+user1135 act291
+user1521 act89
+user1038 act22
+user1999 act188
+user211 act274
+user1174 act254
+user319 act286
+user597 act275
+user1853 act18
+user1512 act117
+user25 act145
+user1756 act263
+user418 act94
+user676 act217
+user1885 act142
+user789 act90
+user311 act62
+user126 act12
+user1505 act36
+user556 act178
+user1756 act154
+user292 act214
+user1752 act104
+user781 act112
+user473 act128
+user620 act215
+user754 act289
+user494 act161
+user1058 act135
+user241 act138
+user651 act157
+user1500 act253
+user1656 act82
+user2000 act136
+user551 act231
+user732 act164
+user1223 act77
+user1999 act181
+user866 act90
+user139 act85
+user1873 act33
+user1437 act124
+user1825 act164
+user185 act80
+user1710 act145
+user245 act208
+user283 act140
+user1217 act151
+user87 act38
+user517 act148
+user809 act207
+user1908 act55
+user221 act234
+user1117 act87
+user1590 act286
+user1651 act0
+user1775 act25
+user1256 act68
+user657 act124
+user1677 act31
+user1121 act249
+user142 act36
+user175 act245
+user1098 act299
+user1253 act278
+user1119 act197
+user1344 act107
+user1199 act4
+user701 act291
+user698 act299
+user1947 act196
+user471 act172
+user450 act31
+user1654 act33
+user127 act60
+user638 act61
+user433 act167
+user425 act26
+user790 act169
+user138 act276
+user1052 act222
+user1438 act143
+user239 act54
+user694 act68
+user1675 act152
+user1361 act173
+user550 act77
+user1823 act228
+user1004 act172
+user799 act245
+user746 act231
+user665 act218
+user1352 act236
+user1453 act271
+user1135 act172
+user1268 act190
+user605 act250
+user1506 act190
+user330 act166
+user684 act208
+user285 act5
+user528 act166
+user204 act144
+user1100 act200
+user586 act51
+user1297 act48
+user199 act112
+user842 act112
+user1171 act25
+user1071 act14
+user1934 act226
+user1402 act120
+user1443 act31
+user291 act279
+user969 act252
+user270 act164
+user572 act208
+user979 act187
+user1218 act126
+user1764 act212
+user691 act19
+user155 act248
+user223 act155
+user1083 act65
+user304 act159
+user1184 act172
+user892 act137
+user1602 act64
+user1216 act292
+user924 act278
+user1935 act134
+user1518 act205
+user1682 act53
+user1644 act26
+user1857 act107
+user1760 act119
+user1311 act106
+user1505 act30
+user1695 act180
+user1248 act42
+user648 act186
+user1057 act197
+user1400 act214
+user1849 act40
+user1756 act295
+user1834 act21
+user524 act144
+user28 act106
+user1764 act207
+user620 act109
+user730 act59
+user870 act157
+user157 act127
+user903 act178
+user1129 act270
+user1516 act234
+user367 act11
+user1199 act177
+user1414 act247
+user681 act238
+user982 act210
+user1130 act227
+user245 act23
+user799 act222
+user1591 act103
+user877 act63
+user1764 act247
+user1114 act218
+user1792 act292
+user759 act119
+user376 act184
+user1942 act274
+user1163 act269
+user1030 act81
+user362 act65
+user1333 act295
+user929 act93
+user687 act70
+user822 act114
+user1434 act103
+user1578 act173
+user1532 act237
+user529 act131
+user24 act294
+user1039 act222
+user1014 act103
+user2003 act170
+user1645 act233
+user880 act7
+user1359 act40
+user628 act138
+user1967 act50
+user1958 act150
+user1896 act182
+user960 act184
+user1609 act54
+user911 act17
+user670 act210
+user1854 act168
+user1677 act185
+user1006 act238
+user15 act272
+user1106 act224
+user31 act261
+user1619 act172
+user1409 act198
+user1283 act59
+user1717 act15
+user835 act225
+user49 act189
+user827 act170
+user433 act92
+user237 act136
+user1326 act245
+user1252 act22
+user812 act297
+user113 act250
+user1687 act286
+user1346 act95
+user142 act166
+user110 act260
+user1471 act299
+user1430 act52
+user532 act260
+user1036 act31
+user1510 act170
+user1054 act61
+user1087 act79
+user446 act219
+user149 act171
+user1534 act275
+user189 act249
+user1110 act144
+user1619 act73
+user1855 act202
+user74 act50
+user674 act165
+user1286 act237
+user349 act29
+user1863 act125
+user1728 act54
+user288 act207
+user505 act21
+user1051 act15
+user748 act147
+user703 act174
+user782 act119
+user1213 act42
+user816 act139
+user1809 act133
+user1023 act222
+user1937 act61
+user1512 act174
+user1161 act159
+user1125 act82
+user1224 act231
+user1835 act262
+user1313 act147
+user423 act168
+user246 act106
+user1989 act236
+user1725 act120
+user542 act71
+user1637 act260
+user125 act172
+user115 act128
+user1780 act67
+user1605 act260
+user408 act218
+user764 act64
+user1533 act12
+user972 act156
+user356 act177
+user218 act161
+user482 act168
+user1989 act206
+user1311 act126
+user814 act28
+user120 act149
+user554 act297
+user388 act274
+user999 act229
+user870 act5
+user18 act221
+user314 act138
+user1772 act288
+user1519 act89
+user733 act218
+user1218 act192
+user50 act239
+user1862 act89
+user607 act299
+user1312 act10
+user1403 act126
+user1816 act184
+user792 act178
+user544 act144
+user689 act37
+user852 act227
+user1558 act218
+user970 act52
+user562 act168
+user1561 act55
+user939 act174
+user891 act37
+user381 act184
+user2002 act106
+user291 act207
+user1237 act284
+user1855 act201
+user965 act45
+user499 act162
+user181 act274
+user1119 act1
+user1288 act27
+user934 act56
+user440 act265
+user1951 act279
+user1213 act32
+user965 act246
+user767 act221
+user2001 act176
+user1030 act268
+user255 act32
+user1293 act234
+user1340 act262
+user547 act186
+user1154 act237
+user1506 act128
+user486 act225
+user1795 act178
+user854 act125
+user601 act49
+user10 act92
+user1959 act71
+user940 act273
+user513 act38
+user380 act134
+user967 act53
+user1607 act239
+user325 act244
+user291 act200
+user1513 act46
+user865 act124
+user961 act285
+user1973 act272
+user894 act74
+user374 act219
+user1193 act267
+user1572 act6
+user1359 act264
+user1484 act272
+user1552 act255
+user75 act162
+user1599 act8
+user1034 act272
+user1095 act3
+user954 act101
+user1022 act219
+user535 act122
+user65 act256
+user1847 act115
+user1055 act208
+user1487 act247
+user428 act68
+user242 act272
+user599 act161
+user295 act21
+user1145 act130
+user1796 act89
+user144 act232
+user611 act240
+user1611 act222
+user266 act169
+user1774 act95
+user1784 act270
+user335 act204
+user1984 act131
+user201 act289
+user374 act176
+user1602 act179
+user201 act146
+user1872 act297
+user970 act174
+user1277 act173
+user1314 act39
+user639 act8
+user297 act56
+user1872 act273
+user1655 act123
+user558 act54
+user1412 act130
+user1504 act50
+user292 act254
+user1644 act101
+user1306 act59
+user1300 act45
+user247 act103
+user234 act171
+user812 act174
+user161 act201
+user536 act96
+user1433 act57
+user226 act126
+user1406 act293
+user120 act14
+user421 act62
+user732 act234
+user1003 act282
+user82 act25
+user1572 act147
+user608 act27
+user875 act42
+user378 act107
+user1095 act187
+user63 act258
+user280 act282
+user1710 act77
+user1853 act99
+user1215 act87
+user277 act50
+user1216 act81
+user1461 act113
+user1742 act296
+user1852 act153
+user1142 act74
+user689 act152
+user361 act95
+user756 act189
+user1795 act6
+user700 act180
+user546 act128
+user465 act190
+user331 act70
+user135 act158
+user1973 act222
+user1381 act4
+user1746 act192
+user1909 act1
+user1257 act184
+user1796 act32
+user106 act259
+user1108 act209
+user1577 act250
+user1808 act105
+user36 act208
+user206 act237
+user1538 act224
+user715 act158
+user264 act240
+user937 act294
+user470 act214
+user1529 act263
+user363 act125
+user987 act172
+user1676 act47
+user1099 act161
+user1320 act71
+user1226 act227
+user781 act183
+user898 act31
+user13 act117
+user760 act47
+user963 act242
+user490 act44
+user1051 act77
+user266 act274
+user926 act259
+user1827 act100
+user1875 act222
+user1852 act88
+user1674 act139
+user338 act110
+user1976 act196
+user33 act171
+user1144 act192
+user1796 act16
+user244 act144
+user1655 act263
+user1680 act147
+user582 act217
+user593 act24
+user7 act0
+user182 act208
+user275 act39
+user1142 act109
+user959 act24
+user786 act9
+user61 act195
+user251 act89
+user885 act186
+user777 act154
+user1990 act96
+user1540 act65
+user1022 act119
+user1557 act20
+user961 act68
+user486 act93
+user1752 act105
+user1248 act242
+user1186 act255
+user976 act66
+user129 act46
+user817 act133
+user1813 act192
+user474 act278
+user12 act209
+user1248 act109
+user879 act227
+user629 act94
+user605 act202
+user132 act221
+user1283 act40
+user784 act93
+user738 act186
+user809 act142
+user765 act238
+user1705 act56
+user1597 act80
+user1307 act209
+user1358 act128
+user1483 act168
+user1654 act11
+user395 act35
+user612 act235
+user1555 act179
+user236 act228
+user1896 act191
+user1523 act213
+user1491 act213
+user384 act266
+user1398 act277
+user1338 act86
+user1176 act135
+user716 act289
+user353 act138
+user281 act31
+user159 act104
+user213 act274
+user85 act254
+user1840 act221
+user1253 act118
+user1709 act258
+user642 act297
+user1747 act278
+user1066 act61
+user1910 act207
+user1304 act258
+user532 act85
+user1874 act114
+user5 act91
+user1410 act207
+user1018 act54
+user188 act26
+user455 act182
+user252 act63
+user688 act210
+user94 act159
+user830 act232
+user354 act260
+user1336 act202
+user629 act281
+user1450 act99
+user525 act31
+user222 act293
+user1289 act1
+user497 act142
+user181 act223
+user1545 act228
+user246 act186
+user496 act178
+user1740 act135
+user1567 act34
+user769 act8
+user1443 act84
+user1556 act61
+user517 act210
+user400 act239
+user42 act194
+user1759 act65
+user1644 act276
+user1145 act296
+user249 act34
+user46 act277
+user1363 act154
+user1085 act18
+user1960 act41
+user637 act47
+user902 act51
+user708 act199
+user1250 act8
+user1177 act235
+user292 act275
+user431 act278
+user970 act60
+user1255 act164
+user119 act151
+user1902 act105
+user1816 act4
+user522 act235
+user1381 act78
+user971 act279
+user174 act162
+user1930 act39
+user1510 act113
+user239 act184
+user1961 act117
+user1725 act54
+user668 act60
+user28 act61
+user1048 act289
+user1027 act79
+user1803 act175
+user1671 act281
+user272 act259
+user154 act25
+user397 act249
+user403 act68
+user1400 act127
+user1020 act219
+user1917 act167
+user1876 act89
+user502 act15
+user366 act231
+user1700 act156
+user1911 act206
+user1800 act249
+user692 act103
+user837 act36
+user1467 act156
+user893 act179
+user1964 act233
+user515 act102
+user1826 act221
+user394 act28
+user1589 act70
+user1606 act8
+user1307 act141
+user1747 act149
+user793 act245
+user376 act83
+user1523 act87
+user210 act130
+user98 act79
+user1470 act154
+user959 act161
+user1984 act39
+user1634 act144
+user1129 act161
+user1909 act196
+user1124 act24
+user95 act204
+user881 act159
+user1416 act118
+user650 act229
+user110 act298
+user1653 act17
+user942 act154
+user1528 act131
+user1309 act18
+user1683 act291
+user1080 act218
+user1511 act206
+user1635 act201
+user416 act126
+user547 act212
+user979 act160
+user1050 act186
+user1177 act30
+user489 act117
+user1014 act279
+user1502 act264
+user573 act29
+user519 act251
+user1927 act187
+user990 act25
+user232 act74
+user1075 act97
+user541 act110
+user765 act239
+user513 act217
+user261 act36
+user803 act104
+user168 act220
+user71 act119
+user1112 act207
+user703 act298
+user1956 act266
+user1174 act134
+user1452 act122
+user1710 act29
+user1642 act113
+user28 act161
+user693 act93
+user1291 act289
+user727 act244
+user836 act89
+user1513 act93
+user1401 act275
+user1377 act158
+user1742 act86
+user1009 act69
+user1731 act191
+user1366 act227
+user280 act256
+user1865 act223
+user985 act16
+user1067 act208
+user69 act23
+user695 act122
+user1300 act97
+user101 act299
+user801 act138
+user1879 act178
+user721 act80
+user473 act259
+user307 act260
+user169 act147
+user309 act15
+user579 act54
+user1745 act131
+user1814 act130
+user16 act5
+user1101 act26
+user1749 act75
+user369 act161
+user1843 act96
+user1885 act75
+user1965 act43
+user1060 act173
+user1615 act143
+user1547 act244
+user1728 act134
+user1967 act236
+user1061 act260
+user881 act44
+user36 act107
+user547 act160
+user1702 act250
+user687 act248
+user1912 act288
+user889 act293
+user332 act283
+user960 act127
+user1026 act112
+user563 act268
+user1514 act287
+user505 act96
+user1845 act194
+user429 act196
+user908 act136
+user1637 act164
+user1952 act196
+user36 act97
+user117 act41
+user241 act153
+user722 act268
+user851 act270
+user1671 act240
+user610 act4
+user1250 act278
+user1299 act190
+user716 act252
+user93 act58
+user1584 act26
+user1707 act206
+user1472 act142
+user841 act238
+user88 act280
+user42 act143
+user857 act178
+user1025 act209
+user107 act73
+user186 act63
+user1002 act129
+user1475 act146
+user703 act196
+user542 act10
+user42 act270
+user999 act253
+user48 act60
+user1998 act181
+user1875 act130
+user938 act124
+user966 act90
+user1910 act168
+user1700 act246
+user724 act150
+user541 act130
+user1793 act202
+user661 act142
+user1863 act107
+user317 act119
+user941 act274
+user964 act89
+user1453 act242
+user882 act207
+user69 act289
+user346 act109
+user1982 act195
+user174 act24
+user516 act39
+user1507 act234
+user722 act118
+user1563 act267
+user130 act169
+user1412 act169
+user613 act205
+user620 act89
+user1648 act124
+user1861 act49
+user1209 act248
+user110 act76
+user720 act199
+user1969 act257
+user291 act160
+user1378 act150
+user1999 act273
+user862 act74
+user1566 act10
+user1133 act4
+user248 act79
+user971 act37
+user8 act212
+user126 act160
+user1855 act234
+user495 act30
+user1095 act221
+user906 act4
+user878 act238
+user314 act106
+user1505 act268
+user611 act189
+user450 act33
+user1354 act104
+user965 act202
+user1595 act206
+user1015 act138
+user749 act93
+user1009 act51
+user1191 act131
+user1490 act235
+user966 act241
+user44 act167
+user1594 act18
+user322 act177
+user917 act32
+user1289 act79
+user1894 act154
+user1120 act106
+user62 act19
+user419 act132
+user1177 act46
+user438 act103
+user1651 act43
+user1739 act43
+user515 act122
+user2000 act29
+user4 act34
+user1240 act237
+user1070 act267
+user315 act253
+user1122 act281
+user89 act51
+user1411 act67
+user1849 act60
+user1478 act278
+user598 act165
+user465 act152
+user1228 act203
+user377 act184
+user148 act151
+user882 act261
+user1835 act132
+user250 act53
+user1790 act70
+user418 act223
+user1612 act15
+user37 act217
+user185 act53
+user1121 act139
+user1005 act218
+user305 act136
+user431 act81
+user396 act170
+user701 act295
+user921 act275
+user816 act196
+user799 act177
+user932 act263
+user536 act257
+user1962 act139
+user152 act101
+user523 act29
+user755 act272
+user1680 act114
+user923 act236
+user62 act210
+user1991 act259
+user337 act226
+user709 act2
+user67 act87
+user731 act27
+user122 act160
+user654 act167
+user1099 act27
+user1066 act241
+user539 act138
+user300 act282
+user1766 act119
+user1541 act117
+user740 act266
+user27 act258
+user1016 act218
+user1190 act200
+user1368 act229
+user1510 act153
+user77 act228
+user1209 act172
+user233 act262
+user24 act218
+user1485 act21
+user1447 act151
+user700 act134
+user373 act276
+user119 act92
+user163 act173
+user1020 act237
+user466 act13
+user1852 act88
+user1481 act241
+user811 act32
+user500 act33
+user603 act144
+user1523 act141
+user355 act291
+user896 act101
+user379 act97
+user1566 act85
+user1207 act104
+user1567 act144
+user560 act285
+user1224 act239
+user1659 act285
+user1931 act213
+user1522 act262
+user1058 act83
+user153 act98
+user344 act275
+user1503 act70
+user240 act120
+user718 act52
+user762 act244
+user1934 act104
+user391 act83
+user1563 act223
+user142 act220
+user1388 act261
+user572 act106
+user1969 act94
+user1878 act62
+user502 act108
+user1678 act88
+user1214 act76
+user109 act96
+user842 act3
+user826 act91
+user181 act215
+user1684 act150
+user1623 act7
+user1301 act89
+user52 act152
+user534 act37
+user564 act86
+user1568 act279
+user1812 act164
+user590 act210
+user933 act45
+user120 act16
+user1156 act231
+user1432 act97
+user907 act215
+user382 act218
+user226 act22
+user535 act206
+user1616 act2
+user1473 act158
+user1654 act96
+user1286 act210
+user1740 act35
+user1455 act58
+user820 act225
+user670 act170
+user542 act165
+user389 act112
+user1975 act36
+user1952 act102
+user1329 act296
+user1858 act271
+user1588 act105
+user1936 act112
+user1757 act166
+user287 act102
+user385 act146
+user175 act84
+user692 act58
+user90 act149
+user1875 act130
+user1504 act62
+user747 act129
+user205 act108
+user240 act282
+user1256 act183
+user1693 act290
+user1224 act113
+user30 act60
+user24 act168
+user59 act129
+user437 act116
+user971 act287
+user1549 act93
+user438 act12
+user656 act207
+user1466 act213
+user668 act299
+user1436 act84
+user867 act29
+user1465 act184
+user1110 act136
+user512 act124
+user584 act56
+user1873 act87
+user505 act84
+user1006 act139
+user1511 act290
+user243 act110
+user952 act111
+user1987 act149
+user1295 act270
+user626 act100
+user1030 act240
+user1873 act167
+user1391 act9
+user1523 act35
+user87 act191
+user937 act41
+user74 act65
+user1340 act100
+user1201 act177
+user56 act140
+user769 act130
+user1687 act231
+user475 act104
+user719 act44
+user1138 act285
+user161 act51
+user1487 act77
+user164 act150
+user1669 act126
+user1571 act170
+user272 act47
+user1536 act61
+user1512 act6
+user908 act295
+user282 act84
+user582 act271
+user996 act218
+user1600 act109
+user1662 act291
+user1622 act120
+user482 act123
+user1841 act182
+user1595 act180
+user669 act10
+user1082 act18
+user1508 act118
+user184 act2
+user925 act196
+user27 act279
+user1126 act133
+user1886 act218
+user1297 act236
+user1573 act43
+user136 act223
+user162 act63
+user16 act162
+user968 act183
+user462 act33
+user1529 act244
+user1644 act270
+user500 act282
+user1660 act296
+user1041 act52
+user530 act63
+user979 act79
+user283 act261
+user1418 act224
+user1705 act291
+user1687 act61
+user1235 act22
+user1865 act19
+user22 act157
+user1105 act64
+user921 act245
+user98 act149
+user1890 act5
+user328 act176
+user1397 act16
+user154 act152
+user1299 act157
+user1815 act146
+user1129 act19
+user1338 act24
+user114 act164
+user584 act119
+user976 act210
+user516 act233
+user1169 act132
+user144 act19
+user1036 act195
+user254 act249
+user158 act161
+user1765 act263
+user829 act74
+user842 act207
+user1753 act215
+user792 act254
+user504 act264
+user918 act69
+user1917 act77
+user650 act242
+user1061 act219
+user196 act38
+user1128 act230
+user2000 act225
+user447 act280
+user264 act271
+user602 act101
+user1545 act216
+user1870 act125
+user931 act31
+user1235 act225
+user731 act157
+user1628 act0
+user1174 act20
+user787 act291
+user1131 act241
+user650 act179
+user1047 act114
+user14 act123
+user1221 act194
+user345 act148
+user1258 act16
+user1336 act248
+user1529 act26
+user642 act151
+user936 act297
+user1191 act42
+user606 act279
+user1602 act10
+user1225 act10
+user306 act160
+user288 act275
+user558 act100
+user462 act138
+user1679 act181
+user1577 act171
+user1939 act169
+user1615 act0
+user619 act216
+user157 act230
+user775 act48
+user845 act262
+user1712 act238
+user1461 act257
+user410 act24
+user1836 act33
+user669 act294
+user592 act142
+user266 act3
+user1443 act84
+user1240 act159
+user1108 act109
+user167 act260
+user1198 act202
+user1689 act259
+user1245 act85
+user356 act278
+user878 act203
+user1398 act104
+user1519 act276
+user772 act22
+user518 act91
+user1539 act278
+user69 act217
+user1556 act47
+user1120 act248
+user1258 act28
+user1993 act184
+user1614 act189
+user1299 act111
+user785 act182
+user486 act118
+user1364 act3
+user37 act244
+user1479 act17
+user1141 act15
+user1689 act148
+user1746 act251
+user23 act5
+user895 act167
+user1038 act49
+user176 act289
+user46 act157
+user1406 act288
+user299 act208
+user1779 act13
+user1506 act169
+user681 act128
+user680 act173
+user1660 act73
+user604 act88
+user1823 act178
+user1556 act262
+user806 act255
+user976 act72
+user1776 act169
+user1502 act170
+user681 act24
+user1584 act53
+user1762 act204
+user1556 act107
+user863 act296
+user1059 act20
+user952 act14
+user1646 act148
+user1254 act179
+user1782 act100
+user1012 act24
+user1597 act267
+user695 act74
+user535 act106
+user1530 act74
+user785 act105
+user1542 act272
+user270 act141
+user624 act16
+user1432 act227
+user1054 act197
+user747 act119
+user1538 act240
+user876 act242
+user528 act36
+user1905 act218
+user1960 act292
+user385 act164
+user1397 act209
+user147 act208
+user676 act174
+user854 act23
+user1373 act77
+user392 act55
+user607 act187
+user1303 act16
+user1024 act151
+user347 act29
+user365 act167
+user820 act218
+user1143 act261
+user1417 act106
+user557 act257
+user1182 act212
+user576 act87
+user539 act206
+user1426 act77
+user1064 act237
+user1182 act171
+user54 act10
+user1879 act91
+user783 act151
+user322 act47
+user1773 act236
+user1601 act52
+user1294 act296
+user1474 act240
+user843 act116
+user1772 act290
+user611 act266
+user1682 act131
+user690 act237
+user1304 act210
+user1301 act3
+user865 act206
+user198 act288
+user1278 act109
+user920 act109
+user1393 act138
+user330 act70
+user1094 act146
+user660 act9
+user255 act37
+user288 act103
+user1797 act200
+user57 act178
+user1078 act79
+user1458 act246
+user1899 act185
+user676 act71
+user1890 act250
+user1266 act60
+user1508 act5
+user837 act266
+user1924 act13
+user751 act3
+user105 act235
+user508 act114
+user1786 act48
+user659 act10
+user1358 act231
+user67 act245
+user958 act60
+user1418 act11
+user1947 act251
+user188 act114
+user1116 act194
+user686 act289
+user55 act244
+user22 act267
+user1923 act200
+user751 act290
+user1819 act281
+user1133 act40
+user596 act7
+user609 act48
+user1019 act149
+user1832 act122
+user561 act150
+user877 act263
+user655 act292
+user1588 act89
+user595 act112
+user794 act73
+user1174 act150
+user1137 act92
+user873 act249
+user1535 act43
+user1805 act36
+user1593 act116
+user320 act164
+user1900 act100
+user820 act68
+user1034 act76
+user787 act115
+user700 act75
+user1366 act113
+user726 act126
+user524 act200
+user661 act112
+user1030 act197
+user1100 act74
+user57 act249
+user436 act169
+user1181 act107
+user1689 act80
+user1470 act217
+user599 act251
+user238 act39
+user861 act109
+user457 act211
+user393 act82
+user1092 act7
+user1013 act3
+user643 act49
+user750 act285
+user1745 act168
+user1860 act252
+user419 act297
+user1741 act250
+user1157 act286
+user1786 act59
+user791 act166
+user1609 act229
+user1921 act139
+user197 act115
+user142 act27
+user271 act231
+user1606 act26
+user1873 act124
+user427 act128
+user669 act140
+user376 act131
+user1669 act110
+user1311 act239
+user1137 act117
+user815 act295
+user133 act170
+user71 act7
+user397 act274
+user1289 act49
+user569 act229
+user704 act146
+user114 act280
+user1368 act163
+user939 act134
+user1982 act131
+user1660 act246
+user513 act203
+user427 act83
+user80 act56
+user840 act125
+user1565 act161
+user1389 act174
+user1640 act267
+user1082 act193
+user796 act282
+user1542 act206
+user1343 act155
+user487 act297
+user1860 act135
+user1904 act100
+user248 act120
+user1025 act154
+user1734 act246
+user1311 act87
+user363 act187
+user1035 act51
+user1188 act213
+user511 act69
+user1003 act243
+user217 act208
+user803 act196
+user1846 act62
+user1232 act66
+user1751 act39
+user816 act138
+user1748 act83
+user121 act210
+user670 act34
+user395 act102
+user113 act274
+user386 act277
+user479 act4
+user1253 act123
+user193 act259
+user454 act170
+user1128 act283
+user557 act71
+user1640 act112
+user655 act277
+user1953 act217
+user1253 act32
+user676 act298
+user1864 act30
+user136 act125
+user653 act280
+user568 act179
+user1260 act195
+user1868 act129
+user1212 act7
+user916 act172
+user983 act92
+user1838 act199
+user536 act254
+user854 act295
+user391 act108
+user1825 act115
+user1648 act165
+user1646 act160
+user488 act106
+user20 act252
+user1560 act113
+user1432 act55
+user1035 act72
+user1607 act137
+user1970 act111
+user1201 act214
+user574 act36
+user1157 act79
+user513 act145
+user1466 act52
+user1676 act40
+user789 act79
+user1830 act54
+user261 act199
+user1931 act258
+user1440 act188
+user343 act277
+user1064 act184
+user1611 act75
+user333 act48
+user1323 act250
+user1359 act110
+user170 act99
+user421 act251
+user1505 act211
+user332 act158
+user1507 act172
+user535 act20
+user1662 act232
+user158 act14
+user87 act125
+user1905 act83
+user1933 act262
+user1414 act217
+user746 act124
+user845 act55
+user888 act286
+user1441 act76
+user959 act165
+user773 act43
+user698 act203
+user1748 act162
+user1449 act237
+user1095 act127
+user1360 act247
+user1941 act189
+user1537 act271
+user1863 act248
+user1799 act145
+user325 act6
+user601 act66
+user1901 act102
+user1630 act11
+user864 act75
+user1287 act296
+user869 act105
+user500 act131
+user1201 act165
+user948 act50
+user1935 act146
+user1574 act14
+user656 act3
+user1284 act164
+user141 act229
+user523 act18
+user817 act89
+user1534 act121
+user271 act104
+user1414 act251
+user1729 act35
+user1964 act15
+user784 act267
+user243 act127
+user1666 act56
+user240 act219
+user178 act45
+user1968 act154
+user206 act286
+user554 act134
+user1576 act106
+user29 act280
+user1796 act94
+user1315 act282
+user181 act297
+user1952 act116
+user1599 act145
+user708 act172
+user1180 act258
+user1741 act125
+user1144 act45
+user135 act54
+user1696 act135
+user970 act258
+user357 act34
+user331 act248
+user1138 act85
+user65 act45
+user449 act254
+user422 act192
+user1988 act35
+user797 act9
+user561 act297
+user502 act46
+user313 act271
+user966 act236
+user483 act118
+user1760 act58
+user783 act251
+user1509 act179
+user1057 act223
+user211 act92
+user1256 act204
+user1406 act263
+user1370 act178
+user1866 act72
+user1320 act179
+user82 act239
+user1233 act171
+user1581 act210
+user389 act264
+user428 act13
+user585 act194
+user934 act45
+user355 act208
+user43 act256
+user159 act114
+user302 act239
+user1464 act155
+user1932 act45
+user1391 act66
+user1386 act265
+user610 act277
+user493 act218
+user728 act243
+user1862 act259
+user311 act205
+user1691 act266
+user1638 act44
+user402 act135
+user1922 act296
+user1363 act9
+user528 act217
+user1445 act157
+user1755 act138
+user227 act277
+user294 act194
+user86 act146
+user687 act263
+user1884 act37
+user629 act204
+user260 act232
+user1218 act253
+user1848 act23
+user1946 act19
+user1131 act25
+user481 act213
+user1531 act90
+user590 act242
+user1073 act223
+user717 act47
+user1004 act127
+user831 act27
+user38 act221
+user1792 act299
+user362 act127
+user38 act290
+user1845 act148
+user1365 act263
+user1154 act172
+user1035 act292
+user1725 act73
+user217 act233
+user1255 act135
+user1798 act231
+user221 act70
+user1476 act42
+user981 act292
+user1503 act153
+user253 act227
+user1097 act129
+user428 act40
+user687 act111
+user356 act122
+user784 act228
+user770 act214
+user523 act295
+user642 act203
+user46 act145
+user1328 act232
+user615 act190
+user1170 act235
+user1356 act168
+user1412 act104
+user232 act204
+user686 act196
+user275 act60
+user343 act79
+user25 act126
+user1464 act6
+user53 act110
+user720 act164
+user1591 act124
+user660 act11
+user835 act257
+user307 act194
+user718 act183
+user1505 act289
+user859 act38
+user122 act270
+user1556 act63
+user1360 act79
+user1218 act205
+user1845 act7
+user1937 act177
+user1076 act292
+user1983 act272
+user239 act254
+user352 act221
+user1008 act112
+user1700 act256
+user1376 act208
+user1586 act213
+user336 act265
+user1341 act212
+user1287 act277
+user267 act41
+user1746 act126
+user894 act222
+user1498 act101
+user1864 act13
+user1303 act142
+user281 act59
+user515 act38
+user1628 act6
+user1959 act257
+user1271 act143
+user1495 act83
+user1374 act251
+user1145 act264
+user1698 act154
+user1446 act254
+user1479 act177
+user953 act41
+user330 act58
+user283 act263
+user1897 act12
+user0 act182
+user1367 act202
+user643 act134
+user1933 act194
+user1003 act183
+user65 act27
+user702 act207
+user1993 act115
+user853 act56
+user1776 act145
+user833 act260
+user1302 act168
+user1859 act242
+user1245 act100
+user739 act38
+user1134 act258
+user772 act39
+user956 act217
+user641 act241
+user570 act173
+user306 act298
+user1080 act149
+user1568 act63
+user945 act261
+user788 act10
+user1010 act17
+user1753 act223
+user1592 act207
+user1544 act13
+user1338 act206
+user880 act103
+user1882 act299
+user121 act237
+user1371 act53
+user1819 act136
+user1402 act168
+user1896 act299
+user730 act283
+user652 act284
+user294 act6
+user1234 act12
+user1550 act228
+user1214 act283
+user1927 act291
+user570 act154
+user1860 act8
+user950 act253
+user1207 act80
+user1024 act193
+user249 act101
+user384 act260
+user1547 act170
+user1381 act146
+user805 act280
+user209 act262
+user445 act71
+user1668 act212
+user1579 act273
+user1279 act21
+user1825 act197
+user392 act10
+user1364 act284
+user1148 act118
+user1948 act209
+user613 act91
+user140 act13
+user328 act276
+user1342 act77
+user1949 act136
+user974 act194
+user472 act233
+user1789 act297
+user115 act24
+user1573 act226
+user1155 act84
+user246 act31
+user1997 act51
+user1416 act14
+user1900 act88
+user1303 act293
+user73 act180
+user107 act98
+user218 act141
+user463 act270
+user1166 act120
+user1591 act219
+user548 act165
+user496 act6
+user922 act289
+user732 act149
+user1804 act102
+user1565 act222
+user552 act46
+user1808 act23
+user1335 act217
+user1383 act136
+user322 act199
+user1311 act177
+user284 act224
+user1230 act282
+user906 act54
+user1529 act278
+user156 act280
+user244 act163
+user1930 act167
+user407 act274
+user1583 act97
+user276 act137
+user701 act250
+user316 act181
+user75 act8
+user120 act261
+user381 act81
+user178 act18
+user868 act73
+user1126 act219
+user932 act81
+user1941 act175
+user951 act199
+user1142 act145
+user1189 act138
+user114 act215
+user235 act242
+user827 act38
+user1166 act134
+user1738 act152
+user1599 act74
+user1796 act166
+user1430 act269
+user1153 act182
+user593 act64
+user932 act288
+user499 act255
+user1496 act190
+user905 act50
+user926 act125
+user384 act209
+user1877 act79
+user484 act142
+user1292 act122
+user190 act193
+user1891 act228
+user1903 act144
+user1725 act216
+user1737 act238
+user317 act72
+user752 act101
+user1288 act70
+user1252 act53
+user1235 act253
+user50 act200
+user257 act285
+user191 act9
+user1382 act41
+user1905 act32
+user1446 act122
+user752 act38
+user1895 act284
+user29 act80
+user34 act123
+user1162 act17
+user265 act42
+user1128 act26
+user1448 act291
+user1560 act270
+user100 act291
+user552 act105
+user531 act138
+user757 act105
+user1655 act65
+user25 act133
+user936 act1
+user12 act247
+user542 act164
+user1866 act259
+user182 act98
+user661 act15
+user66 act135
+user1112 act206
+user1012 act146
+user550 act16
+user1254 act8
+user1427 act13
+user121 act280
+user694 act70
+user1467 act53
+user537 act198
+user1999 act18
+user247 act261
+user634 act192
+user283 act248
+user376 act275
+user1501 act263
+user1145 act118
+user1716 act249
+user1817 act29
+user943 act133
+user582 act68
+user1475 act32
+user915 act59
+user294 act95
+user1080 act110
+user1807 act134
+user1024 act212
+user74 act295
+user473 act226
+user506 act189
+user1966 act22
+user1169 act114
+user481 act43
+user1511 act201
+user362 act261
+user1787 act16
+user769 act208
+user448 act126
+user765 act205
+user276 act36
+user504 act268
+user1321 act191
+user1405 act273
+user923 act68
+user769 act226
+user1386 act158
+user175 act22
+user1044 act189
+user193 act264
+user953 act223
+user303 act157
+user276 act54
+user201 act166
+user667 act111
+user1034 act264
+user497 act201
+user1101 act94
+user70 act30
+user1899 act123
+user1678 act48
+user857 act250
+user563 act17
+user1149 act254
+user1236 act252
+user1599 act5
+user1107 act33
+user969 act262
+user540 act228
+user1055 act45
+user378 act247
+user1272 act1
+user412 act81
+user1354 act32
+user449 act19
+user1125 act9
+user173 act219
+user16 act30
+user718 act81
+user273 act138
+user1166 act127
+user630 act50
+user1640 act128
+user1412 act156
+user1204 act91
+user1425 act286
+user50 act157
+user587 act127
+user1498 act21
+user1233 act61
+user1377 act109
+user1817 act298
+user1380 act108
+user309 act285
+user1112 act54
+user881 act182
+user1648 act170
+user439 act161
+user1044 act150
+user14 act270
+user478 act46
+user1488 act173
+user1865 act205
+user422 act193
+user1594 act250
+user579 act185
+user645 act237
+user1131 act2
+user405 act15
+user1891 act198
+user1292 act219
+user1137 act4
+user164 act193
+user682 act42
+user170 act63
+user1303 act165
+user827 act70
+user1546 act41
+user1492 act10
+user853 act67
+user14 act203
+user1797 act166
+user1658 act102
+user1957 act119
+user1727 act266
+user183 act44
+user436 act39
+user1978 act198
+user1694 act178
+user274 act178
+user1749 act108
+user840 act248
+user879 act276
+user145 act191
+user945 act247
+user859 act198
+user140 act141
+user1543 act69
+user1304 act258
+user962 act240
+user189 act51
+user1921 act97
+user855 act215
+user1230 act260
+user1893 act152
+user1530 act248
+user1412 act271
+user721 act257
+user1572 act87
+user846 act54
+user1275 act141
+user115 act62
+user1509 act73
+user1345 act87
+user1089 act143
+user1168 act49
+user230 act133
+user333 act102
+user1480 act99
+user975 act52
+user1494 act105
+user619 act259
+user1320 act63
+user114 act138
+user630 act172
+user876 act260
+user855 act272
+user289 act166
+user130 act275
+user1442 act124
+user1785 act71
+user1719 act264
+user232 act149
+user744 act276
+user1230 act211
+user1178 act138
+user1705 act74
+user1998 act25
+user1584 act41
+user1830 act87
+user248 act277
+user1382 act106
+user1006 act149
+user117 act141
+user416 act106
+user1631 act104
+user375 act202
+user752 act192
+user757 act251
+user174 act20
+user1114 act219
+user1688 act269
+user617 act235
+user920 act77
+user40 act85
+user1511 act12
+user204 act184
+user877 act222
+user593 act106
+user983 act243
+user215 act225
+user645 act193
+user1149 act140
+user2 act289
+user1921 act164
+user456 act158
+user938 act14
+user665 act239
+user257 act245
+user300 act154
+user1881 act164
+user1458 act292
+user1625 act47
+user358 act267
+user1151 act243
+user1474 act204
+user1634 act199
+user1191 act171
+user1348 act141
+user1052 act112
+user84 act249
+user1926 act29
+user966 act220
+user1682 act25
+user1521 act279
+user874 act13
+user1223 act95
+user1979 act50
+user1069 act4
+user1342 act183
+user437 act269
+user688 act29
+user358 act244
+user1277 act8
+user1322 act140
+user1923 act258
+user629 act56
+user192 act278
+user1586 act92
+user1875 act256
+user924 act117
+user1339 act277
+user1402 act23
+user563 act190
+user457 act149
+user636 act103
+user1322 act153
+user1127 act118
+user912 act43
+user757 act248
+user1845 act29
+user500 act133
+user433 act212
+user1957 act264
+user603 act191
+user1983 act223
+user818 act117
+user1358 act291
+user1310 act238
+user1846 act239
+user1012 act152
+user55 act81
+user1086 act54
+user1787 act169
+user1934 act249
+user482 act252
+user234 act235
+user1015 act281
+user1704 act222
+user1475 act264
+user301 act144
+user188 act157
+user1980 act253
+user1017 act141
+user1664 act231
+user1729 act156
+user1402 act86
+user588 act83
+user930 act33
+user230 act233
+user673 act213
+user1665 act272
+user763 act77
+user1163 act131
+user1420 act224
+user382 act153
+user656 act51
+user634 act261
+user1542 act67
+user575 act48
+user745 act193
+user905 act282
+user1101 act22
+user1287 act181
+user1435 act290
+user1578 act81
+user1624 act216
+user314 act235
+user1849 act177
+user1922 act116
+user1895 act167
+user996 act41
+user1708 act232
+user926 act107
+user1139 act224
+user710 act67
+user260 act225
+user1123 act180
+user1196 act33
+user449 act17
+user1191 act79
+user320 act259
+user544 act210
+user482 act264
+user1284 act128
+user282 act164
+user774 act136
+user763 act48
+user755 act123
+user1386 act160
+user1935 act177
+user527 act3
+user1675 act176
+user1117 act101
+user1284 act249
+user1302 act57
+user1960 act95
+user824 act279
+user353 act9
+user1326 act9
+user730 act282
+user21 act239
+user899 act174
+user176 act132
+user1562 act148
+user818 act241
+user1444 act278
+user1718 act30
+user1826 act104
+user826 act31
+user1954 act126
+user1447 act292
+user1371 act16
+user168 act269
+user1650 act96
+user1156 act16
+user531 act255
+user695 act38
+user758 act13
+user1808 act173
+user1263 act130
+user19 act72
+user947 act94
+user1036 act179
+user1650 act267
+user716 act148
+user1262 act201
+user1208 act24
+user1902 act174
+user1177 act71
+user915 act99
+user931 act130
+user1014 act116
+user789 act62
+user37 act43
+user1960 act108
+user31 act257
+user1288 act272
+user908 act34
+user1210 act110
+user897 act40
+user1758 act227
+user30 act19
+user122 act129
+user1535 act173
+user216 act226
+user406 act141
+user1881 act227
+user1198 act113
+user1648 act96
+user450 act12
+user1291 act268
+user996 act285
+user635 act222
+user960 act155
+user413 act92
+user1274 act7
+user1694 act117
+user1252 act223
+user236 act115
+user1725 act112
+user1161 act76
+user793 act193
+user513 act9
+user1696 act130
+user1548 act280
+user426 act45
+user1034 act242
+user1330 act88
+user522 act250
+user502 act287
+user383 act172
+user1765 act49
+user1166 act69
+user1959 act209
+user478 act16
+user1859 act90
+user1921 act178
+user526 act188
+user362 act223
+user1403 act269
+user413 act293
+user1904 act285
+user1545 act176
+user385 act218
+user679 act39
+user992 act234
+user1774 act265
+user1600 act150
+user492 act89
+user1289 act171
+user626 act276
+user1579 act50
+user1064 act183
+user398 act251
+user1201 act73
+user1946 act9
+user248 act194
+user1303 act70
+user1587 act211
+user1628 act47
+user923 act204
+user1313 act3
+user1699 act132
+user290 act25
+user1992 act121
+user1168 act227
+user860 act285
+user1382 act198
+user75 act45
+user1033 act41
+user1124 act114
+user793 act4
+user930 act140
+user597 act253
+user601 act171
+user1837 act271
+user1071 act117
+user354 act27
+user683 act109
+user646 act254
+user25 act105
+user818 act166
+user1682 act193
+user1694 act285
+user1857 act131
+user1305 act110
+user651 act58
+user430 act153
+user1784 act180
+user359 act100
+user701 act221
+user1901 act54
+user470 act235
+user877 act276
+user1136 act196
+user1765 act176
+user1859 act217
+user97 act90
+user1643 act239
+user585 act40
+user218 act17
+user997 act128
+user1251 act240
+user511 act107
+user1958 act219
+user867 act150
+user135 act217
+user659 act95
+user1257 act245
+user1140 act79
+user940 act141
+user146 act19
+user560 act297
+user1999 act176
+user502 act281
+user276 act136
+user1312 act11
+user60 act192
+user1034 act280
+user683 act213
+user569 act118
+user40 act281
+user92 act70
+user1708 act33
+user340 act91
+user418 act199
+user505 act284
+user1032 act284
+user596 act153
+user1876 act3
+user1163 act168
+user480 act144
+user20 act123
+user1347 act100
+user88 act36
+user1391 act200
+user1156 act163
+user383 act120
+user784 act84
+user419 act183
+user894 act17
+user946 act294
+user866 act294
+user1409 act96
+user1633 act295
+user614 act30
+user529 act219
+user1909 act233
+user454 act242
+user1015 act234
+user316 act143
+user910 act145
+user6 act155
+user1984 act264
+user254 act209
+user716 act30
+user6 act48
+user1935 act116
+user1932 act83
+user767 act147
+user1043 act273
+user216 act148
+user522 act277
+user1080 act254
+user1931 act224
+user2004 act149
+user1706 act236
+user705 act2
+user1647 act212
+user1105 act202
+user901 act3
+user155 act256
+user1075 act165
+user624 act239
+user983 act39
+user400 act293
+user830 act158
+user1476 act84
+user1460 act4
+user404 act68
+user154 act92
+user1191 act46
+user1134 act176
+user1821 act43
+user1829 act254
+user775 act288
+user1706 act262
+user1553 act100
+user1742 act68
+user1146 act123
+user756 act181
+user1179 act103
+user1644 act20
+user1359 act89
+user592 act38
+user99 act54
+user1402 act126
+user939 act134
+user1005 act175
+user1475 act30
+user219 act21
+user430 act20
+user1824 act233
+user654 act19
+user664 act236
+user1795 act209
+user1064 act86
+user1398 act25
+user427 act83
+user1679 act206
+user353 act36
+user1758 act144
+user643 act27
+user1942 act218
+user335 act21
+user447 act118
+user3 act267
+user1853 act56
+user1273 act241
+user1733 act126
+user1902 act187
+user1993 act39
+user1461 act196
+user967 act81
+user1210 act5
+user1373 act246
+user412 act45
+user834 act234
+user1797 act292
+user461 act77
+user54 act164
+user1392 act297
+user1081 act95
+user1384 act148
+user329 act151
+user98 act161
+user1341 act151
+user799 act29
+user1278 act103
+user1655 act109
+user1689 act69
+user1666 act1
+user253 act173
+user162 act134
+user1994 act223
+user1676 act225
+user1205 act127
+user336 act17
+user331 act122
+user1146 act287
+user377 act138
+user379 act162
+user1443 act46
+user1300 act20
+user1051 act249
+user841 act36
+user727 act173
+user37 act8
+user244 act234
+user927 act180
+user154 act88
+user1433 act217
+user31 act54
+user1603 act169
+user1413 act59
+user1294 act263
+user1221 act276
+user237 act76
+user576 act289
+user1942 act153
+user477 act145
+user1075 act43
+user1795 act235
+user179 act226
+user1107 act86
+user910 act0
+user824 act210
+user305 act295
+user903 act36
+user1211 act269
+user1545 act163
+user749 act181
+user104 act283
+user739 act27
+user1319 act1
+user29 act266
+user823 act231
+user1553 act230
+user83 act247
+user352 act9
+user727 act106
+user995 act52
+user1358 act178
+user1375 act67
+user1078 act60
+user347 act10
+user662 act143
+user1660 act114
+user1737 act177
+user582 act129
+user867 act107
+user1239 act227
+user1465 act130
+user583 act107
+user729 act185
+user53 act73
+user1567 act149
+user1533 act156
+user49 act205
+user1143 act261
+user824 act199
+user308 act171
+user179 act179
+user52 act279
+user1805 act162
+user590 act20
+user1147 act41
+user231 act5
+user1803 act22
+user1017 act276
+user163 act35
+user1861 act260
+user1329 act199
+user187 act159
+user507 act84
+user1849 act214
+user906 act110
+user1516 act150
+user467 act125
+user557 act54
+user450 act110
+user102 act75
+user243 act171
+user46 act27
+user1485 act67
+user1053 act231
+user1871 act122
+user1827 act277
+user1618 act297
+user25 act270
+user1729 act141
+user529 act140
+user834 act174
+user1541 act225
+user568 act289
+user1763 act21
+user1168 act143
+user359 act47
+user320 act40
+user283 act275
+user1698 act177
+user107 act193
+user95 act246
+user986 act97
+user617 act115
+user1809 act9
+user197 act9
+user144 act102
+user17 act84
+user322 act7
+user129 act128
+user64 act148
+user565 act120
+user233 act243
+user1357 act24
+user605 act175
+user1877 act64
+user0 act152
+user280 act65
+user669 act220
+user706 act248
+user57 act285
+user133 act289
+user1215 act241
+user1625 act67
+user1816 act48
+user608 act164
+user1131 act289
+user375 act48
+user73 act159
+user646 act154
+user1683 act81
+user409 act33
+user617 act192
+user252 act193
+user1550 act287
+user1438 act64
+user32 act68
+user1770 act11
+user565 act152
+user1016 act230
+user839 act116
+user1278 act244
+user618 act14
+user1775 act39
+user788 act253
+user1356 act95
+user1733 act175
+user930 act137
+user160 act79
+user1894 act21
+user1726 act131
+user700 act11
+user1283 act156
+user1822 act203
+user318 act25
+user1307 act138
+user1857 act160
+user567 act22
+user1745 act18
+user655 act192
+user632 act248
+user1254 act186
+user379 act241
+user448 act218
+user1280 act142
+user1572 act34
+user516 act284
+user392 act232
+user1389 act258
+user0 act256
+user1935 act219
+user636 act83
+user44 act69
+user1717 act12
+user779 act246
+user899 act71
+user1973 act59
+user1226 act179
+user1721 act257
+user1958 act63
+user645 act118
+user278 act239
+user1552 act121
+user234 act260
+user1350 act62
+user1080 act214
+user1087 act220
+user1370 act208
+user1062 act25
+user1592 act139
+user175 act236
+user295 act239
+user1520 act252
+user1529 act81
+user826 act154
+user1831 act179
+user883 act282
+user443 act105
+user115 act294
+user667 act89
+user1615 act101
+user152 act294
+user710 act1
+user1799 act294
+user1953 act189
+user1621 act288
+user1406 act270
+user1134 act264
+user1787 act223
+user1132 act261
+user1189 act207
+user376 act123
+user1460 act244
+user266 act74
+user1999 act77
+user1019 act271
+user1866 act1
+user386 act135
+user1132 act188
+user1648 act148
+user800 act108
+user817 act210
+user239 act125
+user204 act264
+user1162 act197
+user1632 act141
+user681 act197
+user562 act269
+user1064 act128
+user459 act77
+user94 act153
+user255 act218
+user1983 act294
+user401 act252
+user580 act181
+user1674 act77
+user513 act297
+user1824 act192
+user148 act113
+user1243 act19
+user458 act160
+user1691 act208
+user579 act261
+user1558 act262
+user1276 act17
+user1449 act110
+user571 act82
+user1948 act31
+user845 act54
+user946 act95
+user1135 act88
+user1531 act59
+user178 act5
+user1830 act283
+user128 act155
+user1259 act63
+user299 act297
+user78 act247
+user1336 act26
+user16 act187
+user1105 act275
+user812 act198
+user75 act95
+user347 act186
+user849 act219
+user1219 act247
+user1552 act154
+user210 act103
+user1835 act214
+user1106 act236
+user1098 act224
+user76 act262
+user1664 act33
+user961 act251
+user1188 act154
+user1191 act215
+user12 act179
+user1927 act125
+user1709 act214
+user148 act32
+user854 act21
+user93 act40
+user1818 act114
+user117 act131
+user1588 act295
+user905 act255
+user363 act208
+user607 act299
+user118 act69
+user636 act213
+user145 act208
+user1300 act198
+user1517 act162
+user113 act217
+user816 act297
+user969 act19
+user26 act280
+user1867 act184
+user699 act35
+user1233 act196
+user1692 act256
+user1830 act43
+user1613 act149
+user1176 act42
+user263 act54
+user790 act194
+user1829 act141
+user904 act192
+user1971 act182
+user1687 act237
+user1035 act156
+user859 act29
+user1507 act160
+user1075 act195
+user245 act166
+user167 act206
+user974 act131
+user900 act59
+user361 act175
+user1897 act85
+user1981 act44
+user454 act111
+user1912 act198
+user71 act255
+user205 act126
+user174 act3
+user82 act261
+user415 act99
+user1690 act176
+user85 act276
+user730 act253
+user302 act265
+user1086 act29
+user1804 act46
+user1755 act197
+user118 act171
+user1531 act135
+user1708 act29
+user171 act25
+user615 act105
+user1855 act211
+user68 act96
+user1171 act175
+user1678 act88
+user122 act198
+user424 act181
+user531 act81
+user79 act194
+user990 act294
+user1924 act148
+user26 act48
+user1977 act184
+user426 act273
+user1482 act221
+user1216 act109
+user18 act229
+user559 act68
+user1960 act126
+user1759 act97
+user1889 act51
+user940 act20
+user1252 act237
+user587 act187
+user1139 act253
+user474 act9
+user1460 act108
+user1733 act299
+user1491 act13
+user250 act126
+user734 act31
+user1832 act138
+user78 act272
+user1352 act28
+user1190 act21
+user10 act219
+user1283 act199
+user1370 act158
+user1771 act110
+user1848 act217
+user1103 act98
+user1138 act184
+user985 act273
+user69 act97
+user1892 act277
+user407 act173
+user1719 act271
+user36 act116
+user424 act94
+user11 act227
+user1496 act170
+user1691 act293
+user1482 act83
+user1425 act133
+user537 act86
+user582 act249
+user1104 act199
+user41 act103
+user1043 act47
+user1432 act7
+user314 act73
+user1178 act250
+user1406 act77
+user1071 act239
+user1239 act3
+user70 act158
+user778 act168
+user442 act84
+user1115 act101
+user1306 act92
+user823 act239
+user742 act6
+user706 act88
+user1110 act220
+user1668 act5
+user1292 act100
+user1783 act109
+user1957 act215
+user601 act12
+user902 act217
+user158 act240
+user1335 act292
+user540 act129
+user1477 act135
+user893 act62
+user49 act259
+user1030 act102
+user1230 act63
+user491 act215
+user825 act232
+user1947 act230
+user1093 act164
+user1809 act195
+user409 act222
+user1057 act159
+user402 act133
+user26 act201
+user1097 act112
+user1807 act258
+user353 act235
+user1585 act227
+user667 act146
+user468 act47
+user1333 act288
+user651 act56
+user1274 act151
+user780 act61
+user388 act32
+user426 act285
+user143 act140
+user1284 act175
+user1172 act61
+user602 act130
+user1635 act56
+user975 act181
+user1956 act83
+user411 act191
+user1559 act249
+user1466 act56
+user1855 act177
+user952 act147
+user512 act222
+user1184 act261
+user1647 act185
+user1862 act16
+user279 act50
+user770 act132
+user1499 act3
+user1517 act146
+user1721 act145
+user98 act288
+user67 act183
+user702 act298
+user131 act22
+user993 act294
+user914 act39
+user1957 act229
+user965 act147
+user1842 act95
+user876 act194
+user1541 act100
+user1661 act71
+user600 act89
+user1486 act220
+user558 act262
+user123 act83
+user1419 act60
+user978 act248
+user205 act247
+user394 act178
+user965 act124
+user1637 act165
+user1805 act246
+user1009 act134
+user1384 act168
+user238 act284
+user1799 act36
+user321 act109
+user1649 act105
+user958 act292
+user549 act106
+user982 act101
+user1017 act105
+user882 act271
+user294 act25
+user1168 act294
+user1435 act240
+user938 act245
+user1128 act173
+user543 act89
+user1019 act16
+user1221 act162
+user1167 act42
+user1015 act39
+user1044 act244
+user1415 act220
+user1002 act192
+user1971 act65
+user707 act203
+user724 act263
+user1903 act36
+user1968 act147
+user1162 act102
+user571 act138
+user1337 act235
+user471 act239
+user1576 act161
+user1085 act103
+user978 act145
+user1120 act279
+user1555 act119
+user4 act130
+user1450 act100
+user1677 act253
+user1920 act46
+user603 act76
+user1795 act192
+user82 act119
+user15 act188
+user1165 act270
+user1409 act197
+user1327 act173
+user140 act272
+user1363 act36
+user141 act218
+user737 act52
+user866 act236
+user1243 act298
+user1485 act20
+user1548 act53
+user1539 act115
+user1845 act24
+user1591 act81
+user1208 act178
+user1411 act154
+user1263 act57
+user506 act220
+user1355 act82
+user1346 act242
+user1773 act29
+user309 act193
+user73 act295
+user1282 act45
+user1523 act36
+user719 act137
+user1323 act180
+user1591 act251
+user1639 act209
+user1909 act162
+user1618 act254
+user220 act281
+user1406 act251
+user1249 act110
+user1018 act22
+user1829 act118
+user1014 act92
+user1426 act43
+user1558 act159
+user1085 act170
+user220 act39
+user873 act22
+user582 act52
+user324 act68
+user200 act299
+user1400 act235
+user1006 act67
+user324 act29
+user1483 act110
+user592 act73
+user1298 act177
+user1569 act280
+user402 act219
+user117 act72
+user501 act96
+user625 act220
+user738 act67
+user1038 act257
+user1389 act171
+user944 act23
+user1825 act134
+user1712 act157
+user545 act255
+user897 act225
+user1576 act57
+user1527 act26
+user1716 act236
+user487 act272
+user1890 act279
+user1540 act125
+user1397 act28
+user319 act102
+user273 act241
+user310 act13
+user1147 act41
+user5 act174
+user1436 act268
+user1402 act251
+user840 act195
+user1146 act256
+user1340 act241
+user159 act86
+user478 act134
+user143 act110
+user489 act93
+user725 act137
+user607 act135
+user1903 act19
+user1593 act201
+user1085 act110
+user1830 act273
+user1846 act258
+user894 act120
+user1670 act189
+user1017 act81
+user764 act25
+user1575 act200
+user341 act203
+user1615 act127
+user1109 act280
+user660 act143
+user242 act226
+user186 act176
+user1133 act84
+user458 act220
+user1208 act9
+user565 act213
+user524 act241
+user1930 act21
+user1313 act266
+user355 act149
+user1396 act23
+user62 act236
+user273 act170
+user621 act136
+user49 act75
+user117 act40
+user566 act274
+user425 act197
+user872 act46
+user130 act20
+user227 act190
+user1205 act225
+user296 act236
+user1226 act298
+user1317 act132
+user944 act51
+user520 act104
+user429 act219
+user1807 act193
+user161 act227
+user754 act199
+user60 act120
+user413 act212
+user1190 act19
+user837 act130
+user590 act22
+user386 act272
+user1649 act290
+user886 act17
+user1975 act228
+user528 act213
+user914 act203
+user767 act188
+user1949 act26
+user233 act213
+user647 act208
+user1826 act164
+user1118 act58
+user1947 act153
+user417 act197
+user101 act271
+user301 act149
+user833 act83
+user483 act165
+user1825 act274
+user1744 act213
+user419 act138
+user485 act135
+user130 act106
+user534 act127
+user676 act30
+user342 act283
+user833 act145
+user1758 act44
+user444 act104
+user31 act64
+user1141 act234
+user329 act143
+user1278 act35
+user832 act214
+user1958 act145
+user458 act57
+user219 act19
+user475 act82
+user60 act133
+user1745 act134
+user1360 act188
+user19 act180
+user1385 act191
+user1603 act149
+user259 act209
+user1914 act232
+user1482 act34
+user1362 act145
+user1020 act205
+user1043 act237
+user1222 act1
+user1534 act212
+user1352 act270
+user241 act100
+user1632 act268
+user847 act131
+user461 act57
+user820 act237
+user71 act137
+user1529 act144
+user1293 act105
+user1867 act211
+user268 act297
+user434 act129
+user501 act240
+user1820 act107
+user1932 act135
+user682 act280
+user472 act210
+user1318 act234
+user929 act234
+user906 act295
+user1629 act146
+user1984 act129
+user1868 act294
+user1240 act76
+user905 act151
+user1058 act234
+user1521 act289
+user388 act4
+user1018 act204
+user1488 act48
+user126 act184
+user1427 act195
+user1280 act275
+user1042 act204
+user1076 act153
+user191 act125
+user628 act51
+user382 act242
+user968 act60
+user206 act207
+user944 act51
+user824 act219
+user722 act138
+user1250 act207
+user1066 act5
+user173 act193
+user1910 act45
+user1309 act295
+user205 act45
+user1168 act223
+user988 act95
+user519 act95
+user917 act89
+user638 act52
+user1354 act140
+user8 act256
+user1405 act22
+user813 act199
+user595 act143
+user975 act205
+user725 act271
+user1546 act110
+user1668 act145
+user313 act225
+user1404 act141
+user1083 act100
+user79 act159
+user266 act87
+user1356 act101
+user1374 act111
+user1202 act21
+user425 act220
+user1638 act262
+user1498 act56
+user760 act168
+user1769 act192
+user1792 act105
+user1611 act93
+user890 act92
+user1347 act264
+user408 act296
+user1491 act275
+user658 act34
+user1021 act36
+user83 act235
+user746 act207
+user484 act49
+user291 act276
+user1084 act160
+user418 act33
+user1098 act168
+user193 act175
+user1278 act10
+user1452 act262
+user431 act95
+user238 act194
+user1734 act261
+user335 act175
+user911 act124
+user428 act133
+user184 act121
+user456 act132
+user682 act80
+user1634 act136
+user1353 act121
+user883 act151
+user1838 act127
+user766 act270
+user372 act129
+user1295 act179
+user799 act96
+user419 act69
+user1338 act91
+user1064 act127
+user949 act271
+user269 act143
+user724 act94
+user1105 act239
+user1754 act280
+user54 act170
+user1831 act283
+user375 act190
+user1318 act222
+user678 act94
+user901 act229
+user1335 act47
+user1669 act285
+user1174 act90
+user583 act21
+user135 act81
+user231 act0
+user571 act79
+user1997 act156
+user161 act244
+user1702 act282
+user786 act162
+user1669 act139
+user542 act221
+user1707 act240
+user1987 act265
+user1004 act65
+user202 act230
+user651 act89
+user1593 act199
+user466 act231
+user1851 act134
+user1288 act227
+user498 act56
+user1390 act232
+user1708 act259
+user1030 act8
+user915 act227
+user930 act7
+user1194 act201
+user279 act23
+user1112 act244
+user1541 act281
+user593 act157
+user861 act280
+user1635 act254
+user1023 act46
+user1899 act156
+user1264 act161
+user402 act123
+user1235 act298
+user2003 act106
+user681 act225
+user269 act123
+user497 act160
+user78 act69
+user914 act28
+user1926 act166
+user236 act66
+user1912 act96
+user1767 act114
+user1166 act77
+user1632 act285
+user105 act6
+user422 act212
+user853 act146
+user66 act12
+user769 act232
+user700 act200
+user1774 act227
+user116 act187
+user29 act47
+user1525 act157
+user1004 act237
+user627 act43
+user1357 act89
+user514 act141
+user1789 act113
+user1458 act130
+user1482 act178
+user1652 act198
+user1179 act129
+user1446 act97
+user1291 act206
+user396 act137
+user1970 act251
+user640 act64
+user452 act153
+user1469 act235
+user662 act229
+user123 act275
+user646 act274
+user978 act73
+user1887 act50
+user336 act11
+user596 act166
+user1006 act0
+user907 act73
+user1192 act236
+user759 act79
+user1700 act232
+user285 act180
+user589 act74
+user238 act275
+user1556 act254
+user1622 act40
+user248 act97
+user1468 act157
+user1860 act200
+user471 act276
+user1264 act44
+user1016 act31
+user1173 act81
+user312 act228
+user470 act255
+user1266 act132
+user1327 act264
+user1315 act211
+user955 act81
+user617 act57
+user1559 act52
+user1993 act62
+user27 act118
+user1461 act130
+user844 act231
+user52 act8
+user987 act59
+user414 act248
+user534 act143
+user720 act95
+user1853 act40
+user1565 act295
+user1142 act263
+user1459 act242
+user174 act189
+user128 act203
+user1681 act15
+user563 act131
+user1431 act284
+user469 act87
+user353 act232
+user1193 act217
+user332 act90
+user1969 act266
+user1052 act187
+user1317 act108
+user1248 act124
+user1665 act242
+user1954 act228
+user51 act235
+user37 act276
+user1530 act252
+user69 act89
+user1259 act262
+user337 act33
+user1489 act238
+user695 act90
+user227 act12
+user535 act199
+user1711 act52
+user364 act118
+user1100 act46
+user728 act13
+user573 act219
+user1674 act104
+user1291 act116
+user782 act260
+user1955 act157
+user879 act171
+user1854 act94
+user1257 act137
+user503 act50
+user1715 act135
+user213 act63
+user178 act130
+user1109 act164
+user700 act178
+user102 act291
+user487 act204
+user43 act204
+user1525 act176
+user1806 act150
+user65 act175
+user1630 act288
+user1835 act246
+user1467 act82
+user1545 act85
+user583 act278
+user560 act296
+user329 act143
+user1645 act156
+user1627 act160
+user1217 act264
+user863 act108
+user390 act31
+user14 act26
+user523 act212
+user1291 act184
+user1041 act222
+user805 act108
+user995 act191
+user1855 act260
+user1670 act289
+user1538 act181
+user261 act122
+user545 act42
+user651 act217
+user633 act110
+user1164 act146
+user1595 act80
+user1035 act129
+user1400 act81
+user1617 act260
+user344 act54
+user896 act283
+user1500 act83
+user996 act275
+user1655 act220
+user1357 act129
+user129 act93
+user1709 act255
+user306 act196
+user1015 act191
+user416 act80
+user314 act84
+user866 act298
+user1758 act84
+user1549 act231
+user235 act299
+user307 act69
+user1740 act183
+user318 act122
+user106 act65
+user1301 act86
+user1307 act119
+user1005 act277
+user564 act61
+user29 act100
+user1639 act218
+user1732 act159
+user454 act190
+user1624 act25
+user1609 act144
+user1481 act20
+user539 act160
+user1763 act239
+user562 act276
+user134 act126
+user1089 act292
+user813 act140
+user1135 act254
+user1907 act78
+user1174 act256
+user371 act215
+user1793 act125
+user1609 act174
+user38 act144
+user545 act139
+user234 act23
+user1807 act186
+user640 act77
+user1063 act19
+user1427 act296
+user408 act28
+user1488 act178
+user980 act45
+user1099 act61
+user427 act6
+user480 act163
+user1056 act127
+user1472 act43
+user1516 act107
+user477 act263
+user320 act185
+user1306 act143
+user1301 act210
+user1000 act29
+user456 act86
+user773 act293
+user199 act189
+user1629 act289
+user702 act288
+user545 act156
+user1321 act14
+user152 act257
+user1293 act268
+user1971 act91
+user664 act216
+user493 act157
+user857 act124
+user706 act76
+user605 act170
+user1445 act184
+user1015 act177
+user1813 act162
+user152 act264
+user1668 act248
+user262 act246
+user890 act277
+user1209 act123
+user1834 act252
+user1870 act111
+user258 act231
+user383 act158
+user1904 act236
+user1567 act274
+user1850 act50
+user1232 act193
+user1432 act224
+user890 act142
+user1759 act13
+user1864 act116
+user1837 act93
+user149 act209
+user85 act176
+user1369 act92
+user1725 act69
+user1052 act187
+user284 act76
+user473 act15
+user1990 act239
+user399 act193
+user710 act223
+user1982 act264
+user1947 act122
+user974 act102
+user45 act299
+user966 act188
+user831 act292
+user760 act286
+user55 act116
+user1302 act62
+user1583 act190
+user337 act75
+user330 act214
+user1994 act23
+user1415 act269
+user1585 act253
+user1033 act114
+user238 act270
+user286 act46
+user1564 act286
+user489 act119
+user1797 act219
+user902 act65
+user519 act170
+user575 act173
+user1716 act292
+user1915 act256
+user1848 act138
+user1790 act280
+user524 act14
+user470 act206
+user1025 act77
+user226 act73
+user514 act263
+user573 act161
+user603 act268
+user1214 act148
+user1798 act70
+user419 act246
+user1033 act287
+user595 act196
+user729 act195
+user1898 act270
+user1839 act205
+user1377 act234
+user1250 act143
+user649 act150
+user1038 act246
+user1884 act181
+user1392 act87
+user252 act257
+user292 act181
+user642 act92
+user114 act90
+user964 act9
+user492 act59
+user1122 act299
+user1374 act77
+user223 act42
+user1959 act91
+user1141 act168
+user1380 act56
+user1532 act223
+user1303 act267
+user496 act28
+user1085 act277
+user1510 act221
+user783 act146
+user86 act287
+user1411 act185
+user728 act152
+user1230 act191
+user183 act22
+user686 act191
+user750 act156
+user309 act222
+user808 act163
+user637 act145
+user707 act78
+user1541 act169
+user1656 act129
+user1548 act83
+user312 act257
+user1796 act90
+user1892 act161
+user106 act253
+user809 act139
+user7 act213
+user396 act96
+user1867 act83
+user1631 act33
+user327 act116
+user310 act108
+user42 act289
+user24 act126
+user373 act69
+user1850 act161
+user1279 act43
+user1451 act113
+user1780 act268
+user848 act79
+user1907 act92
+user775 act24
+user808 act10
+user713 act46
+user193 act29
+user456 act83
+user1089 act96
+user1700 act71
+user890 act32
+user479 act290
+user1428 act55
+user626 act63
+user1217 act125
+user1059 act257
+user844 act91
+user1604 act216
+user269 act259
+user950 act97
+user421 act125
+user1298 act32
+user1662 act209
+user757 act288
+user760 act151
+user729 act22
+user535 act199
+user1940 act291
+user1669 act49
+user1057 act234
+user1035 act150
+user1395 act249
+user245 act117
+user1118 act121
+user1632 act23
+user174 act209
+user1531 act193
+user1752 act12
+user892 act1
+user8 act5
+user252 act246
+user675 act171
+user1946 act180
+user186 act17
+user1788 act119
+user1958 act257
+user306 act45
+user1812 act213
+user1225 act93
+user409 act137
+user881 act10
+user1032 act162
+user507 act11
+user455 act43
+user1177 act147
+user1053 act88
+user156 act69
+user477 act93
+user1359 act266
+user1605 act266
+user926 act98
+user1818 act194
+user1493 act160
+user1521 act163
+user947 act120
+user292 act186
+user1962 act63
+user1531 act44
+user1142 act32
+user1710 act283
+user676 act190
+user1885 act7
+user1364 act86
+user71 act32
+user491 act143
+user1446 act194
+user1687 act44
+user172 act117
+user1671 act53
+user1859 act140
+user1218 act164
+user1242 act41
+user1386 act150
+user458 act109
+user508 act179
+user896 act39
+user765 act244
+user1764 act51
+user1083 act157
+user1396 act160
+user1510 act177
+user64 act27
+user1553 act3
+user1449 act167
+user686 act222
+user535 act281
+user1764 act37
+user424 act47
+user1556 act60
+user1619 act71
+user1008 act32
+user1418 act169
+user1407 act81
+user1313 act180
+user722 act234
+user264 act42
+user379 act120
+user560 act14
+user281 act145
+user745 act147
+user1567 act60
+user588 act58
+user1822 act180
+user468 act26
+user953 act26
+user675 act100
+user1183 act44
+user1337 act39
+user1899 act53
+user905 act111
+user1367 act63
+user368 act199
+user634 act0
+user259 act215
+user352 act164
+user1165 act68
+user661 act260
+user1216 act214
+user1413 act220
+user1297 act297
+user1811 act11
+user1956 act149
+user1595 act260
+user1437 act253
+user1921 act212
+user178 act52
+user1620 act223
