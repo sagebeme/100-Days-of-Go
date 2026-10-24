@@ -38,7 +38,7 @@ Ends with: a CLI M-Pesa budget tracker
 |---|---|---|---|
 | 15 | Boda Boda Fleet | structs, methods, pointer vs value receivers | Done |
 | 16 | Payment Methods | interfaces and implicit satisfaction | Done |
-| 17 | Failed Transactions | custom errors, wrapping, errors.Is and errors.As | Planned |
+| 17 | Failed Transactions | custom errors, wrapping, errors.Is and errors.As | Done |
 | 18 | Typed Inventory | generics: type parameters and constraints | Planned |
 | 19 | Table-Driven Tests | t.Run, subtests, test helpers, coverage | Planned |
 | 20 | Go Modules | go.mod, semantic versions, adding and upgrading a dependency | Planned |
