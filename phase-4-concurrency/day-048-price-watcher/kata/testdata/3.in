@@ -1,0 +1,11 @@
+10
+set b x 5
+set a x 5
+best x
+set a x 6
+best x
+del b x
+best x
+del a x
+del a x
+best x

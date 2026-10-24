@@ -1,0 +1,6 @@
+5
+del s x
+set s x 3
+del s x
+set s x 4
+best x
