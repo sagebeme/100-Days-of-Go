@@ -7,7 +7,7 @@ A boda boda rider in Kakamega wants to know his best week: the 7 days in a row t
 Today you'll use fixed windows (best streak, moving averages of the price of unga) and windows that grow and shrink (the longest run with no repeat, the shortest run of chama contributions that reaches a target).
 
 ```
-BestStreak([]int{300, 800, 100, 900, 200}, 2)          →  1100     900 + 200 ... or 800 + 100? No: 100 + 900 = 1000, 900 + 200 = 1100
+BestStreak([]int{300, 800, 100, 900, 200}, 2)          →  1100     900 + 200, the best two days in a row
 MovingAverage([]int{180, 190, 200, 210}, 2)            →  [185 195 205]
 LongestUniqueRun("ugaliugali")                         →  5        "ugali"
 ShortestToReach([]int{200, 500, 100, 1000, 300}, 1200) →  2        1000 + 300
