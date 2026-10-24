@@ -41,7 +41,7 @@ Ends with: a CLI M-Pesa budget tracker
 | 17 | Failed Transactions | custom errors, wrapping, errors.Is and errors.As | Done |
 | 18 | Typed Inventory | generics: type parameters and constraints | Done |
 | 19 | Table-Driven Tests | t.Run, subtests, test helpers, coverage | Done |
-| 20 | Go Modules | go.mod, semantic versions, adding and upgrading a dependency | Planned |
+| 20 | Go Modules | go.mod, semantic versions, adding and upgrading a dependency | Done |
 | 21 | Config Loader | env variables, 12-factor config, .env files, never committing secrets | Planned |
 | 22 | CLI Flags | the flag package, subcommands, exit codes | Planned |
 | 23 | Save and Load | files, encoding/json, struct tags | Planned |
