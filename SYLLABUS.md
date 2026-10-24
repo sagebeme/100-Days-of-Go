@@ -63,7 +63,7 @@ Ends with: a timed mock HackerRank test
 | 31 | Sorting Showdown | merge sort, quicksort, custom comparators | Done |
 | 32 | Binary Search | searching sorted data and searching the answer | Done |
 | 33 | Stacks | bracket checkers and undo history | Done |
-| 34 | Queues | a bank queue simulator and deques | Planned |
+| 34 | Queues | a bank queue simulator and deques | Done |
 | 35 | Recursion | factorials to permutations, base cases | Planned |
 | 36 | Trees | binary search trees, traversals | Planned |
 | 37 | Graphs | BFS and DFS on a matatu route map | Planned |
