@@ -163,7 +163,7 @@ Ends with: sixteen projects of your own
 | 91 | Matatu Route Finder | shortest paths on a real map | Planned |
 | 92 | Log Analyser | streaming big files | Planned |
 | 93 | Key-Value Store | a tiny database with a write-ahead log | Done |
-| 94 | Job Board | full stack with search | Planned |
+| 94 | Job Board | full stack with search | Done |
 | 95 | Webhook Relay | signatures, retries, replay protection | Planned |
 | 96 | Discord Bot | a bot that runs your katas | Planned |
 | 97 | Fix an Open-Source Issue | reading someone else's code | Planned |
