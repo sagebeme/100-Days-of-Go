@@ -1,0 +1,11 @@
+3
+GET /routes/{id}/trips
+GET /routes/125/trips
+POST /routes/125/trips
+6
+GET /routes/125/trips
+POST /routes/125/trips
+POST /routes/111/trips
+DELETE /routes/125/trips
+GET /routes/trips
+GET /routes/125

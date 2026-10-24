@@ -1,0 +1,11 @@
+4
+GET /trips
+POST /trips
+GET /trips/{id}
+DELETE /trips/{id}
+5
+GET /trips
+DELETE /trips
+HEAD /trips/42
+PUT /trips/42
+GET /bookings

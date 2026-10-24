@@ -1,0 +1,17 @@
+5
+GET /
+POST /trips/{id}/bookings
+GET /bookings/{id}
+PATCH /trips/{id}
+PUT /trips/{id}
+10
+GET /
+POST /
+HEAD /
+GET /trips/7/bookings
+POST /trips/7/bookings
+GET /trips/7
+OPTIONS /trips/7
+PATCH /trips/7/bookings/1
+GET /bookings/9001
+DELETE /bookings/9001

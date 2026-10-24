@@ -1,0 +1,8 @@
+1
+GET /health
+5
+GET /health
+HEAD /health
+POST /health
+GET /healthz
+GET /
