@@ -84,7 +84,7 @@ Ends with: a concurrent price scraper
 | 44 | Context | cancellation and deadlines | Done |
 | 45 | Mutexes | shared state, sync.Mutex, the race detector | Done |
 | 46 | Worker Pools | bounded concurrency, fan-out and fan-in | Done |
-| 47 | Rate Limiting | tickers and token buckets | Planned |
+| 47 | Rate Limiting | tickers and token buckets | Done |
 | 48 | Capstone: Price Watcher | scrapes many shops at once without hammering any | Planned |
 
 ## Phase 5: Backend engineering
