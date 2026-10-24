@@ -62,7 +62,7 @@ Ends with: a timed mock HackerRank test
 | 30 | Sliding Window | best streaks and moving averages | Done |
 | 31 | Sorting Showdown | merge sort, quicksort, custom comparators | Done |
 | 32 | Binary Search | searching sorted data and searching the answer | Done |
-| 33 | Stacks | bracket checkers and undo history | Planned |
+| 33 | Stacks | bracket checkers and undo history | Done |
 | 34 | Queues | a bank queue simulator and deques | Planned |
 | 35 | Recursion | factorials to permutations, base cases | Planned |
 | 36 | Trees | binary search trees, traversals | Planned |
