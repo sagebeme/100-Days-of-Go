@@ -1,0 +1,13 @@
+3 12
+put 1 1
+put 2 2
+put 3 3
+put 1 100
+put 4 4
+get 2
+get 1
+get 3
+get 4
+put 5 5
+get 1
+get 3

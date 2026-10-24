@@ -1,0 +1,8 @@
+2 7
+put 1 10
+put 2 20
+get 1
+put 3 30
+get 2
+get 3
+get 1

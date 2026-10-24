@@ -1,0 +1,11 @@
+1 10
+get 5
+put 5 50
+get 5
+put 5 55
+get 5
+put 6 60
+get 5
+get 6
+put 6 0
+get 6
