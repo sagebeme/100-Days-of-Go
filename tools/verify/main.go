@@ -7,6 +7,10 @@
 //
 // Tests live only in each day's starter/ folder. To test a solution, verify copies the
 // starter's tests next to the solution's code in .verify/ (gitignored) and runs them there.
+//
+// Phase 6 days are TypeScript: their tests are *.test.ts(x) files in starter/. For those, verify
+// copies starter/ and then solution/ over it into phase-6-frontend/.verify/<day> and runs Vitest
+// there, so it needs `npm ci` to have been run in phase-6-frontend first.
 package main
 
 import (
@@ -40,10 +44,22 @@ func main() {
 	}
 
 	problems := 0
-	tested, katas := 0, 0
+	tested, katas, tsTested := 0, 0, 0
+	var tsRoot string // the folder holding package.json for the TypeScript days
 	for _, d := range days {
 		starter := filepath.Join(root, d.Dir, "starter")
 		solution := filepath.Join(root, d.Dir, "solution")
+		if isTS(starter) {
+			tsRoot = filepath.Dir(filepath.Join(root, d.Dir))
+			dst := filepath.Join(tsRoot, ".verify", d.Name)
+			if err := assembleTS(starter, solution, dst); err != nil {
+				fmt.Printf("FAIL  day %d: %v\n", d.N, err)
+				problems++
+			} else {
+				tsTested++
+			}
+			continue
+		}
 		if course.Exists(starter) && course.Exists(solution) {
 			dst := filepath.Join(scratch, "days", d.Name)
 			if err := assemble(starter, solution, dst); err != nil {
@@ -65,6 +81,19 @@ func main() {
 		} else {
 			fmt.Printf("ok    %d solutions pass their tests\n", tested)
 		}
+	}
+
+	if tsTested > 0 {
+		cmd := exec.Command("npx", "vitest", "run", ".verify")
+		cmd.Dir = tsRoot
+		out, err := cmd.CombinedOutput()
+		if err != nil {
+			fmt.Printf("FAIL  TypeScript solutions don't pass their tests (did you run npm ci in %s?):\n%s\n", filepath.Base(tsRoot), out)
+			problems++
+		} else {
+			fmt.Printf("ok    %d TypeScript solutions pass their tests\n", tsTested)
+		}
+		os.RemoveAll(filepath.Join(tsRoot, ".verify"))
 	}
 
 	for _, d := range days {
@@ -100,8 +129,16 @@ func main() {
 			if !course.Exists(starter) {
 				continue
 			}
-			cmd := exec.Command("go", "test", "-count=1", "./"+d.Dir+"/starter")
-			cmd.Dir = root
+			var cmd *exec.Cmd
+			if isTS(starter) {
+				dayDir := filepath.Join(root, d.Dir)
+				rel, _ := filepath.Rel(filepath.Dir(dayDir), filepath.Join(dayDir, "starter"))
+				cmd = exec.Command("npx", "vitest", "run", filepath.ToSlash(rel))
+				cmd.Dir = filepath.Dir(dayDir)
+			} else {
+				cmd = exec.Command("go", "test", "-count=1", "./"+d.Dir+"/starter")
+				cmd.Dir = root
+			}
 			out, err := cmd.CombinedOutput()
 			if err == nil {
 				fmt.Printf("FAIL  day %d: the untouched starter passes its tests, so they check nothing\n", d.N)
@@ -118,7 +155,7 @@ func main() {
 		fmt.Printf("\n%d problem(s).\n", problems)
 		os.Exit(1)
 	}
-	fmt.Printf("\nverify passed: %d days, %d katas\n", tested, katas)
+	fmt.Printf("\nverify passed: %d days, %d katas\n", tested+tsTested, katas)
 }
 
 // assemble copies the starter's tests (and testdata) and the solution's code into dst.
@@ -148,6 +185,46 @@ func assemble(starter, solution, dst string) error {
 		return os.CopyFS(filepath.Join(dst, "testdata"), os.DirFS(td))
 	}
 	return nil
+}
+
+// isTS reports whether a starter folder holds TypeScript tests.
+func isTS(starter string) bool {
+	found := false
+	filepath.WalkDir(starter, func(path string, e os.DirEntry, err error) error {
+		if err != nil || found {
+			return err
+		}
+		if e.IsDir() && e.Name() == "node_modules" {
+			return filepath.SkipDir
+		}
+		name := e.Name()
+		if strings.HasSuffix(name, ".test.ts") || strings.HasSuffix(name, ".test.tsx") {
+			found = true
+		}
+		return nil
+	})
+	return found
+}
+
+// assembleTS copies the whole starter, then the whole solution over it, into dst.
+func assembleTS(starter, solution, dst string) error {
+	if err := os.RemoveAll(dst); err != nil {
+		return err
+	}
+	if err := os.CopyFS(dst, os.DirFS(starter)); err != nil {
+		return err
+	}
+	return filepath.WalkDir(solution, func(path string, e os.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		rel, _ := filepath.Rel(solution, path)
+		target := filepath.Join(dst, rel)
+		if e.IsDir() {
+			return os.MkdirAll(target, 0o755)
+		}
+		return copyFile(path, target)
+	})
 }
 
 func copyFile(src, dst string) error {
