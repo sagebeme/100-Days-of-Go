@@ -1,0 +1,7 @@
+6
+GET /x 599 1
+GET /x 404 2
+GET /y 502 3
+GET /y 504 3
+GET /x 500 1
+PUT /z 302 5

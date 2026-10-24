@@ -1,0 +1,8 @@
+7
+GET /trips/1 200 12
+POST /trips/1/bookings 201 40
+POST /trips/1/bookings 409 8
+GET /bookings/7 404 3
+POST /trips/2/bookings 500 1203
+GET /trips/2 503 30
+GET /trips/2 503 31
