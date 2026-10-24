@@ -1,0 +1,11 @@
+4
+total int 0
+members int 0
+dry bool false
+name string chama
+5
+-total
+12005
+--members=5
+-dry
+report.txt

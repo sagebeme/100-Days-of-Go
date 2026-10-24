@@ -1,0 +1,5 @@
+total=12005
+members=5
+dry=true
+name=chama
+args: report.txt

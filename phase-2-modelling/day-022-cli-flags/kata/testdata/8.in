@@ -1,0 +1,9 @@
+4
+total int 0
+members int 0
+dry bool false
+name string chama
+3
+-dry=F
+-
+-total=1

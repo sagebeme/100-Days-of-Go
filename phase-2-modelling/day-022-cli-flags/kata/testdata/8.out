@@ -1,0 +1,5 @@
+total=0
+members=0
+dry=false
+name=chama
+args: - -total=1
