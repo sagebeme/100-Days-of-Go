@@ -106,7 +106,7 @@ Ends with: a deployed matatu-booking API
 | 58 | Sessions and JWTs | cookies vs tokens, expiry, refresh rotation | Done |
 | 59 | Roles and Permissions | 401 vs 403, authorisation checks in one place | Done |
 | 60 | OWASP Top 10 | injection, broken access control, SSRF, and how Go code avoids them | Done |
-| 61 | CORS and Security Headers | origins, preflight, CSP, HSTS | Planned |
+| 61 | CORS and Security Headers | origins, preflight, CSP, HSTS | Done |
 | 62 | Integration Tests | httptest, a real test database, testing the whole request | Planned |
 | 63 | Docker and CI | a small image, GitHub Actions, secrets in CI | Planned |
 | 64 | Capstone: Matatu Booking API | seats, bookings and payments, deployed | Planned |
