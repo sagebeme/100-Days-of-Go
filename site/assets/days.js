@@ -152,7 +152,7 @@ window.GO_DAYS = [
   {"day":83,"phase":7,"title":"Secrets Management","topic":"rotating keys, vaults, least privilege","capstone":false,"path":"","brief":"","kata":false},
   {"day":84,"phase":7,"title":"Hardened Service","topic":"a design doc, then the changes it calls for","capstone":true,"path":"","brief":"","kata":false},
   {"day":85,"phase":8,"title":"Link Shortener","topic":"a full service from a one-paragraph brief","capstone":false,"path":"phase-8-portfolio/day-085-link-shortener","brief":"Wanjiru runs Kiungo, a small agency in Nairobi that sends SMS campaigns for dukas and schools. An SMS is 160 characters, and a link like https://duka.co.ke/sale?item=sufuria\u0026size=5L\u0026utm_source=sms eats half of it. She…","kata":true},
-  {"day":86,"phase":8,"title":"Kiswahili Wordle","topic":"a terminal game with a word list","capstone":false,"path":"","brief":"","kata":false},
+  {"day":86,"phase":8,"title":"Kiswahili Wordle","topic":"a terminal game with a word list","capstone":false,"path":"phase-8-portfolio/day-086-kiswahili-wordle","brief":"Mwalimu Atieno teaches Kiswahili at a day school in Kisumu. Her Form 2 class plays Wordle on their phones at lunch, in English. She wants a Kiswahili version they can run in the computer lab: five-letter words, six…","kata":true},
   {"day":87,"phase":8,"title":"Chat Server","topic":"WebSockets and rooms","capstone":false,"path":"","brief":"","kata":false},
   {"day":88,"phase":8,"title":"Invoice PDF","topic":"generating documents","capstone":false,"path":"","brief":"","kata":false},
   {"day":89,"phase":8,"title":"Static Site Generator","topic":"Markdown to HTML","capstone":false,"path":"","brief":"","kata":false},
