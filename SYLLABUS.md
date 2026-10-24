@@ -81,7 +81,7 @@ Ends with: a concurrent price scraper
 | 41 | Goroutines | starting work concurrently, sync.WaitGroup | Done |
 | 42 | Channels | sending, receiving, closing, ranging | Done |
 | 43 | Select | timeouts, multiplexing, default cases | Done |
-| 44 | Context | cancellation and deadlines | Planned |
+| 44 | Context | cancellation and deadlines | Done |
 | 45 | Mutexes | shared state, sync.Mutex, the race detector | Planned |
 | 46 | Worker Pools | bounded concurrency, fan-out and fan-in | Planned |
 | 47 | Rate Limiting | tickers and token buckets | Planned |
