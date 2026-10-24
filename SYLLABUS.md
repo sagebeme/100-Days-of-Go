@@ -154,7 +154,7 @@ Ends with: sixteen projects of your own
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
-| 85 | Link Shortener | a full service from a one-paragraph brief | Planned |
+| 85 | Link Shortener | a full service from a one-paragraph brief | Done |
 | 86 | Kiswahili Wordle | a terminal game with a word list | Planned |
 | 87 | Chat Server | WebSockets and rooms | Planned |
 | 88 | Invoice PDF | generating documents | Planned |
