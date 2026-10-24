@@ -59,7 +59,7 @@ Ends with: a timed mock HackerRank test
 | 27 | How Fast Is Fast | Big-O, counting operations, fast stdin and stdout | Done |
 | 28 | Duplicate Receipts | hashing, sets, frequency counts | Done |
 | 29 | Two Pointers | pair sums, reversing, merging sorted lists | Done |
-| 30 | Sliding Window | best streaks and moving averages | Planned |
+| 30 | Sliding Window | best streaks and moving averages | Done |
 | 31 | Sorting Showdown | merge sort, quicksort, custom comparators | Planned |
 | 32 | Binary Search | searching sorted data and searching the answer | Planned |
 | 33 | Stacks | bracket checkers and undo history | Planned |
