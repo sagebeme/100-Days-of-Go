@@ -37,7 +37,7 @@ Ends with: a CLI M-Pesa budget tracker
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
 | 15 | Boda Boda Fleet | structs, methods, pointer vs value receivers | Done |
-| 16 | Payment Methods | interfaces and implicit satisfaction | Planned |
+| 16 | Payment Methods | interfaces and implicit satisfaction | Done |
 | 17 | Failed Transactions | custom errors, wrapping, errors.Is and errors.As | Planned |
 | 18 | Typed Inventory | generics: type parameters and constraints | Planned |
 | 19 | Table-Driven Tests | t.Run, subtests, test helpers, coverage | Planned |
