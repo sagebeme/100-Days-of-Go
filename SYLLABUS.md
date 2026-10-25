@@ -124,7 +124,7 @@ Ends with: a full-stack booking app
 | 68 | Talking to Go | fetch, loading and error states, CORS in practice | Done |
 | 69 | Forms | controlled inputs, validation on both sides | Done |
 | 70 | Login Flow | storing tokens safely, protected routes | Done |
-| 71 | Live Seats | WebSockets from Go to React | Planned |
+| 71 | Live Seats | WebSockets from Go to React | Done |
 | 72 | Accessible by Default | semantics, keyboard use, contrast, axe | Planned |
 | 73 | Front-End Tests | Vitest, Testing Library, Playwright | Planned |
 | 74 | Fast on a Cheap Phone | bundle size, caching, slow 3G | Planned |
