@@ -1,0 +1,7 @@
+6
+c1 TestB FAIL
+c1 TestB PASS
+c1 TestA PASS
+c1 TestA FAIL
+c2 TestC PASS
+c2 TestC FAIL
