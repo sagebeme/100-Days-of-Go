@@ -47,7 +47,7 @@ Ends with: a CLI M-Pesa budget tracker
 | 23 | Save and Load | files, encoding/json, struct tags | Done |
 | 24 | CSV Statements | encoding/csv, parsing a real M-Pesa statement | Done |
 | 25 | Git Like a Team | branches, small commits, pull requests, code review | Done |
-| 26 | Capstone: Pesa Budget CLI | tracks spending from statements, configured by env and flags | Planned |
+| 26 | Capstone: Pesa Budget CLI | tracks spending from statements, configured by env and flags | Done |
 
 ## Phase 3: Algorithms for HackerRank
 
