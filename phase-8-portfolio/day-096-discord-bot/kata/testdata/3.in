@@ -1,0 +1,7 @@
+6
+SOLVE b 1 0
+SOLVE a 1 0
+SOLVE c 2 0
+TOP 3
+SOLVE a 1 5
+TOP 1
