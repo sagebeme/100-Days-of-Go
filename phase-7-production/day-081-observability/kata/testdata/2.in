@@ -1,0 +1,9 @@
+8 100
+query
+add 5
+query
+add 5
+add 0
+query
+add 1000000000
+query
