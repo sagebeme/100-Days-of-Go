@@ -1,0 +1,33 @@
+{{define "head"}}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/static/style.css">
+{{end}}
+
+{{define "page"}}{{template "head" .}}<title>{{.Page.Title}} | {{.Site.SiteTitle}}</title>
+{{with .Page.Description}}<meta name="description" content="{{.}}">{{end}}
+</head>
+<body>
+<p><a href="/">{{.Site.SiteTitle}}</a></p>
+<article>
+<h1>{{.Page.Title}}</h1>
+{{if not .Page.Date.IsZero}}<time datetime="{{.Page.Date.Format "2006-01-02"}}">{{.Page.Date.Format "2 January 2006"}}</time>{{end}}
+{{.Page.Body}}
+{{with .Page.Tags}}<p>Tags: {{range $i, $t := .}}{{if $i}}, {{end}}{{$t}}{{end}}</p>{{end}}
+</article>
+</body>
+</html>
+{{end}}
+
+{{define "index"}}{{template "head" .}}<title>{{.Site.SiteTitle}}</title>
+</head>
+<body>
+<h1>{{.Site.SiteTitle}}</h1>
+<ul>
+{{range .Pages}}<li><a href="/{{.Slug}}/">{{.Title}}</a>{{if not .Date.IsZero}} <time>{{.Date.Format "2 Jan 2006"}}</time>{{end}}{{with .Description}}<br>{{.}}{{end}}</li>
+{{end}}</ul>
+</body>
+</html>
+{{end}}
