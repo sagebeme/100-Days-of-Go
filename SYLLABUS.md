@@ -45,7 +45,7 @@ Ends with: a CLI M-Pesa budget tracker
 | 21 | Config Loader | env variables, 12-factor config, .env files, never committing secrets | Done |
 | 22 | CLI Flags | the flag package, subcommands, exit codes | Done |
 | 23 | Save and Load | files, encoding/json, struct tags | Done |
-| 24 | CSV Statements | encoding/csv, parsing a real M-Pesa statement | Planned |
+| 24 | CSV Statements | encoding/csv, parsing a real M-Pesa statement | Done |
 | 25 | Git Like a Team | branches, small commits, pull requests, code review | Planned |
 | 26 | Capstone: Pesa Budget CLI | tracks spending from statements, configured by env and flags | Planned |
 
