@@ -1,0 +1,86 @@
+30 40 15
+c0 dmz
+c1 office
+c2 dmz
+c3 internet
+c4 partner
+c5 dmz
+c6 partner
+c7 internal
+c8 partner
+c9 dmz
+c10 partner
+c11 internal
+c12 partner
+c13 partner
+c14 internet
+c15 office
+c16 internal
+c17 partner
+c18 internet
+c19 partner
+c20 internet
+c21 partner
+c22 internal
+c23 partner
+c24 internal
+c25 partner
+c26 dmz
+c27 internet
+c28 partner
+c29 office
+c22 c10
+c4 c21
+c6 c2
+c13 c29
+c6 c20
+c20 c14
+c8 c5
+c11 c13
+c23 c18
+c10 c20
+c17 c6
+c28 c10
+c3 c26
+c1 c22
+c7 c8
+c24 c18
+c19 c27
+c7 c3
+c10 c29
+c5 c9
+c14 c0
+c1 c11
+c22 c2
+c28 c9
+c23 c21
+c10 c0
+c10 c9
+c10 c4
+c24 c20
+c13 c27
+c27 c19
+c21 c26
+c2 c9
+c19 c6
+c28 c14
+c9 c4
+c8 c12
+c19 c5
+c10 c18
+c0 c11
+c1
+c14
+c5
+c11
+c25
+c25
+c11
+c9
+c18
+c3
+c14
+c6
+c13
+c29
+c6
