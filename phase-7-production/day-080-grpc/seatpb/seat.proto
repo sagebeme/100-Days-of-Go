@@ -1,0 +1,52 @@
+// The contract for Twende's seat service. Change this file, then regenerate the Go code
+// with the command in the Day 80 README.
+syntax = "proto3";
+
+package twende.seats.v1;
+
+option go_package = "github.com/sagebeme/100-Days-of-Go/phase-7-production/day-080-grpc/seatpb";
+
+service SeatService {
+  // GetTrip returns a trip and the seats already taken.
+  rpc GetTrip(GetTripRequest) returns (Trip);
+  // BookSeat books one seat for one phone number.
+  rpc BookSeat(BookSeatRequest) returns (Booking);
+  // WatchSeats sends the current seats free straight away, then one update per booking,
+  // until the client cancels.
+  rpc WatchSeats(WatchSeatsRequest) returns (stream SeatUpdate);
+}
+
+message GetTripRequest {
+  string trip_id = 1;
+}
+
+message Trip {
+  string id = 1;
+  string route = 2;
+  string departs = 3;  // "07:30"
+  int32 seats = 4;     // seats in the vehicle, numbered 1 to seats
+  repeated int32 taken = 5;  // booked seat numbers, smallest first
+}
+
+message BookSeatRequest {
+  string trip_id = 1;
+  int32 seat = 2;
+  string phone = 3;
+}
+
+message Booking {
+  string id = 1;
+  string trip_id = 2;
+  int32 seat = 3;
+  string phone = 4;
+}
+
+message WatchSeatsRequest {
+  string trip_id = 1;
+}
+
+message SeatUpdate {
+  string trip_id = 1;
+  int32 seat = 2;        // the seat just booked, or 0 for the first message
+  int32 seats_free = 3;
+}
