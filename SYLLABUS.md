@@ -164,7 +164,7 @@ Ends with: sixteen projects of your own
 | 92 | Log Analyser | streaming big files | Planned |
 | 93 | Key-Value Store | a tiny database with a write-ahead log | Done |
 | 94 | Job Board | full stack with search | Done |
-| 95 | Webhook Relay | signatures, retries, replay protection | Planned |
+| 95 | Webhook Relay | signatures, retries, replay protection | Done |
 | 96 | Discord Bot | a bot that runs your katas | Planned |
 | 97 | Fix an Open-Source Issue | reading someone else's code | Planned |
 | 98 | Make It 10x Faster | profiling with pprof | Planned |
