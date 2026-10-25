@@ -120,7 +120,7 @@ Ends with: a full-stack booking app
 |---|---|---|---|
 | 65 | TypeScript for Go Developers | types, interfaces, unions, async | Done |
 | 66 | First React App | Vite, components, props | Done |
-| 67 | State and Events | useState, lists, keys | Planned |
+| 67 | State and Events | useState, lists, keys | Done |
 | 68 | Talking to Go | fetch, loading and error states, CORS in practice | Planned |
 | 69 | Forms | controlled inputs, validation on both sides | Planned |
 | 70 | Login Flow | storing tokens safely, protected routes | Planned |
