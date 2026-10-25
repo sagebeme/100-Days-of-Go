@@ -166,7 +166,7 @@ Ends with: sixteen projects of your own
 | 94 | Job Board | full stack with search | Done |
 | 95 | Webhook Relay | signatures, retries, replay protection | Done |
 | 96 | Discord Bot | a bot that runs your katas | Done |
-| 97 | Fix an Open-Source Issue | reading someone else's code | Planned |
+| 97 | Fix an Open-Source Issue | reading someone else's code | Done |
 | 98 | Make It 10x Faster | profiling with pprof | Planned |
 | 99 | Mock Interview | a timed HackerRank test and a system design question | Planned |
 | 100 | Capstone: Your Portfolio | ship one project people can use, with a write-up | Planned |
