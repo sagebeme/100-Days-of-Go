@@ -1,0 +1,94 @@
+amina:3:5 wanjiru:1:0 baraka:1:2 kamau:1:2
+wanjiru:3:4 amina:3:5 baraka:2:4 kamau:2:5
+wanjiru:3:4
+wanjiru:5:6 amina:4:6 kamau:4:9 juma:4:10 achieng:2:2
+wanjiru:6:8 juma:5:13
+wanjiru:7:9 amina:5:6
+wanjiru:7:9 juma:7:14
+wanjiru:7:9 juma:7:14 amina:6:7 kamau:5:11 achieng:2:2
+wanjiru:8:11 juma:8:17 amina:6:7 kamau:6:12 achieng:2:2 otieno:2:3 baraka:2:4
+wanjiru:8:11
+wanjiru:8:11 juma:8:17 amina:7:8
+wanjiru:8:11 juma:8:17 amina:7:8 kamau:6:12
+wanjiru:8:11 juma:8:17 amina:7:8 kamau:6:12 otieno:3:3
+wanjiru:8:11 juma:8:17 amina:7:8 kamau:6:12
+juma:9:19
+juma:9:19 amina:8:9 wanjiru:8:11 kamau:7:14
+juma:9:19 amina:8:9 wanjiru:8:11 kamau:7:14 otieno:5:6 achieng:3:4 baraka:3:7
+amina:9:9 wanjiru:9:11 juma:9:19 kamau:9:19 otieno:6:9 baraka:5:8 achieng:3:4
+wanjiru:10:11 juma:10:20 amina:9:9 kamau:9:19 baraka:7:11 otieno:6:9
+juma:11:20 wanjiru:10:11 kamau:10:21 amina:9:9 baraka:7:11 otieno:7:11 achieng:4:7
+juma:11:20 kamau:11:23 amina:10:10 wanjiru:10:11 otieno:8:12 baraka:7:11
+wanjiru:11:12 juma:11:20
+kamau:12:23 wanjiru:11:12 amina:11:13 juma:11:20 baraka:9:11 otieno:8:12 achieng:6:10
+kamau:12:23 wanjiru:11:12 amina:11:13 juma:11:20
+kamau:12:23 wanjiru:11:12 amina:11:13 juma:11:20
+kamau:13:25 wanjiru:12:12
+wanjiru:13:12 juma:13:24
+wanjiru:15:18 juma:14:26 amina:13:16 kamau:13:25 otieno:11:18
+wanjiru:15:18
+wanjiru:15:18 juma:14:26 amina:13:16
+wanjiru:15:18 juma:14:26 amina:13:16 kamau:13:25 baraka:11:11 otieno:11:18 achieng:9:13
+wanjiru:15:18 juma:14:26 amina:13:16 kamau:13:25 baraka:11:11 otieno:11:18 achieng:9:13
+wanjiru:15:18 juma:15:27
+wanjiru:15:18 juma:15:27 kamau:14:27 amina:13:16 baraka:12:13 otieno:11:18
+wanjiru:15:18
+wanjiru:15:18 juma:15:27 kamau:14:27
+juma:16:29 wanjiru:15:18 amina:14:16 kamau:14:27 achieng:13:21
+juma:16:29 wanjiru:15:18 amina:14:16 kamau:14:27 achieng:13:21 baraka:12:13 otieno:12:19
+juma:16:29 wanjiru:15:18 amina:14:16 otieno:14:23 kamau:14:27
+wanjiru:17:20 juma:17:29
+wanjiru:17:20 juma:17:29 amina:15:19
+juma:18:29
+juma:19:30
+juma:19:30 wanjiru:18:22 kamau:16:31 amina:15:19 baraka:14:16 otieno:14:23
+juma:19:30 wanjiru:18:22 kamau:17:31 amina:15:19
+juma:19:30 wanjiru:18:22 kamau:17:31
+juma:19:30 wanjiru:18:22 kamau:17:31 amina:15:19
+juma:19:30 wanjiru:18:22 kamau:17:31 amina:16:21 baraka:14:16 otieno:14:23
+juma:19:30 wanjiru:18:22 kamau:17:31 amina:16:21 baraka:14:16 otieno:14:23 achieng:13:21
+juma:19:30 wanjiru:18:22 kamau:17:31 amina:16:21 baraka:14:16
+juma:19:30 wanjiru:18:22 kamau:17:31 amina:16:21 baraka:14:16 otieno:14:23 achieng:13:21
+juma:19:30 wanjiru:18:22 kamau:17:31 amina:16:21 baraka:14:16 otieno:14:23 achieng:13:21
+wanjiru:19:22 juma:19:30 kamau:17:31 amina:16:21
+wanjiru:19:22 juma:19:30 kamau:17:31
+wanjiru:20:22 juma:19:30 amina:17:22 kamau:17:31 achieng:16:23
+wanjiru:20:22
+wanjiru:20:22
+wanjiru:20:22 juma:19:30 amina:17:22 kamau:17:31
+wanjiru:20:22
+wanjiru:20:22 juma:19:30 amina:17:22 kamau:17:31 baraka:16:17
+wanjiru:20:22 juma:19:30
+wanjiru:20:22 juma:19:30 amina:18:25 kamau:18:31 baraka:16:17 achieng:16:23
+wanjiru:20:22 amina:19:25 juma:19:30 kamau:19:34 achieng:17:24 baraka:16:17 otieno:15:23
+wanjiru:20:22 amina:19:25 juma:19:30 kamau:19:34 achieng:17:24 baraka:16:17 otieno:15:23
+wanjiru:20:22 amina:19:25 juma:19:30
+wanjiru:21:22 amina:20:25 juma:20:33
+wanjiru:22:25 amina:21:25
+wanjiru:22:25 amina:21:25 juma:20:33
+wanjiru:22:25 amina:21:25 juma:20:33 kamau:19:34 achieng:18:27
+wanjiru:22:25 amina:21:25 juma:20:33 kamau:20:35 baraka:18:20 achieng:18:27
+wanjiru:22:25 amina:21:25 juma:20:33 kamau:20:35 baraka:18:20 achieng:18:27 otieno:18:30
+wanjiru:23:26 amina:21:25 juma:20:33 kamau:20:35 achieng:19:30 baraka:18:20 otieno:18:30
+wanjiru:23:26 amina:21:25 kamau:21:35 achieng:20:31 juma:20:33 baraka:18:20 otieno:18:30
+wanjiru:23:26 amina:21:25 kamau:21:35 achieng:20:31 juma:20:33
+wanjiru:23:26 amina:21:25 juma:21:35 kamau:21:35
+wanjiru:23:26
+wanjiru:23:26 amina:23:28 achieng:22:35 juma:21:35 kamau:21:35 baraka:18:20 otieno:18:30
+wanjiru:23:26 amina:23:28
+wanjiru:23:26 amina:23:28 achieng:22:35 juma:21:35 kamau:21:35 baraka:18:20 otieno:18:30
+wanjiru:23:26 amina:23:28
+wanjiru:23:26 amina:23:28 achieng:22:35 juma:21:35 kamau:21:35
+amina:25:31
+amina:25:31 wanjiru:23:26 achieng:22:35 juma:21:35
+amina:25:31 wanjiru:23:26 achieng:22:35 juma:21:35
+amina:25:31 wanjiru:23:26 achieng:22:35 juma:21:35 kamau:21:35 baraka:19:21 otieno:18:30
+amina:25:31 wanjiru:23:26 achieng:22:35
+amina:25:31 wanjiru:23:26 achieng:22:35
+amina:26:32 wanjiru:23:26 achieng:22:35 juma:21:35 kamau:21:35 baraka:19:21 otieno:18:30
+amina:26:32 wanjiru:25:27 juma:25:44 achieng:24:35 kamau:23:40
+wanjiru:26:28
+wanjiru:26:28 amina:26:32
+amina:27:35 wanjiru:26:28 juma:25:44 achieng:24:35 kamau:23:40
+amina:27:35 wanjiru:26:28
+amina:27:35 wanjiru:26:28 juma:26:47 achieng:24:35 kamau:23:40
