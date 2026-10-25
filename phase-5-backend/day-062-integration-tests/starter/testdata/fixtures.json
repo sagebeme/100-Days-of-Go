@@ -1,0 +1,10 @@
+{
+  "trips": [
+    {"routeId": 111, "departs": "2026-03-02T06:30:00Z", "seats": 14},
+    {"routeId": 125, "departs": "2026-03-02T07:00:00Z", "seats": 2}
+  ],
+  "users": [
+    {"name": "Wanjiku", "phone": "0712345678", "token": "tok-wanjiku"},
+    {"name": "Otieno", "phone": "0722000111", "token": "tok-otieno"}
+  ]
+}
