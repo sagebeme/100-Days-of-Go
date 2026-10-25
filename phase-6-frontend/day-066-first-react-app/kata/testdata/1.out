@@ -1,0 +1,8 @@
+App
+  Header
+  RouteList
+    RouteCard
+      FareBadge
+  Footer
+depth 4
+leaves 3
