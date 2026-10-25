@@ -2,7 +2,7 @@
 
 Days 65 to 76 are TypeScript and React. Each day still ends with a Go kata.
 
-Install the tools once (Node 22 or later):
+Install the tools once (Node 24):
 
 ```bash
 cd phase-6-frontend && npm ci
