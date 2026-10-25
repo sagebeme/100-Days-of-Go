@@ -143,7 +143,7 @@ Ends with: a design doc and a hardened service
 | 79 | Background Jobs | queues, retries, idempotent workers | Done |
 | 80 | gRPC | protobuf, service contracts, streaming | Done |
 | 81 | Observability | metrics, traces, structured logs, health checks | Done |
-| 82 | Threat Modelling | STRIDE on your own API | Planned |
+| 82 | Threat Modelling | STRIDE on your own API | Done |
 | 83 | Secrets Management | rotating keys, vaults, least privilege | Planned |
 | 84 | Capstone: Hardened Service | a design doc, then the changes it calls for | Planned |
 

@@ -1,0 +1,6 @@
+db 1
+worker 2
+vault SAFE
+api 1
+mpesa 0
+db 1

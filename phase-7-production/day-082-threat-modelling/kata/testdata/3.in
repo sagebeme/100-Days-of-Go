@@ -1,0 +1,21 @@
+6 8 6
+mpesa internet
+app internet
+api dmz
+worker internal
+db internal
+vault internal
+app api
+api worker
+worker api
+worker db
+mpesa db
+db db
+api worker
+vault api
+db
+worker
+vault
+api
+mpesa
+db

@@ -1,0 +1,13 @@
+5 4 3
+app internet
+api dmz
+seats internal
+postgres internal
+backups internal
+app api
+api seats
+seats postgres
+backups postgres
+postgres
+app
+backups
