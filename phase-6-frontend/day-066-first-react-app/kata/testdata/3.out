@@ -1,0 +1,6 @@
+App
+  RouteList
+    RouteCard
+      FareBadge
+depth 4
+leaves 1
