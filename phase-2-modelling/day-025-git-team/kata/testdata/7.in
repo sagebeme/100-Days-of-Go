@@ -1,0 +1,4 @@
+v10.20.30
+2
+fix(): empty scope is invalid
+fix(ok): valid fix

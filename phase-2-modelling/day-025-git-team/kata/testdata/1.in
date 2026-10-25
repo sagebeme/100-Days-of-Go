@@ -1,0 +1,6 @@
+v1.4.2
+4
+fix(ledger): stop negative balances
+docs: explain .env.example
+feat: add CSV export
+chore: bump pgx
