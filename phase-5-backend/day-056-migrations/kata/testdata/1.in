@@ -1,0 +1,8 @@
+4 3
+create_trips
+create_routes
+create_bookings
+add_fare
+create_routes create_trips
+create_trips create_bookings
+create_routes add_fare
