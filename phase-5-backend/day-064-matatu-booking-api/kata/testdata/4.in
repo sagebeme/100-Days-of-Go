@@ -1,0 +1,6 @@
+5
+BOOK a t 1
+CANCEL a
+BOOK b t 1
+CANCEL a
+BOOK c t 1
