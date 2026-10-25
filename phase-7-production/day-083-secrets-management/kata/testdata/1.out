@@ -1,0 +1,5 @@
+level=INFO msg=login user=wanjiku
+db_password=[REDACTED] host=10.0.3.7
+GET /trips Authorization: Bearer [REDACTED]
+daraja=sk_live_abc123 fallback [REDACTED] KEY= token=
+redacted 3
