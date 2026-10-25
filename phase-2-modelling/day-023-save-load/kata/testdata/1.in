@@ -1,0 +1,6 @@
+[
+  {"till": "522533", "amount_ksh": 450, "phone": "0712345678"},
+  {"till": "174379", "amount_ksh": 1200},
+  {"till": "522533", "amount_ksh": 300, "reversed": false},
+  {"till": "174379", "amount_ksh": 5000, "reversed": true}
+]
