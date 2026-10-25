@@ -141,7 +141,7 @@ Ends with: a design doc and a hardened service
 | 77 | System Design Basics | load, latency, bottlenecks, drawing the system | Done |
 | 78 | Caching | Redis, cache-aside, invalidation | Done |
 | 79 | Background Jobs | queues, retries, idempotent workers | Done |
-| 80 | gRPC | protobuf, service contracts, streaming | Planned |
+| 80 | gRPC | protobuf, service contracts, streaming | Done |
 | 81 | Observability | metrics, traces, structured logs, health checks | Planned |
 | 82 | Threat Modelling | STRIDE on your own API | Planned |
 | 83 | Secrets Management | rotating keys, vaults, least privilege | Planned |
