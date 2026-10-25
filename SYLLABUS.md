@@ -158,7 +158,7 @@ Ends with: sixteen projects of your own
 | 86 | Kiswahili Wordle | a terminal game with a word list | Done |
 | 87 | Chat Server | WebSockets and rooms | Done |
 | 88 | Invoice PDF | generating documents | Done |
-| 89 | Static Site Generator | Markdown to HTML | Planned |
+| 89 | Static Site Generator | Markdown to HTML | Done |
 | 90 | Rate-Limited Proxy | reverse proxies and limits | Planned |
 | 91 | Matatu Route Finder | shortest paths on a real map | Planned |
 | 92 | Log Analyser | streaming big files | Planned |

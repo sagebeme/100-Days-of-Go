@@ -1,0 +1,4 @@
+body { max-width: 40rem; margin: 2rem auto; padding: 0 1rem; font-family: system-ui, sans-serif; line-height: 1.6; }
+time { color: #666; font-size: 0.9rem; }
+table { border-collapse: collapse; }
+td, th { border: 1px solid #ccc; padding: 0.25rem 0.5rem; }
