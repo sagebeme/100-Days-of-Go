@@ -1,0 +1,78 @@
+# GitHub Actions workflow for the booking API once it lives in its own repository,
+# with go.mod and the Dockerfile at the root. Copy it to .github/workflows/api.yml
+# in that repository. (It is not active here: this course repo has its own CI.)
+name: api
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Least privilege: every job can only read the code unless it asks for more.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      # A throwaway Postgres just for this job. Its password isn't a secret: the
+      # database exists for a few minutes and only this job can reach it.
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: gopher
+          POSTGRES_PASSWORD: gopher
+          POSTGRES_DB: matatu
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U gopher -d matatu"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgres://gopher:gopher@localhost:5432/matatu?sslmode=disable
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Check formatting
+        run: test -z "$(gofmt -l .)"
+      - run: go vet ./...
+      - name: Test, with the race detector and the real database
+        run: go test -race -count=1 ./...
+      - name: Known vulnerabilities
+        run: go run golang.org/x/vuln/cmd/govulncheck@latest ./...
+
+  docker:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the image
+        run: docker build -t twende-api:${{ github.sha }} .
+      - name: Smoke test the image
+        run: |
+          docker run -d --name api -p 8080:8080 twende-api:${{ github.sha }}
+          for i in $(seq 1 20); do
+            curl -fsS http://localhost:8080/healthz && exit 0
+            sleep 1
+          done
+          docker logs api
+          exit 1
+
+  deploy:
+    needs: docker
+    # Only pushes to main deploy. Pull requests stop after the tests and the build.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    # The "production" environment can require a reviewer's approval, and holds
+    # the secret below so other jobs can't read it.
+    environment: production
+    steps:
+      - name: Trigger the Render deploy hook
+        env:
+          DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: curl -fsS -X POST "$DEPLOY_HOOK" > /dev/null

@@ -1,0 +1,11 @@
+# GitHub Actions workflow for the booking API once it lives in its own repository.
+# Your code here. Follow step 8 in the README. You need:
+#
+# - name, and triggers: push to main, and every pull_request
+# - permissions: contents: read
+# - a "test" job on ubuntu-latest with a postgres:16-alpine service (and a health
+#   check on it), DATABASE_URL in env, then: checkout, setup-go with
+#   go-version-file: go.mod, gofmt check, go vet, go test -race, govulncheck
+# - a "docker" job that needs test: build the image, run it, curl /healthz
+# - a "deploy" job that needs docker, runs only for pushes to main, uses the
+#   "production" environment, and calls a deploy hook from secrets.RENDER_DEPLOY_HOOK_URL

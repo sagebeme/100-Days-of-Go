@@ -1,0 +1,8 @@
+6 6
+test lint build docker deploy smoke
+build test
+build lint
+docker build
+smoke docker
+deploy smoke
+deploy docker
