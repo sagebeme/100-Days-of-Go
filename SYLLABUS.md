@@ -101,7 +101,7 @@ Ends with: a deployed matatu-booking API
 | 53 | Validation | rejecting bad input early, limiting body size | Done |
 | 54 | Middleware | logging, recovery, request IDs, slog | Done |
 | 55 | Postgres | database/sql, pgx, connection pools | Done |
-| 56 | Migrations | versioned schema changes, rolling back | Planned |
+| 56 | Migrations | versioned schema changes, rolling back | Done |
 | 57 | Passwords | hashing with bcrypt and argon2, never storing plain text | Done |
 | 58 | Sessions and JWTs | cookies vs tokens, expiry, refresh rotation | Done |
 | 59 | Roles and Permissions | 401 vs 403, authorisation checks in one place | Done |
