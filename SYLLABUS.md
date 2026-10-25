@@ -109,7 +109,7 @@ Ends with: a deployed matatu-booking API
 | 61 | CORS and Security Headers | origins, preflight, CSP, HSTS | Done |
 | 62 | Integration Tests | httptest, a real test database, testing the whole request | Done |
 | 63 | Docker and CI | a small image, GitHub Actions, secrets in CI | Done |
-| 64 | Capstone: Matatu Booking API | seats, bookings and payments, deployed | Planned |
+| 64 | Capstone: Matatu Booking API | seats, bookings and payments, deployed | Done |
 
 ## Phase 6: Front end with TypeScript and React
 
