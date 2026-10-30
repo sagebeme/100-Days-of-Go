@@ -17,6 +17,8 @@ coverage.txt
 # Front-end phases
 node_modules/
 dist/
+test-results/
+playwright-report/
 
 # Editors and OS
 .idea/
