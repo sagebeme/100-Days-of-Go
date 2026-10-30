@@ -55,16 +55,20 @@ go test -run '^$' -bench . -benchtime 3x -count 6 ./phase-8-portfolio/day-098-ma
 ```bash
 cd phase-8-portfolio/day-098-make-it-10x-faster/starter
 go test -run '^$' -bench . -benchtime 3x -cpuprofile cpu.out -memprofile mem.out
-go tool pprof -top cpu.out                        # where the CPU time goes
+go tool pprof -top -cum cpu.out                   # where the CPU time goes, your functions included
+go tool pprof -list 'Summarise$' cpu.out          # the time spent on each line of Summarise
 go tool pprof -top -sample_index=alloc_space mem.out   # who allocates the most
 go tool pprof -http=:8080 cpu.out                 # a flame graph in the browser
+cd -
 ```
+
+Plain `-top` sorts by the time spent inside each function itself, so the top rows are usually Go's own memory allocator. `-cum` counts the functions they call too, which brings `Summarise` and whatever it calls to the top.
 
 4. Fix the biggest cost first, re-run the tests, and measure again. One change at a time, so you know what each change bought you. Stop when the tests pass and the benchmark is 10x faster.
 5. Compare with `benchstat` (install it once with `go install golang.org/x/perf/cmd/benchstat@latest`):
 
 ```bash
-go test -run '^$' -bench . -count 6 ./phase-8-portfolio/day-098-make-it-10x-faster/starter | tee new.txt
+go test -run '^$' -bench . -benchtime 3x -count 6 ./phase-8-portfolio/day-098-make-it-10x-faster/starter | tee new.txt
 benchstat old.txt new.txt
 ```
 
