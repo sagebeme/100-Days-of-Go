@@ -1,0 +1,9 @@
+/bookings 313 18 231
+/healthz 292 17 223
+/metrics 290 17 220
+/payments/callback 294 13 233
+/readyz 244 20 243
+/trips 293 14 219
+/trips/{id} 274 16 239
+ALL 2000 115 229
+worst minute 7 with 4 errors
