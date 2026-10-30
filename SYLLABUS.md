@@ -169,4 +169,4 @@ Ends with: sixteen projects of your own
 | 97 | Fix an Open-Source Issue | reading someone else's code | Done |
 | 98 | Make It 10x Faster | profiling with pprof | Done |
 | 99 | Mock Interview | a timed HackerRank test and a system design question | Done |
-| 100 | Capstone: Your Portfolio | ship one project people can use, with a write-up | Planned |
+| 100 | Capstone: Your Portfolio | ship one project people can use, with a write-up | Done |
