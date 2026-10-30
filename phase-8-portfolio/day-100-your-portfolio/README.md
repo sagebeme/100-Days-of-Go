@@ -44,8 +44,8 @@ Requirements, in two parts. Part A is the one that gets you hired; do it even if
 **Part A: ship one project**
 
 1. **Choose.** Pick the project you can explain best and that someone can use in under a minute. A deployed web service with a URL beats a library; a library with a clear README beats a CLI nobody can install. Pick the one that matches the job you want: backend roles want the API, the relay or the KV store.
-2. **Move it into its own repository**, with its own `go.mod` (Day 20). Keep the history honest: a fresh repository with a first commit called "Import from 100 Days of Go" is fine.
-3. **Tests and CI.** `go vet`, `go test -race ./...` and `gofmt -l .` in `.github/workflows/ci.yml` (Day 63). The badge goes at the top of the README. Never commit a secret: config comes from env (Day 21).
+2. **Move it into its own repository**, with its own `go.mod` ([Day 20](../../phase-2-modelling/day-020-go-modules/)). Keep the history honest: a fresh repository with a first commit called "Import from 100 Days of Go" is fine.
+3. **Tests and CI.** `go vet`, `go test -race ./...` and `gofmt -l .` in `.github/workflows/ci.yml` ([Day 63](../../phase-5-backend/day-063-docker-and-ci/)). The badge goes at the top of the README. Never commit a secret: config comes from env ([Day 21](../../phase-2-modelling/day-021-config-loader/)).
 4. **Deploy it** to a free tier (Render, Fly.io, Koyeb, or a static host for a CLI's docs), with a health check. Put the live link at the top of the README.
 5. **README**: one line on what it is and who it's for; the live link and a screenshot or GIF; how to run it locally in three commands; the design in a short diagram; the trade-offs and what you'd do next. Write it for a stranger who has two minutes.
 6. **Demo**: a 60 to 90 second screen recording that shows it working, linked from the README. Show the result first, then how.
@@ -64,7 +64,7 @@ go test ./phase-8-portfolio/day-100-your-portfolio/starter
 **Stretch goals**
 
 - A GitHub Action that regenerates the site on every push to `projects.json` and publishes it with GitHub Pages.
-- A dark mode for the page with `prefers-color-scheme`, and a check with Day 72's accessibility tools.
+- A dark mode for the page with `prefers-color-scheme`, and a check with [Day 72](../../phase-6-frontend/day-072-accessible-by-default/)'s accessibility tools.
 - An `og:image` and `og:description` per project, so links look good when shared on LinkedIn and WhatsApp.
 - Ship a second project, then a third. Three solid ones beat ten thin ones.
 
@@ -74,7 +74,7 @@ go test ./phase-8-portfolio/day-100-your-portfolio/starter
 - [ ] Two or three featured projects, each with a live link, the code, and one sentence on the problem it solves.
 - [ ] Every link works. Click them all on a phone, on mobile data.
 - [ ] Every repository it links to has a README, a green CI badge and no secrets in its history.
-- [ ] It loads fast on a cheap phone: no 5 MB hero image, no framework you don't need (Day 74).
+- [ ] It loads fast on a cheap phone: no 5 MB hero image, no framework you don't need ([Day 74](../../phase-6-frontend/day-074-fast-on-a-cheap-phone/)).
 - [ ] Contact: an email address and LinkedIn. GitHub is linked from every project.
 - [ ] It has your own domain if you can afford one (a `.co.ke` or `.dev`; check current prices with a registrar), or a tidy `you.github.io`.
 - [ ] No "lorem ipsum", no unfinished sections, no typos. Ask a friend to read it.
@@ -85,25 +85,25 @@ Good lines start with a verb, name the hard part, and give a number when there i
 
 | Project | Line |
 |---|---|
-| Pesa Budget CLI (Day 26) | Built a Go CLI that categorises M-Pesa statements and reports monthly spending, configured by env and flags. |
-| Price Watcher (Day 48) | Wrote a concurrent price scraper in Go with worker pools and per-site rate limits. |
-| Matatu Booking API (Day 64) | Built a REST API in Go and Postgres for seat booking with payments, auth and integration tests, deployed with Docker. |
-| Booking App (Day 76) | Built a React and TypeScript front end for a Go booking API with live seat updates over WebSockets. |
-| Hardened Service (Day 84) | Wrote a threat model for a Go service and shipped the fixes: metrics, structured logs, secret rotation. |
-| Link Shortener (Day 85) | Built and deployed a URL shortener in Go from a one-paragraph brief, with tests and CI. |
-| Kiswahili Wordle (Day 86) | Built a terminal word game in Go with a Kiswahili word list and table-driven tests for every game rule. |
-| Chat Server (Day 87) | Built a WebSocket chat server in Go with rooms and safe concurrent broadcasting. |
-| Invoice PDF (Day 88) | Generated PDF invoices in Go from structured data, with tests for totals and VAT. |
-| Static Site Generator (Day 89) | Wrote a Markdown-to-HTML static site generator in Go. |
-| Rate-Limited Proxy (Day 90) | Built a reverse proxy in Go with per-client token-bucket rate limiting. |
-| Matatu Route Finder (Day 91) | Implemented shortest-path routing over a Nairobi stage graph in Go. |
-| Log Analyser (Day 92) | Wrote a streaming log analyser in Go that handles files larger than memory. |
-| Key-Value Store (Day 93) | Built a crash-safe key-value store in Go with a checksummed write-ahead log, recovery and compaction. |
-| Job Board (Day 94) | Built a job board in Go with ranked search, pagination, html/template pages and CSRF protection. |
-| Webhook Relay (Day 95) | Built an HMAC-verified webhook relay in Go with replay protection, deduplication and exponential backoff. |
-| Discord Bot (Day 96) | Built a Discord bot in Go on the interactions endpoint with Ed25519 request verification, no SDK. |
-| Open-source fix (Day 97) | Fixed a money-parsing bug in an open-source Go package, with a regression test and a PR that followed the project's contributing guide. |
-| Make It 10x Faster (Day 98) | Made a Go statement parser 400x faster using pprof and benchmarks, guarded by allocation tests in CI. |
+| Pesa Budget CLI ([Day 26](../../phase-2-modelling/day-026-pesa-budget/)) | Built a Go CLI that categorises M-Pesa statements and reports monthly spending, configured by env and flags. |
+| Price Watcher ([Day 48](../../phase-4-concurrency/day-048-price-watcher/)) | Wrote a concurrent price scraper in Go with worker pools and per-site rate limits. |
+| Matatu Booking API ([Day 64](../../phase-5-backend/day-064-matatu-booking-api/)) | Built a REST API in Go and Postgres for seat booking with payments, auth and integration tests, deployed with Docker. |
+| Booking App ([Day 76](../../phase-6-frontend/day-076-booking-app/)) | Built a React and TypeScript front end for a Go booking API with live seat updates over WebSockets. |
+| Hardened Service ([Day 84](../../phase-7-production/day-084-hardened-service/)) | Wrote a threat model for a Go service and shipped the fixes: metrics, structured logs, secret rotation. |
+| Link Shortener ([Day 85](../day-085-link-shortener/)) | Built and deployed a URL shortener in Go from a one-paragraph brief, with tests and CI. |
+| Kiswahili Wordle ([Day 86](../day-086-kiswahili-wordle/)) | Built a terminal word game in Go with a Kiswahili word list and table-driven tests for every game rule. |
+| Chat Server ([Day 87](../day-087-chat-server/)) | Built a WebSocket chat server in Go with rooms and safe concurrent broadcasting. |
+| Invoice PDF ([Day 88](../day-088-invoice-pdf/)) | Generated PDF invoices in Go from structured data, with tests for totals and VAT. |
+| Static Site Generator ([Day 89](../day-089-static-site-generator/)) | Wrote a Markdown-to-HTML static site generator in Go. |
+| Rate-Limited Proxy ([Day 90](../day-090-rate-limited-proxy/)) | Built a reverse proxy in Go with per-client token-bucket rate limiting. |
+| Matatu Route Finder ([Day 91](../day-091-matatu-route-finder/)) | Implemented shortest-path routing over a Nairobi stage graph in Go. |
+| Log Analyser ([Day 92](../day-092-log-analyser/)) | Wrote a streaming log analyser in Go that handles files larger than memory. |
+| Key-Value Store ([Day 93](../day-093-key-value-store/)) | Built a crash-safe key-value store in Go with a checksummed write-ahead log, recovery and compaction. |
+| Job Board ([Day 94](../day-094-job-board/)) | Built a job board in Go with ranked search, pagination, html/template pages and CSRF protection. |
+| Webhook Relay ([Day 95](../day-095-webhook-relay/)) | Built an HMAC-verified webhook relay in Go with replay protection, deduplication and exponential backoff. |
+| Discord Bot ([Day 96](../day-096-discord-bot/)) | Built a Discord bot in Go on the interactions endpoint with Ed25519 request verification, no SDK. |
+| Open-source fix ([Day 97](../day-097-fix-an-open-source-issue/)) | Fixed a money-parsing bug in an open-source Go package, with a regression test and a PR that followed the project's contributing guide. |
+| Make It 10x Faster ([Day 98](../day-098-make-it-10x-faster/)) | Made a Go statement parser 400x faster using pprof and benchmarks, guarded by allocation tests in CI. |
 
 ## The kata: Polish Plan
 
@@ -134,4 +134,4 @@ This day is the portfolio, so the last checklist is the whole course's:
 - **Tests and CI**: this tool gets its own CI badge too. Green badges everywhere are the quickest signal that you finish things.
 - **What you'd do next**: a short "Now" section on the site: what you're learning, the next project you'll ship, the open-source issue you're working on. Update it every month.
 
-You started with a single M-Pesa SMS on Day 1. A hundred days later you can design, build, test, secure, speed up and ship a service, and explain how you did it. Ship it, and go and get the job.
+You started with a single M-Pesa SMS on [Day 1](../../phase-1-terminal/day-001-mpesa-sms/). A hundred days later you can design, build, test, secure, speed up and ship a service, and explain how you did it. Ship it, and go and get the job.

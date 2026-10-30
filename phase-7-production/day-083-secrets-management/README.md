@@ -2,7 +2,7 @@
 
 ## The brief
 
-Twende has a handful of secrets that could ruin the SACCO in an afternoon: the Postgres password, the M-Pesa Daraja keys and the key that signs passengers' login tokens (Day 58). Right now they're env variables that every service can read, nobody has ever changed them, and last week one turned up in a log line. Today you load secrets from proper sources, make them impossible to log by accident, give each service only the secrets it needs, and rotate the signing key without logging out every passenger.
+Twende has a handful of secrets that could ruin the SACCO in an afternoon: the Postgres password, the M-Pesa Daraja keys and the key that signs passengers' login tokens ([Day 58](../../phase-5-backend/day-058-sessions-and-jwts/)). Right now they're env variables that every service can read, nobody has ever changed them, and last week one turned up in a log line. Today you load secrets from proper sources, make them impossible to log by accident, give each service only the secrets it needs, and rotate the signing key without logging out every passenger.
 
 ```
 Chain{Env{Prefix: "TWENDE_"}, Files{FS: os.DirFS("/run/secrets")}}.Get(ctx, "DB_PASSWORD")

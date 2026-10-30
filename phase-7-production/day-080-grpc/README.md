@@ -50,9 +50,9 @@ Two rules keep old clients working when the contract grows: never reuse or chang
 | the caller's deadline passed | `DeadlineExceeded` | 504 |
 | the caller cancelled | `Canceled` | 499 (nginx) |
 
-**Deadlines.** A gRPC call carries its context's deadline to the server, which sees it in its own `ctx`. A client without a deadline can wait for ever on a stuck server, so `Client` wraps every call in `context.WithTimeout` (Day 44).
+**Deadlines.** A gRPC call carries its context's deadline to the server, which sees it in its own `ctx`. A client without a deadline can wait for ever on a stuck server, so `Client` wraps every call in `context.WithTimeout` ([Day 44](../../phase-4-concurrency/day-044-context-cancel/)).
 
-**Server streaming.** The handler gets a `stream` and calls `stream.Send` as often as it likes; it ends the stream by returning. `stream.Context()` is cancelled when the client goes away. Today's server keeps a buffered channel per watcher, and `BookSeat` sends to each one with a `select` and `default`, so one slow watcher can't block a booking (Day 43).
+**Server streaming.** The handler gets a `stream` and calls `stream.Send` as often as it likes; it ends the stream by returning. `stream.Context()` is cancelled when the client goes away. Today's server keeps a buffered channel per watcher, and `BookSeat` sends to each one with a `select` and `default`, so one slow watcher can't block a booking ([Day 43](../../phase-4-concurrency/day-043-select-timeouts/)).
 
 **bufconn.** `google.golang.org/grpc/test/bufconn` is a listener that lives in memory. The tests run a real gRPC server and client over it, with no ports and no network.
 

@@ -16,7 +16,7 @@ SortScorers(table)               →  Baraka 15, Wekesa 15, Achieng 12, Otieno 1
 
 ### Merge sort: O(n log n) always
 
-Split the slice in half, sort each half (recursively), then merge the two sorted halves, which you wrote on Day 29. There are about log₂ n levels of halving and each level merges n values in total, so the cost is O(n log n) whatever the input. It is **stable**: equal values keep their order, as long as the merge takes from the left on a tie (`<=`). It needs O(n) extra memory for the merged slices.
+Split the slice in half, sort each half (recursively), then merge the two sorted halves, which you wrote on [Day 29](../day-029-two-pointers/). There are about log₂ n levels of halving and each level merges n values in total, so the cost is O(n log n) whatever the input. It is **stable**: equal values keep their order, as long as the merge takes from the left on a tie (`<=`). It needs O(n) extra memory for the merged slices.
 
 ### Quicksort: O(n log n) on average, in place
 
@@ -50,7 +50,7 @@ slices.SortFunc(table, func(x, y Scorer) int {
 })
 ```
 
-`sort.Slice(s, func(i, j int) bool {...})` from Day 10 works too. Neither is stable. Use `slices.SortStableFunc` when the original order of ties matters.
+`sort.Slice(s, func(i, j int) bool {...})` from [Day 10](../../phase-1-terminal/day-010-exam-grader/) works too. Neither is stable. Use `slices.SortStableFunc` when the original order of ties matters.
 
 ### Spotting it in a problem
 

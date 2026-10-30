@@ -44,7 +44,7 @@ This is the first time helpers live in a normal `.go` file instead of a `_test.g
 
 ## Why it matters at work
 
-Unit tests prove the pieces work; integration tests prove they're connected. Most production bugs in a web API live in the connections: a route registered without its middleware, a header set after `WriteHeader`, a JSON field name that doesn't match the front end, a database constraint the in-memory fake didn't have. Reviewers ask "is there a test that goes through the router?" for any new endpoint, and CI runs the Postgres version on every push (Day 63). Two habits keep these tests trusted: every test cleans up after itself, so the order tests run in never matters, and the tests that need a database skip clearly when there isn't one instead of failing on a laptop without Docker.
+Unit tests prove the pieces work; integration tests prove they're connected. Most production bugs in a web API live in the connections: a route registered without its middleware, a header set after `WriteHeader`, a JSON field name that doesn't match the front end, a database constraint the in-memory fake didn't have. Reviewers ask "is there a test that goes through the router?" for any new endpoint, and CI runs the Postgres version on every push ([Day 63](../day-063-docker-and-ci/)). Two habits keep these tests trusted: every test cleans up after itself, so the order tests run in never matters, and the tests that need a database skip clearly when there isn't one instead of failing on a laptop without Docker.
 
 ## Steps
 

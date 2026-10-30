@@ -2,7 +2,7 @@
 
 ## The brief
 
-Guess a number between 1 and 1 000 000, and you're told "higher" or "lower" each time. Twenty guesses always do it, because each one halves what's left. You played this on Day 12. Today it becomes a tool: find a price in a sorted list of a million M-Pesa transactions in 20 steps, count how many transactions fall in a price band, and, the part that wins timed tests, binary search over possible **answers** instead of over data.
+Guess a number between 1 and 1 000 000, and you're told "higher" or "lower" each time. Twenty guesses always do it, because each one halves what's left. You played this on [Day 12](../../phase-1-terminal/day-012-guessing-game/). Today it becomes a tool: find a price in a sorted list of a million M-Pesa transactions in 20 steps, count how many transactions fall in a price band, and, the part that wins timed tests, binary search over possible **answers** instead of over data.
 
 ```
 Search([]int{50, 100, 200, 500, 1000}, 200)               →  2

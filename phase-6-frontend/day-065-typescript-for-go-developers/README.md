@@ -59,7 +59,7 @@ TypeScript types disappear when the code runs. That's why `parseRoute` exists: d
 npm test -- day-065
 ```
 
-There's no page to look at today. From Day 66, `npm run dev` shows your work in the browser.
+There's no page to look at today. From [Day 66](../day-066-first-react-app/), `npm run dev` shows your work in the browser.
 
 ## The kata: Payment Events
 

@@ -37,7 +37,7 @@ The Status codes section of [reference/http.md](../../reference/http.md) has eve
 
 The Go pieces:
 
-- **Sentinel errors and `errors.Is`** (Day 17): the store returns `ErrNotFound` or `ErrSeatTaken`, possibly wrapped with `%w`, and `errors.Is` finds them through the wrapping.
+- **Sentinel errors and `errors.Is`** ([Day 17](../../phase-2-modelling/day-017-failed-transactions/)): the store returns `ErrNotFound` or `ErrSeatTaken`, possibly wrapped with `%w`, and `errors.Is` finds them through the wrapping.
 - **A custom error type and `errors.As`**: `*InvalidError` carries a message that's safe to show. `errors.As(err, &invalid)` finds it and fills `invalid` in.
 - **One function that maps errors to codes**, `StatusFor`, so every handler answers the same way. Handlers call one `fail(w, r, err)` and stop thinking about codes.
 
@@ -63,7 +63,7 @@ Status codes are the contract between your API and every client, proxy and monit
 2. In `starter/api.go`, finish `InvalidError.Error` (return the message), then write `StatusFor` from its doc comment. Check `*InvalidError` with `errors.As` and the two sentinels with `errors.Is`.
 3. Write `writeJSON` and `writeError`: set `Content-Type: application/json`, then `w.WriteHeader(status)`, then encode. The error body is a struct with one field, `Error string` tagged `json:"error"`.
 4. Write `fail(w, r, err)`: get the status and message from `StatusFor`. For a 500, `log.Printf` the method, the path and the real error. Then `writeError` with the safe message.
-5. Write a `pathID` helper as on Day 50: `400` when `{id}` isn't a whole number above 0.
+5. Write a `pathID` helper as on [Day 50](../day-050-http-methods/): `400` when `{id}` isn't a whole number above 0.
 6. `GET /trips/{id}` and `GET /bookings/{id}`: read from the store, `fail` on an error, `200` otherwise.
 7. `POST /trips/{id}/bookings`, in this order:
    - Ask `a.limiter.Allow` with the client's IP: `net.SplitHostPort(r.RemoteAddr)` gives host and port. If it says no, set `Retry-After` to the wait in whole seconds, rounded up with `math.Ceil` and at least 1, and answer `429`. The limiter goes first so a flood of bad requests is still limited.

@@ -86,7 +86,7 @@ go run ./tools/kata 99
 | Failures and scaling | 2 | said what happens when the database, M-Pesa or SMS is down, and how December is handled |
 | Trade-offs | 1 | named at least two choices and what you gave up for each |
 
-16 or more is a strong answer for a junior role. Under 10: re-read Day 77 and try the question again in a week.
+16 or more is a strong answer for a junior role. Under 10: re-read [Day 77](../../phase-7-production/day-077-system-design-basics/) and try the question again in a week.
 
 **Stretch goals**
 

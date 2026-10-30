@@ -22,7 +22,7 @@ Money is kept in **cents** as an `int`. Floats can't hold `0.1` exactly, so `0.1
 
 ## What you'll use
 
-You've had table tests since Day 1. Today you meet the rest of the `testing` toolkit:
+You've had table tests since [Day 1](../../phase-1-terminal/day-001-mpesa-sms/). Today you meet the rest of the `testing` toolkit:
 
 - **Subtests**: `t.Run(name, func(t *testing.T) { ... })` runs each row as its own test, with its own name and its own pass or fail. A `t.Fatalf` inside a subtest stops only that row.
 - **Running one subtest**: `-run` takes a pattern, with `/` between the test and the subtest. Spaces in names become `_`.
@@ -54,7 +54,7 @@ In code review, "where's the test for that?" is the most common comment there is
 
 1. Read `starter/amount_test.go` from top to bottom before you write any code. Find the helper, the two tables, `t.Run`, the round-trip test and the fuzz test.
 2. Run the tests with `-v`. Every row fails, and each failure names its row.
-3. Write `FormatAmount` first, since it's the smaller one: split the sign off, then `cents/100` and `cents%100`. Day 13's comma code works here. `%02d` pads the cents to two digits. Run just its tests: `-run TestFormatAmount`.
+3. Write `FormatAmount` first, since it's the smaller one: split the sign off, then `cents/100` and `cents%100`. [Day 13](../../phase-1-terminal/day-013-package-it-up/)'s comma code works here. `%02d` pads the cents to two digits. Run just its tests: `-run TestFormatAmount`.
 4. Write `ParseAmount` one subtest at a time. Pick the first failing row, make it pass, run again. A good order: trim and strip the prefix, then split on `.` with `strings.Cut`, then check the whole part (plain digits, or comma groups with `strings.Split`), then the cents.
 5. Wrap every error with the input: `fmt.Errorf("%w: %q", ErrFormat, s)`. The tests use `errors.Is`, so any message with `%w` passes.
 6. When everything passes, run with `-cover`. Then open the HTML report and look for any red lines.

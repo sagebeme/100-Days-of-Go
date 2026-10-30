@@ -49,7 +49,7 @@ Anything slow or flaky that the user doesn't need to wait for goes in a queue: e
 2. Write `Backoff`. Start the ceiling at `base` and double it `attempt - 1` times, stopping once it reaches `max` (so a huge attempt can't overflow). Cap it with `min`. Return `half + time.Duration(rnd()*float64(ceiling-half))`.
 3. Write `Enqueue`. Under the lock: if `q.seen[key]`, return `ErrDuplicate`. Otherwise mark it seen and append a job with `RunAt: q.clock.Now()` and the next `seq`.
 4. Write `RunDue`. Read the time once. Under the lock, split `pending` into due and not due, and keep the not-due ones. Unlock, sort the due ones with `byRunAt`, and run each with the handler. On an error: add one to `Attempts`, save `err.Error()` in `LastErr`, then under the lock either append to `dead` (permanent, or `Attempts >= MaxAttempts`) or set a new `RunAt` and append to `pending`. Return how many ran.
-5. Write `Run`: a `for` loop with a `select` on `ctx.Done()` and `tick` (Day 43).
+5. Write `Run`: a `for` loop with a `select` on `ctx.Done()` and `tick` ([Day 43](../../phase-4-concurrency/day-043-select-timeouts/)).
 6. Write `Pending` (a sorted copy) and `DeadLetters` (a copy). Return copies so callers can't change the queue behind its lock.
 7. Write `Idempotent`: a map of keys that succeeded, behind its own mutex. Don't hold the mutex while the handler runs.
 8. Run the tests from the repo root:

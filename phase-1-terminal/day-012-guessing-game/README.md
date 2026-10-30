@@ -23,7 +23,7 @@ A game that reads the keyboard and picks a random number is hard to test: you ca
 
 ## What you'll use
 
-- `io.Reader` means "anything you can read from" and `io.Writer` means "anything you can write to". `os.Stdin`, a file and `strings.NewReader("...")` are all readers. `os.Stdout` and `*strings.Builder` are writers. Day 16 explains how this works.
+- `io.Reader` means "anything you can read from" and `io.Writer` means "anything you can write to". `os.Stdin`, a file and `strings.NewReader("...")` are all readers. `os.Stdout` and `*strings.Builder` are writers. [Day 16](../../phase-2-modelling/day-016-payment-methods/) explains how this works.
 - `bufio.NewScanner(in)` reads one line at a time. `sc.Scan()` returns `false` when the input runs out, and `sc.Text()` is the line.
 - `fmt.Fprintf(out, ...)` and `fmt.Fprintln(out, ...)` are `Printf` and `Println` that write to `out`.
 - `strconv.Atoi(s)` turns `"42"` into `42`, and returns an error for `"abc"`.

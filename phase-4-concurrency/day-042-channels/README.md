@@ -18,7 +18,7 @@ Total(Parse(Lines(msgs)))  →  1770
 Batch(payments A B C D E, 2)  →  [A B], [C D], [E], then closed
 ```
 
-*Real till messages are longer, like the one you built on Day 1. Today's are cut down to a code and an amount so the day is about channels, not parsing.*
+*Real till messages are longer, like the one you built on [Day 1](../../phase-1-terminal/day-001-mpesa-sms/). Today's are cut down to a code and an amount so the day is about channels, not parsing.*
 
 ## What you'll use
 

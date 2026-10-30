@@ -92,7 +92,7 @@ Stretch goals:
 
 ## The kata: Busiest Minute
 
-Given every request's time in a day, sorted, find the 60-second window with the most requests. Two pointers over a sorted stream, the same idea as Day 30. Instructions are in `kata/README.md`. Judge it with:
+Given every request's time in a day, sorted, find the 60-second window with the most requests. Two pointers over a sorted stream, the same idea as [Day 30](../../phase-3-algorithms/day-030-sliding-window/). Instructions are in `kata/README.md`. Judge it with:
 
 ```bash
 go run ./tools/kata 92

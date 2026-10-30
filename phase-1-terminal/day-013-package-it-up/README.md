@@ -52,9 +52,9 @@ fmt.Printf("%d items\n", "three") // go vet: fmt.Printf format %d has arg "three
 
 ## Steps
 
-1. Read `starter/ksh/ksh.go`. In the same file, write an unexported helper `group(n int) string` that puts commas into a non-negative number. You wrote this logic on Day 11. Import `"strconv"`.
+1. Read `starter/ksh/ksh.go`. In the same file, write an unexported helper `group(n int) string` that puts commas into a non-negative number. You wrote this logic on [Day 11](../day-011-receipt-printer/). Import `"strconv"`.
 2. Finish `Format`: for a negative amount, return `"-Ksh"` plus `group(-amount)`. Otherwise return `"Ksh"` plus `group(amount)`.
-3. Open `starter/basket.go`. Write `Total`: loop over the basket. Look each item up in `prices` with the comma-ok idiom from Day 7 and return an error if it's missing. Return an error if a quantity is below 1. Add up quantity times price.
+3. Open `starter/basket.go`. Write `Total`: loop over the basket. Look each item up in `prices` with the comma-ok idiom from [Day 7](../day-007-sheng-dictionary/) and return an error if it's missing. Return an error if a quantity is below 1. Add up quantity times price.
 4. Write `Summary`: call `Total` and return its error if there is one. Add up the quantities. Use `"item"` when the count is exactly 1 and `"items"` otherwise.
 5. Import the `ksh` package in `basket.go` using its full path:
 

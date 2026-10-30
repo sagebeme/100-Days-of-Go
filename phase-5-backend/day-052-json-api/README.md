@@ -42,7 +42,7 @@ if errors.As(err, &wrongType) {
 }
 ```
 
-The JSON sections of [reference/http.md](../../reference/http.md) cover the helpers and the safe-reading pattern. Day 53 adds the body size limit and checks the values themselves.
+The JSON sections of [reference/http.md](../../reference/http.md) cover the helpers and the safe-reading pattern. [Day 53](../day-053-validation/) adds the body size limit and checks the values themselves.
 
 ## Why it matters at work
 

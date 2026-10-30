@@ -14,14 +14,14 @@ SumBalances([]string{"mpesa", "bank", "sacco"}, balance)
   →  85500                                                 12 500 + 60 000 + 13 000
 ```
 
-`send` and `balance` are passed in as functions, so the tests can stand in for the real gateway and the real banks. You met function values on Day 10 with `sort.Slice`.
+`send` and `balance` are passed in as functions, so the tests can stand in for the real gateway and the real banks. You met function values on [Day 10](../../phase-1-terminal/day-010-exam-grader/) with `sort.Slice`.
 
 ## What you'll use
 
 - **`go f()`** starts `f` in a new goroutine: a function running at the same time as the rest of your program. The `go` statement returns at once; it doesn't wait for `f`.
 - **`sync.WaitGroup`** counts goroutines that haven't finished. `wg.Go(f)` starts `f` in a goroutine and counts it. `wg.Wait()` blocks until every counted goroutine has returned.
 - **The older form** you'll see in most code written before Go 1.25: `wg.Add(1)` before `go`, and `defer wg.Done()` as the first line inside the goroutine.
-- **One slot each.** Two goroutines must never write the same variable at once. Writing to different elements of a slice is fine, so give goroutine `i` the slot `results[i]`. Day 45 covers what happens when goroutines do share a variable.
+- **One slot each.** Two goroutines must never write the same variable at once. Writing to different elements of a slice is fine, so give goroutine `i` the slot `results[i]`. [Day 45](../day-045-mutexes/) covers what happens when goroutines do share a variable.
 
 ```go
 results := make([]string, len(numbers))

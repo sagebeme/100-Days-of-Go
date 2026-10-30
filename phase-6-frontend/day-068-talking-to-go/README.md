@@ -40,7 +40,7 @@ An aborted fetch rejects with an `AbortError`. That's not a failure to show the 
 
 **State as a union.** `loading`, `error` and `done` can't be true together, so model them as `{ kind: "loading" } | { kind: "error"; message } | { kind: "done"; routes }`, not three booleans that can disagree.
 
-**CORS.** The page comes from `http://localhost:5173` and the API from `http://localhost:8080`: different origins. The browser sends the request but hides the response from your JavaScript unless the API answers with `Access-Control-Allow-Origin: http://localhost:5173`. The Go side is the small `cors` function in `api/main.go`. CORS protects the *user's browser*, not your server: `curl` ignores it. Day 61 covers preflights and the rest; see also [http.md](../../reference/http.md).
+**CORS.** The page comes from `http://localhost:5173` and the API from `http://localhost:8080`: different origins. The browser sends the request but hides the response from your JavaScript unless the API answers with `Access-Control-Allow-Origin: http://localhost:5173`. The Go side is the small `cors` function in `api/main.go`. CORS protects the *user's browser*, not your server: `curl` ignores it. [Day 61](../../phase-5-backend/day-061-cors-and-security-headers/) covers preflights and the rest; see also [http.md](../../reference/http.md).
 
 ## Why it matters at work
 

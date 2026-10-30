@@ -73,7 +73,7 @@ go test ./phase-5-backend/day-060-owasp-top-10/starter
 go run golang.org/x/vuln/cmd/govulncheck@latest ./...
 ```
 
-"No vulnerabilities found" is the answer you want. If it reports one, it names the module, the fixed version and the line in your code that reaches it. Upgrade with `go get module@version` and run it again. Day 63 runs it in CI on every push.
+"No vulnerabilities found" is the answer you want. If it reports one, it names the module, the fixed version and the line in your code that reaches it. Upgrade with `go get module@version` and run it again. [Day 63](../day-063-docker-and-ci/) runs it in CI on every push.
 
 ## The kata: Blocked Addresses
 

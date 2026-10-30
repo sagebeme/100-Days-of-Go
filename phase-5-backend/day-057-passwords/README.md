@@ -85,7 +85,7 @@ The tests use tiny argon2id settings so they run fast. To feel the real cost, ti
 
 ## The kata: Account Lockout
 
-Replay a log of login attempts and print the server's answer to each: three wrong passwords in a row lock the account for five minutes. Hashing makes each guess slow; lockout and rate limiting (Day 61) cap how many guesses there are. Instructions are in `kata/README.md`. Judge it with:
+Replay a log of login attempts and print the server's answer to each: three wrong passwords in a row lock the account for five minutes. Hashing makes each guess slow; lockout and rate limiting ([Day 61](../day-061-cors-and-security-headers/)) cap how many guesses there are. Instructions are in `kata/README.md`. Judge it with:
 
 ```bash
 go run ./tools/kata 57

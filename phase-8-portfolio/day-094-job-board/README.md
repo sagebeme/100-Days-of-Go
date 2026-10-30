@@ -58,11 +58,11 @@ go test ./phase-8-portfolio/day-094-job-board/starter
 
 **Stretch goals**
 
-- A `cmd/kazi` main that seeds ten jobs and serves on `PORT` (Day 21's config rules).
+- A `cmd/kazi` main that seeds ten jobs and serves on `PORT` ([Day 21](../../phase-2-modelling/day-021-config-loader/)'s config rules).
 - Search suggestions for the search box, from the kata.
 - Prefix matching (`dev` finds `developer`) worth fewer points than a whole word.
-- Store jobs in Postgres (Day 55) behind an interface, and search with `tsvector`. Keep the in-memory store for tests.
-- Security headers from Day 61, including a `Content-Security-Policy` that allows no inline scripts.
+- Store jobs in Postgres ([Day 55](../../phase-5-backend/day-055-postgres/)) behind an interface, and search with `tsvector`. Keep the in-memory store for tests.
+- Security headers from [Day 61](../../phase-5-backend/day-061-cors-and-security-headers/), including a `Content-Security-Policy` that allows no inline scripts.
 
 ## The kata: Search Suggestions
 
@@ -86,6 +86,6 @@ go run ./tools/kata 94
 ## Make it portfolio-ready
 
 - **README**: a screenshot of the search page on a phone, the API table from the `NewServer` doc comment with one `curl` example per route, and the ranking rule in one sentence.
-- **Demo and deploy**: add the `cmd/kazi` main and a Dockerfile (Day 63), deploy it to a free tier (Render, Fly.io or Koyeb), and put the link at the top of the README. Seed it with fake jobs, never real people's details.
+- **Demo and deploy**: add the `cmd/kazi` main and a Dockerfile ([Day 63](../../phase-5-backend/day-063-docker-and-ci/)), deploy it to a free tier (Render, Fly.io or Koyeb), and put the link at the top of the README. Seed it with fake jobs, never real people's details.
 - **Tests and CI**: `go test -race ./...` and `go vet` in GitHub Actions, with the badge in the README. Add one end-to-end test with `httptest.NewServer` that posts a form and follows the redirect.
 - **What you'd do next**: write down the limits. An in-memory store loses everything on restart, and ranking by scanning every job is O(n) per search. Say what you'd change at 100 000 jobs: an inverted index (word to job IDs), or Postgres full-text search.

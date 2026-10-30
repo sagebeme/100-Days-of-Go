@@ -48,7 +48,7 @@ Max(3, 7)           // 7
 Max("chai", "unga") // "unga"
 ```
 
-When should you reach for generics? When you'd otherwise copy the same function for several types and the body doesn't care which type it is. If the body needs a type switch, you probably want an interface (Day 16) instead.
+When should you reach for generics? When you'd otherwise copy the same function for several types and the body doesn't care which type it is. If the body needs a type switch, you probably want an interface ([Day 16](../day-016-payment-methods/)) instead.
 
 ## Steps
 

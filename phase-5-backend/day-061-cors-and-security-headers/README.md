@@ -52,7 +52,7 @@ p.AddTrustedOrigin("https://twende.example")
 handler := p.Handler(mux)
 ```
 
-**A token bucket per IP** with `golang.org/x/time/rate` (Day 47 built one by hand). `rate.NewLimiter(rate.Every(10*time.Second), 3)` allows 3 at once, then one every 10 seconds. `AllowN(now, 1)` takes the time as an argument, which makes it testable with a fake clock. Keep one limiter per IP in a map behind a mutex, and evict idle ones.
+**A token bucket per IP** with `golang.org/x/time/rate` ([Day 47](../../phase-4-concurrency/day-047-rate-limiting/) built one by hand). `rate.NewLimiter(rate.Every(10*time.Second), 3)` allows 3 at once, then one every 10 seconds. `AllowN(now, 1)` takes the time as an argument, which makes it testable with a fake clock. Keep one limiter per IP in a map behind a mutex, and evict idle ones.
 
 **The client IP** is the host part of `r.RemoteAddr`, split off with `net.SplitHostPort`. Don't trust `X-Forwarded-For`: anyone can send it. Behind a proxy you control (Render and Fly.io both put one in front of your app), read the header that proxy sets, and only that one.
 

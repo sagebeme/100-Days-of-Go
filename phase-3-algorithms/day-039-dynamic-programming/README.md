@@ -2,9 +2,9 @@
 
 ## The brief
 
-Day 35's recursion tried every possibility. That's fine until the same smaller problem comes up again and again. Counting the ways up the 90 steps of a footbridge in Mombasa, one or two at a time, plain recursion asks "how many ways from step 45?" billions of times. Dynamic programming (DP) asks it once and writes the answer down.
+[Day 35](../day-035-recursion/)'s recursion tried every possibility. That's fine until the same smaller problem comes up again and again. Counting the ways up the 90 steps of a footbridge in Mombasa, one or two at a time, plain recursion asks "how many ways from step 45?" billions of times. Dynamic programming (DP) asks it once and writes the answer down.
 
-You'll do it two ways, memoisation and tabulation, on four classics: the stairs, the fewest M-Pesa agent notes for an amount (where Day 38's greedy breaks), the longest common subsequence of two names, and the best paying load for a boda boda.
+You'll do it two ways, memoisation and tabulation, on four classics: the stairs, the fewest M-Pesa agent notes for an amount (where [Day 38](../day-038-greedy/)'s greedy breaks), the longest common subsequence of two names, and the best paying load for a boda boda.
 
 ```
 ClimbWays(4)                                              →  5      1111, 112, 121, 211, 22

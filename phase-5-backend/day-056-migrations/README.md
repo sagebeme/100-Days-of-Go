@@ -57,7 +57,7 @@ Every team that runs a database has a migration tool, often [goose](https://gith
 
 ## Steps
 
-You need the Postgres container from Day 55 only for the last two steps.
+You need the Postgres container from [Day 55](../day-055-postgres/) only for the last two steps.
 
 1. Open `starter/migrations.go`. Write a helper that splits a file name such as `0002_create_trips.up.sql` into its version, name and direction, or returns an error naming the file. Use `strings.HasSuffix` and `strings.TrimSuffix` for the direction, `strings.Cut` on the first `_`, and check every character of the version and the name yourself.
 2. Write `Parse`. `fs.ReadDir(fsys, dir)` lists the folder. Skip directories and anything not ending in `.sql`. For each file, split the name, read it with `fs.ReadFile(fsys, path.Join(dir, name))`, and collect it in a `map[int]*Migration`. Check each rule from the doc comment as you go and at the end. Then copy the map into a slice and sort it by version.

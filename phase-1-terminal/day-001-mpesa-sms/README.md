@@ -12,7 +12,7 @@ BuildConfirmation("RKD4XY7Z1P", 1250, "Kip")
   →  "RKD4XY7Z1P Confirmed. Ksh1250.00 sent to Kip."
 ```
 
-*This is a simplified version of the real text. Real messages also put commas in big amounts and add the phone number, the date and time, and your new balance. You'll format numbers properly on Day 11.*
+*This is a simplified version of the real text. Real messages also put commas in big amounts and add the phone number, the date and time, and your new balance. You'll format numbers properly on [Day 11](../day-011-receipt-printer/).*
 
 ## What you'll use
 

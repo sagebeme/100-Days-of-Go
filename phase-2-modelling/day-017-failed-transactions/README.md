@@ -23,11 +23,11 @@ Explain(&TxError{Code: "QFT3", Err: &LimitError{Limit: 10000, Sent: 3000, Amount
 
 ## What you'll use
 
-Since Day 5 you've returned errors made with `errors.New` and `fmt.Errorf`. Today errors get structure. All of this is new:
+Since [Day 5](../../phase-1-terminal/day-005-fuel-split/) you've returned errors made with `errors.New` and `fmt.Errorf`. Today errors get structure. All of this is new:
 
 - **Sentinel errors**: package-level values like `var ErrInsufficientFunds = errors.New("insufficient funds")`. Callers check for them by identity, not by reading the text.
 - **Wrapping with `%w`**: `fmt.Errorf("%w: balance Ksh%d", ErrInsufficientFunds, bal)` makes a new error with more detail that still *contains* the sentinel. (`%v` would copy the text and lose the link.)
-- **Custom error types**: any type with an `Error() string` method is an `error`. That's Day 16's interfaces at work. A struct can carry fields like `Limit` and `Sent` that a caller can read.
+- **Custom error types**: any type with an `Error() string` method is an `error`. That's [Day 16](../day-016-payment-methods/)'s interfaces at work. A struct can carry fields like `Limit` and `Sent` that a caller can read.
 - **`Unwrap() error`**: a custom type that wraps another error returns it from `Unwrap`, so the standard library can look inside.
 - **`errors.Is(err, target)`**: unwraps `err` layer by layer and reports whether any layer is `target`.
 - **`errors.As(err, &target)`**: unwraps until it finds a layer of `target`'s type, stores it in `target`, and returns `true`.

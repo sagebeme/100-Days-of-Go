@@ -71,7 +71,7 @@ Stretch goals:
 - Message history: the last 20 messages of a room are sent to anyone who joins.
 - Pings every 30 seconds with `conn.Ping`, to find dead connections that never closed.
 - A cap on rooms and members, and a per-client rate limit on messages.
-- Run two instances behind a load balancer with Redis pub/sub between them (Day 78 has Redis).
+- Run two instances behind a load balancer with Redis pub/sub between them ([Day 78](../../phase-7-production/day-078-caching/) has Redis).
 
 ## The kata: Delivery Count
 
@@ -97,5 +97,5 @@ go run ./tools/kata 87
 - Put it in its own repo with a README covering the message format, the hub design (a small diagram of handlers, channels and the hub) and the slow-client policy.
 - Record a demo GIF of two browser tabs on `cmd/chat`'s test page chatting in the same room.
 - Deploy it on a host that supports WebSockets (Fly.io and Render do) and link the live page. Use `wss://` behind HTTPS.
-- Write "What I'd do next": history, presence, Redis pub/sub for more than one instance, a React client (Day 71).
+- Write "What I'd do next": history, presence, Redis pub/sub for more than one instance, a React client ([Day 71](../../phase-6-frontend/day-071-live-seats/)).
 - Add GitHub Actions running `go test -race` and show the CI badge.

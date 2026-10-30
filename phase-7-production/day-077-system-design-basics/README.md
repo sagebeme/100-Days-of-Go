@@ -25,8 +25,8 @@ Summarise(latencies)                    →  {P50: 20ms, P95: 20ms, P99: 2s}
                                         └────reads──▶ read replica
 ```
 
-- **Load balancer.** One address for the phones; it spreads requests across the API servers and stops sending to one that fails its health check (Day 81).
-- **Stateless services.** An API server keeps nothing between requests: no sessions in memory, no files on its own disk. Sessions live in a signed token or a shared store (Day 58). Then any server can answer any request, and you add capacity by adding servers.
+- **Load balancer.** One address for the phones; it spreads requests across the API servers and stops sending to one that fails its health check ([Day 81](../day-081-observability/)).
+- **Stateless services.** An API server keeps nothing between requests: no sessions in memory, no files on its own disk. Sessions live in a signed token or a shared store ([Day 58](../../phase-5-backend/day-058-sessions-and-jwts/)). Then any server can answer any request, and you add capacity by adding servers.
 - **Read replicas.** Most traffic is "list trips" and "show seats", which only read. A replica is a copy of the database that follows the primary. Reads go there; writes (bookings) go to the primary. A replica can lag behind by a moment, so "show my booking" straight after booking should read the primary.
 - **The bottleneck.** You can add API servers easily. The single primary database is the box you can't just copy, so estimate it first.
 
