@@ -14,6 +14,31 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    # Real Postgres and Redis, so the Day 55, 56, 62 and 78 tests that skip without them run here.
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 2s
+          --health-timeout 5s
+          --health-retries 15
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 2s
+          --health-timeout 5s
+          --health-retries 15
+    env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/postgres?sslmode=disable
+      REDIS_ADDR: localhost:6379
     steps:
       - uses: actions/checkout@v4
 
@@ -52,6 +77,12 @@ jobs:
 
       - name: Solutions and katas pass, starters fail
         run: go run ./tools/verify -starters
+
+      - name: Day 73 end-to-end test in a real browser
+        working-directory: phase-6-frontend
+        run: |
+          npx playwright install --with-deps chromium
+          npx playwright test --config day-073-front-end-tests/playwright.config.ts
 
       - name: Site day list is up to date
         run: go run ./tools/sitedata -check
