@@ -1,0 +1,7 @@
+6
+trips_loads PASS
+login_errors FAIL
+trips_loads FAIL
+seats_pick PASS
+login_errors FAIL
+trips_loads PASS
