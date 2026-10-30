@@ -161,7 +161,7 @@ Ends with: sixteen projects of your own
 | 89 | Static Site Generator | Markdown to HTML | Done |
 | 90 | Rate-Limited Proxy | reverse proxies and limits | Done |
 | 91 | Matatu Route Finder | shortest paths on a real map | Done |
-| 92 | Log Analyser | streaming big files | Planned |
+| 92 | Log Analyser | streaming big files | Done |
 | 93 | Key-Value Store | a tiny database with a write-ahead log | Done |
 | 94 | Job Board | full stack with search | Done |
 | 95 | Webhook Relay | signatures, retries, replay protection | Done |
