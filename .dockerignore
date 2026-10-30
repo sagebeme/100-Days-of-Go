@@ -1,0 +1,10 @@
+# Keep the Docker build context small and free of secrets. The Dockerfiles in
+# Days 63 and 64 build from the repo root and only need go.mod, go.sum and Go code.
+.git
+.env
+.env.*
+!.env.example
+.verify
+.unlazy
+**/node_modules
+site
