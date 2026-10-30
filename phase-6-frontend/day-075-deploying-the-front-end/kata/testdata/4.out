@@ -1,0 +1,4 @@
+delete about.html
+delete index.html
+keep assets/x-1.js
+unchanged 0
