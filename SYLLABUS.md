@@ -127,7 +127,7 @@ Ends with: a full-stack booking app
 | 71 | Live Seats | WebSockets from Go to React | Done |
 | 72 | Accessible by Default | semantics, keyboard use, contrast, axe | Done |
 | 73 | Front-End Tests | Vitest, Testing Library, Playwright | Done |
-| 74 | Fast on a Cheap Phone | bundle size, caching, slow 3G | Planned |
+| 74 | Fast on a Cheap Phone | bundle size, caching, slow 3G | Done |
 | 75 | Deploying the Front End | static hosting, env variables at build time | Planned |
 | 76 | Capstone: Booking App | the Phase 5 API with a React front end, end to end | Planned |
 

@@ -1,0 +1,12 @@
+6 5
+main 40
+react 130
+TripBoard 12
+SeatMap 90
+leaflet 140
+oldChart 60
+main react static
+main TripBoard static
+TripBoard SeatMap lazy
+SeatMap leaflet static
+SeatMap react static

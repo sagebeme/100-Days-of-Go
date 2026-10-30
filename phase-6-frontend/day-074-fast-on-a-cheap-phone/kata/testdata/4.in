@@ -1,0 +1,7 @@
+3 3
+main 10
+x 20
+y 30
+main x lazy
+main x static
+x y lazy
