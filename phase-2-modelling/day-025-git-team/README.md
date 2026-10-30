@@ -48,7 +48,7 @@ Optional footers, like BREAKING CHANGE: what breaks and how to update.
 
 - `feat` adds a feature, `fix` fixes a bug, and `docs`, `test`, `refactor`, `perf`, `chore`, `ci`, `build`, `style` and `revert` cover the rest.
 - The scope says which part of the code changed: `feat(ledger): ...`.
-- `!` or a `BREAKING CHANGE:` footer warns that the change breaks callers. On Day 20 that meant a major version; today's kata turns commits into the next version.
+- `!` or a `BREAKING CHANGE:` footer warns that the change breaks callers. On [Day 20](../day-020-go-modules/) that meant a major version; today's kata turns commits into the next version.
 - Keep the header to 72 characters, so it isn't cut off in `git log --oneline` and on GitHub. Write the description as a command (`add CSV export`, not `added` or `adds`) with no full stop.
 
 ### Pull requests and code review

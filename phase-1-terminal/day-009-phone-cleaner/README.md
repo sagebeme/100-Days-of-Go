@@ -22,7 +22,7 @@ A wrong number here sends someone's money to a stranger. So the rule is strict: 
 - Comparing bytes with character literals: `c >= '0' && c <= '9'` is true for a digit.
 - A `switch` with no value, where each `case` is a condition.
 - `strings.TrimSpace` to drop spaces at both ends, and `strings.HasPrefix(s, "254")`.
-- `errors.New` and `fmt.Errorf` from Day 5. `%q` prints a value in quotes, which makes errors easy to read.
+- `errors.New` and `fmt.Errorf` from [Day 5](../day-005-fuel-split/). `%q` prints a value in quotes, which makes errors easy to read.
 
 ```go
 s := "07a1"

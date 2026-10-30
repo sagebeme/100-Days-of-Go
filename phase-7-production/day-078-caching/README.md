@@ -2,7 +2,7 @@
 
 ## The brief
 
-Every passenger who opens Twende sees the trip list, and every trip card asks Postgres for the same row: route, departure time, seats free. At 7 am that's thousands of identical queries a second, and the database is the box from Day 77 you can't simply copy. Today you put Redis in front of it with the **cache-aside** pattern: look in Redis first, go to the database only on a miss, and keep a copy for next time.
+Every passenger who opens Twende sees the trip list, and every trip card asks Postgres for the same row: route, departure time, seats free. At 7 am that's thousands of identical queries a second, and the database is the box from [Day 77](../day-077-system-design-basics/) you can't simply copy. Today you put Redis in front of it with the **cache-aside** pattern: look in Redis first, go to the database only on a miss, and keep a copy for next time.
 
 ```
 Get("46K-0730")   Redis miss  →  Postgres  →  SET trip:46K-0730 {...} EX 30   →  {SeatsFree: 9}
@@ -22,7 +22,7 @@ Redis is down     →  Postgres, a warning in the log, the passenger notices not
 - **TTL (time to live).** Every cached value gets an expiry. It's your safety net: if an invalidation is ever missed, the stale value still goes away.
 - **Invalidate on write.** Write the database first, then **delete** the key. Don't write the new value into the cache: two writers can finish in the opposite order to how they started and leave the older value cached. A delete can't be out of order; the next read loads whatever is true. One gap remains: a reader that loaded the old row just before your write can put it back just after your delete. The TTL limits how long that lasts.
 - **Stampede protection.** When a hot key expires, every request misses at once and they all hit the database together. A `Group` lets the first caller do the load while the rest wait for its answer. It's a small version of `golang.org/x/sync/singleflight`, built with a mutex, a map and a channel that's closed when the load finishes (Days 42 and 45).
-- **Generics (Day 18).** `Group[T any]` works for any result type, so `Group[Trip]` returns a `Trip` with no type assertions.
+- **Generics ([Day 18](../../phase-2-modelling/day-018-typed-inventory/)).** `Group[T any]` works for any result type, so `Group[Trip]` returns a `Trip` with no type assertions.
 
 ```go
 raw, err := rdb.Get(ctx, key).Bytes()

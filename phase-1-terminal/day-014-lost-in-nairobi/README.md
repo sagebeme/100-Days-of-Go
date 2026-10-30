@@ -38,7 +38,7 @@ var exits = map[string]map[string]string{
 }
 ```
 
-`exits["archives"]["kusini"]` is `"hilton"`: walk south from Archives and you reach Hilton. A room is just its name, a string. Day 15 introduces structs, which are a neater way to group a room's description and exits. You don't need one today: two maps that share the same keys do the job.
+`exits["archives"]["kusini"]` is `"hilton"`: walk south from Archives and you reach Hilton. A room is just its name, a string. [Day 15](../../phase-2-modelling/day-015-boda-fleet/) introduces structs, which are a neater way to group a room's description and exits. You don't need one today: two maps that share the same keys do the job.
 
 ## What you'll use
 
@@ -46,7 +46,7 @@ var exits = map[string]map[string]string{
 - `strings.Fields` and `strings.ToLower` to read a command whatever the spacing and case.
 - `sort.Strings` and `strings.Join` to list the exits in a fixed order.
 - A function that takes the current state and an input and returns the new state and the output. That one idea makes a whole game testable without typing a single command.
-- `bufio.Scanner` on `os.Stdin` for the playable version, as on Day 12.
+- `bufio.Scanner` on `os.Stdin` for the playable version, as on [Day 12](../day-012-guessing-game/).
 
 ```go
 next, ok := exits["kimathi"]["kaskazini"] // "", false: there's no road that way

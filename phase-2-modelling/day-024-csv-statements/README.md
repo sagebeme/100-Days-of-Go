@@ -36,7 +36,7 @@ New today: **`encoding/csv`**.
 - **Find columns by name, not position.** Read the header row into a `map[string]int` from name to index. Then a file with the columns in another order, or an extra column, still works.
 - **The byte order mark.** Excel and some exporters put the invisible character `U+FEFF` at the very start of a file. Your first header cell is then `"\ufeffReceipt No."`, and a lookup for `"Receipt No."` fails. Strip it with `strings.TrimPrefix(name, "\ufeff")`.
 - **Times with a zone.** `time.ParseInLocation(layout, s, EAT)` reads a time that has no zone written in it, in the zone you give. `time.FixedZone("EAT", 3*60*60)` is UTC+3. Kenya doesn't use daylight saving, so a fixed zone is correct. Comparing times uses `t.Equal(u)`, not `==`.
-- Money again in **cents**, as on Day 19: `"1,235.50"` becomes `123550`.
+- Money again in **cents**, as on [Day 19](../day-019-table-tests/): `"1,235.50"` becomes `123550`.
 
 ## Steps
 

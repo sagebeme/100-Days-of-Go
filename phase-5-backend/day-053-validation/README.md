@@ -27,7 +27,7 @@ POST /trips/1/bookings  {"seat": 3     →  400  {"error":"body must be valid JS
 - **Three stages, three codes.** Can I read it? (`413` too big, `400` broken JSON.) Does the thing it's about exist? (`404`.) Do the values follow the rules? (`422`, with every problem.) [reference/http.md](../../reference/http.md) has the "400 or 422?" rule.
 - **A slice of field errors that is an `error`.** `type Errors []FieldError` with an `Error()` method can be returned and logged like any error, and encodes as a JSON list.
 - **Runes, not bytes, for length.** `len("Wanjirũ")` is 8 bytes, but it's 7 characters. `utf8.RuneCountInString` counts characters. `unicode.IsLetter` accepts letters from any alphabet, so a name isn't rejected for having a `ũ` in it.
-- **Normalise, then store.** The phone check is your Day 9 `Clean`. Store the clean form, `254712345678`, so the same passenger always looks the same.
+- **Normalise, then store.** The phone check is your [Day 9](../../phase-1-terminal/day-009-phone-cleaner/) `Clean`. Store the clean form, `254712345678`, so the same passenger always looks the same.
 - **A clock you pass in.** `NewAPI(store, now)` takes `now func() time.Time`, so a test can fix the time and "has already left" doesn't depend on when the tests run.
 
 ```go
@@ -45,7 +45,7 @@ unicode.IsLetter('ũ')             // true
 
 ## Why it matters at work
 
-Validation is the cheapest security you'll ever add. OWASP's injection and insecure-design items both start with "don't trust input" (see [reference/owasp-checklist.md](../../reference/owasp-checklist.md)), and a body size limit is the one line that stops a single client from filling your server's memory. Allow-lists, like "letters, spaces, hyphens, apostrophes and full stops", are safer than block-lists, because you can't list everything bad. In review, people check three things: the body is limited before it's read, every field the handler uses has a rule, and the errors tell a front-end developer which field to fix. Validation doesn't replace escaping output or parameterised SQL (Day 55). It's a first wall, not the only one.
+Validation is the cheapest security you'll ever add. OWASP's injection and insecure-design items both start with "don't trust input" (see [reference/owasp-checklist.md](../../reference/owasp-checklist.md)), and a body size limit is the one line that stops a single client from filling your server's memory. Allow-lists, like "letters, spaces, hyphens, apostrophes and full stops", are safer than block-lists, because you can't list everything bad. In review, people check three things: the body is limited before it's read, every field the handler uses has a rule, and the errors tell a front-end developer which field to fix. Validation doesn't replace escaping output or parameterised SQL ([Day 55](../day-055-postgres/)). It's a first wall, not the only one.
 
 ## Steps
 

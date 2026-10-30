@@ -2,7 +2,7 @@
 
 ## The brief
 
-Passengers want to see their bookings, and only theirs. Build the browser half of the token scheme from Day 58. Logging in gives a short-lived **access token**, which the page keeps in memory and sends with every API call, and a long-lived **refresh token**, which the Go server puts in an `HttpOnly` cookie that JavaScript can't touch. When the access token expires, the page quietly gets a new one. When the refresh token dies too, the passenger goes back to the login form with a clear message.
+Passengers want to see their bookings, and only theirs. Build the browser half of the token scheme from [Day 58](../../phase-5-backend/day-058-sessions-and-jwts/). Logging in gives a short-lived **access token**, which the page keeps in memory and sends with every API call, and a long-lived **refresh token**, which the Go server puts in an `HttpOnly` cookie that JavaScript can't touch. When the access token expires, the page quietly gets a new one. When the refresh token dies too, the passenger goes back to the login form with a clear message.
 
 ```
 auth.login("0712345678", "matatu-2026")   →  { phone: "0712345678", name: "Amina" }   (token in memory, cookie set)

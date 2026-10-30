@@ -42,7 +42,7 @@ Draw **trust boundaries** where the level of trust changes: between the internet
 | R | **Repudiation**: "I never did that" | non-repudiation | audit logs with who, what, when |
 | I | **Information disclosure**: data reaching the wrong people | confidentiality | encryption, authorisation, no secrets in logs |
 | D | **Denial of service**: stopping it working | availability | rate limits, timeouts, body size limits |
-| E | **Elevation of privilege**: doing more than allowed | authorisation | deny by default, object-level checks (Day 59) |
+| E | **Elevation of privilege**: doing more than allowed | authorisation | deny by default, object-level checks ([Day 59](../../phase-5-backend/day-059-roles-and-permissions/)) |
 
 **STRIDE per element.** Not every letter fits every box. An external entity can be spoofed and can deny things, but you can't patch its code. A process can suffer all six. A data store can be tampered with, leak or fill up. A flow can be tampered with, read or cut. `PerKind` and `PerFlow` hold that table, and today's code adds one rule: a flow that crosses a boundary without authentication can also be **spoofed**.
 
@@ -52,9 +52,9 @@ Draw **trust boundaries** where the level of trust changes: between the internet
 
 - **M-Pesa → Booking API, Spoofing** (likelihood 4, impact 5, critical). The payment callback is just an HTTPS POST to a URL. Anyone who finds that URL can post "payment received" and ride free. Fix: never trust a callback on its own. Before marking a booking paid, confirm the transaction with M-Pesa's own API, check the amount and phone match the booking, accept each receipt number once, and keep the callback URL unguessable and restricted to the addresses Safaricom publishes.
 - **Booking API, Elevation of privilege** (3, 5, high). A passenger reads someone else's booking by changing the ID. Fix: the object-level check from Day 59, and a test grid of every route against every role.
-- **Passenger app, Repudiation** (3, 3, medium). "I never booked that seat." Fix: an audit log of who booked what and when, with the request ID (Day 81), kept where the API can append but not edit.
-- **Booking API → Seat service, Spoofing and Tampering** (2, 4, medium). The gRPC call (Day 80) has no TLS and no authentication, so anything inside the network can book seats. Fix: mutual TLS between services, or at least a service token.
-- **Booking API, Denial of service** (4, 3, high). A script floods `/bookings`. Fix: rate limiting (Day 47), timeouts and body limits (Day 84).
+- **Passenger app, Repudiation** (3, 3, medium). "I never booked that seat." Fix: an audit log of who booked what and when, with the request ID ([Day 81](../day-081-observability/)), kept where the API can append but not edit.
+- **Booking API → Seat service, Spoofing and Tampering** (2, 4, medium). The gRPC call ([Day 80](../day-080-grpc/)) has no TLS and no authentication, so anything inside the network can book seats. Fix: mutual TLS between services, or at least a service token.
+- **Booking API, Denial of service** (4, 3, high). A script floods `/bookings`. Fix: rate limiting ([Day 47](../../phase-4-concurrency/day-047-rate-limiting/)), timeouts and body limits ([Day 84](../day-084-hardened-service/)).
 - **Redis, Information disclosure** (2, 2, low). Cached trips aren't secret. Note it, and move on.
 
 Every row in [owasp-checklist.md](../../reference/owasp-checklist.md) maps to a STRIDE letter: A01 broken access control is E, A02 cryptographic failures is I, A03 injection is T, A07 authentication failures is S, and A09 logging failures is R. Use the checklist for the fixes once STRIDE has found the problems.
@@ -66,7 +66,7 @@ Threat models are how a design review asks "is this safe?" before the code exist
 ## Steps
 
 1. Open `starter/model.go`. The types, the STRIDE tables and the questions are given. `starter/twende.go` is the Twende model.
-2. Write `Validate`. Use a `map[string]bool` of names seen: a repeat is `ErrDuplicate`, a kind missing from `PerKind` is `ErrBadKind`, and a flow end not in the map is `ErrUnknown`. Wrap with `fmt.Errorf("%w: %q", ErrX, name)` so the message names the culprit (Day 17).
+2. Write `Validate`. Use a `map[string]bool` of names seen: a repeat is `ErrDuplicate`, a kind missing from `PerKind` is `ErrBadKind`, and a flow end not in the map is `ErrUnknown`. Wrap with `fmt.Errorf("%w: %q", ErrX, name)` so the message names the culprit ([Day 17](../../phase-2-modelling/day-017-failed-transactions/)).
 3. Write `zone` and `CrossesBoundary`.
 4. Write `STRIDE`. Validate first. Then one `Threat` per category in `PerKind[c.Kind]` for each component, then one per category for each flow, with `Spoofing` first when the flow crosses a boundary and isn't authenticated. A flow's target is `From + " -> " + To`. Set `Boundary` on flow threats.
 5. Write `Score` and `Level`.

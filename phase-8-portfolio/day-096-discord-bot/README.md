@@ -29,7 +29,7 @@ POST /interactions  bad X-Signature-Ed25519                   →  401
 - Config from env, never committed, from [Day 21: Config Loader](../../phase-2-modelling/day-021-config-loader/) and [env-and-config.md](../../reference/env-and-config.md).
 - Handlers and `httptest`, from [Day 49](../../phase-5-backend/day-049-hello-server/) and [Day 62: Integration Tests](../../phase-5-backend/day-062-integration-tests/).
 - Verifying a signed request before reading it, from [Day 95: Webhook Relay](../day-095-webhook-relay/).
-- New today: `crypto/ed25519`. HMAC (Day 95) needs a shared secret. Ed25519 is public-key: Discord signs with a private key it keeps, and you verify with the public key from the developer portal. Nobody who reads your config can forge a request.
+- New today: `crypto/ed25519`. HMAC ([Day 95](../day-095-webhook-relay/)) needs a shared secret. Ed25519 is public-key: Discord signs with a private key it keeps, and you verify with the public key from the developer portal. Nobody who reads your config can forge a request.
 
 ```go
 msg := append([]byte(timestamp), body...)
@@ -110,6 +110,6 @@ go run ./tools/kata 96
 ## Make it portfolio-ready
 
 - **README**: a screenshot or short GIF of the bot in a test server, the three commands, and a diagram: Discord → `/interactions` → `VerifyRequest` → `ParseCommand` → `Bot.Handle`.
-- **Deploy**: run `katabot` on a free tier (it's one small binary in a Docker image, Day 63), set `DISCORD_PUBLIC_KEY` in the host's settings, and add a `/healthz` check. Put the invite link in the README so people can try it.
+- **Deploy**: run `katabot` on a free tier (it's one small binary in a Docker image, [Day 63](../../phase-5-backend/day-063-docker-and-ci/)), set `DISCORD_PUBLIC_KEY` in the host's settings, and add a `/healthz` check. Put the invite link in the README so people can try it.
 - **Tests and CI**: `go test -race ./...` in GitHub Actions and the badge. Note in the README that every command rule is tested without Discord, and how.
-- **What you'd do next**: progress is lost on restart, so name the store you'd use. Mention rate limiting `/submit` (Day 47) so nobody brute-forces answers, and the deferred response for anything slower than 3 seconds.
+- **What you'd do next**: progress is lost on restart, so name the store you'd use. Mention rate limiting `/submit` ([Day 47](../../phase-4-concurrency/day-047-rate-limiting/)) so nobody brute-forces answers, and the deferred response for anything slower than 3 seconds.

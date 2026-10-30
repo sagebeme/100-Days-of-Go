@@ -24,11 +24,11 @@ GET /assets/nope.js     →  404
 
 **Runtime config.** Build-time values mean one build per environment. To promote the *same* tested build from staging to production, the page can fetch `/config.json` at startup, and the server fills it from its own environment. `main.tsx` does this: build-time config first, then `mergeRuntime` with whatever `/config.json` says.
 
-**Fail fast, all at once.** Like Day 21's Go config, check everything at startup and report every problem together, so one failed deploy shows all of them. A page silently calling `http://localhost:8080` from production is far worse than a page that refuses to start.
+**Fail fast, all at once.** Like [Day 21](../../phase-2-modelling/day-021-config-loader/)'s Go config, check everything at startup and report every problem together, so one failed deploy shows all of them. A page silently calling `http://localhost:8080` from production is far worse than a page that refuses to start.
 
 **Static hosting.** Netlify, Vercel, Cloudflare Pages, GitHub Pages, or S3 behind a CDN all do the same three things, which `api/main.go` does in a few lines of Go:
 
-1. serve files, with long caching for hashed `assets/` and `no-cache` for `index.html` (Day 74)
+1. serve files, with long caching for hashed `assets/` and `no-cache` for `index.html` ([Day 74](../day-074-fast-on-a-cheap-phone/))
 2. **SPA fallback**: a path with no file, like `/bookings/K7Q2`, gets `index.html`, so a refresh or a shared link doesn't 404. On Netlify that's a `_redirects` line, `/* /index.html 200`.
 3. HTTPS, which the hosts do for you. Behind your own Go server, that's a reverse proxy or `autocert`.
 

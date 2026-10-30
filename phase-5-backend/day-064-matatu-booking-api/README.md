@@ -38,7 +38,7 @@ All of Phase 5, plus one new idea: a `Payer` interface. A real one would start a
 
 ## Why it matters at work
 
-This is the shape of most backend work: a small API whose correctness lives in the rules (one seat, one booking; your ticket, your eyes only), and whose quality lives in everything around them (validation, status codes, auth, headers, logs, health checks, config, shutdown). A reviewer reading a service like this checks each of the things the requirements list, and so does an incident. The tests here run the whole API over real HTTP with an in-memory store, which is how you'll test services at work, with a Postgres version in CI (Day 62).
+This is the shape of most backend work: a small API whose correctness lives in the rules (one seat, one booking; your ticket, your eyes only), and whose quality lives in everything around them (validation, status codes, auth, headers, logs, health checks, config, shutdown). A reviewer reading a service like this checks each of the things the requirements list, and so does an incident. The tests here run the whole API over real HTTP with an in-memory store, which is how you'll test services at work, with a Postgres version in CI ([Day 62](../day-062-integration-tests/)).
 
 ## Steps
 
@@ -52,7 +52,7 @@ The starter gives you the types (`models.go`), the `Store` interface and `MemSto
 **Endpoints**
 
 3. `GET /healthz` is always 200. `GET /readyz` is 200 when `Store.Ping` works, 503 while draining.
-4. `POST /auth/register` takes `phone`, `name` (1 to 50 characters) and `password` (15 to 64 characters, per NIST SP 800-63B as on Day 57), and hashes the password with bcrypt at `cfg.BcryptCost`. It answers 201 with the user (never the hash), 409 for a phone that has an account, 422 for bad values and 400 for broken JSON or unknown fields. Phones in `cfg.AdminPhones` get the admin role; everyone else is a passenger.
+4. `POST /auth/register` takes `phone`, `name` (1 to 50 characters) and `password` (15 to 64 characters, per NIST SP 800-63B as on [Day 57](../day-057-passwords/)), and hashes the password with bcrypt at `cfg.BcryptCost`. It answers 201 with the user (never the hash), 409 for a phone that has an account, 422 for bad values and 400 for broken JSON or unknown fields. Phones in `cfg.AdminPhones` get the admin role; everyone else is a passenger.
 5. `POST /auth/login` answers 200 with an HS256 JWT (`sub` is the phone, plus `iss`, `aud`, `iat`, `exp` after `cfg.AccessTTL`), `tokenType` `Bearer` and `expiresIn` in seconds. A wrong password and an unknown phone get the same 401.
 6. `GET /routes`, `GET /trips` (optionally `?route=<id>`, 400 if that isn't a number) and `GET /trips/{id}` are public. A trip shows `fare`, `seatsLeft` and `takenSeats`.
 7. `POST /routes` and `POST /trips` are admin only. A trip needs an existing route (422), a departure after `cfg.Now()` (422) and 1 to 33 seats (422).
@@ -65,7 +65,7 @@ The starter gives you the types (`models.go`), the `Store` interface and `MemSto
 
 12. Roles live in one permission table, checked in one middleware: no user is 401 with `WWW-Authenticate: Bearer`, the wrong role is 403. Conductors read bookings and do nothing else. Read the role from the store on each request, not from the token, so a role change applies at once.
 13. A token that's present but bad (wrong signature, `alg: none`, expired) is 401 with `WWW-Authenticate: Bearer error="invalid_token"`, on any route.
-14. Every response has the four security headers from Day 61. CORS allows only `cfg.AllowedOrigins`, with credentials, `Vary: Origin`, and preflights.
+14. Every response has the four security headers from [Day 61](../day-061-cors-and-security-headers/). CORS allows only `cfg.AllowedOrigins`, with credentials, `Vary: Origin`, and preflights.
 15. A token bucket per client IP (`cfg.RatePerSecond`, `cfg.RateBurst`, time from `cfg.Now`) answers 429 with `Retry-After`. With `cfg.ClientIPHeader` set, the IP comes from that header (the last entry, for `X-Forwarded-For`) instead of `RemoteAddr`. The 429 still carries the CORS and security headers.
 16. Bodies are limited to 1 MB (413). Panics become a 500 with a generic message. Each request writes one log line with method, path, status and duration, and never a token or password.
 17. `cmd/api` seeds the routes, sets server timeouts, and shuts down gracefully on SIGINT or SIGTERM: `SetDraining`, then `Shutdown` within `cfg.ShutdownTimeout`.
@@ -82,9 +82,9 @@ JWT_SECRET="$(openssl rand -base64 32)" ADMIN_PHONES=0700000001 \
 
 ## Deploy it
 
-The store is in memory, so every restart or redeploy starts again from the seeded routes. That's fine for a demo. For real use, write a `PGStore` behind the same `Store` interface (Day 55's queries, Day 56's migrations, Day 62's test pattern) and set `DATABASE_URL`.
+The store is in memory, so every restart or redeploy starts again from the seeded routes. That's fine for a demo. For real use, write a `PGStore` behind the same `Store` interface ([Day 55](../day-055-postgres/)'s queries, [Day 56](../day-056-migrations/)'s migrations, Day 62's test pattern) and set `DATABASE_URL`.
 
-First, give the API a repository of its own: copy the solution (or your starter) into a new repo with its own `go.mod`, put the `Dockerfile` at the root with its build path changed to `./cmd/api`, and add Day 63's `ci.yml` as `.github/workflows/api.yml`. Make a secret with `openssl rand -base64 32`, and keep it out of git.
+First, give the API a repository of its own: copy the solution (or your starter) into a new repo with its own `go.mod`, put the `Dockerfile` at the root with its build path changed to `./cmd/api`, and add [Day 63](../day-063-docker-and-ci/)'s `ci.yml` as `.github/workflows/api.yml`. Make a secret with `openssl rand -base64 32`, and keep it out of git.
 
 ### Render
 
@@ -142,5 +142,5 @@ go run ./tools/kata 64
 - **`a body over 1 MB: 400, want 413`**: check for `*http.MaxBytesError` with `errors.As` before the generic JSON error. The given `decode` does it; use it.
 - **`GET /me/bookings` returns `null`**: a nil slice encodes as `null`. Start from `[]Booking{}`.
 - **On Render or Fly, everyone hits the rate limit at once**: they all share the proxy's IP. Set `CLIENT_IP_HEADER`. Never read that header when the app isn't behind a proxy that sets it, because then the client chooses its own IP.
-- **Stretch goals:** a `PGStore`; refresh tokens with rotation from Day 58; an `Idempotency-Key` on `POST /bookings/{id}/pay`, so a retry over a bad connection can't charge twice; evicting idle IPs from the limiter (Day 61's `Evict`); booking cancellation.
+- **Stretch goals:** a `PGStore`; refresh tokens with rotation from [Day 58](../day-058-sessions-and-jwts/); an `Idempotency-Key` on `POST /bookings/{id}/pay`, so a retry over a bad connection can't charge twice; evicting idle IPs from the limiter (Day 61's `Evict`); booking cancellation.
 - **Still stuck?** Open `solution/`, read the file for the part you're on once, close it, then write your own version from memory.

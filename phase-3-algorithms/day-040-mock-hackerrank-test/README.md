@@ -72,12 +72,12 @@ go run ./tools/kata 40
 
 These hints name the technique. In a real test, nobody would tell you, so try each problem for at least ten minutes first.
 
-- **Problem 1:** the numbers 1 to n+1 add up to a formula (Day 27). Subtract what you have. Sorting is O(n log n) and not needed.
-- **Problem 2:** two passes. Count every byte first (Day 28: an array of 256 counts works as a map for bytes), then find the first count of 1.
+- **Problem 1:** the numbers 1 to n+1 add up to a formula ([Day 27](../day-027-how-fast-is-fast/)). Subtract what you have. Sorting is O(n log n) and not needed.
+- **Problem 2:** two passes. Count every byte first ([Day 28](../day-028-duplicate-receipts/): an array of 256 counts works as a map for bytes), then find the first count of 1.
 - **Problem 3:** one pass. Keep the cheapest price seen so far. Each day, the best you could do selling today is today's price minus that. A nested loop is O(n²) and fails the million-day test.
-- **Problem 4:** sort by start (Day 31), clone first so the input doesn't change. Then the next booking either touches the last merged one (`Start <= End`) or starts a new one.
-- **Problem 5:** each unvisited `#` starts a new shamba. Flood fill from it (Day 37) and mark everything you reach. Use an explicit stack or a queue, not recursion: the snake test goes 500 000 cells deep.
-- **Problem 6:** the O(n²) DP is the one in textbooks, and too slow. Keep `tails`, where `tails[k]` is the smallest last value of any rising run of length k+1. It stays sorted, so binary search (Day 32: `sort.SearchInts`) finds where each value goes. Equal values replace, they don't extend.
+- **Problem 4:** sort by start ([Day 31](../day-031-sorting-showdown/)), clone first so the input doesn't change. Then the next booking either touches the last merged one (`Start <= End`) or starts a new one.
+- **Problem 5:** each unvisited `#` starts a new shamba. Flood fill from it ([Day 37](../day-037-graphs/)) and mark everything you reach. Use an explicit stack or a queue, not recursion: the snake test goes 500 000 cells deep.
+- **Problem 6:** the O(n²) DP is the one in textbooks, and too slow. Keep `tails`, where `tails[k]` is the smallest last value of any rising run of length k+1. It stays sorted, so binary search ([Day 32](../day-032-binary-search/): `sort.SearchInts`) finds where each value goes. Equal values replace, they don't extend.
 - **Problem 7, wrong answer on a test with a winding road:** you only moved right and down. Traffic can make going back up faster.
 - **Problem 7, too slow:** check that you skip stale heap entries, and that you mark cells as numbers `r*C + c` in a slice, not as keys in a map.
 - **Still stuck when the timer goes?** That's information, not failure: note which days to revisit. Then open `solution/mock.go` and `kata/solution/main.go`, read each answer once, close them, and write your own version from memory.

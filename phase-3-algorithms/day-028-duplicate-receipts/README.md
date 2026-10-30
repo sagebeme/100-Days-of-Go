@@ -19,7 +19,7 @@ TwoSum([]int{300, 700, 150, 850}, 1000)                            →  0, 1, tr
 
 ### Maps as sets and counters
 
-You met maps on Day 7. A set is a map whose values you ignore. `struct{}` takes no memory, so `map[string]struct{}` is the usual Go set:
+You met maps on [Day 7](../../phase-1-terminal/day-007-sheng-dictionary/). A set is a map whose values you ignore. `struct{}` takes no memory, so `map[string]struct{}` is the usual Go set:
 
 ```go
 seen := map[string]struct{}{}
@@ -82,7 +82,7 @@ go test ./phase-3-algorithms/day-028-duplicate-receipts/starter
 
 ## The kata: Derby Draws
 
-A string of Gor Mahia and AFC Leopards goals: count every stretch where the score is level. It looks like a counting-substrings problem, which is O(n²). A running score and a map make it O(n): the same prefix-sum idea from Day 27, with a map instead of an array. Instructions are in `kata/README.md`. Judge it with:
+A string of Gor Mahia and AFC Leopards goals: count every stretch where the score is level. It looks like a counting-substrings problem, which is O(n²). A running score and a map make it O(n): the same prefix-sum idea from [Day 27](../day-027-how-fast-is-fast/), with a map instead of an array. Instructions are in `kata/README.md`. Judge it with:
 
 ```bash
 go run ./tools/kata 28

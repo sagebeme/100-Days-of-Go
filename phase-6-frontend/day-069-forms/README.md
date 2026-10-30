@@ -33,7 +33,7 @@ Inputs always hold strings, even `type="number"`. Convert when you send: `Number
 
 **Validation on both sides.** The browser checks for speed: the passenger sees a mistake without a round trip. The server checks for safety: anyone can send any JSON with `curl`, so the browser's checks protect nothing. Keep the rules and messages identical, here by writing `validate.ts` to mirror `Validate` in `api/main.go`. `noValidate` on the `<form>` turns off the browser's built-in bubbles so your messages are the only ones.
 
-**Showing errors.** `422 Unprocessable Content` with `{"errors": {"field": "message"}}` means "I understood you, but these fields are wrong". Put each message in an element with an `id`, and point its input at it with `aria-describedby`; add `aria-invalid="true"`. Screen readers then read the error with the field. Day 72 goes further.
+**Showing errors.** `422 Unprocessable Content` with `{"errors": {"field": "message"}}` means "I understood you, but these fields are wrong". Put each message in an element with an `id`, and point its input at it with `aria-describedby`; add `aria-invalid="true"`. Screen readers then read the error with the field. [Day 72](../day-072-accessible-by-default/) goes further.
 
 **A preflight.** A `POST` with `Content-Type: application/json` isn't a "simple" request, so before sending it the browser asks with `OPTIONS`. The `cors` function in `api/main.go` answers with `Access-Control-Allow-Methods` and `Access-Control-Allow-Headers`. You can see both requests in the Network tab.
 

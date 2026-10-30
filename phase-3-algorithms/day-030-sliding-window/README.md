@@ -26,7 +26,7 @@ best = max(best, sum)
 
 ### A window that grows and shrinks
 
-Two pointers moving the same way (Day 29). `right` moves forward every step and adds a value. While the window breaks the rule, `left` moves forward and removes one. Each index enters once and leaves once, so the inner `for` loop costs O(n) in total, not O(n) per step.
+Two pointers moving the same way ([Day 29](../day-029-two-pointers/)). `right` moves forward every step and adds a value. While the window breaks the rule, `left` moves forward and removes one. Each index enters once and leaves once, so the inner `for` loop costs O(n) in total, not O(n) per step.
 
 ```go
 for right := range a {

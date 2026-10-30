@@ -18,7 +18,7 @@ NextWarmer([]int{22, 24, 21, 20, 25})    →  [1 3 2 1 0]
 
 ### A generic stack
 
-A slice with `append` to push and a re-slice to pop. Each is O(1). The type parameter from Day 18 makes one stack for every element type:
+A slice with `append` to push and a re-slice to pop. Each is O(1). The type parameter from [Day 18](../../phase-2-modelling/day-018-typed-inventory/) makes one stack for every element type:
 
 ```go
 type Stack[T any] struct{ items []T }
@@ -26,7 +26,7 @@ type Stack[T any] struct{ items []T }
 func (s *Stack[T]) Push(v T) { s.items = append(s.items, v) }
 ```
 
-The methods have pointer receivers (Day 15) because they change the stack. `Pop` on an empty stack returns `T`'s zero value and `false`: `var zero T` gives you one for any `T`.
+The methods have pointer receivers ([Day 15](../../phase-2-modelling/day-015-boda-fleet/)) because they change the stack. `Pop` on an empty stack returns `T`'s zero value and `false`: `var zero T` gives you one for any `T`.
 
 ### Brackets
 
@@ -46,7 +46,7 @@ For "next warmer day", keep a stack of days still waiting, coldest on top. When 
 - "**undo**", "back button", "the most recent".
 - "**next greater** / next smaller element", "days until", "stock span", "largest rectangle in a histogram": a monotonic stack.
 - "longest valid substring of brackets": a stack of indexes (the kata).
-- Recursion (Day 35) runs on a stack too. If recursion gets too deep, an explicit stack replaces it.
+- Recursion ([Day 35](../day-035-recursion/)) runs on a stack too. If recursion gets too deep, an explicit stack replaces it.
 
 ### Brute force vs optimal
 

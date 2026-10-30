@@ -67,7 +67,7 @@ docker inspect --format '{{.Config.User}}' twende-api          # nonroot:nonroot
 
    In your own repo, add a `.dockerignore` (with `.git`, `node_modules` and `.env`) so the build doesn't send everything to Docker, and so a local `.env` never ends up in an image.
 
-8. Write `starter/ci.yml` from its outline. It's for the booking API once it has its own repository (Day 64), where it goes in `.github/workflows/api.yml`. Check it parses: `python3 -c "import yaml; yaml.safe_load(open('phase-5-backend/day-063-docker-and-ci/starter/ci.yml'))"`. Then compare with `solution/ci.yml`.
+8. Write `starter/ci.yml` from its outline. It's for the booking API once it has its own repository ([Day 64](../day-064-matatu-booking-api/)), where it goes in `.github/workflows/api.yml`. Check it parses: `python3 -c "import yaml; yaml.safe_load(open('phase-5-backend/day-063-docker-and-ci/starter/ci.yml'))"`. Then compare with `solution/ci.yml`.
 
 ### Secrets in CI
 

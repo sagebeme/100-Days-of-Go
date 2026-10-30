@@ -60,7 +60,7 @@ if p.Seats != nil {
 
 ## Why it matters at work
 
-Every phone network drops requests, and every mobile app and HTTP client library retries. If `POST /bookings` isn't protected, retries turn into double bookings and double M-Pesa charges, and the support line finds out before you do. In code review, people check that each handler's method matches what it does: no `GET` that changes data, `PUT` that really replaces, `DELETE` that's safe to repeat, and an idempotency key on any `POST` that moves money. Load balancers, proxies and Day 79's job workers retry idempotent requests on their own, so a handler that lies about its method breaks in ways that are hard to trace.
+Every phone network drops requests, and every mobile app and HTTP client library retries. If `POST /bookings` isn't protected, retries turn into double bookings and double M-Pesa charges, and the support line finds out before you do. In code review, people check that each handler's method matches what it does: no `GET` that changes data, `PUT` that really replaces, `DELETE` that's safe to repeat, and an idempotency key on any `POST` that moves money. Load balancers, proxies and [Day 79](../../phase-7-production/day-079-background-jobs/)'s job workers retry idempotent requests on their own, so a handler that lies about its method breaks in ways that are hard to trace.
 
 ## Steps
 

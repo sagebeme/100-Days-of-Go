@@ -54,7 +54,7 @@ _, err = jwt.ParseWithClaims(s, &claims, func(*jwt.Token) (any, error) { return 
 
 **Refresh tokens with rotation.** The refresh token is a random string, not a JWT, stored on the server, so it *can* be revoked. Each use returns a new one and marks the old one used. All tokens from one login form a **family**. If a used token comes back, either the app retried or a thief has a copy; you can't tell which, so revoke the family and make the passenger log in again. Store the SHA-256 of each token, not the token: a leaked table is then useless. A fast hash is fine here because the token is 26 random characters, not a guessable password.
 
-**`errors.Join`, `os.LookupEnv` and `t.Setenv`** for config, as on Day 21. The secret comes from `JWT_SECRET` and has no default. See [env-and-config.md](../../reference/env-and-config.md).
+**`errors.Join`, `os.LookupEnv` and `t.Setenv`** for config, as on [Day 21](../../phase-2-modelling/day-021-config-loader/). The secret comes from `JWT_SECRET` and has no default. See [env-and-config.md](../../reference/env-and-config.md).
 
 ### Cookies or tokens?
 
@@ -63,7 +63,7 @@ _, err = jwt.ParseWithClaims(s, &claims, func(*jwt.Token) (any, error) { return 
 | Best for | a website on your own domain | phone apps, other services calling your API |
 | Logout | instant: delete the row | the access token works until `exp`; revoke the refresh family |
 | Stolen by XSS | not with `HttpOnly` | yes, if the browser app keeps it in `localStorage` |
-| CSRF | yes: use `SameSite` and `http.CrossOriginProtection` (Day 61) | no, if sent in the `Authorization` header |
+| CSRF | yes: use `SameSite` and `http.CrossOriginProtection` ([Day 61](../day-061-cors-and-security-headers/)) | no, if sent in the `Authorization` header |
 | Server lookup per request | yes | no, until the refresh |
 
 ## Why it matters at work

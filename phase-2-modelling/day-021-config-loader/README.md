@@ -46,10 +46,10 @@ cfg, err := Load(FromMap(map[string]string{"PORT": "9000"})) // a test
 - **Functions that return functions.** `FromMap` and `Layered` build a `LookupFunc` and return it. The function they return can use their parameters later. Go calls that a closure.
 - **Parsing with good errors**: `strconv.Atoi` for whole numbers, `time.ParseDuration` for `5s` or `1m30s`, `strconv.ParseBool` for `true`, `false`, `1`, `0`. Every error names the variable and quotes the bad value.
 - **`errors.Join(errs...)`** joins many errors into one, with a newline between them. It returns `nil` if there are none, so `return cfg, errors.Join(errs...)` works on the happy path too.
-- **`io.Reader`**: an interface (Day 16) for anything you can read bytes from: a file, a network connection, or `strings.NewReader("...")` in a test. `bufio.NewScanner` takes any `io.Reader`.
+- **`io.Reader`**: an interface ([Day 16](../day-016-payment-methods/)) for anything you can read bytes from: a file, a network connection, or `strings.NewReader("...")` in a test. `bufio.NewScanner` takes any `io.Reader`.
 - **`url.Parse` and `(*url.URL).Redacted()`** from `net/url`: `Redacted` returns the URL with the password replaced by `xxxxx`.
 - **`String() string`**: any type with this method satisfies `fmt.Stringer`, and `fmt.Println(cfg)` calls it. That's where you hide the secrets, so nobody can print them by accident.
-- **`os.Args`**: the words typed after the command. `os.Args[1]` is the first one. Day 22 does this properly with the `flag` package.
+- **`os.Args`**: the words typed after the command. `os.Args[1]` is the first one. [Day 22](../day-022-cli-flags/) does this properly with the `flag` package.
 
 ## Why it matters at work
 

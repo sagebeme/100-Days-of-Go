@@ -34,7 +34,7 @@ Why is it safe to skip? If `a[i] + a[j]` is too small, then `a[i]` plus anything
 
 A read pointer `r` visits every element. A write pointer `w` marks where the next kept value goes. That's how `Dedup` works in place with no second slice. Merging uses one pointer per input, always taking the smaller front value.
 
-Today's `Dedup` returns `sorted[:w]`. The result shares memory with the input (Day 6), which is the point: no extra space.
+Today's `Dedup` returns `sorted[:w]`. The result shares memory with the input ([Day 6](../../phase-1-terminal/day-006-chama-ledger/)), which is the point: no extra space.
 
 ### Spotting it in a problem
 
@@ -52,7 +52,7 @@ Today's `Dedup` returns `sorted[:w]`. The result shares memory with the input (D
 | remove duplicates | new slice plus a set: O(n) time, O(n) space | read and write pointers: O(n) time, O(1) space |
 | almost a palindrome (kata) | try every deletion: O(n²) | one walk, two checks: O(n) |
 
-Day 28's map solves Two Sum on unsorted data in O(n) but uses O(n) memory. If the data is already sorted, two pointers need none. If it isn't, sorting costs O(n log n). Knowing both, and saying why you chose one, is what interviewers listen for. See the patterns table in [reference/big-o.md](../../reference/big-o.md#patterns-and-their-complexity).
+[Day 28](../day-028-duplicate-receipts/)'s map solves Two Sum on unsorted data in O(n) but uses O(n) memory. If the data is already sorted, two pointers need none. If it isn't, sorting costs O(n log n). Knowing both, and saying why you chose one, is what interviewers listen for. See the patterns table in [reference/big-o.md](../../reference/big-o.md#patterns-and-their-complexity).
 
 ## Steps
 

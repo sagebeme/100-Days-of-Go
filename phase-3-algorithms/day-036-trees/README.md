@@ -32,7 +32,7 @@ type Node struct {
 }
 ```
 
-A tree is a node plus two smaller trees, which is why recursion (Day 35) fits it so well. `nil` is the empty tree and the base case of nearly every tree function:
+A tree is a node plus two smaller trees, which is why recursion ([Day 35](../day-035-recursion/)) fits it so well. `nil` is the empty tree and the base case of nearly every tree function:
 
 ```go
 func Height(n *Node) int {
@@ -52,11 +52,11 @@ func Height(n *Node) int {
 | in-order | left, node, right | a BST's keys in sorted order |
 | pre-order | node, left, right | a copy of the shape: the kata reads one |
 | post-order | left, right, node | children before parents: heights, sizes, deleting |
-| level order | one level at a time, top down | breadth-first search, with a queue (Day 34) |
+| level order | one level at a time, top down | breadth-first search, with a queue ([Day 34](../day-034-queues/)) |
 
 ### How fast is a BST?
 
-Search, insert and delete each walk one path: O(height). A balanced tree has height about log₂ n. But insert sorted keys and every new key goes right, so the tree is a line of height n and every operation is O(n). One test inserts 2000 sorted keys and checks the height is 2000. Real libraries use self-balancing trees (red-black, AVL) to avoid this. Go's standard library has no tree; a sorted slice with binary search (Day 32) or a map usually does the job.
+Search, insert and delete each walk one path: O(height). A balanced tree has height about log₂ n. But insert sorted keys and every new key goes right, so the tree is a line of height n and every operation is O(n). One test inserts 2000 sorted keys and checks the height is 2000. Real libraries use self-balancing trees (red-black, AVL) to avoid this. Go's standard library has no tree; a sorted slice with binary search ([Day 32](../day-032-binary-search/)) or a map usually does the job.
 
 ### Spotting it in a problem
 

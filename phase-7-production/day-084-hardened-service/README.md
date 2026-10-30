@@ -4,7 +4,7 @@
 
 The Twende booking API in `starter/` works on a laptop. It lists trips and sells seats. It also reads its config without checking it, has no timeouts, lets anyone book, accepts a body of any size, logs nothing, has no metrics or health checks, falls over on a panic, and drops requests mid-flight when it's stopped. The SACCO wants it live before the December rush.
 
-This capstone is how a senior engineer would do it: write a short design doc first, get it reviewed, then make exactly the changes it calls for. Everything from Phase 7 comes together here, along with config (Day 21), middleware (Day 54), passwords and keys (Days 57 and 83) and security headers (Day 61).
+This capstone is how a senior engineer would do it: write a short design doc first, get it reviewed, then make exactly the changes it calls for. Everything from Phase 7 comes together here, along with config ([Day 21](../../phase-2-modelling/day-021-config-loader/)), middleware ([Day 54](../../phase-5-backend/day-054-middleware/)), passwords and keys (Days 57 and 83) and security headers ([Day 61](../../phase-5-backend/day-061-cors-and-security-headers/)).
 
 ```
 TWENDE_RATE=fast go run ./…/cmd/twende

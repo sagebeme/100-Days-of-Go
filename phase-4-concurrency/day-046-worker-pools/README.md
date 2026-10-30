@@ -2,7 +2,7 @@
 
 ## The brief
 
-At the end of every month the Umoja chama sends each of its 2 000 members a PDF statement. Rendering one takes a second and a lot of memory. Start 2 000 goroutines at once (Day 41) and the small server runs out of memory; render them one by one and it takes half an hour. The answer is in between: a fixed pool of workers, say 4, that take jobs from a queue until it's empty.
+At the end of every month the Umoja chama sends each of its 2 000 members a PDF statement. Rendering one takes a second and a lot of memory. Start 2 000 goroutines at once ([Day 41](../day-041-goroutines/)) and the small server runs out of memory; render them one by one and it takes half an hour. The answer is in between: a fixed pool of workers, say 4, that take jobs from a queue until it's empty.
 
 Today you write three tools you'll use for the rest of the course:
 
@@ -26,7 +26,7 @@ err := g.Wait()   →  the first error, and ctx was cancelled so the other sends
 - **Fan-out, fan-in**: fan-out is many goroutines reading one channel. Fan-in is the reverse: one goroutine per input forwards into a single output, and a last goroutine closes the output after a `WaitGroup` says they're all done.
 - **A semaphore channel**: `slots := make(chan struct{}, n)`. Sending takes a slot and waits when all `n` are taken; receiving gives one back. `struct{}` takes no memory.
 - **`sync.Once`**: `once.Do(f)` runs `f` the first time only, however many goroutines call it. Here it keeps the first error.
-- **Generics** (Day 18): `Process[J, R any]` works for any job and result type.
+- **Generics** ([Day 18](../../phase-2-modelling/day-018-typed-inventory/)): `Process[J, R any]` works for any job and result type.
 
 ```go
 jobs := make(chan int)

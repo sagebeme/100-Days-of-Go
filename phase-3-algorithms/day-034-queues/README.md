@@ -44,12 +44,12 @@ func (h *freeAt) Push(x any)        { *h = append(*h, x.(int)) }
 func (h *freeAt) Pop() any          { old := *h; x := old[len(old)-1]; *h = old[:len(old)-1]; return x }
 ```
 
-You don't call those methods yourself. You call `heap.Push(&h, x)`, `heap.Pop(&h)`, and `heap.Fix(&h, i)` after changing `h[i]`. A slice of all-equal values is already a valid heap, so `make(freeAt, tellers)` needs no `heap.Init`. Dijkstra's shortest path (Day 40's kata) is built on the same heap.
+You don't call those methods yourself. You call `heap.Push(&h, x)`, `heap.Pop(&h)`, and `heap.Fix(&h, i)` after changing `h[i]`. A slice of all-equal values is already a valid heap, so `make(freeAt, tellers)` needs no `heap.Init`. Dijkstra's shortest path ([Day 40](../day-040-mock-hackerrank-test/)'s kata) is built on the same heap.
 
 ### Spotting it in a problem
 
 - "**in the order they arrive**", "first come, first served", "simulate": a queue.
-- "**shortest path**" on an unweighted graph or grid: BFS, which runs on a queue (Day 37).
+- "**shortest path**" on an unweighted graph or grid: BFS, which runs on a queue ([Day 37](../day-037-graphs/)).
 - "**maximum / minimum of every window**": a monotonic deque.
 - "the **smallest / earliest / cheapest** next", "the top k", "merge k sorted lists": a heap.
 

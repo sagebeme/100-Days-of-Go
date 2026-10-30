@@ -57,7 +57,7 @@ err = json.NewDecoder(io.LimitReader(resp.Body, 1<<20)).Decode(&entries) // read
 
 [reference/http.md](../../reference/http.md) has the full list of status codes. `httptest.NewServer(handler)` starts a real server on `127.0.0.1` with a random port and gives you its `URL`; the tests use it for every fake shop.
 
-`Config.Limiter` is an interface with one method, `Wait(ctx) error`. A `*rate.Limiter` from Day 47 already has that method, so it fits without any glue, and the tests pass a fake that counts calls.
+`Config.Limiter` is an interface with one method, `Wait(ctx) error`. A `*rate.Limiter` from [Day 47](../day-047-rate-limiting/) already has that method, so it fits without any glue, and the tests pass a fake that counts calls.
 
 ## Why it matters at work
 
@@ -72,7 +72,7 @@ Requirements. Meet them in any order. `go test` checks each one.
 3. At most `cfg.Workers` requests are in flight at once (below 1 counts as 1). Use a worker pool, not a goroutine per shop.
 4. Every attempt has its own timeout of `cfg.Timeout` (0 means none), made with `context.WithTimeout` from the `ctx` that `Watch` got.
 5. If `cfg.Limiter` isn't nil, call its `Wait(ctx)` before every attempt, retries included. If `Wait` returns an error, that shop has failed.
-6. A `5xx` answer is retried, up to `cfg.Retries` extra attempts. Before retry 1 wait `cfg.Backoff`, before retry 2 twice that, and so on, using `cfg.Sleep`. If `cfg.Sleep` is nil, wait for real with a timer and `ctx`, as on Day 44.
+6. A `5xx` answer is retried, up to `cfg.Retries` extra attempts. Before retry 1 wait `cfg.Backoff`, before retry 2 twice that, and so on, using `cfg.Sleep`. If `cfg.Sleep` is nil, wait for real with a timer and `ctx`, as on [Day 44](../day-044-context-cancel/).
 7. Anything else that goes wrong (a timeout, a network error, a `4xx` including `429`, bad JSON) fails that shop at once, with no retry.
 8. A shop that fails goes into `Summary.Failed`, sorted by name. It never stops the other shops, and it isn't an error from `Watch`.
 9. `Watch` returns an error only when `ctx` itself is done, and then it returns `ctx.Err()`.
@@ -84,7 +84,7 @@ go test -race ./phase-4-concurrency/day-048-price-watcher/starter
 go run ./phase-4-concurrency/day-048-price-watcher/starter/cmd/watch
 ```
 
-When it works, make it yours: add a `-workers` flag to `cmd/watch` (Day 22), or print how many attempts each shop needed.
+When it works, make it yours: add a `-workers` flag to `cmd/watch` ([Day 22](../../phase-2-modelling/day-022-cli-flags/)), or print how many attempts each shop needed.
 
 ## The kata: Price Board
 
@@ -96,7 +96,7 @@ go run ./tools/kata 48
 
 ## When you're stuck
 
-- **Where to start**: split it in three. `fetchOnce` makes one request and returns the entries or an error. `fetch` wraps it in the retry loop with the limiter and backoff. `Watch` runs `fetch` from a Day 46 worker pool, storing each shop's entries and error in slot `i`, then merges once every worker is done.
+- **Where to start**: split it in three. `fetchOnce` makes one request and returns the entries or an error. `fetch` wraps it in the retry loop with the limiter and backoff. `Watch` runs `fetch` from a [Day 46](../day-046-worker-pools/) worker pool, storing each shop's entries and error in slot `i`, then merges once every worker is done.
 - **`12 requests were open at once with Workers: 3`**: you started a goroutine per shop. Start `cfg.Workers` goroutines that `range` over a channel of shop numbers.
 - **`Watch took 3s with a 100ms timeout`**: the request isn't using the timeout context. Build the request with `http.NewRequestWithContext(ctx, ...)` using the context from `context.WithTimeout`.
 - **`the shop got 4 requests, want 1`** for a 404 or 429: retry only when `resp.StatusCode >= 500`. A wrapped sentinel error (`var errServer = errors.New(...)`, then `errors.Is`) is a tidy way for `fetchOnce` to tell `fetch` "this one is worth retrying".

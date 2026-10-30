@@ -35,7 +35,7 @@ Habari, Wanjiku!
 - **`http.ServeMux`** picks the handler for each request from a pattern. Since Go 1.22 a pattern can start with a method and contain `{name}` wildcards, which `r.PathValue("name")` reads. `{$}` means "this exact path and nothing below it". Without it, `"GET /"` would match every path.
 - **`http.Server`** holds the handler, the address and the timeouts. `http.ListenAndServe` makes one with no timeouts at all, so a slow client can hold a connection open forever. Don't use it for a real server.
 - **`net.Listen` and `srv.Serve`** are the two halves of `ListenAndServe`: open the port, then serve on it. Splitting them lets a test listen on port 0, which asks the operating system for any free port.
-- **`signal.NotifyContext`** (new today) gives you a context that's cancelled when the process gets Ctrl+C (`os.Interrupt`) or `SIGTERM`, which Docker and hosting platforms send to stop your app. It's the Day 44 context idea, plugged into the operating system.
+- **`signal.NotifyContext`** (new today) gives you a context that's cancelled when the process gets Ctrl+C (`os.Interrupt`) or `SIGTERM`, which Docker and hosting platforms send to stop your app. It's the [Day 44](../../phase-4-concurrency/day-044-context-cancel/) context idea, plugged into the operating system.
 - **`srv.Shutdown(ctx)`** closes the listener, waits for running requests to finish, and gives up when `ctx` expires. `Serve` then returns `http.ErrServerClosed`, which means "stopped on purpose", not a failure.
 
 ```go
@@ -49,7 +49,7 @@ defer stop()
 <-ctx.Done() // blocks until Ctrl+C
 ```
 
-Keep [reference/http.md](../../reference/http.md) open for the whole phase. The config follows [reference/env-and-config.md](../../reference/env-and-config.md) and Day 21: read it once at startup, fail fast, and pass it down.
+Keep [reference/http.md](../../reference/http.md) open for the whole phase. The config follows [reference/env-and-config.md](../../reference/env-and-config.md) and [Day 21](../../phase-2-modelling/day-021-config-loader/): read it once at startup, fail fast, and pass it down.
 
 ## Why it matters at work
 

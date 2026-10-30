@@ -34,11 +34,11 @@ The rules that seem just as sensible fail. The tests include both:
 
 ### When greedy is wrong
 
-Biggest-note-first is optimal for Kenya's notes and coins (1000, 500, 200, 100, 50, 20, 10, 5, 1). It's not optimal for every set. With coins of 1, 3 and 4 and an amount of 6, greedy pays 4 + 1 + 1 (three coins), but 3 + 3 is two. When a counter-example exists, you need dynamic programming (Day 39), which tries every option without repeating work. If you can't prove a greedy and can't break it on a few small cases, write a brute force and compare them on random inputs.
+Biggest-note-first is optimal for Kenya's notes and coins (1000, 500, 200, 100, 50, 20, 10, 5, 1). It's not optimal for every set. With coins of 1, 3 and 4 and an amount of 6, greedy pays 4 + 1 + 1 (three coins), but 3 + 3 is two. When a counter-example exists, you need dynamic programming ([Day 39](../day-039-dynamic-programming/)), which tries every option without repeating work. If you can't prove a greedy and can't break it on a few small cases, write a brute force and compare them on random inputs.
 
 ### Pairing from both ends
 
-For the bodas: sort the passengers. The heaviest person must go on some boda. If the lightest person fits with them, put them together: nobody else fits better with the heaviest. Otherwise the heaviest rides alone. That's two pointers (Day 29) on top of a sort.
+For the bodas: sort the passengers. The heaviest person must go on some boda. If the lightest person fits with them, put them together: nobody else fits better with the heaviest. Otherwise the heaviest rides alone. That's two pointers ([Day 29](../day-029-two-pointers/)) on top of a sort.
 
 ### Spotting it in a problem
 
@@ -72,7 +72,7 @@ go test ./phase-3-algorithms/day-038-greedy/starter
 
 ## The kata: Cross Out k Digits
 
-Cross out `k` digits from a price tag to leave the smallest number. LeetCode's "Remove K Digits": a greedy you can prove in one sentence, run with a monotonic stack (Day 33). Instructions are in `kata/README.md`. Judge it with:
+Cross out `k` digits from a price tag to leave the smallest number. LeetCode's "Remove K Digits": a greedy you can prove in one sentence, run with a monotonic stack ([Day 33](../day-033-stacks/)). Instructions are in `kata/README.md`. Judge it with:
 
 ```bash
 go run ./tools/kata 38

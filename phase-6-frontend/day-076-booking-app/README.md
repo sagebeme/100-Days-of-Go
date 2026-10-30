@@ -24,13 +24,13 @@ The Go API in `api/` is Phase 5's booking API cut down to run in memory. Log in 
 
 ## What you'll use
 
-- TypeScript types and unions for the API's shapes and results (Day 65)
+- TypeScript types and unions for the API's shapes and results ([Day 65](../day-065-typescript-for-go-developers/))
 - Components, props, state, lists and keys (Days 66 and 67)
-- `fetch`, loading and error states, `useEffect` with cleanup (Day 68)
-- A controlled form, validation mirrored from Go, 422 field errors (Day 69)
-- An access token in memory, a refresh cookie, one shared refresh, 401 handling (Day 70)
-- Labels, a radio group for seats, `aria-describedby`, focus on each new page (Day 72)
-- Fakes at the edges: `fakeFetch` for the client, a fake `Client` for the App (Day 73)
+- `fetch`, loading and error states, `useEffect` with cleanup ([Day 68](../day-068-talking-to-go/))
+- A controlled form, validation mirrored from Go, 422 field errors ([Day 69](../day-069-forms/))
+- An access token in memory, a refresh cookie, one shared refresh, 401 handling ([Day 70](../day-070-login-flow/))
+- Labels, a radio group for seats, `aria-describedby`, focus on each new page ([Day 72](../day-072-accessible-by-default/))
+- Fakes at the edges: `fakeFetch` for the client, a fake `Client` for the App ([Day 73](../day-073-front-end-tests/))
 
 `starter/api.ts` already has every type and error class; `starter/fakeFetch.ts` is Day 73's helper, finished. The tests use both, so keep their names.
 

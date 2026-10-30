@@ -55,7 +55,7 @@ require (
 )
 ```
 
-- `module` is this module's path. Every import of a package in the repo starts with it, which is why Day 13 imported `github.com/sagebeme/100-Days-of-Go/phase-1-terminal/day-013-package-it-up/solution/ksh`.
+- `module` is this module's path. Every import of a package in the repo starts with it, which is why [Day 13](../../phase-1-terminal/day-013-package-it-up/) imported `github.com/sagebeme/100-Days-of-Go/phase-1-terminal/day-013-package-it-up/solution/ksh`.
 - `go` is the oldest Go version that can build it.
 - `require` lists each dependency and the **minimum** version needed. `// indirect` marks one your code doesn't import directly; a dependency of a dependency needs it.
 - `go.sum` holds a checksum for each module version. The go command checks every download against it, and against Google's public checksum database, so nobody can quietly swap the code behind a version. Commit both files.

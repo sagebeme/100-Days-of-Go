@@ -62,7 +62,7 @@ go test -race ./phase-8-portfolio/day-093-key-value-store/starter
 **Stretch goals**
 
 - Compact by itself when the log is, say, four times bigger than the live data.
-- A `starter/cmd/kv` command: `kv set k v`, `kv get k`, `kv compact`, with exit codes as on Day 22.
+- A `starter/cmd/kv` command: `kv set k v`, `kv get k`, `kv compact`, with exit codes as on [Day 22](../../phase-2-modelling/day-022-cli-flags/).
 - A `GetAt(key, t)` that answers "what was the value at time t?". That's the kata.
 - Batch writes: `Apply(ops)` writes several records and syncs once. Fewer syncs is the biggest speed-up a WAL has.
 
@@ -88,6 +88,6 @@ go run ./tools/kata 93
 
 - **README**: what it is in one line, the record format as a diagram, the guarantees (what `Set` returning `nil` promises) and the limits (one process, keys in memory, values up to 1 MiB).
 - **Demo**: a short recording of the stretch `kv` command. Write keys, pull the plug with `kill -9` in the middle of a loop of writes, restart, show the keys are back.
-- **Tests and CI**: run `go test -race ./...` in GitHub Actions (Day 63) and put the badge at the top of the README. Add a fuzz test (`go test -fuzz`) that feeds random bytes to `Open` and checks it never panics.
+- **Tests and CI**: run `go test -race ./...` in GitHub Actions ([Day 63](../../phase-5-backend/day-063-docker-and-ci/)) and put the badge at the top of the README. Add a fuzz test (`go test -fuzz`) that feeds random bytes to `Open` and checks it never panics.
 - **Deploy link**: this is a library, so the "deploy" is a tagged release (`v0.1.0`) and a [pkg.go.dev](https://pkg.go.dev) page once someone runs `go get` on it.
 - **What you'd do next**: write it up honestly. Keys live in memory, so it can't hold more than RAM. Bitcask keeps only the keys and file offsets in memory; LSM trees (LevelDB, Pebble) sort data on disk. A bad record in the middle of the log currently drops everything after it; a real store would report it.

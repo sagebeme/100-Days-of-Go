@@ -62,11 +62,11 @@ go test -race ./phase-8-portfolio/day-095-webhook-relay/starter
 
 **Stretch goals**
 
-- A `cmd/relay` main that reads `WEBHOOK_SECRET` and the subscribers from env (Day 21), runs `Run` in a goroutine and shuts down cleanly on Ctrl+C.
+- A `cmd/relay` main that reads `WEBHOOK_SECRET` and the subscribers from env ([Day 21](../../phase-2-modelling/day-021-config-loader/)), runs `Run` in a goroutine and shuts down cleanly on Ctrl+C.
 - Jitter: wait a random time between 0 and `Backoff(n)` ("full jitter") so a thousand retries don't land on a recovering service in the same second. Inject the random source.
 - Honour a subscriber's `Retry-After` header on `429` and `503`.
 - A dead-letter list for results that never got through, and a way to replay them.
-- Keep the queue and the seen IDs in Redis (Day 78) so a restart loses nothing.
+- Keep the queue and the seen IDs in Redis ([Day 78](../../phase-7-production/day-078-caching/)) so a restart loses nothing.
 
 ## The kata: Replay Window
 
@@ -90,6 +90,6 @@ go run ./tools/kata 95
 
 - **README**: a diagram (provider → relay → three services), the signature format with a worked example you can check with `openssl dgst -sha256 -hmac`, and the delivery guarantee in plain words: "at least once; subscribers dedupe by `Webhook-Id`".
 - **Demo**: a script that signs a request with `curl` and shows `202`, then `200 duplicate`, then `401` for a tampered body. Record it with asciinema.
-- **Deploy**: ship `cmd/relay` in a small Docker image (Day 63) to a free tier, with two test subscribers on [webhook.site](https://webhook.site). Put the URL in the README, and the secrets only in the host's env settings.
+- **Deploy**: ship `cmd/relay` in a small Docker image ([Day 63](../../phase-5-backend/day-063-docker-and-ci/)) to a free tier, with two test subscribers on [webhook.site](https://webhook.site). Put the URL in the README, and the secrets only in the host's env settings.
 - **Tests and CI**: `go test -race ./...` in GitHub Actions and the badge in the README. Add a fuzz test for `Verify` that checks it never panics on any header.
-- **What you'd do next**: be honest about the gaps. The queue is in memory, so a crash loses queued events; the dedupe window resets on restart; one slow subscriber delays the others. Say how you'd fix each: a durable queue, Redis for seen IDs, a worker pool per subscriber (Day 46).
+- **What you'd do next**: be honest about the gaps. The queue is in memory, so a crash loses queued events; the dedupe window resets on restart; one slow subscriber delays the others. Say how you'd fix each: a durable queue, Redis for seen IDs, a worker pool per subscriber ([Day 46](../../phase-4-concurrency/day-046-worker-pools/)).

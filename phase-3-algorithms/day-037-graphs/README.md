@@ -38,7 +38,7 @@ Store each node's neighbours: `map[string][]string`. An undirected edge goes in 
 
 ### BFS: shortest paths when every edge costs the same
 
-Start with the start node in a queue (Day 34). Take the front, add each neighbour you haven't seen, and remember where you came from. BFS reaches nodes in rings: everything 1 hop away, then 2 hops, and so on. So the first time it reaches a node, that's the fewest hops. Walk the `cameFrom` map back from the end to rebuild the path.
+Start with the start node in a queue ([Day 34](../day-034-queues/)). Take the front, add each neighbour you haven't seen, and remember where you came from. BFS reaches nodes in rings: everything 1 hop away, then 2 hops, and so on. So the first time it reaches a node, that's the fewest hops. Walk the `cameFrom` map back from the end to rebuild the path.
 
 ```go
 cameFrom := map[string]string{start: ""}
@@ -59,13 +59,13 @@ Visiting neighbours in alphabetical order makes the answer the same every run. M
 
 ### DFS: go deep, then back up
 
-DFS follows one road as far as it goes before trying the next. Write it with recursion, or with an explicit stack (Day 33) when the graph might be very deep. It's the simple choice for "can I get there?", "how many separate networks?", flood fill and cycle detection. It does **not** find shortest paths.
+DFS follows one road as far as it goes before trying the next. Write it with recursion, or with an explicit stack ([Day 33](../day-033-stacks/)) when the graph might be very deep. It's the simple choice for "can I get there?", "how many separate networks?", flood fill and cycle detection. It does **not** find shortest paths.
 
 ### Cost
 
 Both visit each node once and look at each edge once (twice if undirected): O(V + E). A grid is a graph too: each cell is a node with up to four edges (the kata).
 
-If edges have different costs, like minutes in traffic, BFS isn't enough. Dijkstra's algorithm uses a heap (Day 34) instead of a queue: O((V + E) log V). Day 40's kata needs it.
+If edges have different costs, like minutes in traffic, BFS isn't enough. Dijkstra's algorithm uses a heap (Day 34) instead of a queue: O((V + E) log V). [Day 40](../day-040-mock-hackerrank-test/)'s kata needs it.
 
 ### Spotting it in a problem
 

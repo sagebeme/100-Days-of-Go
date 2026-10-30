@@ -22,7 +22,7 @@ l.Withdraw("Akinyi", 300)     →  ErrInsufficientFunds    still 200
 - **A data race** is two goroutines touching the same variable at the same time, with at least one writing. `total += a` is really load, add, store. Two goroutines can both load 1000, both add, and both store their own answer: one payment vanishes.
 - **`sync.Mutex`** lets one goroutine at a time through. `mu.Lock()` waits until the mutex is free and takes it; `mu.Unlock()` gives it back. Code between them is a critical section.
 - **`defer mu.Unlock()`** right after `Lock` unlocks however the function returns, including early returns.
-- **A mutex in a struct** guards the fields next to it. Don't copy the struct after first use, so use pointer receivers (Day 15). `go vet` warns about copies: `passes lock by value`.
+- **A mutex in a struct** guards the fields next to it. Don't copy the struct after first use, so use pointer receivers ([Day 15](../../phase-2-modelling/day-015-boda-fleet/)). `go vet` warns about copies: `passes lock by value`.
 - **The race detector.** `go test -race` builds your code with extra checks that watch every memory access and report a race when they see one. It slows code down a lot, so it's for tests, not production.
 
 ```go
@@ -42,7 +42,7 @@ When reads far outnumber writes, `sync.RWMutex` lets many readers in at once wit
 
 ## Why it matters at work
 
-A data race doesn't fail every time. It passes on your laptop, passes in CI, and loses money in production on the busiest day of the month, when goroutines really do run at once. That's why serious Go teams run `go test -race` in CI (Day 63 sets that up), and why a reviewer who sees a map or counter shared between goroutines asks "what guards this?". The answer should be a mutex in the same struct, or a channel that owns the data.
+A data race doesn't fail every time. It passes on your laptop, passes in CI, and loses money in production on the busiest day of the month, when goroutines really do run at once. That's why serious Go teams run `go test -race` in CI ([Day 63](../../phase-5-backend/day-063-docker-and-ci/) sets that up), and why a reviewer who sees a map or counter shared between goroutines asks "what guards this?". The answer should be a mutex in the same struct, or a channel that owns the data.
 
 ## Steps
 

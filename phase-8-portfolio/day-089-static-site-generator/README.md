@@ -81,7 +81,7 @@ Stretch goals:
 
 ## The kata: Tag Balance
 
-Check that the tags in a line of HTML are balanced, and say where the first problem is. It's Day 33's bracket checker with tag names. Instructions are in `kata/README.md`. Judge it with:
+Check that the tags in a line of HTML are balanced, and say where the first problem is. It's [Day 33](../../phase-3-algorithms/day-033-stacks/)'s bracket checker with tag names. Instructions are in `kata/README.md`. Judge it with:
 
 ```bash
 go run ./tools/kata 89

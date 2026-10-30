@@ -2,7 +2,7 @@
 
 ## The brief
 
-Kevin has his M-Pesa statements as CSV files now (Day 24), and a budget in his head: Ksh3,000 a month for food, Ksh500 for the matatu. What he doesn't have is a way to see, in one command, whether April went to plan. Build `pesabudget`.
+Kevin has his M-Pesa statements as CSV files now ([Day 24](../day-024-csv-statements/)), and a budget in his head: Ksh3,000 a month for food, Ksh500 for the matatu. What he doesn't have is a way to see, in one command, whether April went to plan. Build `pesabudget`.
 
 It reads one or more statement files, sorts every completed payment into a category by matching words in its details, compares each category with its budget and prints a report. It's configured the way real tools are: env variables for the settings you keep, flags for the ones you change per run, with flags winning. With `-strict` it exits with a special code when you're over budget, so a script or a cron job can nag you.
 
@@ -38,13 +38,13 @@ The two statements in `starter/testdata/` are made up, in the Day 24 format. `ap
 ## What you'll use
 
 - **Day 24's statement parser**, as `ParseStatement`. Copy your own code in; it's yours.
-- **Structs, methods and slices** (Day 15) for `Rule`, `Line` and `Summary`, and a method `Summary.Over`.
-- **Errors** (Day 17) that name the setting or the file and line that's wrong.
-- **Table tests** (Day 19). The test file is long; read it before you start, because it is most of the spec.
-- **Config from the environment** (Day 21): a `LookupFunc` instead of `os.LookupEnv`, so the tests never touch your real environment. [reference/env-and-config.md](../../reference/env-and-config.md) has the patterns.
-- **Flags and exit codes** (Day 22): one `FlagSet`, `fs.Visit` to know which flags were really given, `Run(args, lookup, stdout, stderr) int`.
-- **Files** (Day 23), opened and closed with `defer`.
-- **`fmt` widths** (Day 11): `%-12s` pads on the right, `%14s` on the left.
+- **Structs, methods and slices** ([Day 15](../day-015-boda-fleet/)) for `Rule`, `Line` and `Summary`, and a method `Summary.Over`.
+- **Errors** ([Day 17](../day-017-failed-transactions/)) that name the setting or the file and line that's wrong.
+- **Table tests** ([Day 19](../day-019-table-tests/)). The test file is long; read it before you start, because it is most of the spec.
+- **Config from the environment** ([Day 21](../day-021-config-loader/)): a `LookupFunc` instead of `os.LookupEnv`, so the tests never touch your real environment. [reference/env-and-config.md](../../reference/env-and-config.md) has the patterns.
+- **Flags and exit codes** ([Day 22](../day-022-cli-flags/)): one `FlagSet`, `fs.Visit` to know which flags were really given, `Run(args, lookup, stdout, stderr) int`.
+- **Files** ([Day 23](../day-023-save-load/)), opened and closed with `defer`.
+- **`fmt` widths** ([Day 11](../../phase-1-terminal/day-011-receipt-printer/)): `%-12s` pads on the right, `%14s` on the left.
 
 ## Why it matters at work
 

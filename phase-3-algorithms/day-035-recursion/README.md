@@ -27,7 +27,7 @@ func Factorial(n int) int {
 }
 ```
 
-Each call waits on the stack (Day 33) until the smaller one returns. Go's stack grows as needed, so thousands of levels are fine. A million levels is slow, and an explicit stack is better there ([reference/big-o.md](../../reference/big-o.md#before-you-submit)).
+Each call waits on the stack ([Day 33](../day-033-stacks/)) until the smaller one returns. Go's stack grows as needed, so thousands of levels are fine. A million levels is slow, and an explicit stack is better there ([reference/big-o.md](../../reference/big-o.md#before-you-submit)).
 
 ### Include or exclude
 
@@ -37,7 +37,7 @@ For "can some of these add up to X", every note is either used or not. That's tw
 return CanPay(notes[1:], amount-notes[0]) || CanPay(notes[1:], amount)
 ```
 
-With n notes that's up to 2^n paths. Fine for n = 25, hopeless for n = 100. Day 39 makes this kind of problem fast when the amounts are small.
+With n notes that's up to 2^n paths. Fine for n = 25, hopeless for n = 100. [Day 39](../day-039-dynamic-programming/) makes this kind of problem fast when the amounts are small.
 
 ### Backtracking
 
@@ -53,7 +53,7 @@ Hanoi with n discs is: move n−1 discs to the spare peg, move the biggest disc,
 
 - "**all** permutations / subsets / combinations", "every way to", "generate": backtracking.
 - **n ≤ 10** (n! choices) or **n ≤ 20** (2^n choices). Small limits are the hint that brute-force recursion is the intended answer.
-- Trees and nested structures (Day 36): a tree is a node plus smaller trees.
+- Trees and nested structures ([Day 36](../day-036-trees/)): a tree is a node plus smaller trees.
 - "divide in half": merge sort, binary search, fast power.
 - If the same smaller problem gets solved again and again, it's dynamic programming (Day 39).
 

@@ -40,7 +40,7 @@ for _, n := range numbers {
 
 ## Why it matters at work
 
-Every API you call has limits, and every API you run needs them. Going over someone else's limit gets you `429` responses and, with payment and SMS providers, a blocked account. Running your own API without limits means one buggy client can take it down for everyone, and one attacker can try thousands of passwords a minute. [reference/owasp-checklist.md](../../reference/owasp-checklist.md) asks you to rate-limit logins per IP and per account and answer `429` with `Retry-After`. In review, expect "what happens if this loop runs 10 000 times a second?" Day 61 turns today's `ClientLimiter` into a per-IP limiter in front of an HTTP API.
+Every API you call has limits, and every API you run needs them. Going over someone else's limit gets you `429` responses and, with payment and SMS providers, a blocked account. Running your own API without limits means one buggy client can take it down for everyone, and one attacker can try thousands of passwords a minute. [reference/owasp-checklist.md](../../reference/owasp-checklist.md) asks you to rate-limit logins per IP and per account and answer `429` with `Retry-After`. In review, expect "what happens if this loop runs 10 000 times a second?" [Day 61](../../phase-5-backend/day-061-cors-and-security-headers/) turns today's `ClientLimiter` into a per-IP limiter in front of an HTTP API.
 
 ## Steps
 

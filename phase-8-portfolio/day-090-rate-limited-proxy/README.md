@@ -73,7 +73,7 @@ Stretch goals:
 - Different limits per route, and a stricter one for `POST`.
 - Prometheus metrics: requests, 429s and upstream latency per route.
 - Retries for idempotent methods only (`GET`, `HEAD`), with a budget, and a circuit breaker per upstream.
-- Share the limits between several proxy instances with Redis (Day 78).
+- Share the limits between several proxy instances with Redis ([Day 78](../../phase-7-production/day-078-caching/)).
 
 ## The kata: Token Buckets
 

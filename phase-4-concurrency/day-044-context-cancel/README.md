@@ -27,7 +27,7 @@ FirstAvailable(ctx, []string{"Super Metro", "Embassava", "Rembo"}, check)
 - **`ctx.Done()`** is a channel that's closed when the context is cancelled or its deadline passes. Put it in a `select` next to the real work. **`ctx.Err()`** then says why: `context.Canceled` or `context.DeadlineExceeded`.
 - **`context.WithCancel(ctx)`** and **`context.WithTimeout(ctx, d)`** make a child context and a `cancel` func. Cancelling a parent cancels every child, never the other way round.
 - **Always `defer cancel()`.** It frees the child's timer and resources even when the work finishes early. `go vet` warns when you forget.
-- **`%w`** in `fmt.Errorf` wraps an error, so `errors.Is(err, context.DeadlineExceeded)` still works after you add the route name (Day 17).
+- **`%w`** in `fmt.Errorf` wraps an error, so `errors.Is(err, context.DeadlineExceeded)` still works after you add the route name ([Day 17](../../phase-2-modelling/day-017-failed-transactions/)).
 
 ```go
 ctx, cancel := context.WithTimeout(ctx, 2*time.Second)

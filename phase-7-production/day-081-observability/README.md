@@ -23,7 +23,7 @@ GET /readyz   → 503 {"status":"fail","checks":{"db":"ok","redis":"fail"}}   (t
 
 **Structured logs with `log/slog`.** One JSON object per event, with named fields, so you can search `status>=500 AND path="/bookings"` instead of reading text. `slog.New(slog.NewJSONHandler(os.Stdout, nil))` makes a logger; `log.LogAttrs(ctx, slog.LevelInfo, "request", slog.Int("status", 200))` writes a line at a level you choose.
 
-- **Request IDs.** You met these in Day 54's middleware; today they get stricter. Every request gets an ID that appears in every log line it causes and in the `X-Request-ID` response header. The passenger's support ticket quotes it, and you find her exact request. Reuse an ID that the caller sent, so one ID follows a request through several services, but only if it's short and plain: a header with a newline in it could forge log lines.
+- **Request IDs.** You met these in [Day 54](../../phase-5-backend/day-054-middleware/)'s middleware; today they get stricter. Every request gets an ID that appears in every log line it causes and in the `X-Request-ID` response header. The passenger's support ticket quotes it, and you find her exact request. Reuse an ID that the caller sent, so one ID follows a request through several services, but only if it's short and plain: a header with a newline in it could forge log lines.
 - **No secrets in logs.** Log `r.URL.Path`, not `r.URL.String()`: query strings carry tokens and reset codes. Never log headers, bodies, passwords or full phone numbers. Logs are copied to many places and kept for months (A09 in [owasp-checklist.md](../../reference/owasp-checklist.md)).
 
 **Metrics with Prometheus.** Prometheus scrapes `/metrics` every few seconds and stores numbers over time. Two kinds today:
@@ -43,9 +43,9 @@ requests.WithLabelValues("GET", "/trips/{id}", "200").Inc()
 **Health and readiness.** Kubernetes and load balancers ask two different questions:
 
 - **Liveness** (`/healthz`): is the process stuck? If this fails, the server is restarted. Check nothing external: if the database is down, restarting every API server makes things worse.
-- **Readiness** (`/readyz`): should this server get traffic right now? Check the dependencies it needs, each with a timeout. During shutdown, fail readiness first (`Drain`) so the load balancer stops sending new requests while the ones in flight finish (Day 84). Answer `ok` or `fail` only; the error text goes in the log, because it can name hosts, users and versions.
+- **Readiness** (`/readyz`): should this server get traffic right now? Check the dependencies it needs, each with a timeout. During shutdown, fail readiness first (`Drain`) so the load balancer stops sending new requests while the ones in flight finish ([Day 84](../day-084-hardened-service/)). Answer `ok` or `fail` only; the error text goes in the log, because it can name hosts, users and versions.
 
-**Tracing, in concept.** Logs tell you what happened in one service; metrics tell you how much. A **trace** follows one request across services: the booking API calls the seat service (Day 80), which calls Postgres. Each step is a **span** with a start time, a duration and a parent, and they share one trace ID passed between services in the `traceparent` header (the W3C Trace Context standard). Tools draw the spans as a waterfall, so "the 2 s is all in the seat service's database call" is visible at a glance. **OpenTelemetry** is the vendor-neutral standard and Go SDK for producing traces, metrics and logs. Today's request ID is the simplest form of the same idea; we don't add the OpenTelemetry dependency here.
+**Tracing, in concept.** Logs tell you what happened in one service; metrics tell you how much. A **trace** follows one request across services: the booking API calls the seat service ([Day 80](../day-080-grpc/)), which calls Postgres. Each step is a **span** with a start time, a duration and a parent, and they share one trace ID passed between services in the `traceparent` header (the W3C Trace Context standard). Tools draw the spans as a waterfall, so "the 2 s is all in the seat service's database call" is visible at a glance. **OpenTelemetry** is the vendor-neutral standard and Go SDK for producing traces, metrics and logs. Today's request ID is the simplest form of the same idea; we don't add the OpenTelemetry dependency here.
 
 **SLOs and error budgets.** A **service level objective** is a target you promise yourselves, written on what users feel: "99.9% of booking requests succeed in under 500 ms, over 30 days". The **error budget** is what's left: 0.1% of 30 days is 43.2 minutes of failure. While budget remains, ship features. When it's spent, the team stops and works on reliability. Alert on the budget burning fast, not on every slow request.
 
@@ -59,7 +59,7 @@ On-call engineers live in these three tools. The first question in any incident 
 
 1. Open `starter/observe.go`. `RandomID`, the `recorder`, `Metrics`, `NewMetrics`, `Readiness`, `NewReadiness`, `Add` and `Drain` are given.
 2. Write `validID`: 1 to 64 characters, each a letter, digit or hyphen.
-3. Write `RequestID`: take a valid header or call `newID`, set the response header, and pass on `r.WithContext(context.WithValue(...))` with the unexported `ctxKey{}`. Write `RequestIDFrom` with a two-value type assertion (Day 16).
+3. Write `RequestID`: take a valid header or call `newID`, set the response header, and pass on `r.WithContext(context.WithValue(...))` with the unexported `ctxKey{}`. Write `RequestIDFrom` with a two-value type assertion ([Day 16](../../phase-2-modelling/day-016-payment-methods/)).
 4. Write `Logging`. Wrap `w` in a `recorder`, call `next`, then log once with `LogAttrs`: Error level for 500 and above, otherwise Info. Use `rec.code()`.
 5. Write `Instrument`. Time the call with `m.now()` before and after, then `Inc` the counter with the status as a string (`strconv.Itoa`) and `Observe` the seconds in the histogram.
 6. Write `Live`.

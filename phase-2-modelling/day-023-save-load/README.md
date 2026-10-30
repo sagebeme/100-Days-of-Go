@@ -55,7 +55,7 @@ type Contribution struct {
   - Only **exported** (capitalised) fields are saved. A lower-case field is silently skipped.
 - `json.MarshalIndent(v, "", "  ")` turns a value into indented JSON bytes. A `nil` slice becomes `null` and an empty one becomes `[]`.
 - `json.NewDecoder(r).Decode(&v)` reads JSON into `v`. Call `dec.DisallowUnknownFields()` first and a typo like `"ammount_ksh"` becomes an error, instead of a field that quietly stays 0.
-- `os.ReadFile(path)` reads a whole file. Its error for a missing file wraps `fs.ErrNotExist`, so `errors.Is(err, fs.ErrNotExist)` works (Day 17), even after you wrap it again with `%w`.
+- `os.ReadFile(path)` reads a whole file. Its error for a missing file wraps `fs.ErrNotExist`, so `errors.Is(err, fs.ErrNotExist)` works ([Day 17](../day-017-failed-transactions/)), even after you wrap it again with `%w`.
 - **Writing safely**: `os.CreateTemp(dir, pattern)` makes a new file with a unique name, readable only by you. Write to it, `Close` it, then `os.Rename` it over the real file. On Linux and macOS a rename within one folder is atomic: anyone reading the file sees the old version or the new one, never half of each. If the program crashes halfway, the old ledger is still there.
 - `defer os.Remove(tmp.Name())` cleans up the temporary file if anything fails. Once the rename has happened, there's nothing left to remove, and the error is ignored.
 - `time.Parse(time.DateOnly, date)` checks a `YYYY-MM-DD` date. `time.DateOnly` is the layout `"2006-01-02"`. Go layouts are written with that exact reference date, not letters like `YYYY`.
@@ -67,7 +67,7 @@ Files are where data gets lost. In review, look for the write-then-rename patter
 ## Steps
 
 1. Open `starter/ledger.go`. Add `json` tags to every field of the three structs, using the names in the example above. `Notes` gets `omitempty`. `PIN` gets `-`.
-2. Write `Contribute`. Check the amount and the date with `time.Parse(time.DateOnly, date)` first. Then find the member with `for i := range l.Members` and append to `l.Members[i].Contributions`. (Day 15: a `range` value is a copy.)
+2. Write `Contribute`. Check the amount and the date with `time.Parse(time.DateOnly, date)` first. Then find the member with `for i := range l.Members` and append to `l.Members[i].Contributions`. ([Day 15](../day-015-boda-fleet/): a `range` value is a copy.)
 3. Write `Total`.
 4. Write `Save`. Turn `nil` slices into empty ones so the file says `[]`, not `null`. Do that on a copy of `Members`, not the caller's slice. Then `json.MarshalIndent`, add a `'\n'`, and write it with `os.CreateTemp(filepath.Dir(path), filepath.Base(path)+".tmp-*")`, `Write`, `Close`, `os.Chmod(name, 0o600)` and `os.Rename`. Wrap every error with the path.
 5. Write `Load` with `os.ReadFile` and a `json.Decoder` with `DisallowUnknownFields`. Wrap errors with `%w`, so a missing file still matches `fs.ErrNotExist`.
