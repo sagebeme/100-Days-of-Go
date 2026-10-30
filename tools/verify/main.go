@@ -6,7 +6,8 @@
 //	go run ./tools/verify -starters  also check that the starters fail
 //
 // Tests live only in each day's starter/ folder. To test a solution, verify copies the
-// starter's tests next to the solution's code in .verify/run-*/ (gitignored) and runs them there.
+// starter's tests next to the solution's code (and any tests the solution adds) in .verify/run-*/
+// (gitignored) and runs them there.
 // Each run gets its own folder, so two runs at once don't trip over each other.
 //
 // Phase 6 days are TypeScript: their tests are *.test.ts(x) files in starter/. For those, verify
@@ -192,7 +193,7 @@ func main() {
 	fmt.Printf("\nverify passed: %d days, %d katas\n", tested+tsTested, katas)
 }
 
-// assemble copies the starter's tests (and testdata) and the solution's code into dst.
+// assemble copies the starter's tests (and testdata) and the solution's code and own tests into dst.
 func assemble(starter, solution, dst string) error {
 	if err := os.MkdirAll(dst, 0o755); err != nil {
 		return err
@@ -206,12 +207,14 @@ func assemble(starter, solution, dst string) error {
 			return err
 		}
 	}
+	// The solution's code, plus any tests of its own (Day 97's regression test is the answer).
 	code, _ := filepath.Glob(filepath.Join(solution, "*.go"))
 	for _, f := range code {
-		if strings.HasSuffix(f, "_test.go") {
-			continue
+		target := filepath.Join(dst, filepath.Base(f))
+		if strings.HasSuffix(f, "_test.go") && course.Exists(target) {
+			return fmt.Errorf("%s has the same name as a starter test", f)
 		}
-		if err := copyFile(f, filepath.Join(dst, filepath.Base(f))); err != nil {
+		if err := copyFile(f, target); err != nil {
 			return err
 		}
 	}
