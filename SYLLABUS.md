@@ -145,7 +145,7 @@ Ends with: a design doc and a hardened service
 | 81 | Observability | metrics, traces, structured logs, health checks | Done |
 | 82 | Threat Modelling | STRIDE on your own API | Done |
 | 83 | Secrets Management | rotating keys, vaults, least privilege | Done |
-| 84 | Capstone: Hardened Service | a design doc, then the changes it calls for | Planned |
+| 84 | Capstone: Hardened Service | a design doc, then the changes it calls for | Done |
 
 ## Phase 8: Portfolio
 
