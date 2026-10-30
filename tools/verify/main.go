@@ -6,10 +6,11 @@
 //	go run ./tools/verify -starters  also check that the starters fail
 //
 // Tests live only in each day's starter/ folder. To test a solution, verify copies the
-// starter's tests next to the solution's code in .verify/ (gitignored) and runs them there.
+// starter's tests next to the solution's code in .verify/run-*/ (gitignored) and runs them there.
+// Each run gets its own folder, so two runs at once don't trip over each other.
 //
 // Phase 6 days are TypeScript: their tests are *.test.ts(x) files in starter/. For those, verify
-// copies starter/ and then solution/ over it into phase-6-frontend/.verify/<day> and runs Vitest
+// copies starter/ and then solution/ over it into phase-6-frontend/.verify/run-*/<day> and runs Vitest
 // there, so it needs `npm ci` to have been run in phase-6-frontend first.
 package main
 
@@ -38,20 +39,38 @@ func main() {
 	if err != nil {
 		fail("%v", err)
 	}
-	scratch := filepath.Join(root, ".verify")
-	if err := os.RemoveAll(filepath.Join(scratch, "days")); err != nil {
+	if err := os.MkdirAll(filepath.Join(root, ".verify"), 0o755); err != nil {
 		fail("%v", err)
 	}
+	scratch, err := os.MkdirTemp(filepath.Join(root, ".verify"), "run-")
+	if err != nil {
+		fail("%v", err)
+	}
+	cleanups := []string{scratch}
+	defer func() {
+		for _, dir := range cleanups {
+			os.RemoveAll(dir)
+		}
+	}()
 
 	problems := 0
 	tested, katas, tsTested := 0, 0, 0
-	var tsRoot string // the folder holding package.json for the TypeScript days
+	var tsRoot, tsScratch string // the folder holding package.json, and this run's copies under it
 	for _, d := range days {
 		starter := filepath.Join(root, d.Dir, "starter")
 		solution := filepath.Join(root, d.Dir, "solution")
 		if isTS(starter) {
-			tsRoot = filepath.Dir(filepath.Join(root, d.Dir))
-			dst := filepath.Join(tsRoot, ".verify", d.Name)
+			if tsScratch == "" {
+				tsRoot = filepath.Dir(filepath.Join(root, d.Dir))
+				if err := os.MkdirAll(filepath.Join(tsRoot, ".verify"), 0o755); err != nil {
+					fail("%v", err)
+				}
+				if tsScratch, err = os.MkdirTemp(filepath.Join(tsRoot, ".verify"), "run-"); err != nil {
+					fail("%v", err)
+				}
+				cleanups = append(cleanups, tsScratch)
+			}
+			dst := filepath.Join(tsScratch, d.Name)
 			if err := assembleTS(starter, solution, dst); err != nil {
 				fmt.Printf("FAIL  day %d: %v\n", d.N, err)
 				problems++
@@ -72,7 +91,8 @@ func main() {
 	}
 
 	if tested > 0 {
-		cmd := exec.Command("go", "test", "-count=1", "./.verify/days/...")
+		rel, _ := filepath.Rel(root, filepath.Join(scratch, "days"))
+		cmd := exec.Command("go", "test", "-count=1", "./"+filepath.ToSlash(rel)+"/...")
 		cmd.Dir = root
 		out, err := cmd.CombinedOutput()
 		if err != nil {
@@ -84,7 +104,8 @@ func main() {
 	}
 
 	if tsTested > 0 {
-		cmd := exec.Command("npx", "vitest", "run", ".verify")
+		rel, _ := filepath.Rel(tsRoot, tsScratch)
+		cmd := exec.Command("npx", "vitest", "run", filepath.ToSlash(rel))
 		cmd.Dir = tsRoot
 		out, err := cmd.CombinedOutput()
 		if err != nil {
@@ -93,7 +114,6 @@ func main() {
 		} else {
 			fmt.Printf("ok    %d TypeScript solutions pass their tests\n", tsTested)
 		}
-		os.RemoveAll(filepath.Join(tsRoot, ".verify"))
 	}
 
 	for _, d := range days {
@@ -153,6 +173,9 @@ func main() {
 
 	if problems > 0 {
 		fmt.Printf("\n%d problem(s).\n", problems)
+		for _, dir := range cleanups {
+			os.RemoveAll(dir) // os.Exit skips deferred calls
+		}
 		os.Exit(1)
 	}
 	fmt.Printf("\nverify passed: %d days, %d katas\n", tested+tsTested, katas)
