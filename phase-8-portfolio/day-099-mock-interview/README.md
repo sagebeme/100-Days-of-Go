@@ -82,7 +82,7 @@ go run ./tools/kata 99
 | Data model | 3 | had trips, holds and payments, and a database constraint that makes double booking impossible |
 | High-level design | 3 | drew clients, stateless API servers, the database, a queue with workers, and M-Pesa with its callback, and said what each does |
 | Double booking | 2 | explained holds that expire, the unique constraint, and why an in-memory lock isn't enough |
-| Payment callback | 2 | handled late, duplicate and missing callbacks: idempotency on the receipt, a status query, a rule for late payments |
+| Payment callback | 2 | handled late, duplicate and missing callbacks: idempotency on the checkout ID, a status query, a rule for late payments |
 | Failures and scaling | 2 | said what happens when the database, M-Pesa or SMS is down, and how December is handled |
 | Trade-offs | 1 | named at least two choices and what you gave up for each |
 

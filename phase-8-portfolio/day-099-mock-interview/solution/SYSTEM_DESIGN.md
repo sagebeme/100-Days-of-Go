@@ -89,10 +89,10 @@ The partial unique index is what stops double booking: the database refuses the 
 **The payment callback**
 
 - The callback can arrive late, twice, or never. Store it raw first, then process it.
-- Idempotent: `mpesa_receipt` is unique, so a second copy of the same callback inserts nothing and changes nothing.
+- Idempotent: match the callback to its hold by `CheckoutRequestID`, and only move a hold out of `held` once, so a second copy changes nothing. `mpesa_receipt` is unique as a second guard, but only successful payments have one: a cancelled, timed-out or wrong-PIN payment arrives with just a `ResultCode` and no receipt.
 - Late payment for an expired hold: if the seat is still free, take it; if not, refund and send an SMS. Decide this with the SACCO, but decide it explicitly.
-- Never came: a worker uses Daraja's STK push query API for holds stuck in `held` with a checkout ID, before expiring them.
-- Only accept callbacks we can trust: a secret path, and the checkout ID must match a hold we created.
+- Never came: a worker uses Daraja's STK push query API for holds stuck in `held` with a checkout ID, before expiring them. Asked too soon, the query answers "the transaction is being processed". That is an expected answer, not a failure: try again later.
+- Only accept callbacks we can trust. Daraja doesn't sign them, so use a secret path, allow only Safaricom's published IP addresses, require the checkout ID to match a hold we created and the amount to match its fare, and, for extra safety, confirm with the status query before issuing the ticket.
 
 ## 8. What breaks, and how it scales
 
