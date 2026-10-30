@@ -28,7 +28,7 @@ svc.Login("0799999999", "anything")                →  ErrInvalidCredentials   
 - **A password hash** is slow on purpose. SHA-256 runs billions of times a second on a gaming GPU, so a leaked table of SHA-256 passwords falls in hours. bcrypt and argon2id let you choose how much work (and, for argon2id, how much memory) each guess costs.
 - **A salt**: 16 random bytes from `crypto/rand`, made fresh for each password and stored next to the hash. Two passengers with the same password get different hashes, and an attacker can't use one precomputed table for everyone.
 - **`golang.org/x/crypto/argon2`**: `argon2.IDKey(password, salt, time, memory, threads, keyLen)`. Memory is in KiB. The OWASP Password Storage Cheat Sheet's minimum is 19 MiB, 2 passes, 1 thread, which is `DefaultParams`.
-- **`golang.org/x/crypto/bcrypt`**: `GenerateFromPassword(pw, cost)` and `CompareHashAndPassword(hash, pw)`. The cost is a power of two: each step up doubles the work. `bcrypt.Cost(hash)` reads it back. bcrypt only uses the first 72 bytes, and Go returns `bcrypt.ErrPasswordTooLong` for longer input.
+- **`golang.org/x/crypto/bcrypt`**: `GenerateFromPassword(pw, cost)` and `CompareHashAndPassword(hash, pw)`. The cost is a power of two: each step up doubles the work. `bcrypt.Cost(hash)` reads it back. bcrypt only uses the first 72 bytes. `GenerateFromPassword` returns `bcrypt.ErrPasswordTooLong` for longer input; `CompareHashAndPassword` doesn't complain, it just looks at the first 72 bytes.
 - **The PHC string format** packs everything needed to check a password into one string, so you can change the settings later without losing old hashes:
 
 ```
