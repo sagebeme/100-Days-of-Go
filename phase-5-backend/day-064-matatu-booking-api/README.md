@@ -89,10 +89,11 @@ First, give the API a repository of its own: copy the solution (or your starter)
 ### Render
 
 1. On [render.com](https://render.com), create a **Web Service** from your GitHub repo and choose the **Docker** runtime. Render builds the `Dockerfile` on every push to your main branch.
-2. Under **Environment**, add `JWT_SECRET`, `ADMIN_PHONES` (your number), `CORS_ALLOWED_ORIGINS` (your front end's origin, once you have one in Phase 6) and `CLIENT_IP_HEADER=X-Forwarded-For`. Render sets `PORT` itself; the API already reads it.
-3. Set the **Health Check Path** to `/readyz`. Render waits for it before switching traffic to a new deploy, and sends `SIGTERM` to the old instance, which your graceful shutdown handles.
-4. To deploy from CI instead of on every push, turn off auto-deploy, copy the service's **Deploy Hook** URL into a GitHub secret called `RENDER_DEPLOY_HOOK_URL`, and Day 63's `deploy` job calls it after the tests and the image build pass.
-5. Free instances sleep when idle, so the first request after a quiet spell is slow, and the in-memory data is gone.
+2. Under **Environment**, add `JWT_SECRET`, `ADMIN_PHONES` (your number), `CORS_ALLOWED_ORIGINS` (your front end's origin, once you have one in Phase 6) and `CLIENT_IP_HEADER` (see the next step). Render's default `PORT` is 10000 and it also detects the port you bind to; the API reads `PORT`, so leave it to Render.
+3. **Check which header holds the client's IP before you trust it.** Render doesn't document this. Its staff say the first `X-Forwarded-For` entry is the client, but Render adds to whatever `X-Forwarded-For` the client sent instead of replacing it, so a client can fake that entry. Render sits behind Cloudflare, which sets `True-Client-IP`. On your first deploy, log the request headers once, call the API from your phone, and compare them with your phone's real IP. Then set `CLIENT_IP_HEADER` to the header that matches and that a client can't fake. If you get this wrong, either every passenger shares one rate limit or anyone can dodge it.
+4. Set the **Health Check Path** to `/readyz`. Render waits for it before switching traffic to a new deploy, and sends `SIGTERM` to the old instance, which your graceful shutdown handles.
+5. To deploy from CI instead of on every push, turn off auto-deploy, copy the service's **Deploy Hook** URL into a GitHub secret called `RENDER_DEPLOY_HOOK_URL`, and Day 63's `deploy` job calls it after the tests and the image build pass.
+6. Free instances sleep when idle, so the first request after a quiet spell is slow, and the in-memory data is gone.
 
 ### Fly.io
 
@@ -100,6 +101,9 @@ First, give the API a repository of its own: copy the solution (or your starter)
 2. Check `fly.toml` has the right port and a health check on `/readyz`:
 
 ```toml
+# Fly's default is 5s, shorter than the API's 10s SHUTDOWN_TIMEOUT.
+kill_timeout = "15s"
+
 [http_service]
   internal_port = 8080
   force_https = true
@@ -113,7 +117,7 @@ First, give the API a repository of its own: copy the solution (or your starter)
 ```
 
 3. Set the secrets, which Fly passes to the app as env variables: `fly secrets set JWT_SECRET="$(openssl rand -base64 32)" ADMIN_PHONES=0700000001 CLIENT_IP_HEADER=Fly-Client-IP`.
-4. `fly deploy`. Fly stops old machines with `SIGINT` by default, which your shutdown also handles.
+4. `fly deploy`. Fly stops old machines with `SIGINT` by default, which your shutdown also handles, and kills them after `kill_timeout`, which is why it's 15s above.
 5. From CI, run `flyctl deploy --remote-only` with a token from `fly tokens create deploy` stored as a GitHub secret named `FLY_API_TOKEN`.
 
 Then try it: register, log in, list routes, book a seat, pay, and look at the response headers with `curl -i`.
