@@ -1,0 +1,24 @@
+{
+  "owner": "Your Name",
+  "headline": "Junior Go developer in Nairobi. One line on what you build and for whom.",
+  "projects": [
+    {
+      "name": "Webhook Relay",
+      "day": 95,
+      "summary": "Verifies, dedupes and forwards payment webhooks to every service, with retries.",
+      "repo": "https://github.com/your-username/webhook-relay",
+      "demo": "https://webhook-relay.example.dev",
+      "tags": ["go", "security", "http"],
+      "featured": true,
+      "cv_line": "Built an HMAC-verified webhook relay in Go with replay protection, deduplication and exponential backoff; 95% test coverage."
+    },
+    {
+      "name": "Key-Value Store",
+      "day": 93,
+      "summary": "A tiny database with a write-ahead log that survives a power cut mid-write.",
+      "repo": "https://github.com/your-username/kvstore",
+      "tags": ["go", "storage"],
+      "cv_line": "Wrote a crash-safe key-value store with a CRC-checked write-ahead log, recovery and compaction."
+    }
+  ]
+}
