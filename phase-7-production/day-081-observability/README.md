@@ -49,7 +49,7 @@ requests.WithLabelValues("GET", "/trips/{id}", "200").Inc()
 
 **SLOs and error budgets.** A **service level objective** is a target you promise yourselves, written on what users feel: "99.9% of booking requests succeed in under 500 ms, over 30 days". The **error budget** is what's left: 0.1% of 30 days is 43.2 minutes of failure. While budget remains, ship features. When it's spent, the team stops and works on reliability. Alert on the budget burning fast, not on every slow request.
 
-**Testing metrics.** The tests scrape the registry with `promhttp.HandlerFor(reg, ...)`, exactly as Prometheus would, and look for the lines they expect. `NewMetrics` takes a clock function so the durations in the test are exact.
+**Testing metrics.** The tests use the client library's own `testutil` package: `testutil.GatherAndCompare(reg, expected, names...)` reads the registry the way Prometheus scrapes `/metrics` and diffs the named metrics against the text you expect, and `testutil.GatherAndCount` counts series. `NewMetrics` takes a clock function so the durations in the test are exact.
 
 ## Why it matters at work
 
@@ -93,7 +93,7 @@ go run ./tools/kata 81
 - **`log status = <nil>`** or `log has no duration_ms`: the attribute names must match exactly: `request_id`, `method`, `path`, `status`, `duration_ms`.
 - **`the log contains "SECRET-TOKEN"`**: you logged `r.URL.String()` or `r.RequestURI`. Use `r.URL.Path`.
 - **`status 0`** in the log: the handler never called `WriteHeader`. Use `rec.code()`, which treats that as 200.
-- **`/metrics is missing the line ... route="/trips/{id}"`** and `3 request series, want 2`: you used `r.URL.Path` as the route label. Use the `route` argument.
+- **`3 request series, want 2`**, with a diff showing `route="/trips/1"` where `route="/trips/{id}"` was expected: you used `r.URL.Path` as the route label. Use the `route` argument.
 - **`panic: duplicate metrics collector registration attempted`**: a test registered the metrics twice on one registry. Each test makes a fresh `prometheus.NewRegistry()`; don't use the default registry in tests.
 - **`a hanging check hung the readiness probe`**: give each check its own `context.WithTimeout` and call `cancel()` after it.
 - **`readyz body ... leaks the error text`**: write `"fail"` in the body and the error in the log.

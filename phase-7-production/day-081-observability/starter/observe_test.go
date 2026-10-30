@@ -14,7 +14,7 @@ import (
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"github.com/prometheus/client_golang/prometheus/testutil"
 )
 
 func ok(w http.ResponseWriter, r *http.Request) { w.Write([]byte("sawa")) }
@@ -173,23 +173,14 @@ http_request_duration_seconds_bucket{method="GET",route="/trips/{id}",le="+Inf"}
 http_request_duration_seconds_sum{method="GET",route="/trips/{id}"} 2.32
 http_request_duration_seconds_count{method="GET",route="/trips/{id}"} 3
 `
-	got := scrape(t, reg)
-	for _, line := range strings.Split(strings.TrimSpace(want), "\n") {
-		if !strings.Contains(got, line+"\n") {
-			t.Errorf("/metrics is missing the line\n\t%s\ngot:\n%s", line, got)
-		}
+	if n, err := testutil.GatherAndCount(reg, "http_requests_total"); err != nil || n != 2 {
+		t.Errorf("%d request series (%v), want 2: label by route pattern, never by the real path", n, err)
 	}
-	if n := strings.Count(got, "http_requests_total{"); n != 2 {
-		t.Errorf("%d request series, want 2: label by route pattern, never by the real path", n)
+	// GatherAndCompare reads the registry the way Prometheus scrapes /metrics and
+	// compares these two metrics exactly, so a missing or extra series fails.
+	if err := testutil.GatherAndCompare(reg, strings.NewReader(want), "http_requests_total", "http_request_duration_seconds"); err != nil {
+		t.Errorf("/metrics doesn't match:\n%v", err)
 	}
-}
-
-// scrape returns what Prometheus would read from /metrics for this registry.
-func scrape(t *testing.T, reg *prometheus.Registry) string {
-	t.Helper()
-	rec := httptest.NewRecorder()
-	promhttp.HandlerFor(reg, promhttp.HandlerOpts{}).ServeHTTP(rec, httptest.NewRequest("GET", "/metrics", nil))
-	return rec.Body.String()
 }
 
 func TestLive(t *testing.T) {
