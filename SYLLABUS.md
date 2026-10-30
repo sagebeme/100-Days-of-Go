@@ -160,7 +160,7 @@ Ends with: sixteen projects of your own
 | 88 | Invoice PDF | generating documents | Done |
 | 89 | Static Site Generator | Markdown to HTML | Done |
 | 90 | Rate-Limited Proxy | reverse proxies and limits | Planned |
-| 91 | Matatu Route Finder | shortest paths on a real map | Planned |
+| 91 | Matatu Route Finder | shortest paths on a real map | Done |
 | 92 | Log Analyser | streaming big files | Planned |
 | 93 | Key-Value Store | a tiny database with a write-ahead log | Done |
 | 94 | Job Board | full stack with search | Done |
