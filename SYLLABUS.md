@@ -129,7 +129,7 @@ Ends with: a full-stack booking app
 | 73 | Front-End Tests | Vitest, Testing Library, Playwright | Done |
 | 74 | Fast on a Cheap Phone | bundle size, caching, slow 3G | Done |
 | 75 | Deploying the Front End | static hosting, env variables at build time | Done |
-| 76 | Capstone: Booking App | the Phase 5 API with a React front end, end to end | Planned |
+| 76 | Capstone: Booking App | the Phase 5 API with a React front end, end to end | Done |
 
 ## Phase 7: Production engineering
 
