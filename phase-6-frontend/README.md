@@ -15,9 +15,10 @@ cd phase-6-frontend && npm ci
 | `npm test -- day-066` | run one day's tests (Vitest) |
 | `npm run typecheck` | check every file with the TypeScript compiler |
 | `npm run dev -- day-066-first-react-app/starter` | serve that folder in the browser at http://localhost:5173 |
+| `npm run build -- day-074-fast-on-a-cheap-phone/starter` | build that folder for production into its `dist/` (gitignored) |
 
 Days that talk to Go have an `api/` folder. Start it from the repo root in a second terminal, for example `go run ./phase-6-frontend/day-068-talking-to-go/api`. It listens on http://localhost:8080 and allows the origin in `ALLOWED_ORIGIN` (default `http://localhost:5173`).
 
-The tests never start a server. They swap `fetch` for a fake, so they are fast and work offline.
+The tests never start a server. They swap `fetch` for a fake, so they are fast and work offline. Day 73 also has a Playwright spec that drives a real browser; it's optional and needs a one-off `npx playwright install chromium` (see that day's README).
 
 All files in a day: `starter/` (yours to edit, holds the tests), `solution/` (one way to do it), `kata/` (the Go puzzle), and sometimes `api/` (the Go server).
