@@ -1,0 +1,76 @@
+30 45
+main 40018
+m1 33770
+m2 7446
+m3 20924
+m4 7905
+m5 20259
+m6 11919
+m7 14196
+m8 23031
+m9 7872
+m10 28945
+m11 29932
+m12 34344
+m13 18209
+m14 29229
+m15 11198
+m16 20536
+m17 18296
+m18 32947
+m19 40935
+m20 198
+m21 45179
+m22 33702
+m23 2906
+m24 8336
+m25 14965
+m26 28733
+m27 10185
+m28 39141
+m29 27527
+m18 m10 static
+m25 m21 static
+m19 m12 static
+m11 m16 static
+m23 m26 lazy
+m3 m18 static
+m5 m29 static
+m6 m24 lazy
+m2 m10 static
+m21 m18 static
+m27 m22 static
+m3 m20 lazy
+m28 m7 static
+m9 m19 lazy
+m7 m17 static
+m7 m9 static
+m3 m22 static
+m2 m15 lazy
+m5 m7 static
+m4 m7 lazy
+m1 m15 lazy
+m1 m4 static
+m12 m24 static
+m4 m14 static
+main m6 static
+main m2 static
+m7 m11 lazy
+m16 m27 lazy
+m13 m28 lazy
+m11 m24 static
+m19 m13 lazy
+m5 m14 static
+m2 m21 static
+m2 m22 static
+m16 m25 static
+m4 m12 static
+main m5 lazy
+m1 m23 static
+m2 m3 static
+m17 m20 static
+m3 m9 lazy
+main m1 static
+m2 m8 static
+m11 m13 static
+m25 m10 static

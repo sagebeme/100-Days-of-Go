@@ -1,0 +1,8 @@
+3 4
+main 1
+a 2
+b 4
+main a static
+a main static
+a b lazy
+b a static
