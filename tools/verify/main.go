@@ -104,6 +104,17 @@ func main() {
 	}
 
 	if tsTested > 0 {
+		// Vitest strips types without checking them, so a starter or solution with a type
+		// error would still run. tsc checks every day folder, starters included.
+		tsc := exec.Command("npx", "tsc", "--noEmit")
+		tsc.Dir = tsRoot
+		if out, err := tsc.CombinedOutput(); err != nil {
+			fmt.Printf("FAIL  TypeScript doesn't typecheck:\n%s\n", out)
+			problems++
+		} else {
+			fmt.Println("ok    TypeScript typechecks, starters included")
+		}
+
 		rel, _ := filepath.Rel(tsRoot, tsScratch)
 		cmd := exec.Command("npx", "vitest", "run", filepath.ToSlash(rel))
 		cmd.Dir = tsRoot
