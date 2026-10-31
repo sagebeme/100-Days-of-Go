@@ -14,6 +14,7 @@ So it takes `len("i 0 obj\n") + L + len("\nendobj\n")` bytes, and the number of 
 
 - Line 1: `h` and `n` (1 ≤ h ≤ 10^6, 1 ≤ n ≤ 100 000)
 - Line 2: `n` numbers, the body lengths `L1 ... Ln` (0 ≤ Li ≤ 10^9)
+- The whole file, table included, is under 10^10 bytes, so every offset fits in 10 digits. That's the real limit of a PDF xref table: about 10 GB.
 
 **Output**
 
