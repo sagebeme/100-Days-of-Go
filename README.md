@@ -64,6 +64,7 @@ phase-1-terminal/day-001-mpesa-sms/
     main.go        your answer
     solution/      one working answer
     testdata/      1.in, 1.out, 2.in, ...: the judge's test cases
+    gen/           on many katas: makes one full-size input when you judge
 ```
 
 Run a day's tests from the repo root:
@@ -79,6 +80,8 @@ go run ./tools/kata 1
 ```
 
 The judge feeds each `.in` file to your program, compares what it prints with the `.out` file, and fails anything slower than 2 seconds, like HackerRank. `go run ./tools/kata -solution 1` runs the reference answer instead.
+
+The files in `testdata/` are small, so you can read them. A full-size input can be megabytes, so many katas make one instead: `kata/gen` prints it, the reference solution answers it, and your program must match that answer within the same 2 seconds. It shows up as case `big`. That's the case that catches an answer that's right but too slow, just as HackerRank's hidden tests do. If `big` is the only case that fails, and it fails by timing out, your logic is probably right but too slow. Make it faster, and read the Limits paragraph in the kata's README for what to avoid.
 
 Don't run `go test ./...` across the whole repo: every untouched starter fails on purpose, so you'll see a wall of red for days you haven't reached.
 
