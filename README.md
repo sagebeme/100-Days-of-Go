@@ -94,7 +94,7 @@ cp .env.example .env
 
 ## Reference
 
-- [HTTP methods and status codes](reference/http.md)
+- [HTTP methods, headers and status codes](reference/http.md)
 - [Env variables and config](reference/env-and-config.md)
 - [OWASP Top 10 checklist for Go](reference/owasp-checklist.md)
 - [Big-O cheat sheet](reference/big-o.md)
