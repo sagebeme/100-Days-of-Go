@@ -20,3 +20,15 @@ func TestCompare(t *testing.T) {
 		}
 	}
 }
+
+func TestFingerprintIgnoresWhatCompareIgnores(t *testing.T) {
+	base := Fingerprint([]byte("1\n2\n"))
+	for _, same := range []string{"1\n2", "1  \n2\n\n", "1\r\n2\r\n"} {
+		if got := Fingerprint([]byte(same)); got != base {
+			t.Errorf("Fingerprint(%q) = %s, want %s like %q", same, got, base, "1\n2\n")
+		}
+	}
+	if Fingerprint([]byte("1\n3\n")) == base {
+		t.Error("different output got the same fingerprint")
+	}
+}

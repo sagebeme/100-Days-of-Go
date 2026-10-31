@@ -146,6 +146,19 @@ func main() {
 			problems++
 			continue
 		}
+		if judge.HasBigCase(kata) {
+			bigDir := filepath.Join(scratch, "big", d.Name)
+			big, err := judge.BigCase(kata, bin, bigDir)
+			if err == nil {
+				err = judge.CheckFingerprint(kata, bigDir)
+			}
+			if err != nil {
+				fmt.Printf("FAIL  day %d kata big case: %v\n", d.N, err)
+				problems++
+				continue
+			}
+			cases = append(cases, big)
+		}
 		for _, r := range judge.Run(bin, cases, 2*time.Second) {
 			if !r.Passed {
 				fmt.Printf("FAIL  day %d kata case %s: %s\n", d.N, r.Name, r.Problem)

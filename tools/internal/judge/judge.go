@@ -1,10 +1,16 @@
 // Package judge runs a kata program the way HackerRank does: feed each testdata/N.in on stdin,
 // compare stdout with testdata/N.out, and fail anything slower than the time limit.
+//
+// A full-size input can be megabytes, too big to commit, so a kata can instead ship kata/gen: a
+// program that prints one. BigCase builds that input and the reference solution's answer to it at
+// judge time, and gen/big.sha256 records what the answer must be.
 package judge
 
 import (
 	"bytes"
 	"context"
+	"crypto/sha256"
+	"encoding/hex"
 	"errors"
 	"fmt"
 	"os"
@@ -41,6 +47,63 @@ func Cases(dir string) ([]string, error) {
 		return a < b
 	})
 	return ins, nil
+}
+
+// HasBigCase reports whether the kata in dir ships a generator for a full-size case.
+func HasBigCase(dir string) bool {
+	_, err := os.Stat(filepath.Join(dir, "gen", "main.go"))
+	return err == nil
+}
+
+// BigCase builds dir/gen, writes its input to outDir/big.in, and runs the reference solution
+// (already built as solutionBin) on it to write outDir/big.out. It returns the path of big.in,
+// ready to pass to Run with the other cases. The solution gets a generous limit here: timing it
+// is Run's job.
+func BigCase(dir, solutionBin, outDir string) (string, error) {
+	gen, err := Build(filepath.Join(dir, "gen"), outDir, "gen")
+	if err != nil {
+		return "", fmt.Errorf("kata/gen: %w", err)
+	}
+	inPath := filepath.Join(outDir, "big.in")
+	input, err := exec.Command(gen).Output()
+	if err != nil {
+		return "", fmt.Errorf("kata/gen failed: %w", err)
+	}
+	if err := os.WriteFile(inPath, input, 0o644); err != nil {
+		return "", err
+	}
+	ctx, cancel := context.WithTimeout(context.Background(), time.Minute)
+	defer cancel()
+	cmd := exec.CommandContext(ctx, solutionBin)
+	cmd.Stdin = bytes.NewReader(input)
+	want, err := cmd.Output()
+	if err != nil {
+		return "", fmt.Errorf("the reference solution failed on the big case: %w", err)
+	}
+	return inPath, os.WriteFile(filepath.Join(outDir, "big.out"), want, 0o644)
+}
+
+// Fingerprint is the SHA-256 of output as Compare sees it: no trailing spaces, no trailing blank
+// lines, \n line endings. gen/big.sha256 holds the fingerprint of the big case's right answer.
+func Fingerprint(output []byte) string {
+	sum := sha256.Sum256([]byte(strings.Join(lines(string(output)), "\n")))
+	return hex.EncodeToString(sum[:])
+}
+
+// CheckFingerprint compares outDir/big.out, as written by BigCase, with dir/gen/big.sha256.
+func CheckFingerprint(dir, outDir string) error {
+	want, err := os.ReadFile(filepath.Join(dir, "gen", "big.sha256"))
+	if err != nil {
+		return fmt.Errorf("kata/gen has no big.sha256: %w", err)
+	}
+	got, err := os.ReadFile(filepath.Join(outDir, "big.out"))
+	if err != nil {
+		return err
+	}
+	if fp := Fingerprint(got); fp != strings.TrimSpace(string(want)) {
+		return fmt.Errorf("the big case's answer has fingerprint %s, but gen/big.sha256 says %s: the generator or the solution changed", fp, strings.TrimSpace(string(want)))
+	}
+	return nil
 }
 
 // Build compiles the main package in pkgDir into a binary inside outDir.
