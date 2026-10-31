@@ -3,6 +3,11 @@
 //	go run ./tools/kata 3             judge your kata/main.go for Day 3
 //	go run ./tools/kata -solution 3   judge the reference solution instead
 //	go run ./tools/kata -limit 1s 3   change the time limit per test case (default 2s)
+//
+// A kata with a kata/gen folder also gets a "big" case: a full-size input made at judge time,
+// answered by the reference solution. Course authors record that answer's fingerprint with
+//
+//	go run ./tools/kata -fingerprint 44   write kata/gen/big.sha256 from the solution's answer
 package main
 
 import (
@@ -21,8 +26,9 @@ import (
 func main() {
 	solution := flag.Bool("solution", false, "judge kata/solution instead of your kata/main.go")
 	limit := flag.Duration("limit", 2*time.Second, "time limit per test case")
+	fingerprint := flag.Bool("fingerprint", false, "write kata/gen/big.sha256 from the reference solution's answer to the big case")
 	flag.Usage = func() {
-		fmt.Fprintln(os.Stderr, "usage: go run ./tools/kata [-solution] [-limit 2s] <day>")
+		fmt.Fprintln(os.Stderr, "usage: go run ./tools/kata [-solution] [-limit 2s] [-fingerprint] <day>")
 		flag.PrintDefaults()
 	}
 	flag.Parse()
@@ -58,6 +64,35 @@ func main() {
 	bin, err := judge.Build(pkg, filepath.Join(root, ".verify", "bin"), day.Name+"-kata")
 	if err != nil {
 		fail("%v", err)
+	}
+
+	if judge.HasBigCase(kataDir) {
+		sol, err := judge.Build(filepath.Join(kataDir, "solution"), filepath.Join(root, ".verify", "bin"), day.Name+"-kata-solution")
+		if err != nil {
+			fail("%v", err)
+		}
+		bigDir := filepath.Join(root, ".verify", "big", day.Name)
+		big, err := judge.BigCase(kataDir, sol, bigDir)
+		if err != nil {
+			fail("%v", err)
+		}
+		if *fingerprint {
+			out, err := os.ReadFile(filepath.Join(bigDir, "big.out"))
+			if err != nil {
+				fail("%v", err)
+			}
+			if err := os.WriteFile(filepath.Join(kataDir, "gen", "big.sha256"), []byte(judge.Fingerprint(out)+"\n"), 0o644); err != nil {
+				fail("%v", err)
+			}
+			fmt.Println("wrote kata/gen/big.sha256")
+			return
+		}
+		if err := judge.CheckFingerprint(kataDir, bigDir); err != nil {
+			fail("%v", err)
+		}
+		cases = append(cases, big)
+	} else if *fingerprint {
+		fail("Day %d's kata has no kata/gen folder", n)
 	}
 
 	passed := 0
