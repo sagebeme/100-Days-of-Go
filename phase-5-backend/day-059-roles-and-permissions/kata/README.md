@@ -50,6 +50,6 @@ Amina is an admin, admins inherit from conductors, and conductors inherit from p
 
 **Limits:** 2 seconds per test case.
 
-**Go tip:** keep `map[string]map[string]bool` for grants and `map[string][]string` for parents. For each role, walk its parents once with a slice used as a queue and a `seen` map (a breadth-first search, Day 37), and cache the list of roles you reach. A map of maps returns `false` for a missing inner key even when the outer key is missing too: `grants["nobody"]["x"]` is safe to read.
+**Go tip:** for each role, walk its parents once with a slice used as a queue and a `seen` set (a breadth-first search, Day 37), and keep the roles you reach. Then don't check those roles one by one for every question: 200 000 questions times up to 100 roles is 20 million map lookups, too slow for 2 seconds. Turn it around instead. Give each role a number from 0 to 99, and store a set of roles as two `uint64`s, one bit per role (`[2]uint64`). Keep, for each action, the set of roles granted it, and for each role, the set of roles it reaches. A question is then one map lookup and an AND of two sets: `reach[r][0]&granted[0] != 0 || reach[r][1]&granted[1] != 0`.
 
 Judge it from the repo root with `go run ./tools/kata 59`.
