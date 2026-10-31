@@ -32,6 +32,7 @@ Habari, Wanjiku!
 ## What you'll use
 
 - **A handler** is any function with the signature `func(w http.ResponseWriter, r *http.Request)`. `r` is what the client sent. You write the answer to `w`.
+- **Headers** are the `Name: value` lines before the body, like the `Content-Type` line in the `curl -i` output above. `r.Header.Get("Name")` reads one from the request; `w.Header().Set("Name", "value")` sets one on the response. Set them before the first `w.Write`, because that sends the headers, and anything set afterwards is silently dropped. [The headers section of http.md](../../reference/http.md#headers) lists every header the course uses and the day you practise it.
 - **`http.ServeMux`** picks the handler for each request from a pattern. Since Go 1.22 a pattern can start with a method and contain `{name}` wildcards, which `r.PathValue("name")` reads. `{$}` means "this exact path and nothing below it". Without it, `"GET /"` would match every path.
 - **`http.Server`** holds the handler, the address and the timeouts. `http.ListenAndServe` makes one with no timeouts at all, so a slow client can hold a connection open forever. Don't use it for a real server.
 - **`net.Listen` and `srv.Serve`** are the two halves of `ListenAndServe`: open the port, then serve on it. Splitting them lets a test listen on port 0, which asks the operating system for any free port.

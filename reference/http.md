@@ -1,4 +1,4 @@
-# HTTP: methods and status codes
+# HTTP: methods, headers and status codes
 
 A reference to keep open from Day 49 onwards. Every example uses the matatu-booking API you build in Phase 5: routes, trips, seats and bookings.
 
@@ -21,6 +21,62 @@ Content-Type: application/json
 The **method** says what you want done, the **path** says to what, and the **status code** says how it went.
 
 In Go, `r.Method` holds the method and `r.URL.Path` holds the path. Compare them with the constants in `net/http`, such as `http.MethodGet` and `http.MethodPost`, not with strings you type yourself. You set the status code with `w.WriteHeader(http.StatusCreated)`. If you never call it, the first `w.Write` sends `200 OK`.
+
+## Headers
+
+Headers are `Name: value` lines that travel with every request and response, before the body. They carry everything that isn't the content itself: what format the body is in, who the caller is, how long a copy may be cached, where a new thing was created. A request with the right method, path and body can still fail because of a missing header, so read them in every `curl -i`.
+
+**Names are case-insensitive.** `content-type` and `Content-Type` are the same header. Go stores every name in one spelling, `Content-Type` (see `http.CanonicalHeaderKey`), so always go through the methods below. Indexing the map yourself, as in `r.Header["content-type"]`, finds nothing.
+
+| You want to | In Go |
+|---|---|
+| read a request header | `r.Header.Get("Authorization")` returns the first value, or `""` if it's missing |
+| read every value of a repeated header | `r.Header.Values("Accept")` |
+| set a response header | `w.Header().Set("Location", "/bookings/9001")` replaces any value already there |
+| add another value | `w.Header().Add("Vary", "Origin")` keeps the old ones. Use it when a middleware further out may have set the same header |
+| set a header on a request you send | `req.Header.Set("Authorization", "Bearer "+token)` on a request made with `http.NewRequestWithContext` |
+
+**Set headers before the status.** `w.WriteHeader` sends the status line and every header set so far. The first `w.Write` does the same with `200` if you didn't call it. After that, changing `w.Header()` does nothing and gives no error. "The test sees an empty header" almost always means it was set after `writeError` or `writeJSON`.
+
+**Never trust a request header for security.** The client writes every one of them. A browser won't let a page fake `Origin` or `Cookie`, but `curl` and any script can send anything: a fake `X-Forwarded-For` to dodge a rate limit, or a newline in `X-Request-ID` to forge a log line. Check the format of every header you read, and only take a client IP from a header your own proxy sets ([Day 64](../phase-5-backend/day-064-matatu-booking-api/)).
+
+### The headers the course uses
+
+| Header | Sent by | What it does | Where you practise it |
+|---|---|---|---|
+| `Content-Type` | both | the format of the body: `application/json`, `text/plain; charset=utf-8`. A JSON API answers `415` when a request body isn't JSON | Days 49, 52 |
+| `Accept` | client | the formats the client can read. Most JSON APIs ignore it; send it anyway when you call one | reference only |
+| `Content-Length` | both | the body's size in bytes. Go sets it for you. Don't trust it to limit a body: use `http.MaxBytesReader` | Day 53 |
+| `Location` | server | where the new thing lives, with `201`; where to go, with `3xx` | Days 52, 85 |
+| `Allow` | server | the methods a path accepts, with `405` | Day 50 |
+| `Authorization` | client | who the caller is: `Bearer <token>`, or `Basic base64(user:password)` | Days 58, 70 |
+| `WWW-Authenticate` | server | with `401`, how to authenticate and what was wrong: `Bearer error="invalid_token"` | Days 58, 59 |
+| `Cookie` / `Set-Cookie` | client / server | the browser sends back what the server set. Session cookies need `HttpOnly`, `Secure` and `SameSite` | Days 58, 70 |
+| `Idempotency-Key` | client | makes a retried `POST` safe: the same key gets the same answer instead of a second booking | Days 50, 99 |
+| `Retry-After` | server | with `429` or `503`, how many seconds to wait before trying again | Days 47, 51, 61, 64 |
+| `X-Request-ID` | both | one id for one request across every log line and service | Days 54, 81 |
+| `X-Forwarded-For` | proxy | the client's IP, added by each proxy on the way. The client can pre-fill it, so only trust the entry your own proxy added | Days 53, 64 |
+| `Origin` | browser | which site a page came from. CORS decisions start here | Day 61 |
+| `Access-Control-Allow-*` | server | CORS: which other sites' pages may read your API's answers | Days 61, 68 |
+| `Vary` | server | which request headers changed the answer (`Vary: Origin`), so a cache doesn't hand one site's answer to another | Day 61 |
+| `X-Content-Type-Options: nosniff` and the other security headers | server | tell the browser not to guess types, frame the page or leak URLs. Day 61 explains each | Days 49, 61, 84 |
+| `Cache-Control` | server | who may keep a copy, and for how long. See caching below | Days 63, 74 |
+| `ETag` / `If-None-Match` / `If-Match` | server / client | a version tag for a resource, used by caching and safe edits. See caching below | reference only |
+
+### Caching
+
+`Cache-Control` decides what browsers and proxies may store:
+
+| Value | Means | Use it for |
+|---|---|---|
+| `no-store` | never keep a copy | API answers with personal data, anything after a login. Day 84 sets it on every response |
+| `no-cache` | keep a copy, but check with the server before each use | `index.html`, so a new deploy shows up at once |
+| `public, max-age=31536000, immutable` | keep it for a year and never check | files with a content hash in the name, like Vite's `index-DOzQj1Vn.js` (Day 74) |
+| `private, max-age=60` | only the user's own browser may keep it, for a minute | a user's own data that changes rarely |
+
+To "check with the server", the client sends back the version tag it got. The server sends `ETag: "v7"` with an answer. Next time the client asks with `If-None-Match: "v7"`, and if nothing changed the server answers `304 Not Modified` with no body, which saves data on a slow connection. `http.FileServer` and `http.ServeContent` do this for you, using `Last-Modified` and `If-Modified-Since` too. For a JSON API, an `ETag` can be a hash of the body or a version number from the database row.
+
+`If-Match` uses the same tag to stop lost edits: "only apply my `PATCH` if the resource is still `v7`". When someone else changed it first, answer `412 Precondition Failed`, and the client reloads before trying again.
 
 ## Methods
 
@@ -274,14 +330,17 @@ log.Fatal(srv.ListenAndServe())
 
 | Day | What you meet |
 |---|---|
-| 49 | your first server: handlers, `ServeMux`, `200` and `404` |
+| 49 | your first server: handlers, `ServeMux`, `200` and `404`, setting headers |
 | 50 | routes per method, safety and idempotency, `405` with `Allow` |
 | 51 | choosing the right status code, one shape for every error |
 | 52 | JSON in and out, `Content-Type`, `201` with `Location`, `415` |
 | 53 | validation, `http.MaxBytesReader`, `400`, `413` and `422` |
+| 54 | middleware: reading and setting `X-Request-ID` |
 | 58 | sessions and JWTs: `401` with `WWW-Authenticate` |
 | 59 | roles: `401`, `403` or `404`? |
-| 60–61 | rate limits and `429`, CORS and `OPTIONS` |
+| 60–61 | rate limits and `429`, CORS and `OPTIONS`, security headers |
+| 64 | the client IP behind a proxy: `X-Forwarded-For` |
+| 74 | caching headers for a front end: `Cache-Control` and `304` |
 | 71 | WebSockets: `101` |
 | 85 | redirects: `302`, and why not `301` |
 

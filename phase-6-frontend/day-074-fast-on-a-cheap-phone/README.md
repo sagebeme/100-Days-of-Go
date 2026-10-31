@@ -35,7 +35,7 @@ const SeatMap = lazy(() => import("./SeatMap")); // SeatMap.tsx must have a defa
 
 **Images.** Usually the heaviest thing on a page. `srcSet` lists the sizes you have and `sizes` says how wide the slot is, so the browser picks the smallest file that looks sharp. Use WebP or AVIF, `loading="lazy"` for images below the fold, and always `width` and `height` so the page doesn't jump when the image arrives.
 
-**Caching headers from Go.** Vite puts a content hash in each asset's name, so a changed file gets a new name. That makes the assets safe to cache "forever" (`max-age=31536000, immutable`), while `index.html` gets `no-cache` so a new deploy is seen at once. `http.FileServer` already answers `If-Modified-Since` with an empty `304`. See `api/main.go`, and [http.md](../../reference/http.md) for caching in general.
+**Caching headers from Go.** Vite puts a content hash in each asset's name, so a changed file gets a new name. That makes the assets safe to cache "forever" (`max-age=31536000, immutable`), while `index.html` gets `no-cache` so a new deploy is seen at once. `http.FileServer` already answers `If-Modified-Since` with an empty `304`. See `api/main.go`, and [http.md](../../reference/http.md#caching) for caching in general, with `ETag` and `If-None-Match`.
 
 ## Why it matters at work
 
