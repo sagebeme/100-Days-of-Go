@@ -91,6 +91,27 @@ replace github.com/someone/mpesa => ../mpesa
 
 It only applies when your module is the one being built, never when someone else depends on yours. Remove it before you release.
 
+### Where the downloaded code lives: no node_modules
+
+If you've used npm, you'll look for a `node_modules` folder. Go doesn't make one. `go get`, `go mod tidy` and `go build` download each module version **once**, into a cache outside your project that every project on your computer shares:
+
+```bash
+go env GOMODCACHE   # the source of every module you've downloaded, usually ~/go/pkg/mod
+go env GOCACHE      # compiled packages, so the next build is fast, usually ~/.cache/go-build
+```
+
+| npm | Go |
+|---|---|
+| `package.json` lists your dependencies | `go.mod` |
+| `package-lock.json` pins exact versions | `go.mod` already holds exact versions; `go.sum` holds their checksums |
+| `node_modules/`, one per project, gitignored | `~/go/pkg/mod`, one per computer, outside the repo |
+| `npm ci` on a fresh clone | nothing: the first `go build` or `go test` downloads what's missing. `go mod download` does it up front, for example in a Docker build step |
+| `rm -rf node_modules` to start clean | `go clean -modcache`. The files in the cache are read-only on purpose, so you can't edit a dependency by accident, and plain `rm -rf` fails |
+
+So a Go repo has nothing to install and nothing extra to gitignore for dependencies: commit `go.mod` and `go.sum`, and ignore only what you build, such as `bin/`. This course's `phase-6-frontend` folder is the exception. It's a TypeScript project, so it has its own `package.json` and `node_modules`, and you run `npm ci` there.
+
+To read a dependency's code, look in the cache: `ls $(go env GOMODCACHE)/github.com/jackc/pgx/v5@v5.11.0`. Your editor's "go to definition" opens the same files. To change one, copy it out and point at your copy with `replace`, above.
+
 **Vendoring**: `go mod vendor` copies every dependency into a `vendor/` folder, and `go build` then uses that copy. Some companies do this so builds don't need the network, or so reviewers see dependency changes in the diff. Most open-source projects don't, because the module cache and `go.sum` already make builds repeatable.
 
 ## Why it matters at work
