@@ -2,72 +2,80 @@ package main
 
 import (
 	"bufio"
-	"fmt"
 	"os"
+	"strconv"
+	"strings"
 )
 
+// roleSet holds up to 128 roles, one bit each. The kata promises at most 100.
+type roleSet [2]uint64
+
+func (s *roleSet) add(id int)          { s[id/64] |= 1 << (id % 64) }
+func (s roleSet) has(id int) bool      { return s[id/64]&(1<<(id%64)) != 0 }
+func (s roleSet) meets(t roleSet) bool { return s[0]&t[0] != 0 || s[1]&t[1] != 0 }
+
 func main() {
-	in := bufio.NewReader(os.Stdin)
+	sc := bufio.NewScanner(os.Stdin)
+	sc.Buffer(make([]byte, 1<<20), 1<<20)
 	out := bufio.NewWriter(os.Stdout)
 	defer out.Flush()
 
-	grants := map[string]map[string]bool{} // role → actions
-	parents := map[string][]string{}       // role → roles it inherits from
-	users := map[string]string{}           // user → role
+	roleID := map[string]int{}
+	var parents [][]int // role → roles it inherits from
+	id := func(role string) int {
+		if n, ok := roleID[role]; ok {
+			return n
+		}
+		roleID[role] = len(parents)
+		parents = append(parents, nil)
+		return roleID[role]
+	}
+	grantedTo := map[string]roleSet{} // action → roles granted it directly
+	users := map[string]int{}         // user → role
 
-	var n int
-	fmt.Fscan(in, &n)
+	line := func() []string { sc.Scan(); return strings.Fields(sc.Text()) }
+	n, _ := strconv.Atoi(line()[0])
 	for i := 0; i < n; i++ {
-		var kind, a, b string
-		fmt.Fscan(in, &kind, &a, &b)
-		switch kind {
+		f := line()
+		switch f[0] {
 		case "GRANT":
-			if grants[a] == nil {
-				grants[a] = map[string]bool{}
-			}
-			grants[a][b] = true
+			s := grantedTo[f[2]]
+			s.add(id(f[1]))
+			grantedTo[f[2]] = s
 		case "INHERIT":
+			a, b := id(f[1]), id(f[2])
 			parents[a] = append(parents[a], b)
 		case "USER":
-			users[a] = b
+			users[f[1]] = id(f[2])
 		}
 	}
-
-	// reach[role] is every role whose grants apply to role, itself included.
-	// A seen set makes cycles harmless.
-	reach := map[string][]string{}
-	reachable := func(role string) []string {
-		if r, ok := reach[role]; ok {
-			return r
-		}
-		seen := map[string]bool{role: true}
-		list := []string{role}
-		for i := 0; i < len(list); i++ {
-			for _, p := range parents[list[i]] {
-				if !seen[p] {
-					seen[p] = true
-					list = append(list, p)
+	// reach[r] is every role whose grants apply to r, itself included: a BFS per
+	// role, at most 100 roles, and a loop is harmless because a role is only added once.
+	reach := make([]roleSet, len(parents))
+	for r := range reach {
+		reach[r].add(r)
+		queue := []int{r}
+		for len(queue) > 0 {
+			cur := queue[0]
+			queue = queue[1:]
+			for _, p := range parents[cur] {
+				if !reach[r].has(p) {
+					reach[r].add(p)
+					queue = append(queue, p)
 				}
 			}
 		}
-		reach[role] = list
-		return list
 	}
 
-	var q int
-	fmt.Fscan(in, &q)
+	// Each question is now one map lookup and one AND of two 128-bit sets.
+	q, _ := strconv.Atoi(line()[0])
 	for i := 0; i < q; i++ {
-		var user, action string
-		fmt.Fscan(in, &user, &action)
+		f := line()
 		verdict := "DENY"
-		if role, ok := users[user]; ok {
-			for _, r := range reachable(role) {
-				if grants[r][action] {
-					verdict = "ALLOW"
-					break
-				}
-			}
+		if role, ok := users[f[0]]; ok && reach[role].meets(grantedTo[f[1]]) {
+			verdict = "ALLOW"
 		}
-		fmt.Fprintln(out, verdict)
+		out.WriteString(verdict)
+		out.WriteByte('\n')
 	}
 }
