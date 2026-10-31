@@ -20,7 +20,7 @@ func nairobi() *Graph {
 	g.AddRoute("Kencom", "Kawangware")            // 46K, Citi Hoppa
 	g.AddRoute("Railways", "Ngong")               // 111, MCA Sacco
 	g.AddRoute("Railways", "Ongata Rongai")       // 125, City Shuttle
-	g.AddRoute("Ronald Ngala Street", "Githurai") // 45, Zamzam
+	g.AddRoute("Ronald Ngala Street", "Githurai") // 45, Nicco Travellers
 	g.AddRoute("Ambassadeur", "Buruburu")         // 58, Buruburu 58 Travellers Sacco
 	g.AddRoute("Railways", "Kibera")              // Highrise Kibera Sacco
 	return &g

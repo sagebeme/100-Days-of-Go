@@ -11,7 +11,7 @@ The API starts with five real Nairobi routes, checked on [nishukishe.com](https:
 | 46K | Citi Hoppa | Kencom / Ambassadeur | Kawangware | Ksh100 |
 | 111 | MCA Sacco | Railways | Ngong | Ksh100 |
 | 125 | City Shuttle | Railways | Ongata Rongai | Ksh100 |
-| 45 | Zamzam | Ronald Ngala Street | Githurai | Ksh100 |
+| 45 | Nicco Travellers | Ronald Ngala Street | Githurai | Ksh100 |
 | 58 | Buruburu 58 Travellers Sacco | Ambassadeur | Buruburu | Ksh150 |
 
 ```

@@ -32,7 +32,7 @@ var routes = []Route{
 	{Number: "46K", Operator: "Citi Hoppa", BoardsAt: "Kencom / Ambassadeur", GoesTo: "Kawangware", FareKsh: 100},
 	{Number: "111", Operator: "MCA Sacco", BoardsAt: "Railways", GoesTo: "Ngong", FareKsh: 100},
 	{Number: "125", Operator: "City Shuttle", BoardsAt: "Railways", GoesTo: "Ongata Rongai", FareKsh: 100},
-	{Number: "45", Operator: "Zamzam", BoardsAt: "Ronald Ngala Street", GoesTo: "Githurai", FareKsh: 100},
+	{Number: "45", Operator: "Nicco Travellers", BoardsAt: "Ronald Ngala Street", GoesTo: "Githurai", FareKsh: 100},
 	{Number: "58", Operator: "Buruburu 58 Travellers Sacco", BoardsAt: "Ambassadeur", GoesTo: "Buruburu", FareKsh: 150},
 	{Operator: "Highrise Kibera Sacco", BoardsAt: "Railways", GoesTo: "Kibera"},
 }
