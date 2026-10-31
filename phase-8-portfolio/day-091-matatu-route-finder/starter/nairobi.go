@@ -17,7 +17,7 @@ var NairobiLinks = []Link{
 	{"Ambassadeur", "Kawangware", "46K", 45},            // Citi Hoppa, boarding at Ambassadeur
 	{"Railways", "Ngong", "111", 70},                    // MCA Sacco
 	{"Railways", "Ongata Rongai", "125", 60},            // City Shuttle
-	{"Ronald Ngala Street", "Githurai", "45", 50},       // Zamzam
+	{"Ronald Ngala Street", "Githurai", "45", 50},       // Nicco Travellers
 	{"Ambassadeur", "Buruburu", "58", 35},               // Buruburu 58 Travellers Sacco
 	{"Railways", "Kibera", "Highrise Kibera Sacco", 30}, // route number not shown
 }

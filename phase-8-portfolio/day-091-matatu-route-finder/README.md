@@ -16,7 +16,7 @@ Fastest("Westlands", "Ngong")      →  error: unknown stop: "Westlands"
 FewestTransfers("Mto", "Ziwa")     →  one ride on C, 30 min, 0 transfers   (Fastest is 20 min with 1 transfer)
 ```
 
-The Nairobi data uses only stages and routes checked on [nishukishe.com](https://nishukishe.com/directions) in October 2026: the 46K (Citi Hoppa) from Kencom or Ambassadeur to Kawangware, the 111 (MCA Sacco) from Railways to Ngong, the 125 (City Shuttle) from Railways to Ongata Rongai, the 45 (Zamzam) from Ronald Ngala Street to Githurai, the 58 (Buruburu 58 Travellers Sacco) from Ambassadeur to Buruburu, and Highrise Kibera Sacco from Railways to Kibera. **The connections between stops and all the travel times are simplified for this exercise.** Real matatus stop in many more places, and times depend on traffic. Routes change, so confirm with the conductor. The tests for fewest transfers use a second, made-up network.
+The Nairobi data uses only stages and routes checked on [nishukishe.com](https://nishukishe.com/directions) in October 2026: the 46K (Citi Hoppa) from Kencom or Ambassadeur to Kawangware, the 111 (MCA Sacco) from Railways to Ngong, the 125 (City Shuttle) from Railways to Ongata Rongai, the 45 (Nicco Travellers) from Ronald Ngala Street to Githurai, the 58 (Buruburu 58 Travellers Sacco) from Ambassadeur to Buruburu, and Highrise Kibera Sacco from Railways to Kibera. **The connections between stops and all the travel times are simplified for this exercise.** Real matatus stop in many more places, and times depend on traffic. Routes change, so confirm with the conductor. The tests for fewest transfers use a second, made-up network.
 
 Acceptance criteria:
 

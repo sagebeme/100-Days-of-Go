@@ -11,7 +11,7 @@ Today's map uses real Nairobi stops and the routes listed on [nishukishe.com](ht
 | 46K | Citi Hoppa | Kencom / Ambassadeur | Kawangware |
 | 111 | MCA Sacco | Railways | Ngong |
 | 125 | City Shuttle | Railways | Ongata Rongai |
-| 45 | Zamzam | Ronald Ngala Street | Githurai |
+| 45 | Nicco Travellers | Ronald Ngala Street | Githurai |
 | 58 | Buruburu 58 Travellers Sacco | Ambassadeur | Buruburu |
 | (number not shown) | Highrise Kibera Sacco | Railways | Kibera |
 

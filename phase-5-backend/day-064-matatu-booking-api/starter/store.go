@@ -129,7 +129,7 @@ func SeedRoutes(ctx context.Context, s Store) error {
 		{Number: "46K", Name: "Citi Hoppa", From: "Kencom / Ambassadeur", To: "Kawangware", Fare: 100},
 		{Number: "111", Name: "MCA Sacco", From: "Railways", To: "Ngong", Fare: 100},
 		{Number: "125", Name: "City Shuttle", From: "Railways", To: "Ongata Rongai", Fare: 100},
-		{Number: "45", Name: "Zamzam", From: "Ronald Ngala Street", To: "Githurai", Fare: 100},
+		{Number: "45", Name: "Nicco Travellers", From: "Ronald Ngala Street", To: "Githurai", Fare: 100},
 		{Number: "58", Name: "Buruburu 58 Travellers Sacco", From: "Ambassadeur", To: "Buruburu", Fare: 150},
 	} {
 		if _, err := s.CreateRoute(ctx, r); err != nil {
