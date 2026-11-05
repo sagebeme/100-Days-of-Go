@@ -67,6 +67,33 @@ An M-Pesa agent serves a queue of customers in turns of at most `q` minutes, sen
 go run ./tools/kata 42
 ```
 
+## Check yourself
+
+1. Predict the output:
+
+   ```go
+   ch := make(chan int, 2)
+   ch <- 1
+   close(ch)
+   v, ok := <-ch
+   w, ok2 := <-ch
+   fmt.Println(v, ok, w, ok2)
+   ```
+
+2. Predict `Total(Parse(Lines([]string{"A 500", "B -5", "C 12x", "D 100 extra", "E 20"})))`.
+3. What happens in each case: `main` does `ch := make(chan int)` then `ch <- 1` with no receiver; a goroutine sends on a channel that's already closed.
+4. Why does `Batch` set `batch = nil` after sending, instead of `batch = batch[:0]`?
+
+<details>
+<summary>Answers</summary>
+
+1. `1 true 0 false`. Values already sent are still delivered after `close`; after that a receive gives the zero value and `ok == false`.
+2. `520`. A negative amount, a bad number and a line with three fields are all skipped.
+3. The first is `fatal error: all goroutines are asleep - deadlock!`: an unbuffered send waits for a receiver that never comes. The second panics with `send on closed channel`. That's why only the sender closes, once.
+4. The receiver still holds the slice it was sent. `batch[:0]` would reuse the same array, so the next appends would overwrite the payments in the batch the receiver already has.
+
+</details>
+
 ## When you're stuck
 
 - **`Lines didn't return`**: you send on `out` before returning it. Nobody can receive until the function returns, so the first send waits forever. Do the sending inside `go func() { ... }()`.

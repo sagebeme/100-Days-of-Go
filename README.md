@@ -21,6 +21,8 @@ Every day also ends with a **kata**: a 5–15 minute puzzle in the exact format 
 
 The full day-by-day plan is in [SYLLABUS.md](SYLLABUS.md).
 
+Each phase ends with a one-page recap: the key ideas, a short self-test, and a project to build with no steps. Phases [1](phase-1-terminal/RECAP.md), [2](phase-2-modelling/RECAP.md), [3](phase-3-algorithms/RECAP.md), [4](phase-4-concurrency/RECAP.md), [5](phase-5-backend/RECAP.md), [6](phase-6-frontend/RECAP.md), [7](phase-7-production/RECAP.md), [8](phase-8-portfolio/RECAP.md).
+
 ## What you need
 
 | | |

@@ -113,6 +113,38 @@ Choose polishing tasks, each with hours and impact, to get the most impact withi
 go run ./tools/kata 100
 ```
 
+## Check yourself
+
+1. Why ship one project properly instead of linking sixteen course folders? What does a hiring manager with two minutes need to find?
+2. Predict what `RepoPath` says for each (`owner`, `name`, or an error):
+
+   ```go
+   RepoPath("https://github.com/you/webhook-relay")
+   RepoPath("http://github.com/you/webhook-relay")
+   RepoPath("https://github.com/you/webhook-relay.git")
+   RepoPath("https://github.com/you/webhook-relay/tree/main")
+   ```
+
+3. Spot the bug. The badge table and the CV lines list the projects in different orders, and a typo in `projects.json` vanished without a word:
+
+   ```go
+   json.NewDecoder(r).Decode(&p)
+   badges := BadgeTable(p)
+   cv := CVLines(Portfolio{Projects: Sorted(p.Projects)})
+   ```
+
+4. Why does `Validate` return every problem at once with `errors.Join`? And why must the page be built with `html/template`, when you wrote `projects.json` yourself?
+
+<details>
+<summary>Answers</summary>
+
+1. Sixteen half-finished folders take longer to judge than they have, and say little. One deployed project with a live link, a README, a demo, tests and a green CI badge shows you can finish and ship, which is what they're checking.
+2. `you webhook-relay`, then an error (not `https`), an error (`.git` on the end), an error (more than owner and repo).
+3. The decoder doesn't call `DisallowUnknownFields`, so a misspelt field is silently ignored, and its error isn't checked. And the badge table uses the unsorted projects while the CV uses `Sorted`: build both from the same sorted list so they never drift apart.
+4. Fixing one problem per run is slow; seeing them all at once lets you fix the file in one go. `html/template` escapes everything that lands in the page, so a stray `<` or `&` in a description (or a link someone else contributed) can't break the page or run a script.
+
+</details>
+
 ## When you're stuck
 
 - **`json: unknown field "repo_url"`**: that's `DisallowUnknownFields` doing its job. Use the field names from the struct tags.
@@ -133,5 +165,7 @@ This day is the portfolio, so the last checklist is the whole course's:
 - **Deploy link**: the site itself (GitHub Pages or any static host), and the shipped project's live URL.
 - **Tests and CI**: this tool gets its own CI badge too. Green badges everywhere are the quickest signal that you finish things.
 - **What you'd do next**: a short "Now" section on the site: what you're learning, the next project you'll ship, the open-source issue you're working on. Update it every month.
+
+**That's the end of Phase 8.** [The Phase 8 recap](../RECAP.md) has the key ideas, a short self-test, and one last project: a brief you write yourself.
 
 You started with a single M-Pesa SMS on [Day 1](../../phase-1-terminal/day-001-mpesa-sms/). A hundred days later you can design, build, test, secure, speed up and ship a service, and explain how you did it. Ship it, and go and get the job.

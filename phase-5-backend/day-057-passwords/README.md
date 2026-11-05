@@ -91,6 +91,23 @@ Replay a log of login attempts and print the server's answer to each: three wron
 go run ./tools/kata 57
 ```
 
+## Check yourself
+
+1. Predict `ValidatePassword("Password1!", blocklist)` and `ValidatePassword("nimechoka na jam ya thika road", blocklist)`. Why does NIST say no "one digit, one capital, one symbol" rules?
+2. You hash the same password twice with `HashArgon2id`. Are the two strings equal? Why is that a good thing?
+3. Why does `Login` still run `Verify` against a throwaway hash when the phone number doesn't exist?
+4. bcrypt only reads 72 bytes. A user's password is 72 `a`s; what happens when someone logs in with those 72 `a`s plus `anything`? What does `GenerateFromPassword` do with 73 bytes?
+
+<details>
+<summary>Answers</summary>
+
+1. `ErrTooShort` (10 characters, under 15) and `nil`. Composition rules push people to `Password1!`-style passwords, which are in every cracking list; length is what makes a password hard to guess.
+2. No. Each hash gets a fresh random salt, so two passengers with the same password have different hashes, and one precomputed table can't crack them all.
+3. So both cases take about the same time. If unknown phones answered instantly, an attacker could time the replies and learn which phone numbers have accounts.
+4. It matches: bcrypt compares only the first 72 bytes. `GenerateFromPassword` refuses with `bcrypt: password length exceeds 72 bytes`. That limit is one reason new hashes use argon2id.
+
+</details>
+
 ## When you're stuck
 
 - **`illegal base64 data at input byte 22`**: you encoded with `base64.StdEncoding` (with `=` padding) and decoded with `RawStdEncoding`, or the other way round. Use `RawStdEncoding` for both.

@@ -77,6 +77,39 @@ From a module graph with static and lazy imports, work out the first download, w
 go run ./tools/kata 74
 ```
 
+## Check yourself
+
+1. Why can hashed files like `index-DOzQj1Vn.js` be cached for a year with `immutable`, while `index.html` must be `no-cache`? What happens if you swap them?
+2. Predict the results (sizes in decimal units, as `formatBytes` uses):
+
+   ```ts
+   formatBytes(999);
+   formatBytes(1000);
+   formatBytes(1_250_000);
+   pickWidth(360, 2, [320, 640, 960]);
+   pickWidth(360, 3, [320, 640, 960]);
+   ```
+
+3. Spot the bug. `pickWidth(300, 1, [960, 320, 640])` returns 960 instead of 320:
+
+   ```ts
+   const sorted = [...widths].sort();
+   return sorted.find((w) => w >= needed) ?? sorted[sorted.length - 1];
+   ```
+
+   (It also looks fine with `[320, 640, 960]`. Try `[100, 9, 10]`.)
+4. Why is `const SeatMap = lazy(() => import("./SeatMap"))` declared at the top of the file and not inside `TripBoard`? And why measure with the Profiler before adding `useMemo`?
+
+<details>
+<summary>Answers</summary>
+
+1. A changed file gets a new hash, so a new name, so an old cached copy is never wrong. `index.html` keeps its name and points at the current hashes, so the browser must re-check it (a cheap 304 when nothing changed). Swapped, passengers would keep an old `index.html` pointing at old assets for a year, and never see a deploy.
+2. `"999 B"`, `"1.0 kB"`, `"1.3 MB"`, `960` (720 px needed), and `960` again (1080 needed, nothing is wide enough, so the largest).
+3. `sort()` with no compare function sorts as strings, so `[100, 9, 10]` becomes `[10, 100, 9]`. These widths happen to start with different digits, so the bug hides. Use `sort((a, b) => a - b)`.
+4. Inside the component, each render would make a new lazy component, so React would throw away the seat map and load it again. `useMemo` has a cost of its own; measuring shows which renders are actually slow, so you only add it where it helps.
+
+</details>
+
 ## When you're stuck
 
 - **`Element type is invalid. Received a promise that resolves to: undefined`**: `lazy` needs the module's **default** export. `SeatMap.tsx` has `export default function SeatMap`.

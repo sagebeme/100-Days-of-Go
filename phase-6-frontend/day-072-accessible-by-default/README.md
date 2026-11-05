@@ -62,6 +62,42 @@ Compute WCAG contrast ratios for a designer's colour pairs and give each a verdi
 go run ./tools/kata 72
 ```
 
+## Check yourself
+
+1. Why is `<button>` better than `<div onClick>`, even with `role="button"` and `tabIndex={0}` added? Name two things the `<div>` still doesn't do.
+2. Predict the verdicts with `meetsAA(ratio, largeText)` (4.5 for normal text, 3 for large):
+
+   ```ts
+   meetsAA(contrastRatio("#767676", "#ffffff"), false); // ratio 4.54
+   meetsAA(contrastRatio("#959595", "#ffffff"), false); // ratio 3.00
+   meetsAA(contrastRatio("#959595", "#ffffff"), true);
+   contrastRatio("#ffffff", "#767676");                 // the other way round?
+   ```
+
+3. Spot the bug. After a bad submit the error summary appears, but focus stays on the Book button and the screen reader says nothing:
+
+   ```tsx
+   {hasErrors && (
+     <div role="alert" ref={summaryRef}>
+       <h2>There is a problem</h2>...
+     </div>
+   )}
+   // in the submit handler, right after setErrors(...):
+   summaryRef.current?.focus();
+   ```
+
+4. axe and Lighthouse give the page 100. What can they still not tell you?
+
+<details>
+<summary>Answers</summary>
+
+1. `<button>` is focusable and announced as a button for free, and it activates with Enter *and* Space and submits its form. A `<div>` with a role and `tabIndex` still needs key handlers for Enter and Space, won't submit a form, and isn't disabled by `disabled`.
+2. `true`, `false`, `true`, and `4.54` again: the formula puts the lighter colour on top, so the order doesn't matter.
+3. Two things. The summary doesn't exist yet when the handler runs (it renders after `setErrors`), so `summaryRef.current` is `null`; move the focus into a `useEffect` that depends on `hasErrors`. And a `<div>` can't take focus without `tabIndex={-1}`.
+4. Whether focus goes somewhere sensible, whether the labels and messages make sense, whether the page works with only a keyboard. Automated checks find missing labels, contrast and broken ARIA; you still have to test with a keyboard and a screen reader.
+
+</details>
+
 ## When you're stuck
 
 - **`Unable to find role="group" and name "Choose a seat"`**: a `<fieldset>` is a group, and its name comes from a `<legend>` that is its first child.

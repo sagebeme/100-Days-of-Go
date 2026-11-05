@@ -58,6 +58,34 @@ Print a React-style component tree from child-parent pairs, the way DevTools sho
 go run ./tools/kata 66
 ```
 
+## Check yourself
+
+1. Why does `FareBadge` test `amountKsh === undefined` and not `!amountKsh`? Which real route would show the wrong text the other way?
+2. Predict what the page shows. A route's `goesTo` is `"<script>alert(1)</script>"` and the card renders `<h2>To {route.goesTo}</h2>`.
+3. Spot the bug. With `ROUTES` it seems fine, but as soon as a second route without a painted number is added, React warns `Encountered two children with the same key` and the cards can mix up their content:
+
+   ```tsx
+   <ul>
+     {routes.map((r) => (
+       <li key={r.number}>
+         <RouteCard route={r} />
+       </li>
+     ))}
+   </ul>
+   ```
+
+4. Why does a component's name have to start with a capital letter? What does `<routeCard />` do?
+
+<details>
+<summary>Answers</summary>
+
+1. `!amountKsh` is true for `0` as well as `undefined`, so a free route (Ksh0) would say "Ask the conductor". Only `undefined` means "nobody wrote the fare down".
+2. The literal text `To <script>alert(1)</script>`. React escapes everything inside `{}`, like `html/template`, so nothing runs.
+3. A route without a number has `number` `undefined`, so every such route gets the same (empty) key. Build the key from fields every route has and that are unique together, for example `` `${r.operator}-${r.goesTo}` `` as the solution does.
+4. JSX treats a lowercase name as an HTML tag and a capitalised one as a component. `<routeCard />` makes an unknown `<routecard>` element in the page and never calls your function.
+
+</details>
+
 ## When you're stuck
 
 - **`Unable to find an accessible element with the role "article"`**: the test looks for an `<article>` element. A `<div>` doesn't count.

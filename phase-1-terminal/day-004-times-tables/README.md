@@ -54,6 +54,31 @@ A farmer in Machakos records the rainfall every day. Find the longest run of day
 go run ./tools/kata 4
 ```
 
+## Check yourself
+
+1. What does `Table(5, 0)` return, and why is that the right answer without any special `if`?
+2. Predict `CountDivisible(10, 1, 3)`.
+3. Spot the bug. This `SumTable(7, 12)` returns `462`, not `546`:
+
+   ```go
+   total := 0
+   for i := 0; i < upTo; i++ {
+   	total += n * i
+   }
+   ```
+
+4. Why does `total := 0` go before the loop and not inside it?
+
+<details>
+<summary>Answers</summary>
+
+1. `""`. The condition `1 <= 0` is false from the start, so the loop runs zero times and the empty starting value is returned.
+2. `0`. `from` is bigger than `to`, so the loop never runs and `count` stays 0.
+3. The loop counts `0` to `11` instead of `1` to `12`. It adds `7*0` and misses `7*12 = 84`, and `546 - 84 = 462`. Start at `1` and use `<=`.
+4. Inside the loop it would be reset to 0 on every turn, and it wouldn't exist after the loop, so `return total` wouldn't compile.
+
+</details>
+
 ## When you're stuck
 
 - **`expected '{', found '++'`**: you separated the three parts of your `for` with commas. Use semicolons: `for i := 1; i <= upTo; i++ {`.

@@ -66,6 +66,31 @@ The best way to play your game is to guess the middle every time. Given the rang
 go run ./tools/kata 12
 ```
 
+## Check yourself
+
+1. Why does `Play` take an `io.Reader` and an `io.Writer` instead of using `os.Stdin` and `os.Stdout` directly?
+2. Predict the result and the output of `Play(strings.NewReader("abc\n0\n42\n"), &out, 42, 100, 7)`.
+3. Spot the bug: `used++` moved to just after `sc.Scan()`, before the `strconv.Atoi` check. What changes for a player who types `abc`?
+4. Why can a test rely on `rand.New(rand.NewPCG(1, 2))`, but not on a generator seeded from the clock?
+
+<details>
+<summary>Answers</summary>
+
+1. So a test can pass in a `strings.Reader` as the "keyboard" and a `strings.Builder` as the "screen". The game doesn't care where the lines come from.
+2. `true, 1`, and `out` holds:
+
+   ```
+   Guess a number from 1 to 100. You have 7 tries.
+   > Numbers only, please.
+   > From 1 to 100, please.
+   > Correct! Guesses used: 1.
+   ```
+
+3. Bad input now uses up a try, which the brief says it mustn't. Count a guess only once it's a real number in range.
+4. The same seeds always give the same sequence, so the test knows the numbers in advance. A clock seed changes every run.
+
+</details>
+
 ## When you're stuck
 
 - **`"io" imported and not used`** or **`"math/rand/v2" imported and not used`**: the starter needs these for the function signatures. Don't delete them.

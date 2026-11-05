@@ -90,6 +90,23 @@ Instead of a report at the end of the month, warn the moment a category goes ove
 go run ./tools/kata 26
 ```
 
+## Check yourself
+
+1. `DefaultRules` puts `{"Charge", "fees"}` first. Predict `Categorise("Pay Bill Charge for KPLC STIMA", DefaultRules)`, and say why the order of the rules matters.
+2. Why does `Run` add the `PESA_RULES` rules in front of `DefaultRules` instead of after them?
+3. `april.csv` repeats the last row of `march.csv`. What would go wrong without the `seen` set in `Summarise`?
+4. A setting can come from a flag, an env variable or a default. Which wins, and how does `Run` know a flag was really typed?
+
+<details>
+<summary>Answers</summary>
+
+1. `"fees"`. The first rule whose keyword appears wins, so the transaction charge isn't counted as the bill itself (`STIMA`, bills).
+2. `Categorise` stops at the first match, so the user's own rules must be tried first to override the defaults: `NYAMA CHOMA=eating-out` beats the default `food`.
+3. That payment would be counted twice when both files are summarised together, inflating the spending. A receipt number is unique, so it's counted only the first time.
+4. Flag, then env variable, then default. `fs.Visit` lists only the flags given on the command line, so an env value is used only when its flag wasn't typed.
+
+</details>
+
 ## When you're stuck
 
 - **Where do I start?** Read the test file top to bottom. Then do the pure functions first (`Ksh`, `Categorise`, `ParseBudgets`, `ParseRules`), then `ParseStatement`, `Summarise` and `Report`, and `Run` last. Run one test at a time with `go test -run TestKsh ./phase-2-modelling/day-026-pesa-budget/starter`.
@@ -103,3 +120,5 @@ go run ./tools/kata 26
 - **`-strict=false` doesn't beat `PESA_STRICT=true`**: same cause. `fs.Visit` counts `-strict=false` as set.
 - **A failed run still printed a report**: check every setting and read every file before you print anything.
 - **Still stuck?** Open the files in `solution/`, read them once, close them, then write your own version from memory.
+
+**That's the end of Phase 2.** Before you move on, read [the Phase 2 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

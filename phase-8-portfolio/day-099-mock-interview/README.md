@@ -102,6 +102,43 @@ Find the cheapest fare between two stages using at most `K` changes of matatu. P
 go run ./tools/kata 99
 ```
 
+## Check yourself
+
+1. The interviewer says `n` can be 10^5. What does that tell you about the complexity they expect, and why say the brute force out loud anyway?
+2. Predict the output (run it against your solution):
+
+   ```go
+   fmt.Println(PairForBudget([]int{350, 120, 500, 230}, 350))
+   fmt.Println(MergeShifts([]Shift{{900, 1080}, {360, 600}, {540, 720}, {720, 800}}))
+   fmt.Println(LongestRun([]bool{true, true, false, true, true, true, false, false, true}, 0))
+   fmt.Println(FewestNotes([]int{1, 40, 50}, 80), FewestNotes([]int{40, 50}, 30))
+   ```
+
+3. Spot the bug. `FewestNotes([]int{1, 40, 50}, 80)` returns 31 instead of 2:
+
+   ```go
+   sort.Sort(sort.Reverse(sort.IntSlice(denoms)))
+   count := 0
+   for _, d := range denoms {
+       count += amount / d
+       amount %= d
+   }
+   return count
+   ```
+
+   Why does this pass for Kenyan notes but not for `{1, 40, 50}`? (It also sorts the caller's slice.)
+4. In the system design, why is an in-memory lock not enough to stop double booking, and what is?
+
+<details>
+<summary>Answers</summary>
+
+1. O(n log n) or better: O(n²) is about 10^10 steps, far too slow. Saying the brute force first shows you understand the problem, gives a correct answer to fall back on, and sets up the improvement you explain next.
+2. `1 3 true`, `[{360 800} {900 1080}]` (touching shifts merge too), `3`, and `2 -1` (40 + 40; 30 can't be made from 40s and 50s).
+3. Greedy takes the biggest note first: 50, then 30 ones, 31 notes. It works for Kenyan notes because their values are chosen so greedy is always right; in general you need dynamic programming over every amount up to the target (Day 39). Work on a copy if you must sort.
+4. A lock in one process doesn't stop another API server, and the servers are stateless and several. Holds that expire, and a unique constraint in the database on (trip, seat), make a second booking of the same seat impossible whichever server it reaches.
+
+</details>
+
 ## When you're stuck
 
 - **`PairForBudget([3 3 7], 10)` returns `1, 2`**: you overwrote the index of the first `5`. Only store a price's index the first time you see it.

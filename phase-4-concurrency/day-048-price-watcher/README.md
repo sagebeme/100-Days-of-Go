@@ -94,6 +94,23 @@ Shops change prices and drop items all day; answer "cheapest right now?" fast. A
 go run ./tools/kata 48
 ```
 
+## Check yourself
+
+1. A shop answers `503` every time. With `Retries: 3` and `Backoff: 100ms`, how many requests does it get, and how long does `Watch` wait between them?
+2. Why is a `5xx` retried but a `429` or a bad JSON body fails the shop at once?
+3. Why does every attempt get its own `context.WithTimeout`, rather than one timeout around the whole of `Watch`?
+4. One shop fails. Why does that go in `Summary.Failed` instead of making `Watch` return an error?
+
+<details>
+<summary>Answers</summary>
+
+1. Four requests (the first plus three retries), with waits of 100ms, 200ms and 400ms between them.
+2. A `5xx` is the shop's own trouble, which often passes. A `4xx` means the request itself is wrong or unwelcome (`429` is "slow down"), and bad JSON will be just as bad next time, so retrying only adds load.
+3. A slow shop must not use up the time the other shops need. Each attempt is capped on its own, and the outer `ctx` still stops everything when the caller gives up.
+4. The other shops' prices are still useful. `Watch` returns an error only when its own `ctx` is done, because then there's no trustworthy result at all.
+
+</details>
+
 ## When you're stuck
 
 - **Where to start**: split it in three. `fetchOnce` makes one request and returns the entries or an error. `fetch` wraps it in the retry loop with the limiter and backoff. `Watch` runs `fetch` from a [Day 46](../day-046-worker-pools/) worker pool, storing each shop's entries and error in slot `i`, then merges once every worker is done.
@@ -106,3 +123,5 @@ go run ./tools/kata 48
 - **`Failed = ["Moved Away" "Broken JSON" ...]`**: sort it with `slices.Sort`.
 - **A race report on a map**: don't write the `Cheapest` map from the workers. Keep per-shop results in a slice slot each, and merge after `wg.Wait()`.
 - **Still stuck?** Open `solution/pricewatcher.go`, read it once, close it, then write your own version from memory.
+
+**That's the end of Phase 4.** Before you move on, read [the Phase 4 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

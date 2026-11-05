@@ -86,6 +86,23 @@ Write the core of a flag parser yourself: `-name value`, `-name=value`, bools, `
 go run ./tools/kata 22
 ```
 
+## Check yourself
+
+1. Why does `runSplit` use `flag.NewFlagSet(..., flag.ContinueOnError)` instead of the global `flag.Parse()`?
+2. Predict the exit code for each: `chama split -total 3 -members 5`, `chama split -x`, `chama loan -h`, and `chama split 10 -members 3`.
+3. `-total` defaults to `0`. How does the code tell `-total 0` from no `-total` at all, and what does each print?
+4. Predict `Split(10, 3)` and `Loan(20000, 10, 3)`.
+
+<details>
+<summary>Answers</summary>
+
+1. With `ContinueOnError`, `Parse` returns an error instead of calling `os.Exit`, so `Run` can return a code and a test can check it. Each subcommand also gets its own set of flags.
+2. `1` (the flags are fine but Ksh3 can't be split five ways), `2` (`flag provided but not defined: -x`), `0` (help is success), and `2`: parsing stops at `10`, the first word that isn't a flag, so it's an unexpected argument.
+3. `fs.Visit` only visits flags that were set on the command line. No `-total` prints `-total is required`; `-total 0` prints `-total must be at least 1, got 0`.
+4. `[4 3 3]` (the extra shilling goes to the first member), and `6000, 26000, 8667` (26000 / 3 rounded up).
+
+</details>
+
 ## When you're stuck
 
 - **The whole test run stops with `exit status 2`**: you used `flag.ExitOnError`, or called `os.Exit` inside `Run`. Use `flag.ContinueOnError` and return a code.

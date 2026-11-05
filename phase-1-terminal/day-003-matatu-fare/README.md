@@ -75,6 +75,23 @@ A makanga counts the money at the end of a trip. Children ride for Ksh30, adults
 go run ./tools/kata 3
 ```
 
+## Check yourself
+
+1. In `Fare`, why must `case distanceKm <= 5` come before `case distanceKm <= 15`? What would a 3 km trip cost if the order were reversed?
+2. Predict: `Fare(0, 7, true)`, `Fare(15, 19, true)` and `Fare(16, 20, false)`.
+3. Spot the bug: `if hour >= 6 || hour <= 8 { fare += 30 }`
+4. `Route` has `case "Rongai", "Ongata Rongai":`. Why doesn't Go need a `break` after each case, and why list both names in one case?
+
+<details>
+<summary>Answers</summary>
+
+1. A `switch` runs the first case that's true. With `<= 15` first, a 3 km trip matches it and pays 80 instead of 50.
+2. `0` (the early return means no extras on a trip that doesn't exist), `130` (80 + 30 + 20), and `120` (16 km is in the 16 to 30 band, and hour 20 is after the rush).
+3. `||` makes it true for every hour: any hour is either at least 6 or at most 8. It needs `&&`: `hour >= 6 && hour <= 8`.
+4. Go's `switch` stops after the matching case on its own; there's no fall-through unless you write `fallthrough`. Listing both values in one case gives them the same answer without repeating the code.
+
+</details>
+
 ## When you're stuck
 
 - **`syntax error: unexpected newline, expected { after if clause`**: Go wants the opening `{` on the same line as the `if`, not on the next line.

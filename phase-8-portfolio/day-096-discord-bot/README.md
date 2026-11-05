@@ -97,6 +97,49 @@ Process solve events and `TOP k` queries, ranking users by katas solved, then fe
 go run ./tools/kata 96
 ```
 
+## Check yourself
+
+1. Why do all the command rules live in `Bot.Handle(ctx, Command) Response`, with Discord only a thin layer on top? What does Njeri get from that?
+2. Predict the output (run it against your solution):
+
+   ```go
+   fmt.Println(SameAnswer("  4500 ", "4500"))
+   fmt.Println(SameAnswer("Binary  search", "binary search"))
+   fmt.Println(VerifyRequest(pub, sig, "1792832401", body)) // sig was made for timestamp 1792832400
+   fmt.Println(VerifyRequest(pub, "zz", "1792832400", body))
+   ```
+
+3. Spot the bug. Discord refuses to save the Interactions Endpoint URL, and later anyone can send fake commands:
+
+   ```go
+   func handler(w http.ResponseWriter, r *http.Request) {
+       var in interaction
+       json.NewDecoder(r.Body).Decode(&in)
+       if in.Type == 1 {
+           writeJSON(w, 200, map[string]int{"type": 1})
+           return
+       }
+       body, _ := json.Marshal(in)
+       if !VerifyRequest(pubKey, r.Header.Get("X-Signature-Ed25519"), r.Header.Get("X-Signature-Timestamp"), body) {
+           http.Error(w, "bad signature", 401)
+           return
+       }
+       ...
+   }
+   ```
+
+4. Day 95 used HMAC; Discord uses Ed25519. What's the practical difference for whoever reads your config? And why are hints and answers ephemeral?
+
+<details>
+<summary>Answers</summary>
+
+1. The rules can be tested with plain values, with no network and no Discord account, and changed without opening Discord. The HTTP endpoint (or a gateway client) only turns requests into `Command` values and back, so it can be swapped without touching the rules.
+2. `true` (extra spaces don't matter), `false` (case does), `false` (the timestamp is part of what was signed), `false` (bad hex is just `false`, never a panic).
+3. Two things. PING is answered before checking the signature, but Discord sends badly signed requests too and only saves the URL if they get `401`; check the signature first, for every request. And it verifies a re-encoded body, not the bytes Discord signed, so real requests fail; read the raw body once, verify it, then parse.
+4. With HMAC, anyone who has the shared secret can also forge requests. With Ed25519, your config holds only Discord's public key, which can verify but not sign, so nobody who reads it can forge a request. Ephemeral replies are seen only by the user, so one person's hint or answer doesn't spoil the kata for the whole channel.
+
+</details>
+
 ## When you're stuck
 
 - **Discord says "The specified interactions endpoint url could not be verified"**: your handler doesn't return `401` for a bad signature, doesn't answer `{"type":1}` to a PING, or isn't on HTTPS. The handler tests cover the first two.

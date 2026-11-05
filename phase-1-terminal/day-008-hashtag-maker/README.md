@@ -58,6 +58,30 @@ A palindrome reads the same both ways, like "Kayak". Decide for each line whethe
 go run ./tools/kata 8
 ```
 
+## Check yourself
+
+1. Predict `len("Ngũgĩ")` and `utf8.RuneCountInString("Ngũgĩ")`.
+2. Predict the output:
+
+   ```go
+   for i, r := range "kéja" {
+   	fmt.Print(i, string(r), " ")
+   }
+   ```
+
+3. Spot the bug: `Truncate` written as `return s[:max] + "..."`. What does it do to `"café latte"` with `max` 4?
+4. What does `Hashtag("!!! ???")` return, and why is that better than `"#"`?
+
+<details>
+<summary>Answers</summary>
+
+1. `7` and `5`. `ũ` and `ĩ` take two bytes each, so the bytes outnumber the letters.
+2. `0k 1é 3j 4a`. `range` gives the byte position where each rune starts, and `é` takes two bytes, so position 2 is skipped.
+3. It slices bytes, not letters. `"café latte"[:4]` is `"caf\xc3"`: half of the `é`, which shows as a broken character. Convert to `[]rune` first and slice that.
+4. `""`. Every rune is skipped, so the builder stays empty; a lone `#` isn't a hashtag, so the function says there's nothing to tag.
+
+</details>
+
 ## When you're stuck
 
 - **`"strings" imported and not used`**: you added an import before writing the code that uses it. Use it, or delete the line for now.

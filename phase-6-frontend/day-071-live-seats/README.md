@@ -63,6 +63,31 @@ Updates arrive out of order; keep the newest version of each seat. Instructions 
 go run ./tools/kata 71
 ```
 
+## Check yourself
+
+1. CORS doesn't apply to WebSockets. What does that let another site do, and what stops it here?
+2. Predict the waits. `backoff(attempt)` is `Math.min(1000 * 2 ** attempt, 10_000)`. The server is down and the page fails six times in a row, then connects, then drops again. What are the six waits, and the wait after the next drop?
+3. Spot the bug. Some updates vanish: two `seat` messages arrive between renders and the page only shows the second one.
+
+   ```ts
+   ws.onmessage = (ev) => {
+     const msg = parseMessage(ev.data);
+     if (msg) setSeats(applyMessage(seats, msg));
+   };
+   ```
+
+4. The page has `version: 8`. A `{"type":"seat","version":8,...}` message arrives, then `{"type":"seat","version":7,...}`. What does `applyMessage` do with each, and why is `key={i}` fine for the seat buttons, unlike Day 67's queue?
+
+<details>
+<summary>Answers</summary>
+
+1. Any page on any site can open a socket to your server, and the browser sends the user's cookies with it, so a hostile site could act as the user. `websocket.Accept` refuses origins that aren't in `OriginPatterns` (from `ALLOWED_ORIGIN`); never `InsecureSkipVerify` in production.
+2. 1 s, 2 s, 4 s, 8 s, 10 s, 10 s. A good connection resets `attempt` to 0, so the next drop waits 1 s again.
+3. The handler uses the `seats` from the render that set it up, which is out of date, so each message is applied to an old state and the last one wins. Use the function form: `setSeats((s) => applyMessage(s, msg))`.
+4. It ignores both: an update is applied only if its version is newer than the state's. A seat's index is its seat number and never moves, so the index is a stable, unique key. The queue's index changed when someone left.
+
+</details>
+
 ## When you're stuck
 
 - **`WebSocket connection to 'ws://localhost:8080/ws/seats' failed`** and the API logs nothing: the API isn't running, or the URL says `http://` instead of `ws://`.

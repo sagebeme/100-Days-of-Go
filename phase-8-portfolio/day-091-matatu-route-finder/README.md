@@ -76,6 +76,45 @@ The cheapest fare from one stage to another using at most `k` changes. Plain Dij
 go run ./tools/kata 91
 ```
 
+## Check yourself
+
+1. Why does the search run over (stop, route) states, not just stops? What would a plain stop-by-stop search get wrong about transfers?
+2. Predict the results on the made-up network: Mto to Soko on route A (10 min), Soko to Ziwa on B (10 min), Mto to Shule on C (15 min), Shule to Ziwa on C (15 min).
+
+   ```go
+   f, _ := n.Fastest("Mto", "Ziwa")
+   g, _ := n.FewestTransfers("Mto", "Ziwa")
+   fmt.Println(f.Minutes, f.Transfers, len(f.Legs), g.Minutes, g.Transfers, len(g.Legs))
+   ```
+
+3. Spot the problems. This finds the right number of minutes, but it does far more work than it needs on a big network, and it can't answer the brief:
+
+   ```go
+   for q.Len() > 0 {
+       it := heap.Pop(q).(*item)
+       for _, l := range n.adj[it.stop] {
+           cost := it.minutes + l.Minutes
+           if old, ok := best[l.To]; !ok || cost < old {
+               best[l.To] = cost
+               heap.Push(q, &item{stop: l.To, minutes: cost})
+           }
+       }
+   }
+   ```
+
+   Hint: what happens when a stop has an old, more expensive entry still in the heap, and when you pop the destination?
+4. Walking from Kencom to Railways between two matatus: why does it still count as a transfer, and why break ties with an insertion counter rather than leaving them to map order?
+
+<details>
+<summary>Answers</summary>
+
+1. Arriving at a stop on the 125 and arriving there on foot are different situations: only one can carry on along the 125 without boarding again. Searching by stop alone keeps only the first way it reached each stop, so it can throw away the one that needs fewer boardings.
+2. `20 1 2 30 0 1`. Fastest takes A then B (20 minutes, one change); FewestTransfers stays on C all the way (30 minutes, no change, one leg).
+3. It doesn't skip stale entries: when it pops an item whose cost is worse than `best[it.stop]`, it should `continue`, not expand that stop again. And it never stops at the destination; once the destination is popped its cost is final, so return there. It also searches stops, not (stop, route) states, and keeps no `prev` map, so it can't count transfers, break ties on them, or print the legs.
+4. Walking isn't a matatu, so you still board a second one: two matatu legs means one transfer. Ties broken by map order would give different answers on different runs, and tests (and passengers) need the same answer every time.
+
+</details>
+
 ## When you're stuck
 
 - **`panic: interface conversion: interface {} is *routes.item, not routes.item`**: you pushed pointers and asserted a value, or the other way round. Pick one.

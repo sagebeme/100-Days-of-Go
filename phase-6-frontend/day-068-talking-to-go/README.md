@@ -75,6 +75,31 @@ Given when each search request was sent and how long its answer took, work out w
 go run ./tools/kata 68
 ```
 
+## Check yourself
+
+1. The server answers 500. Does `await fetch(...)` throw? What does your code have to do so the page shows the error instead of a spinner or an empty list?
+2. Predict which answers the page shows. The passenger types "n" then "g" quickly. The request for "n" is slow and comes back after the one for "ng". What does the page show at the end with the `AbortController` cleanup, and what would it show without it?
+3. Spot the bug. The search box fetches in a loop forever:
+
+   ```tsx
+   const [status, setStatus] = useState<Status>({ kind: "loading" });
+   useEffect(() => {
+     fetchRoutes(query).then((routes) => setStatus({ kind: "done", routes }));
+   });
+   ```
+
+4. Why is the state one union `{ kind: "loading" } | { kind: "error"; ... } | { kind: "done"; ... }` and not three booleans? And why does `curl` still get answers when the page says the request was blocked by CORS?
+
+<details>
+<summary>Answers</summary>
+
+1. No. `fetch` only rejects when there's no response at all; a 404 or 500 resolves. Check `res.ok` and throw (an `ApiError` with the body's `error`), then the effect's `catch` sets the error state.
+2. With abort: the results for "ng". The cleanup aborted the "n" request when the query changed, and the `catch` ignores it because the signal was aborted. Without it: the results for "n", because the last answer to arrive wins, even though it's for older text.
+3. There's no dependency list, so the effect runs after every render. Each answer sets state, which renders, which fetches again. Add `[query, attempt]`, and return `() => controller.abort()` as the cleanup.
+4. Three booleans can disagree (loading and error both true), and every render has to work out which wins. A union can only be in one state, and TypeScript only lets you read `routes` in the `done` case. CORS is enforced by the browser, to protect the user; the server still answers, and `curl` doesn't apply CORS rules.
+
+</details>
+
 ## When you're stuck
 
 - **`Access to fetch at 'http://localhost:8080/...' from origin 'http://localhost:5173' has been blocked by CORS policy`**: the API isn't sending `Access-Control-Allow-Origin` for your origin. Check `ALLOWED_ORIGIN`, and that the page really is on port 5173.

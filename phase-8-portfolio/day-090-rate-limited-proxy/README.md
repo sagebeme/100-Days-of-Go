@@ -83,6 +83,37 @@ Simulate per-client token buckets from a log of request times, in whole-number a
 go run ./tools/kata 90
 ```
 
+## Check yourself
+
+1. Why does the proxy refuse `/mpesa/../admin` before matching prefixes, instead of cleaning the path and then matching?
+2. Predict `ClientIP` with the trusted networks `10.0.0.0/24` (run it against your solution):
+   - `RemoteAddr` `41.90.64.7:5555`, `X-Forwarded-For: 6.6.6.6`
+   - `RemoteAddr` `10.0.0.2:5555`, `X-Forwarded-For: 6.6.6.6, 41.90.64.7`
+   - `RemoteAddr` `10.0.0.2:5555`, `X-Forwarded-For: 41.90.64.7, 10.0.0.3`
+3. Spot the bug. A stuck payments service brings the proxy down too, and an outage page shows `dial tcp 10.0.0.5:9000: connect: connection refused` to the app:
+
+   ```go
+   rp := &httputil.ReverseProxy{
+       Rewrite:   rewrite,
+       Transport: http.DefaultTransport,
+       ErrorHandler: func(w http.ResponseWriter, r *http.Request, err error) {
+           http.Error(w, err.Error(), http.StatusBadGateway)
+       },
+   }
+   ```
+
+4. Why are hop-by-hop headers such as `Connection` and `Upgrade`, and any header named in `Connection`, never forwarded? And why set the transport's `Proxy` to `nil`?
+
+<details>
+<summary>Answers</summary>
+
+1. A path with `..` that's cleaned can land on a prefix you never meant to expose, and the upstream may clean it differently from you. Refusing anything that isn't already clean means the path you matched is exactly the path that's forwarded.
+2. `41.90.64.7` (the peer isn't trusted, so the fake header is ignored), `41.90.64.7` (read from the right: the last entry was added by the trusted load balancer), and `41.90.64.7` (`10.0.0.3` is trusted, so it's skipped).
+3. Two problems. `http.DefaultTransport` has no response-header timeout, so every request to a stuck upstream holds a goroutine and a connection until the proxy runs out; set dial, TLS and response-header timeouts, and a deadline on the whole request. And the error handler sends `err.Error()` to the client, leaking an internal address: log the real error and send a generic `502` (or `504` for a deadline).
+4. They describe this one connection, not the request, so forwarding them can confuse the next hop or smuggle headers past it (a header named in `Connection` is hop-by-hop by declaration). With `Proxy` set by default, an `HTTP_PROXY` variable in the environment could send every payment request through somebody else's machine.
+
+</details>
+
 ## When you're stuck
 
 - **`panic: interface conversion: interface {} is nil, not proxy.route`** in `Rewrite`: `Rewrite` reads the matched route from the request's context. Put it there in `ServeHTTP` with `context.WithValue` before calling `rp.ServeHTTP`.

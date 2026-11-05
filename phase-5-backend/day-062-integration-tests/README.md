@@ -84,6 +84,41 @@ Read a log of CI results and find the tests that both passed and failed on the s
 go run ./tools/kata 62
 ```
 
+## Check yourself
+
+1. Every handler unit test passed, yet `GET /me/bookings` answered without a token in production. What kind of bug can only an integration test through `Routes()` catch, and why?
+2. Predict the output:
+
+   ```go
+   func TestOrder(t *testing.T) {
+       t.Cleanup(func() { fmt.Println("close connection") })
+       t.Cleanup(func() { fmt.Println("drop schema") })
+       fmt.Println("test body")
+   }
+   ```
+
+3. Spot the bug. Tests fail with `connection refused` on the first request:
+
+   ```go
+   func NewEnv(t testing.TB, store Store) *Env {
+       srv := httptest.NewServer((&Server{Store: store}).Routes())
+       defer srv.Close()
+       return &Env{URL: srv.URL, Client: &http.Client{Timeout: 5 * time.Second}}
+   }
+   ```
+
+4. Why does each Postgres test get its own schema (through `search_path`), and why do `MemStore` and `PGStore` run through the same contract tests?
+
+<details>
+<summary>Answers</summary>
+
+1. Wiring bugs: a route registered without `requireAuth`, middleware in the wrong order, a wrong path pattern. A unit test calls the handler directly and skips the router, so it can't see them. A request to a real `httptest.NewServer` goes through everything production uses.
+2. `test body`, then `drop schema`, then `close connection`. Cleanups run last-registered first, which is why you register "close the connection" before "drop the schema".
+3. `defer` runs when `NewEnv` returns, so the server is closed before the test sends anything. Use `t.Cleanup(srv.Close)`, which runs when the test ends. Add `t.Helper()` too, so failures point at the test's line.
+4. A schema per test keeps tests independent: they can run in parallel and in any order without seeing each other's rows, and dropping the schema cleans up. The contract tests prove the fake behaves like the real store, so tests that use `MemStore` can be trusted.
+
+</details>
+
 ## When you're stuck
 
 - **`panic: runtime error: index out of range [0] with length 0`** in the API tests: `NewEnv` isn't loading or seeding the fixtures yet, so `env.Fixtures.Trips` is empty.

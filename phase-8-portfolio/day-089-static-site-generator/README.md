@@ -87,6 +87,45 @@ Check that the tags in a line of HTML are balanced, and say where the first prob
 go run ./tools/kata 89
 ```
 
+## Check yourself
+
+1. `html/template` escapes everything, so why is the conversion to `template.HTML` the one line a reviewer reads twice? What makes it safe here?
+2. Predict the output (run it against your solution):
+
+   ```go
+   fmt.Printf("%q %q\n", Slugify("First Week in Go!.md"), Slugify("matatu--fares.md"))
+   fmt.Println(ValidSlug("../../etc"), ValidSlug("matatu-fares"))
+   fmt.Println(filepath.IsLocal("a/b"), filepath.IsLocal("a/../../x"), filepath.IsLocal("/etc/passwd"))
+   ```
+
+3. Spot the bug. Akinyi's guest post has `slug: ../../.ssh/authorized_keys` in its front matter, and the build overwrites a file in Kamau's home folder:
+
+   ```go
+   func Write(dir string, files map[string][]byte) error {
+       for name, data := range files {
+           p := filepath.Join(dir, name)
+           os.MkdirAll(filepath.Dir(p), 0o755)
+           if err := os.WriteFile(p, data, 0o644); err != nil {
+               return err
+           }
+       }
+       return nil
+   }
+   ```
+
+   Which two checks should have stopped it? (And what else is wrong with that `MkdirAll` line?)
+4. Why are unknown front-matter keys an error, not ignored? Give an example of a typo that would otherwise vanish silently.
+
+<details>
+<summary>Answers</summary>
+
+1. `template.HTML` tells the template "this is already safe, don't escape it", so it's the one place the protection is off. It's safe only because goldmark (without `WithUnsafe`) has already dropped raw HTML and `javascript:` links; turn that on and a guest post can run scripts for every visitor.
+2. `"first-week-in-go" "matatu-fares"`, then `false true`, then `true false false`.
+3. The slug from the front matter should be checked with `ValidSlug` in `ParsePage`, and `Write` should refuse any path that isn't `filepath.IsLocal`. Either one alone stops it; have both. The `MkdirAll` error is ignored, so a failure shows up later as a confusing write error.
+4. A misspelt key would just disappear and the post would quietly behave wrongly: `daft: true` instead of `draft: true` publishes a draft, and `tittle:` leaves the post with no title. An error names the file and the key.
+
+</details>
+
 ## When you're stuck
 
 - **The page shows `&lt;p&gt;Hello&lt;/p&gt;` as text**: you put the rendered body in a `string` field. `html/template` escapes strings. Store it as `template.HTML`.

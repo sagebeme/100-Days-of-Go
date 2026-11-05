@@ -80,6 +80,23 @@ The same idea at till scale: a list of methods, thousands of payments, and for e
 go run ./tools/kata 16
 ```
 
+## Check yourself
+
+1. Why does `[]Method{Wallet{Balance: 100}}` fail to compile while `[]Method{&Wallet{Balance: 100}}` works?
+2. What does `var _ Method = (*Wallet)(nil)` do at run time, and why is it worth writing?
+3. Predict. With `cash := &Cash{InPocket: 500}`, `wallet := &Wallet{Balance: 1000}` and `card := &Card{Bank: "Equity", Limit: 5000}`, you call `Checkout([]Method{cash, wallet, card}, 800)` twice. What does each call return, and what is `wallet.Balance` after the first?
+4. Why does `Checkout` copy the slice and use `sort.SliceStable` rather than `sort.Slice` on the caller's slice?
+
+<details>
+<summary>Answers</summary>
+
+1. The methods have pointer receivers, so only `*Wallet` has them. A plain `Wallet` doesn't satisfy `Method` (`method Fee has pointer receiver`).
+2. Nothing at run time. It makes the compiler check that `*Wallet` satisfies `Method`, so a missing or misspelt method is reported right next to the type instead of somewhere far away.
+3. The first returns `"M-Pesa", nil`: cash is free but short, and M-Pesa's fee (13) beats the card's (16). The balance is then `187` (1000 − 813). The second returns `"Equity card", nil`: cash and M-Pesa are both short now.
+4. Sorting in place would reorder the caller's slice behind their back. `SliceStable` keeps methods with equal fees in the order they were listed, which is the "first one listed wins" rule.
+
+</details>
+
 ## When you're stuck
 
 - **`cannot use Wallet{…} (value of struct type Wallet) as Method value: Wallet does not implement Method (method Fee has pointer receiver)`**: use `&Wallet{...}`. The methods belong to `*Wallet`.

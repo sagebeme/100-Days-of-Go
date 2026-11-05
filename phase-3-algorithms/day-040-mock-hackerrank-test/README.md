@@ -68,6 +68,25 @@ Problem 7, the hardest one: the fewest minutes across a city grid where every bl
 go run ./tools/kata 40
 ```
 
+## Check yourself
+
+Try these after the timer, not before.
+
+1. Match each problem to its technique and Big-O: Missing Receipt, First Unique, Best Trade, Merge Bookings, Count Shambas, Longest Rising.
+2. Predict `BestTrade([]int{30, 20, 10})` and `MergeBookings([]Interval{{1, 3}, {3, 5}})`.
+3. `MissingReceipt` uses `m*(m+1)/2` minus the sum. What is `MissingReceipt([]int{})`, and when could the formula overflow?
+4. In `LongestRising`, what does `tails[i]` hold, and why does replacing a tail with a smaller value never make the answer wrong?
+
+<details>
+<summary>Answers</summary>
+
+1. Missing Receipt: Gauss's formula, O(n). First Unique: counting array, O(n). Best Trade: one pass keeping the cheapest price so far, O(n). Merge Bookings: sort by start, then one pass, O(n log n). Count Shambas: DFS or BFS flood fill on the grid, O(R·C). Longest Rising: patience sorting with binary search, O(n log n).
+2. `0` (prices only fall, so the best is not to trade), and `[{1 5}]`: bookings that touch are merged, because `3 <= 3`.
+3. `1`: with no receipts, receipt 1 is missing. `m*(m+1)` overflows a 64-bit `int` only when `m` is around 3 × 10^9, far past the constraints; on a 32-bit `int` it would overflow near 46 000.
+4. The smallest possible last value of a rising run of length `i+1`. A smaller ending can only make it easier to extend later, and the length of `tails` (the answer) is never reduced.
+
+</details>
+
 ## When you're stuck
 
 These hints name the technique. In a real test, nobody would tell you, so try each problem for at least ten minutes first.
@@ -81,3 +100,5 @@ These hints name the technique. In a real test, nobody would tell you, so try ea
 - **Problem 7, wrong answer on a test with a winding road:** you only moved right and down. Traffic can make going back up faster.
 - **Problem 7, too slow:** check that you skip stale heap entries, and that you mark cells as numbers `r*C + c` in a slice, not as keys in a map.
 - **Still stuck when the timer goes?** That's information, not failure: note which days to revisit. Then open `solution/mock.go` and `kata/solution/main.go`, read each answer once, close them, and write your own version from memory.
+
+**That's the end of Phase 3.** Before you move on, read [the Phase 3 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

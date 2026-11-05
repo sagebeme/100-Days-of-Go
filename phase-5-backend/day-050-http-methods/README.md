@@ -91,6 +91,28 @@ Today the mux works out `405` and the `Allow` header for you. In the kata you wr
 go run ./tools/kata 50
 ```
 
+## Check yourself
+
+1. Which of `GET`, `PUT`, `PATCH`, `DELETE` and `POST` are safe, and which are idempotent? Why is a `GET` that books a seat dangerous?
+2. `DELETE /trips/1` answers `204` the first time and `404` the second. Is it still idempotent? Why?
+3. Why does `tripPatch` use `Seats *int` instead of `Seats int`? Predict `PATCH /trips/1` with `{"seats":0}` and with `{}`.
+4. Predict the answers, in order, for these bookings on trip 1:
+
+   1. seat 3 with `Idempotency-Key: k1`
+   2. the same body with `k1` again
+   3. seat 5 with `k1`
+   4. seat 3 with no key
+
+<details>
+<summary>Answers</summary>
+
+1. Safe: `GET` (and `HEAD`). Idempotent: `GET`, `PUT` and `DELETE`. `POST` is neither, and `PATCH` isn't guaranteed. Link previews, crawlers and prefetching send `GET`s freely, so a `GET` that books would book seats nobody asked for.
+2. Yes. Idempotent is about the server's state, not the reply: after one delete or two, the trip is gone.
+3. A pointer tells "not sent" (`nil`) from "sent as 0". `{"seats":0}` is a `400` (seats must be above 0); `{}` is a `200` that changes nothing.
+4. `201` with the booking; `201` with the same bytes and `Idempotent-Replayed: true`, booking nothing new; `422`, because the key was used for a different request; and `409`, because seat 3 is taken.
+
+</details>
+
 ## When you're stuck
 
 - **`GET /trips` with no trips gives `null`**: you encoded a nil slice. `Store.Trips` makes an empty one, so use it as it is rather than declaring `var trips []Trip`.

@@ -94,6 +94,36 @@ Summarise a weekend of request logs: requests, errors and p95 per route, and the
 go run ./tools/kata 84
 ```
 
+## Check yourself
+
+1. Why write `DESIGN.md` before changing any code? What should a reviewer be able to disagree with in it?
+2. Predict the status for each, with the defaults in `Config`:
+   - `TWENDE_RATE=fast` at startup, with no `TWENDE_API_KEY`
+   - `POST /bookings` with `Authorization: Bearer wrong-key`
+   - `POST /bookings` with a 2 MiB body and the right key
+   - `POST /bookings` with `{"tripId":"46K-0730","seat":3,"phone":"0712345678","note":"hi"}`
+   - `GET /readyz` after `Run`'s context is cancelled, while a request is still in flight
+3. Spot the bug. On Friday evening the load balancer takes every server out of rotation, though they're all working:
+
+   ```go
+   mux.Handle("GET /healthz", http.HandlerFunc(live))
+   mux.Handle("GET /readyz", ready)
+   mux.Handle("GET /trips", http.HandlerFunc(listTrips))
+   handler := RateLimit(lim, mux)
+   ```
+
+4. The handler panics on a bad trip. What does the passenger get, what goes in the log, and why must the panic text stay out of the response?
+
+<details>
+<summary>Answers</summary>
+
+1. Deciding what "done" means is cheaper on one page than halfway through the code, and every requirement then maps to a test. A reviewer can push back on the goals and non-goals, the values chosen (timeouts, rate, body size), and the alternatives you turned down, while changing them costs nothing.
+2. It refuses to start, listing both problems at once (`TWENDE_API_KEY: is required` and `TWENDE_RATE: must be a number above 0, got "fast"`); `401` with `WWW-Authenticate: Bearer`; `413`; `400` (an unknown field); `503`, while the request in flight still finishes with its 200.
+3. The rate limiter wraps the whole mux, so the load balancer's health checks count against the limit. When traffic is heavy (or the checks come from one address), `/readyz` gets 429, the balancer reads that as "not ready", and pulls the server. `/healthz`, `/readyz` and `/metrics` must never be limited: route them around the limiter.
+4. A `500` with a plain JSON error. The log gets an Error line with the panic and the request ID, and the server keeps serving. The panic text can name files, queries and internal values, which helps an attacker and means nothing to a passenger.
+
+</details>
+
 ## When you're stuck
 
 - **Where does everything go?** Middleware, outermost first: request ID, logging, panic recovery, security headers, then rate limiting on the API routes only. Two `ServeMux`es make the last part easy: one for the API routes, wrapped in the limiter, mounted at `/` on another that also holds the probes and `/metrics`.
@@ -108,3 +138,5 @@ go run ./tools/kata 84
 - **`Run returned ... while a request was still in flight`**: `srv.Close` drops connections. Use `srv.Shutdown` with a `ShutdownGrace` timeout, and set your draining flag before calling it.
 - **`/readyz still 200 after shutdown began`**: keep an `atomic.Bool` on the server, set it in `Run` when the context is done, and check it first in `/readyz`.
 - **Still stuck?** Open `solution/`, read it once, close it, then write your own version from memory. Then compare your `DESIGN.md` with what you built.
+
+**That's the end of Phase 7.** Before you move on, read [the Phase 7 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

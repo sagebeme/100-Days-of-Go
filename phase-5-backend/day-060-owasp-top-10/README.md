@@ -83,6 +83,23 @@ Parse IPv4 addresses by hand, reject malformed ones (including leading zeros, an
 go run ./tools/kata 60
 ```
 
+## Check yourself
+
+1. Why does `BuildTripSearch` put `"%" + name + "%"` in `args` instead of in the SQL text, and why can't the sort column be a placeholder too?
+2. `PATCH /me` decodes into the whole `Profile`. What does `{"name":"W","role":"admin"}` do, and what's the fix?
+3. Predict `IsBlockedIP` for `127.0.0.1`, `::ffff:127.0.0.1`, `169.254.169.254`, `10.1.2.3` and `8.8.8.8`. Why is checking the hostname alone not enough?
+4. Predict what each template writes for a passenger named `<script>alert(1)</script>` in `<h1>{{.}}</h1>`: `text/template`, then `html/template`.
+
+<details>
+<summary>Answers</summary>
+
+1. Values sent as arguments travel separately from the SQL, so `' OR '1'='1` is just a strange name to search for. Placeholders only stand for values, not for column names, so the sort column comes from an allowlist map instead.
+2. It makes the caller an admin (mass assignment, A01). Decode into a narrow struct with only `name` and `DisallowUnknownFields`, so `role` is rejected with `400`, and take whose profile it is from the logged-in user.
+3. Blocked, blocked (`Unmap` turns it back into `127.0.0.1`), blocked (the cloud metadata address), blocked (private), and allowed. `evil.example` can resolve to `127.0.0.1`, so the check must run on the real IP being dialled, in the dialer's `Control` hook.
+4. `text/template` writes `<h1><script>alert(1)</script></h1>`, which runs in the conductor's browser. `html/template` writes `<h1>&lt;script&gt;alert(1)&lt;/script&gt;</h1>`, which shows as text.
+
+</details>
+
 ## When you're stuck
 
 - **The query has `$1` twice, or `LIMIT $1` after two filters**: number each placeholder from `len(args)` right after appending, not from a counter you forget to bump.

@@ -97,6 +97,23 @@ The two relatives furthest apart in a family tree, given as a preorder string. I
 go run ./tools/kata 36
 ```
 
+## Check yourself
+
+1. Predict `Height` after inserting 10, 20, 30, 40 in that order, and after inserting 2, 1, 3. What does that tell you about the cost of `Contains`?
+2. Which traversal gives a BST's keys in sorted order, and why does it?
+3. Why does `Insert` return the root, and what goes wrong if you call `Insert(root, 5)` and ignore the result when `root` is `nil`?
+4. Predict `Height(nil)` and `LevelOrder` of the 10, 20, 30, 40 tree.
+
+<details>
+<summary>Answers</summary>
+
+1. `4` and `2`. Sorted inserts make a line, so `Contains` walks every node: O(n). The same keys in a good order make a balanced tree, O(log n).
+2. In-order (left, node, right). Everything in the left subtree is smaller and everything in the right is bigger, so visiting left first, then the node, then right lists them in order.
+3. An empty tree has no node to attach to, so `Insert(nil, 5)` makes a new node and returns it. If you ignore the result, your `root` stays `nil` and the key is lost.
+4. `0`, and `[[10] [20] [30] [40]]`: one key per level.
+
+</details>
+
 ## When you're stuck
 
 - **`invalid memory address or nil pointer dereference`:** you read `root.Key` or `n.Left` without checking for `nil` first. Every tree function starts with the `nil` case.

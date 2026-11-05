@@ -52,6 +52,38 @@ Replay add, remove and undo actions on a queue. An undone remove puts the passen
 go run ./tools/kata 67
 ```
 
+## Check yourself
+
+1. Why can't `SeatCounter` keep the count in a plain `let taken = 0`?
+2. Predict what the counter shows after one click:
+
+   ```tsx
+   const [taken, setTaken] = useState(0);
+   <button onClick={() => { setTaken(taken + 1); setTaken(taken + 1); }}>Board two</button>
+   ```
+
+   And what if both calls were `setTaken((t) => t + 1)`?
+3. Spot the bug. Clicking Add does nothing on screen, though `console.log(queue)` shows the new passenger:
+
+   ```tsx
+   function add(name: string) {
+     queue.push({ id: nextId, name });
+     setQueue(queue);
+   }
+   ```
+
+4. The queue renders with `key={i}`. Amina's stop box says "Kibera", then the conductor boards Amina. What does Baraka's stop box show, and why does `key={p.id}` fix it?
+
+<details>
+<summary>Answers</summary>
+
+1. React calls the component function again on every render, so a `let` starts at 0 each time, and changing it doesn't tell React to re-render. `useState` keeps the value between renders, and its setter triggers the next render.
+2. `1`. Both calls use the `taken` from this render (0), so both set it to 1. With the function form each update gets the latest value, so it shows `2`.
+3. `push` changes the same array, so the old and new state are `===` and React skips the re-render. Make a new array: `setQueue([...queue, { id: nextId, name }])`.
+4. "Kibera". With index keys, after Amina leaves, Baraka is item 0, so React reuses item 0's `<li>` (and its uncontrolled input) for him. With `key={p.id}`, React removes Amina's `<li>` and keeps Baraka's, so his box stays empty.
+
+</details>
+
 ## When you're stuck
 
 - **The count never changes, but no error**: you changed state in place (`push`, `splice`, `taken++`). Make a new value and pass it to the setter.

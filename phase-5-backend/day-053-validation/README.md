@@ -77,6 +77,23 @@ Client IP addresses feed rate limits and logs, and some arrive in headers like `
 go run ./tools/kata 53
 ```
 
+## Check yourself
+
+1. Put these in the order the handler checks them, with their codes: the body is 5 KB; the JSON is broken; trip 9 doesn't exist; seat 99 on a 14-seater.
+2. Predict `len("Wanjirũ")` and `utf8.RuneCountInString("Wanjirũ")`. Which one should the 2-to-60 rule use, and why?
+3. Why does `ValidateBooking` collect every problem in `Errors` instead of returning at the first one?
+4. Spot the bug: after validation, the handler books with the original `req` instead of the cleaned one it got back. What ends up in the database for `" Achieng "` and `"0712 345 678"`?
+
+<details>
+<summary>Answers</summary>
+
+1. Size first (`413`), then broken JSON (`400`), then the trip (`404`), then the values (`422`). Can I read it, does it exist, does it follow the rules.
+2. `8` and `7`. The rule is about characters people see, so count runes; counting bytes would reject or wrongly accept names with letters like `ũ`.
+3. So the app can mark every field on the form in one go. Fixing one error, resubmitting and finding the next is a miserable form.
+4. The untrimmed name and the raw phone. The same passenger then shows up under several spellings of one number, which is exactly what normalising was meant to stop.
+
+</details>
+
 ## When you're stuck
 
 - **The 5 KB body gets `400`, not `413`**: you checked for the size error after giving up on it. Use `errors.As(err, &tooBig)` with `var tooBig *http.MaxBytesError`, before the generic `400`.

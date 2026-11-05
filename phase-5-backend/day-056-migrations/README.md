@@ -93,6 +93,23 @@ Numbers put migrations in one line. Some tools let each migration name what it d
 go run ./tools/kata 56
 ```
 
+## Check yourself
+
+1. Why does each migration run in a transaction together with its `INSERT INTO schema_migrations` row?
+2. With migrations 1, 2 and 3 known, predict what `Pending` returns when the database has applied `[1, 3]`, `[1, 2, 3, 4]` and `[1]`.
+3. Two copies of the app start at once and both run `migrate up`. What stops them applying the same migration twice, and why must the whole run use one connection?
+4. Why do `Parse`, `Pending` and `ToRollBack` take plain values (an `fs.FS`, slices) instead of a database?
+
+<details>
+<summary>Answers</summary>
+
+1. So the schema change and the record of it land together or not at all. If the `ALTER TABLE` fails halfway, Postgres rolls everything back and the database is exactly where it was.
+2. An error: version 2 isn't applied but is older than 3, which is (a gap means drift). An error: version 4 has no migration file. And migrations 2 and 3, in order.
+3. A Postgres advisory lock (`pg_advisory_lock`): the second copy waits until the first is done. The lock belongs to the connection that took it, so a different pooled connection wouldn't hold it.
+4. They're pure logic, so tests check ordering, naming and drift in microseconds with an in-memory `fstest.MapFS` and no database. Only the thin `Runner` needs Postgres.
+
+</details>
+
 ## When you're stuck
 
 - **`pattern migrations/*.sql: no matching files found`**: the `//go:embed` path is relative to the Go file's folder. The SQL files must be in `cmd/migrate/migrations/`.

@@ -74,6 +74,41 @@ Process `SET`, `DEL` and `GET` commands with timestamps, and answer each `GET` w
 go run ./tools/kata 93
 ```
 
+## Check yourself
+
+1. Why must `Set` call `f.Sync()` *before* it changes the map and returns? What could go wrong the other way round?
+2. Predict what `Open` gives back. The log holds three good records: `set a=1`, `set b=2`, `delete a`. The power cuts out halfway through a fourth, `set c=3`. After restart:
+
+   ```go
+   s, _ := Open("data")
+   fmt.Println(s.Get("a"))
+   fmt.Println(s.Get("b"))
+   fmt.Println(s.Get("c"))
+   s.Set("d", "4") // then restart again: is d there?
+   ```
+
+3. Spot the bug. A crash during `Compact` sometimes leaves an empty `data.wal`:
+
+   ```go
+   f, _ := os.Create(filepath.Join(s.dir, "data.wal"))
+   for k, v := range s.m {
+       f.Write(encode(opSet, k, v))
+   }
+   f.Sync()
+   ```
+
+4. Why does each record carry lengths and a CRC-32, and not just `SET key value\n`?
+
+<details>
+<summary>Answers</summary>
+
+1. "Saved" must mean "on disk". If the map changes and the call returns before the sync, a power cut can lose a write the caller was told had succeeded, and the in-memory state would disagree with the file. If the write fails, the map stays as it was.
+2. `"" false` (deleted), `"2" true`, `"" false` (the torn record is dropped, never read as a wrong value). `d` survives: `Open` truncated the file at the torn record, so the next record is appended after the last good one.
+3. `os.Create` truncates the real log first, so for a while the only copy of the data is in memory. Write the live keys to `data.wal.tmp`, sync it, then rename it over `data.wal`; a rename is atomic, so a crash leaves either the old log or the new one.
+4. Lengths make any bytes safe in a key or value: a value with a space or a newline breaks a text format. The CRC lets `Open` tell a torn or corrupt record from a good one, so it stops there instead of reading garbage as data.
+
+</details>
+
 ## When you're stuck
 
 - **`unexpected EOF` from `io.ReadFull` on restart**: that's the torn record. Treat `io.ErrUnexpectedEOF` as "stop here", and plain `io.EOF` before any byte as "the log ended cleanly".

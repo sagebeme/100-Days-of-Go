@@ -83,6 +83,32 @@ Replay a request log through a sliding-log rate limiter: allow a request only if
 go run ./tools/kata 61
 ```
 
+## Check yourself
+
+1. Why does `CORS` echo the request's own origin in `Access-Control-Allow-Origin` instead of sending `*`, and why does every response carry `Vary: Origin`?
+2. Predict the status codes. `p := http.NewCrossOriginProtection()` with `p.AddTrustedOrigin("https://twende.example")` wraps a handler that answers 201:
+   - a `POST` with `Sec-Fetch-Site: cross-site` and `Origin: https://evil.example`
+   - a `GET` with the same two headers
+   - a `POST` with `Sec-Fetch-Site: cross-site` and `Origin: https://twende.example`
+   - a `POST` with neither header (curl)
+3. Spot the bug. The browser console says `No 'Access-Control-Allow-Origin' header is present`, but the same request works in curl. The router is built like this:
+
+   ```go
+   h := RateLimit(lim, RequireAuth(CORS(allowed, mux)))
+   ```
+
+4. A colleague keys the rate limiter on `r.Header.Get("X-Forwarded-For")` "because we're behind a proxy". What can an attacker do, and what should the limiter use instead?
+
+<details>
+<summary>Answers</summary>
+
+1. With credentials, browsers refuse `*`: the answer has to name one origin, so you check the origin against the allowlist and echo it back. Because the answer then depends on `Origin`, `Vary: Origin` tells caches not to give one site's answer to another.
+2. 403, 201, 201, 201. Only an unsafe method from a cross-site origin that isn't trusted is refused. `GET` is a safe method, a trusted origin passes, and a request without `Sec-Fetch-Site` or `Origin` isn't from a browser, so it isn't a CSRF risk.
+3. `CORS` is the innermost layer, so a 401 from `RequireAuth` or a 429 from `RateLimit` goes out with no CORS headers, and the browser hides it from the page. Put `CORS` outside everything that can answer early: `CORS(allowed, RateLimit(lim, RequireAuth(mux)))`.
+4. Anyone can send `X-Forwarded-For`, so an attacker sends a new value on every request and never hits the limit (or sends a victim's IP to get them limited). Use the host part of `r.RemoteAddr`, or, behind a proxy you control, only the header that proxy sets.
+
+</details>
+
 ## When you're stuck
 
 - **The browser console says `No 'Access-Control-Allow-Origin' header is present`** although your handler works in curl: the request went through a path that skipped `CORS`, often a 401, 404 or 429 written by middleware that runs before it. Put `CORS` outside everything that can answer early.

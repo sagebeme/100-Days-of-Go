@@ -92,6 +92,23 @@ Read a block of words and print each distinct word with how many times it appear
 go run ./tools/kata 13
 ```
 
+## Check yourself
+
+1. What happens when `basket.go` calls `ksh.group(5)`, and why?
+2. Predict `Summary(map[string]int{"unga": 1}, map[string]int{"unga": 230})` and `Total(map[string]int{"unga": 0}, map[string]int{"unga": 230})`.
+3. `fmt.Printf("%d items\n", "three")` compiles. What tool catches it, and what does it say?
+4. How does Go know `starter` and `starter/ksh` are two different packages?
+
+<details>
+<summary>Answers</summary>
+
+1. It doesn't compile: `undefined: ksh.group`. Names starting with a small letter are private to their own package.
+2. `"1 item, Ksh230", nil` (exactly one item uses the singular), and `0` with the error `unga: quantity 0 must be at least 1`.
+3. `go vet`: `fmt.Printf format %d has arg "three" of wrong type string`.
+4. One folder is one package. `ksh/` is its own folder with its own `package ksh` line, imported by its module path plus folder.
+
+</details>
+
 ## When you're stuck
 
 - **`undefined: ksh`**: you called `ksh.Format` without importing the package. Add the import from step 5.

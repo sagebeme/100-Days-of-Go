@@ -62,6 +62,32 @@ Read a list of M-Pesa balances, some of them negative because of Fuliza, and pri
 go run ./tools/kata 5
 ```
 
+## Check yourself
+
+1. Why does `(a + k - 1) / k` round up? Work it out for `TripCost(50, 12, 177)`, where `a` is 8850 and `k` is 12.
+2. Predict `Split(10, 3)` and `Split(-5, 2)`.
+3. Spot the bug:
+
+   ```go
+   cost, err := TripCost(100, 0, 180)
+   fmt.Println("each pays", cost/4)
+   if err != nil {
+   	fmt.Println("problem:", err)
+   }
+   ```
+
+4. When `TripCost` fails it returns `0` with the error. Why not `-1`, or the best guess it can make?
+
+<details>
+<summary>Answers</summary>
+
+1. Adding `k - 1` pushes any remainder over the next multiple of `k`, but an exact multiple stays below the next one. `8850 + 11 = 8861`, and `8861 / 12` is `738`. With an exact cost like `1800` and `k = 15`, `1814 / 15` is still `120`.
+2. `3, 1, nil` (10 shared by 3 is 3 each with 1 over), and `0, 0` with the error `cost can't be negative`.
+3. It uses `cost` before checking `err`. Check the error straight after the call and stop if it's not `nil`; only then use the value.
+4. When there's an error the other values mean nothing, and callers are expected to check `err` first. Returning zero is the convention, and a made-up number like `-1` could be mistaken for a real answer.
+
+</details>
+
 ## When you're stuck
 
 - **`not enough return values`** with **`have (int)`** and **`want (int, error)`**: every `return` must give both values. Write `return cost, nil`.

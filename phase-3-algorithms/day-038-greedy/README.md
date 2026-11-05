@@ -78,6 +78,23 @@ Cross out `k` digits from a price tag to leave the smallest number. LeetCode's "
 go run ./tools/kata 38
 ```
 
+## Check yourself
+
+1. Predict `MaxBookings` for slots 1–10, 2–3, 4–5, 6–7. What would "starts first" give, and why does "ends first" win?
+2. Predict `MaxBookings([]Slot{{1, 3}, {3, 5}})`. Is a slot starting at 3 allowed after one ending at 3?
+3. Give coins and an amount where biggest-coin-first is wrong. What do you use instead?
+4. Predict `FewestBodas([]int{100, 100, 100}, 130)` and `FewestNotes(0)`.
+
+<details>
+<summary>Answers</summary>
+
+1. `3` (2–3, 4–5, 6–7). "Starts first" takes 1–10 and gets only 1. Taking the slot that ends first leaves the most time for the rest, and the exchange argument shows it's never worse than any best schedule.
+2. `2`. The check is `Start >= free`, so a slot may start the hour the last one ends.
+3. Coins 1, 3, 4 and the amount 6: greedy pays 4 + 1 + 1 (three coins) but 3 + 3 is two. Use dynamic programming (Day 39).
+4. `3` (no two fit together), and an empty map.
+
+</details>
+
 ## When you're stuck
 
 - **`FewestNotes(0)` returns `nil`:** make the map before the loop.

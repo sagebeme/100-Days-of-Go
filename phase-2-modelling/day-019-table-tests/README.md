@@ -74,6 +74,23 @@ Your own mini `go test -cover`: given the blocks of lines each test ran, count t
 go run ./tools/kata 19
 ```
 
+## Check yourself
+
+1. What does `t.Helper()` change when a check inside a helper fails?
+2. The error tests use `errors.Is(err, ErrFormat)` rather than comparing `err.Error()` with a string. What does that let you change later without breaking tests?
+3. Write the command that runs only the `comma group` row of `TestParseAmountErrors`.
+4. Predict `ParseAmount("1,000,000")`, `ParseAmount("Ksh 0.5")`, `ParseAmount("1,0000")` and `ParseAmount(".5")`.
+
+<details>
+<summary>Answers</summary>
+
+1. The failure is reported at the line that called the helper, not inside the helper, so you can see which row failed.
+2. The wording of the messages. Any message that wraps the sentinel with `%w` still passes.
+3. `go test -run 'TestParseAmountErrors/comma_group' ./phase-2-modelling/day-019-table-tests/starter`. Spaces in subtest names become `_`.
+4. `100000000, nil` (cents), `50, nil`, an `ErrFormat` error (a comma group must be exactly three digits), and an `ErrFormat` error (the whole part is empty).
+
+</details>
+
 ## When you're stuck
 
 - **A failure points inside `assertCents`, not at the row**: the helper is missing `t.Helper()`.

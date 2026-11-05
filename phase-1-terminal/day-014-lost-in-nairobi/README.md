@@ -91,6 +91,23 @@ A delivery rider walks a grid of CBD blocks, following a list of moves. Walls st
 go run ./tools/kata 14
 ```
 
+## Check yourself
+
+1. Why does `Step` return the new room and the text instead of printing and changing a global variable?
+2. Predict the room each call returns: `Step("odeon", "  NENDA   Mashariki ")`, `Step("archives", "nenda juu")` and `Step("kencom", "nenda")`.
+3. Why does `Describe` sort the exits before joining them?
+4. A room's exits are a map. What does `exits["kimathi"]["kaskazini"]` give, and why doesn't it panic?
+
+<details>
+<summary>Answers</summary>
+
+1. A function from (state, input) to (new state, output) can be tested with plain calls and compared results, no keyboard or screen needed. The game loop in `cmd/play` is only a thin wrapper.
+2. `"river-road"` (case and spaces are ignored), `"archives"` with `Hiyo si njia...` (juu isn't a direction), and `"kencom"` with `Nenda wapi? Sema njia.`
+3. Map iteration order is random. Without sorting, `Njia:` would list the exits in a different order on different runs and the tests would be flaky.
+4. `""`. Reading a missing key from a map, even a map inside a map, gives the zero value. Use comma-ok to tell "no exit" from a real one.
+
+</details>
+
 ## When you're stuck
 
 - **`assignment to entry in nil map`**: you wrote into a map you declared with `var m map[string]int`. Make it with `map[string]int{}` or `make` first. Reading a nil map is fine; writing panics.
@@ -100,3 +117,5 @@ go run ./tools/kata 14
 - **The player ends up in room `""`**: you used `exits[room][way]` without checking `ok`. A missing key returns `""`, so return the old room when `ok` is false.
 - **`declared and not used: text`** in your loop: print the text that `Step` returns. Use `room, text = Step(room, line)` with `=`, not `:=`, so you update the `room` outside the loop.
 - **Still stuck?** Open `solution/adventure.go` and `solution/cmd/play/main.go`, read them once, close them, then write your own version from memory.
+
+**That's the end of Phase 1.** Before you move on, read [the Phase 1 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

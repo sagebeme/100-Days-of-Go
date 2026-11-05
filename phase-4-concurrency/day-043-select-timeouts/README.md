@@ -61,6 +61,23 @@ Customers at a SACCO counter each wait for the teller or for their own deadline,
 go run ./tools/kata 43
 ```
 
+## Check yourself
+
+1. If both quote channels are ready at the same moment, which case does `select` run?
+2. Predict `TryBook` on an unbuffered `seats` channel with no receiver, and on a buffered channel of size 1 called twice.
+3. Why does `Fastest` set a closed channel to `nil`? What would the loop do without that?
+4. Predict `Fastest(a, b, time.Second)` when `a` and `b` are both closed before it's called. How long does it take?
+
+<details>
+<summary>Answers</summary>
+
+1. One of them, chosen at random. Never rely on the order the cases are written in.
+2. `false` (nobody can take the seat, and `default` runs at once); then `true` and `false` (the one slot is taken).
+3. A receive from a closed channel is always ready and gives `ok == false`, so `select` would keep picking it and the loop would spin. A receive from a `nil` channel never happens, so `select` ignores that case.
+4. `Quote{}` with `ErrNoQuotes`, straight away: both cases are set to `nil` and the loop ends without waiting for the timer.
+
+</details>
+
 ## When you're stuck
 
 - **`Fastest(5s timeout) was still waiting an hour later`**: there's no timeout case in your `select`, or you made a new `time.After` channel each time round the loop, which restarts the clock. Make the timer once, before the loop.

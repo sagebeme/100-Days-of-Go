@@ -92,6 +92,23 @@ Is a pool of 10 enough? Simulate it: queries arrive, each takes the connection t
 go run ./tools/kata 55
 ```
 
+## Check yourself
+
+1. Spot the bug: `db.QueryRowContext(ctx, fmt.Sprintf("SELECT ... FROM trips WHERE id = %s", r.PathValue("id")))`. What could a client send, and what's the fix?
+2. Two passengers book seat 3 on the same trip at the same moment. What makes sure only one wins, and how does the loser's error reach the handler as `409`?
+3. Why is `*sql.DB` opened once at startup, and why cap it with `SetMaxOpenConns`?
+4. What goes wrong if `TripsOnRoute` forgets `defer rows.Close()`, or skips checking `rows.Err()` after the loop?
+
+<details>
+<summary>Answers</summary>
+
+1. SQL injection (OWASP A03): an "id" like `1 OR 1=1` or `1; DROP TABLE bookings` becomes part of the SQL. Use a placeholder, `WHERE id = $1`, and pass the value separately.
+2. The database's `UNIQUE (trip_id, seat)` constraint. The second insert fails with a `*pgconn.PgError` with code `23505`, `TranslateError` turns it into `ErrSeatTaken`, and the handler maps that to `409`.
+3. It's a pool of connections, not one connection, meant to be shared. Postgres allows about 100 connections in total across every copy of your app, so each copy must hold only its share.
+4. Without `Close` the connection is never given back to the pool, and after enough requests every query waits forever. Without `rows.Err()` an error halfway through (a dropped connection, a timeout) looks like a short but successful list.
+
+</details>
+
 ## When you're stuck
 
 - **`sql: unknown driver "pgx" (forgotten import?)`**: add `_ "github.com/jackc/pgx/v5/stdlib"` to the imports of `pg.go`.

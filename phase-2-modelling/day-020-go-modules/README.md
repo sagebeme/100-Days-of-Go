@@ -143,6 +143,23 @@ Compare loose version numbers like `1.01` and `1.001`, where missing parts count
 go run ./tools/kata 20
 ```
 
+## Check yourself
+
+1. Why can't `Compare` just compare the version strings? What does `"v1.10.0" < "v1.9.0"` give?
+2. Predict `Upgrade("v1.2.0", []string{"v1.3.0", "v1.4.1", "v1.5.0-rc.1", "v2.0.0"})`, and say why the two bigger-looking versions lose.
+3. Predict `Compare` for `v1.0.0-alpha.2` against `v1.0.0-alpha.10`, and for `v1.0.0-alpha` against `v1.0.0-alpha.1`.
+4. Your code needs `x v1.2.0`, a dependency needs `x v1.3.0`, and `v1.9.0` is out. Which version does the build use, and why?
+
+<details>
+<summary>Answers</summary>
+
+1. String comparison goes character by character, and `'1' < '9'`, so `"v1.10.0" < "v1.9.0"` is `true`. That's wrong: 10 is more than 9. Compare the numbers.
+2. `"v1.4.1"`. `v1.5.0-rc.1` is a pre-release, which `go get -u` never picks unless you name it, and `v2.0.0` is a different module with its own import path.
+3. `-1` both times. Numeric identifiers are compared as numbers (2 < 10), and when all shared identifiers are equal, the shorter pre-release comes first.
+4. `v1.3.0`. Minimal version selection picks the lowest version that satisfies every requirement, never the newest just because it exists. That keeps builds repeatable.
+
+</details>
+
 ## When you're stuck
 
 - **`TestCompare/v1.10.0_vs_v1.9.0` fails**: you compared strings. `"10" < "9"` as text. Compare the numbers.

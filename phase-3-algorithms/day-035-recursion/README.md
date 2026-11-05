@@ -87,6 +87,23 @@ go test ./phase-3-algorithms/day-035-recursion/starter
 go run ./tools/kata 35
 ```
 
+## Check yourself
+
+1. Your `Factorial` keeps the `n < 0` check but loses its base case (`if n <= 1 { return 1 }`). What does `Factorial(5)` return? And with no checks at all?
+2. Predict `Factorial(0)`, `len(Hanoi(10, "A", "B", "C"))`, `Permutations("aa")` and `len(Permutations("abcd"))`.
+3. In `Permutations`, what does `path = path[:len(path)-1]` after the recursive call do, and what breaks without it?
+4. `CanPay` tries "use this note" and "skip this note" for every note. For which `n` is that fine, and why?
+
+<details>
+<summary>Answers</summary>
+
+1. `0`. The calls run down past 1 and 0 to `Factorial(-1)`, which returns 0, and multiplying by 0 wipes out the whole product. With no checks at all it never stops: it calls itself until the stack runs out and crashes with `fatal error: stack overflow`.
+2. `1`, `1023` (2^10 − 1), `[aa]` (the duplicate check stops the second `aa`), and `24` (4!).
+3. It undoes the choice, so the next loop turn can try a different letter in the same position. Without it, `path` keeps growing and the results are wrong.
+4. Up to about n = 25: 2^n paths is about 3 × 10^7. At n = 100 it's 2^100, which never finishes. Small limits like n ≤ 20 are the hint that this brute force is intended.
+
+</details>
+
 ## When you're stuck
 
 - **`runtime: goroutine stack exceeds 1000000000-byte limit`** or **`fatal error: stack overflow`:** there's no base case, or the recursive call isn't getting smaller. Check that `n-1` (or `notes[1:]`) really is passed.

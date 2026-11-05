@@ -82,6 +82,43 @@ The interview version of today: hand out base62 codes from a counter, give a rep
 go run ./tools/kata 85
 ```
 
+## Check yourself
+
+1. Why does `Create` refuse an existing code instead of overwriting it, and why must codes come from `crypto/rand` and not a counter or `math/rand`?
+2. Predict the output (run it against your solution; base62 is `0-9`, `a-z`, `A-Z`):
+
+   ```go
+   fmt.Println(Encode(0), Encode(61), Encode(62), Encode(3844))
+   for _, a := range []string{"169.254.169.254", "100.64.0.1", "::ffff:127.0.0.1", "41.90.64.7"} {
+       fmt.Println(a, PublicAddr(netip.MustParseAddr(a)))
+   }
+   ```
+
+3. Spot the bug. `http://localtest.me/` and `http://0x7f.0.0.1/` both get through:
+
+   ```go
+   u, err := url.Parse(raw)
+   if err != nil || (u.Scheme != "http" && u.Scheme != "https") {
+       return nil, &URLError{"scheme must be http or https"}
+   }
+   if addr, err := netip.ParseAddr(u.Hostname()); err == nil && !PublicAddr(addr) {
+       return nil, &URLError{"must not point at a private or local address"}
+   }
+   return u, nil
+   ```
+
+4. The shortener only redirects; it never fetches the URL. Why refuse private targets anyway? And what attack is still open when you check the name at creation time but fetch it later?
+
+<details>
+<summary>Answers</summary>
+
+1. Overwriting would silently send everyone who tapped an old SMS to a new campaign's page. A counter or `math/rand` is guessable, so anyone could walk the codes and read every client's links and stats. `crypto/rand` codes can't be guessed.
+2. `0 z 10 100`, then `false` (link-local: the cloud metadata address), `false` (carrier-grade NAT), `false` (loopback written as IPv6, once unmapped), `true`.
+3. It only checks a host that's a literal IP. A name such as `localtest.me` resolves to 127.0.0.1, and odd spellings fail `ParseAddr` and slip past. Resolve the name and check every address it returns (and refuse what doesn't resolve).
+4. A redirect to a private address can still be used against the people who tap it, and as soon as you add a link preview your server fetches the URL, which is SSRF. Checking only at creation leaves DNS rebinding: the name can resolve to a public address today and to 10.0.0.5 tomorrow. Check at dial time, in a `net.Dialer.Control` func.
+
+</details>
+
 ## When you're stuck
 
 - **`Encode(0)` returns `""`**: the loop never runs for 0. Handle it first.

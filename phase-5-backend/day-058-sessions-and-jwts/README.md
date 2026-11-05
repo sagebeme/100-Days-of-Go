@@ -97,6 +97,23 @@ Decode the payload of each token in a log and decide whether it was valid when i
 go run ./tools/kata 58
 ```
 
+## Check yourself
+
+1. What does each cookie flag stop: `HttpOnly`, `Secure`, `SameSite=Lax`?
+2. Why does `Parse` pass `jwt.WithValidMethods([]string{"HS256"})`? What could a token with `"alg": "none"` do without it?
+3. A passenger logs out of the phone app. Their access token is still valid for 10 more minutes. Why can't the server cancel it, and how does Twende keep the damage small?
+4. Refresh token `r1` is rotated into `r2`, and later `r1` arrives again. What does `Rotate` do, and why punish `r2` as well?
+
+<details>
+<summary>Answers</summary>
+
+1. `HttpOnly`: JavaScript (and so an XSS bug) can't read the cookie. `Secure`: it's sent only over HTTPS. `SameSite=Lax`: it isn't sent on cross-site `POST`s, which blocks most CSRF.
+2. The attacker writes the token's header, including which algorithm to check with. Pinning the algorithm means an unsigned `none` token, or one signed with a different algorithm, is rejected instead of trusted.
+3. A JWT is checked by its signature alone, with no lookup, so nothing on the server can say "this one's dead" before `exp`. Twende keeps access tokens to 15 minutes and revokes the refresh family, so a stolen token stops working soon.
+4. It returns `ErrRefreshReused` and revokes the whole family. A reused token means either a retry or a thief with a copy, and the server can't tell which, so every token from that login dies and the passenger logs in again.
+
+</details>
+
 ## When you're stuck
 
 - **`key is of invalid type`** from `SignedString` or `Parse`: HS256 needs the secret as a `[]byte`, not a `string`. Return `t.Secret` from the key func.

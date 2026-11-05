@@ -60,6 +60,28 @@ Sum one column of a CSV with quoted cells, embedded commas, doubled quotes and n
 go run ./tools/kata 24
 ```
 
+## Check yourself
+
+1. How many pieces does `strings.Split` make of this row, and how many cells does `encoding/csv` read from it?
+
+   ```
+   SC1,2026-03-04 17:20:31,"Merchant Payment to 600100 - MAMA PIMA GROCERS, KASARANI",Completed,,-350.00,"2,346.50"
+   ```
+
+2. Why does `Parse` find columns through a `map[string]int` built from the header, instead of using `row[4]` for `Paid In`?
+3. Spot the bug: a file exported from Excel fails with `line 1: missing column "Receipt No."`, though the header plainly starts with `Receipt No.`. What's going on?
+4. Predict: `a` is 12:00 in `EAT` and `b` is 09:00 UTC on the same day. What do `a == b` and `a.Equal(b)` give?
+
+<details>
+<summary>Answers</summary>
+
+1. `strings.Split` gives 9 pieces, because it also splits at the commas inside the quotes. `encoding/csv` reads 7 cells: a quoted cell is one cell, commas and all.
+2. A file with the columns in another order, or with an extra column, still parses. Position-based code would quietly read the wrong cells.
+3. The file starts with a byte order mark, so the first header cell is really `"﻿Receipt No."`. Strip it with `strings.TrimPrefix(name, "﻿")`.
+4. `false` and `true`. They are the same instant, but `==` also compares the location inside the `time.Time`. Always compare times with `Equal`.
+
+</details>
+
 ## When you're stuck
 
 - **`line 1: missing column "Receipt No."`, though it's right there**: the byte order mark is stuck to the first header cell. Print it with `%q` to see `"\ufeffReceipt No."`.

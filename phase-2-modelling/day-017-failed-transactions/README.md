@@ -72,6 +72,29 @@ Process a day's transfers in order and log each one as `OK` or `FAILED` with a r
 go run ./tools/kata 17
 ```
 
+## Check yourself
+
+1. What's the difference between `fmt.Errorf("x: %w", ErrTimeout)` and `fmt.Errorf("x: %v", ErrTimeout)` for a caller using `errors.Is`?
+2. Predict the output:
+
+   ```go
+   err := fmt.Errorf("paying for unga: %w", &TxError{Code: "QFT1", Err: ErrTimeout})
+   fmt.Println(errors.Is(err, ErrTimeout), err == ErrTimeout, Retryable(err))
+   ```
+
+3. Spot the bug: `TxError` has an `Error` method but you forgot `Unwrap`. What does `Explain` return for a failed send with insufficient funds?
+4. Why does `Explain` find a `*LimitError` with `errors.As` instead of `errors.Is`?
+
+<details>
+<summary>Answers</summary>
+
+1. `%w` keeps the original error inside the new one, so `errors.Is` finds it. `%v` only copies its text, so `errors.Is` returns `false`.
+2. `true false true`. `errors.Is` unwraps layer by layer; `==` only looks at the outside layer.
+3. `"<code> Failed. Something went wrong."`. Without `Unwrap`, `errors.Is` can't see past the `TxError`, so no case matches and the `default` runs.
+4. Every `LimitError` is a new value with its own fields, so there's no single value to compare with. `errors.As` asks "is there an error of this type?" and gives you its `Limit` and `Sent` for the message.
+
+</details>
+
 ## When you're stuck
 
 - **`errors.Is` returns false for an error you built with `fmt.Errorf`**: you used `%v` or `%s`. Only `%w` wraps.

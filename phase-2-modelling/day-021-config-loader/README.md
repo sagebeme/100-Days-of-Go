@@ -88,6 +88,23 @@ Read a `.env` file whose values refer to each other with `${NAME}`, and print ev
 go run ./tools/kata 21
 ```
 
+## Check yourself
+
+1. Why does `Load` take a `LookupFunc` instead of calling `os.LookupEnv` itself?
+2. Predict: `Load` with `PORT` set to `""` and the three required variables set. What is `cfg.Port`, and is there an error?
+3. `main` builds `Layered(os.LookupEnv, FromMap(fileValues))`. If `PORT=9000` is exported in the shell and `.env` says `PORT=8081`, which wins, and why is that the right order?
+4. Spot the bug: `ParseDotEnv` splits each line with `strings.Split(line, "=")` and keeps `parts[1]`. What happens to `DARAJA_CONSUMER_SECRET=s3cr=t`?
+
+<details>
+<summary>Answers</summary>
+
+1. So tests can pass a function backed by a map. They never read or change the real environment, so they give the same result on every machine and can run in parallel.
+2. `8080` and no error. An empty value counts as not set, so the default stays.
+3. `9000`. The first lookup that has the key wins, so the real environment overrides the file. That lets a server or CI set values without editing `.env`.
+4. The value becomes `s3cr` and the rest is lost. `strings.Cut(line, "=")` splits at the first `=` only and keeps `s3cr=t` whole.
+
+</details>
+
 ## When you're stuck
 
 - **`TestLoadReportsEverything` shows only the first problem**: you returned as soon as one check failed. Append to `errs` and keep going; return once, at the end.

@@ -22,3 +22,5 @@ Days that talk to Go have an `api/` folder. Start it from the repo root in a sec
 The tests never start a server. They swap `fetch` for a fake, so they are fast and work offline. Day 73 also has a Playwright spec that drives a real browser; it's optional and needs a one-off `npx playwright install chromium` (see that day's README).
 
 All files in a day: `starter/` (yours to edit, holds the tests), `solution/` (one way to do it), `kata/` (the Go puzzle), and sometimes `api/` (the Go server).
+
+When you've finished Day 76, read [the Phase 6 recap](RECAP.md): the key ideas, a short self-test, and one project to build with no steps.

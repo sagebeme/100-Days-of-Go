@@ -86,6 +86,37 @@ Answer "what's the p95 right now?" over a stream of latencies, in O(log n) per s
 go run ./tools/kata 81
 ```
 
+## Check yourself
+
+1. Why does `/healthz` check nothing external while `/readyz` checks the database and Redis? What would a liveness check that pings the database do during a database outage?
+2. Predict what `validID` says, and so which request ID ends up in the log:
+
+   ```go
+   validID("7f3a-91c2")                    // the caller's ID
+   validID("")                             // no header
+   validID("7f3a\n{\"level\":\"INFO\"}")   // a header with a newline
+   validID(strings.Repeat("a", 65))
+   ```
+
+3. Spot the bug. A week after launch, Prometheus runs out of memory:
+
+   ```go
+   m.requests.WithLabelValues(r.Method, r.URL.Path, strconv.Itoa(rec.code())).Inc()
+   ```
+
+   And what's wrong with logging `r.URL.String()`?
+4. The SLO is "99.9% of booking requests succeed in under 500 ms, over 30 days". How big is the error budget in minutes? Why can't you get the fleet's p95 by averaging each server's p95?
+
+<details>
+<summary>Answers</summary>
+
+1. Liveness asks "is the process stuck?"; if it fails, the platform restarts the server. Readiness asks "should I get traffic?"; if it fails, traffic moves elsewhere. A liveness check that pings the database restarts every API server during a database outage, which fixes nothing and turns a small outage into a big one.
+2. `true` (the caller's ID is reused), `false`, `false`, `false`. The last three get a fresh ID from `newID`. The newline one matters most: it could forge a log line.
+3. The label uses the real path, so every trip ID (`/trips/1`, `/trips/2`, ...) is a new time series. Label by the route pattern, `/trips/{id}`. `r.URL.String()` includes the query string, which can carry tokens and reset codes, and logs are copied widely and kept for months: log `r.URL.Path`.
+4. 0.1% of 30 days: 43.2 minutes. Percentiles don't average: one server with few slow requests and one with many don't combine that way. Prometheus adds the histogram buckets from every server first, then estimates p95 from the total.
+
+</details>
+
 ## When you're stuck
 
 - **`RequestIDFrom = "", want "generated-1"`**: the handler got the old request. Pass `r.WithContext(ctx)` to `next`, not `r`.

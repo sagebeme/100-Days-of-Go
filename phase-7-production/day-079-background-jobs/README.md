@@ -66,6 +66,40 @@ Simulate one SMS worker with flaky jobs, exponential backoff and a dead-letter l
 go run ./tools/kata 79
 ```
 
+## Check yourself
+
+1. The booking handler enqueues the SMS and answers at once. Why not send the SMS in the handler? And why do real queues make the worker idempotent even though `Enqueue` already refuses duplicate keys?
+2. Predict the waits from `Backoff(attempt, 1*time.Second, 10*time.Second, rnd)`, with `rnd` always returning 0 (half the ceiling):
+
+   ```go
+   for a := 1; a <= 6; a++ {
+       fmt.Println(a, Backoff(a, time.Second, 10*time.Second, func() float64 { return 0 }))
+   }
+   ```
+
+   What's the longest any retry can wait?
+3. Spot the bug. A wrong phone number costs money every few seconds, for ever:
+
+   ```go
+   if err := h(ctx, j); err != nil {
+       j.Attempts++
+       j.RunAt = now.Add(Backoff(j.Attempts, base, max, rnd))
+       q.pending = append(q.pending, j)
+   }
+   ```
+
+4. "Save the booking, then enqueue the SMS." What can go wrong between the two, and how does the outbox pattern fix it?
+
+<details>
+<summary>Answers</summary>
+
+1. The gateway takes up to two seconds and sometimes times out: the passenger would wait, and a timeout would lose the SMS. Dedupe only stops a second *enqueue*; a worker can send the SMS and crash before marking the job done, and the job runs again (at least once). Only an idempotent worker makes that safe.
+2. 500ms, 1s, 2s, 4s, 5s, 5s. The ceiling doubles from 1 s up to the 10 s cap, and with `rnd` at 0 you get half of it. The longest wait is just under 10 s (with `rnd` close to 1).
+3. It never stops. A `Permanent` error, or `Attempts >= MaxAttempts`, should move the job to the dead-letter list with its `LastErr`, for a human to look at.
+4. The process can die after the commit and before the enqueue (no SMS), or the enqueue can fail after the commit. With an outbox, the job is inserted in the same transaction as the booking, so both are saved or neither is, and a separate worker publishes it. It can publish twice, so the consumer is idempotent.
+
+</details>
+
 ## When you're stuck
 
 - **`Backoff(7, 1s, 1m, rnd=0) = 32s, want 30s`**: you capped after halving, or not at all. Cap the ceiling at `max` first, then take half.

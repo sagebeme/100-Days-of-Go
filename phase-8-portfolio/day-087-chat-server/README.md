@@ -81,6 +81,30 @@ Replay a log of joins, leaves and messages, and say how many people each message
 go run ./tools/kata 87
 ```
 
+## Check yourself
+
+1. Why does one hub goroutine own the rooms map, with handlers talking to it over channels, instead of a map behind a mutex that every handler locks?
+2. Predict what happens. Wanjiku's phone goes into a tunnel and stops reading. Her buffer holds 16 messages. Otieno sends 20 more to route-125. What happens to Wanjiku under `Disconnect`, and under `DropMessages`? What does Otieno notice in each case?
+3. Spot the bug. Under load the whole room freezes when one phone stops reading:
+
+   ```go
+   for c := range h.rooms[m.Room] {
+       c.send <- m
+   }
+   ```
+
+4. Why must `/ws` check the `Origin` header, when CORS would protect an ordinary `fetch`? And why does the server set `from` and `room` itself instead of reading them from the client's JSON?
+
+<details>
+<summary>Answers</summary>
+
+1. Only one goroutine ever touches the map, so there are no races and no lock to forget, and every change happens in one order. Joining, leaving and broadcasting become messages handled one at a time, which is easy to reason about and to shut down.
+2. Under `Disconnect`, the hub removes her once her buffer is full and closes her channel, and her socket is closed with 1008 "too slow". Under `DropMessages`, the messages that don't fit are skipped and counted in `Dropped`. Otieno notices nothing either way: the hub never waits for her.
+3. A send on a full channel blocks, so the hub waits for the slowest phone and every room stops. Use `select` with `default` and apply the policy when the buffer is full.
+4. CORS doesn't apply to WebSockets: any page on any site can open one to your server, and the browser may send your cookies with it (cross-site WebSocket hijacking). If clients set `from` and `room`, anyone could post as someone else or into a room they never joined.
+
+</details>
+
 ## When you're stuck
 
 - **`fatal error: concurrent map writes`**: a handler touched the rooms map. Only `Run` may. Everything else sends on a channel.

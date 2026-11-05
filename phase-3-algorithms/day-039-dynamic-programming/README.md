@@ -96,6 +96,23 @@ Count the messages a string of digits could spell when `A` is `1` and `Z` is `26
 go run ./tools/kata 39
 ```
 
+## Check yourself
+
+1. Plain recursion for `ClimbWays(90)` makes about 10^19 calls. How many does the memoised version make, and why?
+2. Predict `ClimbWays(5)`, `FewestNotes([]int{1, 3, 4}, 6)`, `FewestNotes([]int{200, 500}, 300)` and `LCS("ABC", "")`.
+3. Spot the bug: `BestLoad` loops capacities upwards (`for c := w; c <= capacity; c++`). What does it return for one 10 kg parcel worth 60 and a capacity of 50?
+4. Why is the knapsack DP fast with a capacity of 10^4 but useless with 10^12?
+
+<details>
+<summary>Answers</summary>
+
+1. About 91: one per step from 0 to 90. Each answer is computed once and looked up after that, instead of being recomputed down every branch.
+2. `8`, `2` (3 + 3), `-1` (no mix of 200 and 500 makes 300), and `0`.
+3. `300`: the same parcel is taken five times, because `best[c-w]` already includes it. Loop from `capacity` down so each parcel is used at most once. (Going up is right when items repeat, like notes.)
+4. The cost is parcels × capacity. With 100 parcels that's 10^6 steps for 10^4, but 10^14 steps and a 10^12-entry table for 10^12.
+
+</details>
+
 ## When you're stuck
 
 - **`ClimbWays(90)` never finishes:** the memo isn't being used. Check it before recursing and store the answer before returning. Make the map outside the closure, or each call gets a fresh, empty one.

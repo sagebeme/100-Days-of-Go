@@ -68,6 +68,30 @@ Seat groups of passengers side by side in a matatu's rows, first come first serv
 go run ./tools/kata 76
 ```
 
+## Check yourself
+
+1. Two passengers book seat 3 on the 58 a second apart. What does the second one see, and why does the page load the seat map again after a 409 instead of just showing the message?
+2. Why does `book` return `{ kind: "booked" } | { kind: "invalid"; errors } | { kind: "conflict"; message }` for 201, 422 and 409, but throw for a 500? What does each caller have to handle?
+3. Spot the bug. A passenger's session expires halfway through, and the app ends up on the login page twice in a row, losing the seat they chose:
+
+   ```ts
+   const [a, b] = await Promise.all([client.getSeats(trip.id), client.book(req)]);
+   // and inside Client, every 401 does:
+   const res = await fetch(`${baseUrl}/api/refresh`, { method: "POST", credentials: "include" });
+   ```
+
+4. The browser checks the phone and seat before sending. Why does the page still have to show the server's 422 messages under the fields? And why does each new page's `<h2>` take focus?
+
+<details>
+<summary>Answers</summary>
+
+1. `Seat 3 was just taken. Pick another seat.` in a `role="alert"`. The 409 means the page's map is out of date, so it fetches the seats again to show seat 3 as taken and let them pick a free one.
+2. 201, 422 and 409 are answers the page expects and draws differently; returning them as a union makes TypeScript check that every caller handles each one. A 500 is an unexpected failure, and throwing `ApiError` sends it to the general `Booking failed: MESSAGE` path.
+3. Each 401 starts its own refresh. The server rotates refresh tokens, so the second refresh uses a token that's already spent, fails, and logs the passenger out. Share one in-flight refresh between all callers, as on Day 70.
+4. The server is the one that knows things the browser can't, and its rules are the ones that count; anything the browser missed must still be shown where the passenger can fix it. Moving focus to the heading tells keyboard and screen reader users that the page changed, and starts them at the top of it.
+
+</details>
+
 ## When you're stuck
 
 - **Where do I start?** `validate.ts`, then `api.ts` (copy the shape of Day 70's `Auth`), then the App one page at a time, in the order of the requirements. Run `npm test -- day-076` after each.
@@ -78,3 +102,5 @@ go run ./tools/kata 76
 - **"the seat map is fetched again" counts 3**: the effect ran twice for one change. Check its dependencies don't include a function or object made fresh on every render.
 - **`act(...)` warnings in the output**: a state update landed after the test finished. Await the thing the test is waiting for (`findBy...`), and ignore updates from effects that were cleaned up.
 - **Still stuck?** Open `solution/`, read it once, close it, then write your own version from memory.
+
+**That's the end of Phase 6.** Before you move on, read [the Phase 6 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.
