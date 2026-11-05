@@ -88,6 +88,23 @@ A string of Gor Mahia and AFC Leopards goals: count every stretch where the scor
 go run ./tools/kata 28
 ```
 
+## Check yourself
+
+1. Why is `map[string]struct{}` the usual Go set, rather than `map[string]bool`?
+2. Predict `TwoSum([]int{500, 20, 500}, 1000)` and `TwoSum([]int{500}, 1000)`.
+3. Spot the bug: `TwoSum` stores `firstAt[x] = j` before it looks up `target - x`. What does it now return for `TwoSum([]int{500}, 1000)`?
+4. `TopSeller([]string{"mandazi", "chai"})` returns `"chai", 1`. Why must the tie be broken by a rule instead of by whichever item the loop meets first?
+
+<details>
+<summary>Answers</summary>
+
+1. `struct{}` takes no memory, and the map only answers "is it there?". A `bool` works too, but stores a value you never need.
+2. `0, 2, true` (the two 500s), and `0, 0, false`: one payment can't pair with itself.
+3. `0, 0, true`. The 500 finds itself in the map. Look up the complement first, then store.
+4. Ranging over a map visits keys in a random order, so "the first one met" changes from run to run. A rule (alphabetical here) gives the same answer every time.
+
+</details>
+
 ## When you're stuck
 
 - **`assignment to entry in nil map`:** you declared `var seen map[string]struct{}` and wrote to it. Make it with `make(...)` or `map[string]struct{}{}`.

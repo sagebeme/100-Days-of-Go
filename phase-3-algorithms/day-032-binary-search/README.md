@@ -88,6 +88,23 @@ The smallest bike capacity that delivers every parcel within `d` days. You can't
 go run ./tools/kata 32
 ```
 
+## Check yourself
+
+1. Why is the middle written `lo + (hi-lo)/2` and not `(lo+hi)/2`?
+2. With `a := []int{50, 100, 100, 500}`, predict `FirstAtLeast(a, 100)`, `FirstAtLeast(a, 600)`, `FirstAtLeast(a, 10)` and `CountInRange(a, 100, 100)`.
+3. Spot the bug: in `FirstAtLeast`, the update for `sorted[mid] >= x` is written `hi = mid - 1`. What goes wrong?
+4. `IntSqrt` checks `mid <= n/mid` instead of `mid*mid <= n`. Why, and how many loop turns does it take for `n` up to 10^18?
+
+<details>
+<summary>Answers</summary>
+
+1. `lo + hi` can overflow when both are huge, such as on a search over answers up to 10^18. `lo + (hi-lo)/2` never goes above `hi`.
+2. `1` (the first 100), `4` (past the end: nothing is at least 600), `0`, and `2` (both 100s).
+3. `mid` might be the answer, and `hi = mid - 1` throws it away. The invariant "the answer is in `[lo, hi]`" breaks, so it returns one place too far right whenever the match is at `mid`.
+4. With `mid` near 10^9, `mid*mid` is near 10^18, and for bigger values it can overflow an `int`. Dividing can't overflow. The range is `[0, 10^9]`, so about 30 turns.
+
+</details>
+
 ## When you're stuck
 
 - **The test hangs:** your loop never shrinks the range. With `for lo < hi` and `lo = mid`, round `mid` up: `lo + (hi-lo+1)/2`. With `hi = mid`, round down.

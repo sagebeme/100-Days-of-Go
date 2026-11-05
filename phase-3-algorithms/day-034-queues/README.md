@@ -82,6 +82,23 @@ The sum of the longest queue in every window of `k` minutes. It's the sliding wi
 go run ./tools/kata 34
 ```
 
+## Check yourself
+
+1. Why must a queue never remove its front by shifting every value along, and how does `Queue` avoid that?
+2. Predict `WindowMax([]int{5, 4, 3, 2}, 2)`.
+3. Predict `BankWaits([]int{0, 0, 0}, []int{4, 4, 4}, 1)` and the same with 3 tellers.
+4. In `WindowMax`, why can a value be popped off the back when a newer value is at least as big?
+
+<details>
+<summary>Answers</summary>
+
+1. Shifting is O(n) per removal, so emptying a queue of n values costs O(n²). `Queue` keeps a `head` index and only moves the waiting values down when more than half the slice is used up, which keeps `Dequeue` O(1) amortised.
+2. `[5 4 3]`.
+3. `[0 4 8]` with one teller (each customer waits for everyone before them), and `[0 0 0]` with three.
+4. The newer value stays in the window longer and is at least as big, so the older one can never be the maximum of any later window.
+
+</details>
+
 ## When you're stuck
 
 - **`integer divide by zero`** in the deque: you used `% len(d.buf)` while the buffer was still empty. Call `grow` before every push, and check `n == 0` before every read.

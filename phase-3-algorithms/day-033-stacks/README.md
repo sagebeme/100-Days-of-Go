@@ -78,6 +78,32 @@ The longest balanced run of brackets in a broken calculator's display. LeetCode 
 go run ./tools/kata 33
 ```
 
+## Check yourself
+
+1. Predict `Balanced("((")`, `Balanced(")(")` and `Balanced("ab")`.
+2. Predict `NextWarmer([]int{30, 25, 20})` and explain why the stack's temperatures only go down.
+3. `NextWarmer` has a loop inside a loop. Why is it still O(n)?
+4. Predict `e.Text()` at the end, and why `Delete` uses `min(k, len(e.text))`:
+
+   ```go
+   var e Editor
+   e.Type("abc")
+   e.Delete(10)
+   e.Undo()
+   e.Undo()
+   e.Undo()
+   ```
+
+<details>
+<summary>Answers</summary>
+
+1. `false` (two openers are still on the stack at the end), `false` (the `)` finds the stack empty), and `true` (no brackets at all is balanced).
+2. `[0 0 0]`: it only gets colder, so no day ever has a warmer one ahead. A warmer day pops every colder day on top before it's pushed, so what's left below is never colder than what's on top.
+3. Each index is pushed once and popped at most once. The inner loop's pops add up to at most n over the whole run.
+4. `""`. The first undo brings back `"abc"`, the second the empty starting text, and the third has nothing to undo. Without `min`, deleting 10 bytes from a 3-byte string would slice out of range and panic.
+
+</details>
+
 ## When you're stuck
 
 - **`index out of range [-1]`:** you popped an empty slice. Check `len(s.items) == 0` first.

@@ -142,6 +142,23 @@ Count every pair in an M-Pesa agent's log where a deposit came before a withdraw
 go run ./tools/kata 27
 ```
 
+## Check yourself
+
+1. The constraints say `n ≤ 2 × 10^5` and `q ≤ 2 × 10^5` range questions. Roughly how many steps does looping over each range take, and how many with prefix sums? Which passes the 10^8 rule?
+2. Spot the bug: `RangeSum` written as `prefix[r] - prefix[l]`. What does it return for days 1 to 2 of `[500 200 300]`, and why?
+3. Predict `KnockoutRounds(1)`, `KnockoutRounds(17)` and `KnockoutRounds(1_000_000)`.
+4. A kata wraps stdout in a `bufio.Writer` but forgets `defer out.Flush()`. What does the judge see?
+
+<details>
+<summary>Answers</summary>
+
+1. Looping costs up to `n·q`, about 4 × 10^10 steps: far too slow. Prefix sums cost `n + q`, about 4 × 10^5. Only prefix sums pass.
+2. `200` instead of `500`. `prefix[r]` is the total of the first `r` values, which stops before `a[r]`. The sum of `a[l..r]` is `prefix[r+1] - prefix[l]`.
+3. `0` (one team is already the champion), `5`, and `20`. The count halves each round, so a million teams need only about log₂ of a million rounds.
+4. Nothing, or only part of the output. The writer keeps output in memory until its buffer fills, and `Flush` writes the rest.
+
+</details>
+
 ## When you're stuck
 
 - **`SumTo(1000000000)` is wrong but small ones are right:** you divided before multiplying, `n / 2 * (n + 1)`, which drops the half when `n` is odd. Multiply first: `n * (n + 1) / 2`.

@@ -90,6 +90,30 @@ How many swaps of neighbours does it take to line pupils up by exam mark? Count 
 go run ./tools/kata 31
 ```
 
+## Check yourself
+
+1. Why does quicksort with the first element as the pivot take O(n²) on input that's already sorted?
+2. In `SortScorers`, why is it `cmp.Compare(y.Goals, x.Goals)` and not `cmp.Compare(x.Goals, y.Goals)`?
+3. The merge step takes from the left half on a tie (`<=`). What would `<` change?
+4. Predict the output, and say why `MergeSort` returns `slices.Clone(a)` for a short slice instead of `a`:
+
+   ```go
+   one := []int{7}
+   c := MergeSort(one)
+   c[0] = 9
+   fmt.Println(one)
+   ```
+
+<details>
+<summary>Answers</summary>
+
+1. The pivot is then the smallest value every time, so one side is empty and the other has n−1 values. That's n levels of about n work each. A middle pivot splits sorted input in half.
+2. Swapping the arguments sorts descending: most goals first. Names then break ties in ascending order.
+3. Equal values from the right half would jump ahead of those from the left, so the sort is no longer stable. For plain ints you can't tell; for records with other fields you can.
+4. `[7]`. The clone means the result never shares memory with the input, so changing the sorted copy can't change the caller's slice.
+
+</details>
+
 ## When you're stuck
 
 - **`runtime: goroutine stack exceeds 1000000000-byte limit`:** your recursion never stops. `MergeSort` must return for `len(a) <= 1`, and `QuickSort` must loop only while `len(a) > 1`.

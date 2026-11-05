@@ -80,6 +80,23 @@ Find Kamau's longest run of gym days with at most `k` skipped days in it. It's t
 go run ./tools/kata 30
 ```
 
+## Check yourself
+
+1. Predict `BestStreak([]int{-50, -20, -70}, 2)`. What would it return if `best` started at 0 instead of the first window's sum?
+2. `LongestUniqueRun` has an inner `for` in the grow-and-shrink pattern (or a jump of `left`). Why is it still O(n), not O(n²)?
+3. Spot the bug: in `LongestUniqueRun`, the check is `if last[c] > 0 { left = last[c] }`. What does `"abba"` return, and what should it?
+4. Why doesn't "shortest run with sum at least the target" work as a sliding window when amounts can be negative?
+
+<details>
+<summary>Answers</summary>
+
+1. `-70` (−50 + −20). Starting at 0 would return `0`, a window that doesn't exist.
+2. `left` only ever moves forward. Each index enters the window once and leaves at most once, so all the shrinking together costs O(n).
+3. It returns `3` instead of `2`. At the last `a`, its earlier copy is already outside the window, but `left` jumps back to it. Only move `left` when `last[c] > left`.
+4. Shrinking from the left must make the sum smaller, so you can stop. With negative numbers, dropping a value can make the sum bigger, so the rule "shrink while it still reaches" no longer finds the shortest run.
+
+</details>
+
 ## When you're stuck
 
 - **`slice bounds out of range [:3] with capacity 2`:** you took `sales[:k]` before checking `k <= len(sales)`. Check first.

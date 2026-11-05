@@ -75,6 +75,30 @@ Can a word become a palindrome by deleting at most one letter? This is LeetCode'
 go run ./tools/kata 29
 ```
 
+## Check yourself
+
+1. In `PairWithSum`, when `a[i] + a[j]` is less than the target, why is it safe to drop `a[i]` for good?
+2. Predict the output:
+
+   ```go
+   s := []int{20, 20, 50}
+   d := Dedup(s)
+   fmt.Println(d, s)
+   ```
+
+3. Spot the bug: `PairWithSum([]int{800, 50, 200, 450}, 650)` returns `false`, but 200 + 450 is 650. Why?
+4. Predict `IsPalindrome("Ab,ba!")` and `IsPalindrome("")`.
+
+<details>
+<summary>Answers</summary>
+
+1. The list is sorted, so `a[j]` is the biggest value still in play. If even that is too small with `a[i]`, every other partner is smaller still, so `a[i]` can't be in any pair.
+2. `[20 50] [20 50 50]`. `Dedup` works in place: the result is a shorter view of the same array, and the old values past it stay in `s`.
+3. The input isn't sorted, and the two-pointer argument relies on sorting. Sort first (O(n log n)), or use Day 28's map (O(n) with extra memory).
+4. `true` and `true`. Punctuation is skipped and case is ignored; an empty string reads the same both ways.
+
+</details>
+
 ## When you're stuck
 
 - **`index out of range [-1]`** in `IsPalindrome("")`: `j` starts at -1. Loop with `for i < j`, which is false straight away.

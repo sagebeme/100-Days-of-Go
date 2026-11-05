@@ -106,6 +106,23 @@ Fewest steps across a grid of streets and buildings to the stage. Grid BFS is pr
 go run ./tools/kata 37
 ```
 
+## Check yourself
+
+1. Why does BFS find the fewest hops, and why doesn't DFS?
+2. On a graph with routes A–B, B–C, A–C and X–Y, predict `FewestHops("A", "C")`, `FewestHops("A", "X")`, `FewestHops("A", "A")` and `CountNetworks()`.
+3. Why does `Neighbours` clone and sort the list instead of returning `g.adj[stop]`?
+4. Spot the bug: in BFS, a node is marked as seen when it's taken off the queue instead of when it's added. What happens on a busy graph?
+
+<details>
+<summary>Answers</summary>
+
+1. BFS reaches nodes in rings, all 1 hop away, then all 2 hops, so the first time it reaches a node is by a shortest route. DFS follows one road as deep as it goes and can reach a node by a long way round first.
+2. `1, true` (the direct route), `0, false` (a different network), `0, true` (you're already there), and `2`.
+3. Sorting fixes the visiting order, so ties between equally short paths are broken the same way every run. Cloning first means the graph's own lists are never reordered by a caller.
+4. The same node can be added to the queue many times before it's processed, by every neighbour that sees it. The work grows far past O(V + E). Mark it seen as you add it.
+
+</details>
+
 ## When you're stuck
 
 - **`assignment to entry in nil map`:** `AddRoute` wrote into a `Graph` whose map was never made. Check `g.adj == nil` and make it.
