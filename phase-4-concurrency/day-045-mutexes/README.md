@@ -88,6 +88,39 @@ Simulate `x++` from several goroutines, step by step, following a given schedule
 go run ./tools/kata 45
 ```
 
+## Check yourself
+
+1. `total += a` is one line. Why can two goroutines running it at once lose a payment?
+2. Why does `Balance` need the lock, when it only reads?
+3. Spot the bug. Fifty goroutines withdraw Ksh100 each from Ksh1000. What can go wrong?
+
+   ```go
+   func (l *Ledger) Withdraw(member string, amount int) error {
+   	l.mu.Lock()
+   	ok := l.balances[member] >= amount
+   	l.mu.Unlock()
+   	if !ok {
+   		return ErrInsufficientFunds
+   	}
+   	l.mu.Lock()
+   	l.balances[member] -= amount
+   	l.mu.Unlock()
+   	return nil
+   }
+   ```
+
+4. Why do `Ledger`'s methods use pointer receivers, and what does `go vet` say about a value receiver?
+
+<details>
+<summary>Answers</summary>
+
+1. It's really three steps: load, add, store. Two goroutines can both load 1000, both add their own amount, and both store; the second store overwrites the first.
+2. A read at the same moment as a write is still a data race: the reader can see a half-finished update, and `-race` reports it. Maps can even crash with `concurrent map read and map write`.
+3. More than ten withdrawals can pass the check before any of them takes the money, so the balance goes negative. The check and the change must be inside one lock.
+4. A value receiver copies the struct, mutex and all, so each call would lock its own copy and protect nothing. `go vet` reports `passes lock by value`.
+
+</details>
+
 ## When you're stuck
 
 - **`go: -race requires cgo; enable cgo by setting CGO_ENABLED=1`**: the race detector needs a C compiler. Install `gcc` (on Windows, through MSYS2 or WSL) and run with `CGO_ENABLED=1`.

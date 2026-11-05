@@ -65,6 +65,23 @@ Run a token bucket over a list of message arrival times and count what gets thro
 go run ./tools/kata 47
 ```
 
+## Check yourself
+
+1. Why do `Throttle` and `Allow` take the clock (`tick`, `now`) as parameters instead of calling `time.NewTicker` and `time.Now` themselves?
+2. With `b := NewTokenBucket(2, time.Second, t0)`, predict `Allow` at `t0`, `t0`, `t0`, `t0+1.5s`, `t0+1.9s` and `t0+2s`.
+3. Spot the bug: in the refill, `b.last = now` instead of `b.last = b.last.Add(time.Duration(steps) * b.every)`. What changes in the sequence above?
+4. Why does `ClientLimiter` keep a separate `rate.Limiter` per client instead of one for everybody?
+
+<details>
+<summary>Answers</summary>
+
+1. Tests can drive them with a channel they control and fixed times, so no test waits for a real second and the results never depend on how busy the machine is.
+2. `true true false true false true`. The burst of 2 is spent at once; at 1.5s one token has come in; at 1.9s the next isn't due until 2s.
+3. The half-second already earned at 1.5s is thrown away, so the next token comes at 2.5s and the call at `t0+2s` returns `false`. The bucket runs slower than its rate.
+4. One shop with a buggy script would use up the whole limit and lock every other shop out. Per-client buckets limit only the one that misbehaves.
+
+</details>
+
 ## When you're stuck
 
 - **`1 messages went out before the first tick`**: you sent first and waited after. Wait for the tick, then send.

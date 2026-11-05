@@ -62,6 +62,34 @@ A gateway sends messages `k` at a time and waits for each batch's slowest messag
 go run ./tools/kata 41
 ```
 
+## Check yourself
+
+1. Thirty sends of about a second each: roughly how long does `SendAll` take one after another, and how long with a goroutine each?
+2. Why is it safe for goroutine `i` to write `results[i]`, but not for every goroutine to do `total += amount`?
+3. Spot the bug. What does this print, and what does `go run -race` say?
+
+   ```go
+   total := 0
+   var wg sync.WaitGroup
+   for i := range 1000 {
+   	wg.Go(func() { total += i })
+   }
+   wg.Wait()
+   fmt.Println(total)
+   ```
+
+4. What happens to goroutines that are still running when `main` returns, and why does that make `wg.Wait()` essential?
+
+<details>
+<summary>Answers</summary>
+
+1. About 30 seconds one after another, and about 1 second (the slowest single call) with all of them running at once.
+2. Each goroutine has its own slot, so no two ever write the same memory. `total += amount` reads and writes one shared variable, and two goroutines can read the same old value and lose one of the additions.
+3. A number smaller than 499 500 that changes from run to run, because additions are lost. `-race` prints `WARNING: DATA RACE`. Give each goroutine its own slot, or use a mutex (Day 45).
+4. They're killed mid-step when the program ends. Without waiting, some sends would never happen and their results would be missing.
+
+</details>
+
 ## When you're stuck
 
 - **`SendAll returned [] ...` or the results are all `""`**: you returned before the goroutines finished. Call `wg.Wait()` before `return`.

@@ -69,6 +69,23 @@ Contexts form a tree, and cancelling one cancels its whole subtree. Count how ma
 go run ./tools/kata 44
 ```
 
+## Check yourself
+
+1. You make `ctx` with `WithTimeout(context.Background(), time.Hour)`, then `child` with `WithCancel(ctx)`, then call the parent's `cancel()`. Predict `ctx.Err()` and `child.Err()`. What if you cancel only the child?
+2. `FetchFare` returns `fmt.Errorf("fare for %s: %w", route, err)`. Does `errors.Is(err, context.DeadlineExceeded)` still work? Why?
+3. Why does `FirstAvailable` make `answers` buffered with room for every SACCO?
+4. What does `defer cancel()` free when the work finishes early, and what warns you if you forget it?
+
+<details>
+<summary>Answers</summary>
+
+1. Both are `context canceled`: cancelling a parent cancels every child. Cancelling only the child leaves the parent running.
+2. Yes. `%w` keeps the original error inside, and `errors.Is` unwraps to find it.
+3. After the winner is found and `cancel` is called, the other goroutines still send their answer. With a full-size buffer they never block, so none is left stuck forever (a goroutine leak).
+4. The child context's timer and its link to the parent. `go vet` reports a `cancel` that isn't called on every path.
+
+</details>
+
 ## When you're stuck
 
 - **`fetch's context is still live after FetchFare returned`**: you dropped the `cancel` func with `ctx, _ :=`. `go vet` says **`the cancel function returned by context.WithTimeout should be called, not discarded, to avoid a context leak`**. Add `defer cancel()`.

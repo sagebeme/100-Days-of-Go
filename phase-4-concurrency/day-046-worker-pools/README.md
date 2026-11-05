@@ -72,6 +72,23 @@ go test -race ./phase-4-concurrency/day-046-worker-pools/starter
 go run ./tools/kata 46
 ```
 
+## Check yourself
+
+1. Why not start one goroutine per statement for 2 000 members? Why not render them one by one?
+2. `Process` gets results back from several workers in whatever order they finish. How does it still return them in job order?
+3. Predict `Process([]int{1, 2, 3}, 0, func(x int) int { return x * 10 })`.
+4. Two tasks in a `Group` fail, `"first"` and then `"second"`. What does `Wait` return, and what happens to the group's context?
+
+<details>
+<summary>Answers</summary>
+
+1. 2 000 memory-hungry renders at once can run the server out of memory. One by one takes about half an hour. A pool of `k` workers caps memory use and still runs `k` at a time.
+2. Workers receive job indexes, not jobs, and each writes `results[i]`. The slot decides the order, not the finishing time.
+3. `[10 20 30]`. A worker count below 1 counts as 1.
+4. `"first"`. `sync.Once` keeps only the first error, and it cancels the context so the other tasks can stop early; `Wait` cancels it too once everything is done.
+
+</details>
+
 ## When you're stuck
 
 - **`N jobs were running at once, want 3`** with N bigger than 3: you started a goroutine per job. Start exactly `workers` goroutines and let them share the jobs channel.
