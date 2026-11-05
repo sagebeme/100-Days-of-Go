@@ -24,7 +24,8 @@ PricePerGB(50, 350)        →  146.29
 ```go
 shillings := 7
 half := float64(shillings) / 2 // 3.5
-whole := int(3.9)              // 3: the .9 is cut off, not rounded
+price := 3.9
+whole := int(price)            // 3: the .9 is cut off, not rounded
 cents := math.Round(2.567*100) / 100 // 2.57
 ```
 
