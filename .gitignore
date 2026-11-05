@@ -32,3 +32,6 @@ GATES.md
 # Day 98 benchmark results
 old.txt
 new.txt
+
+# GitHub Pages build (tools/build-pages.sh)
+_site/

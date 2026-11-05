@@ -37,6 +37,8 @@ Check your Go version:
 go version
 ```
 
+[reference/setup.md](reference/setup.md) walks through installing Go and Node on Linux, macOS, Windows and WSL, running Postgres and Redis in Docker for Phases 5 and 7, and fixing the usual setup errors.
+
 ## Getting started
 
 ```bash
@@ -73,6 +75,15 @@ Run a day's tests from the repo root:
 go test ./phase-1-terminal/day-001-mpesa-sms/starter
 ```
 
+Phase 6 (Days 65 to 76) is TypeScript and React, so its starters hold `*.test.ts` and `*.test.tsx` files instead of `_test.go`. Those run with Vitest from the `phase-6-frontend` folder, after a one-off `npm ci` there:
+
+```bash
+cd phase-6-frontend && npm ci
+npm test -- day-066
+```
+
+[phase-6-frontend/README.md](phase-6-frontend/README.md) has the rest. Their katas are still Go, judged with `go run ./tools/kata` as usual.
+
 Judge a day's kata:
 
 ```bash
@@ -97,6 +108,7 @@ cp .env.example .env
 
 ## Reference
 
+- [Setting up your machine](reference/setup.md)
 - [HTTP methods, headers and status codes](reference/http.md)
 - [Env variables and config](reference/env-and-config.md)
 - [OWASP Top 10 checklist for Go](reference/owasp-checklist.md)
@@ -113,6 +125,8 @@ python3 -m http.server 8000
 Then open `http://localhost:8000/site/`. After adding or renaming a day, refresh the site's list with `go run ./tools/sitedata`; `go run ./tools/sitedata -check` fails if it's out of date.
 
 To put it online, import the repo into Netlify or Vercel. `netlify.toml` and `vercel.json` are already set up, and `/` goes to `/site/`.
+
+It's also published to GitHub Pages at <https://sagebeme.github.io/100-Days-of-Go/> on every push to `main`, by `.github/workflows/pages.yml`. That workflow checks the site's day list, then `tools/build-pages.sh` copies `site/` and each day's README into one folder and publishes it. For this to work, Pages must be set to **GitHub Actions** in the repo's Settings → Pages → Build and deployment → Source. On a fork, the address is `https://<your-username>.github.io/100-Days-of-Go/`.
 
 ## For contributors
 
