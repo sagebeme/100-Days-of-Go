@@ -63,6 +63,44 @@ Build the classic interview cache: a fixed capacity, O(1) `get` and `put`, and t
 go run ./tools/kata 78
 ```
 
+## Check yourself
+
+1. Why does `UpdateSeats` write Postgres and then *delete* the key, instead of writing the new value into Redis? What can still leave a stale value cached, and what limits how long it lasts?
+2. Predict how many times `SlowRepo` is read. The cache is empty, the TTL is 30 s, and with miniredis:
+
+   ```go
+   c.Get(ctx, "46K-0730")         // 1
+   c.Get(ctx, "46K-0730")         // 2
+   mr.FastForward(31 * time.Second)
+   c.Get(ctx, "46K-0730")         // 3
+   c.UpdateSeats(ctx, "46K-0730", 3)
+   c.Get(ctx, "46K-0730")         // 4
+   ```
+
+3. Spot the bug. When Redis restarts, every trip page fails with a 500:
+
+   ```go
+   raw, err := c.rdb.Get(ctx, key).Bytes()
+   if errors.Is(err, redis.Nil) {
+       return c.load(ctx, id)
+   }
+   if err != nil {
+       return Trip{}, err
+   }
+   ```
+
+4. Ten passengers open the same trip just after its key expires. How many database queries happen with `Group.Do`, and without it? And why must `BookSeat` never trust the cached seat count?
+
+<details>
+<summary>Answers</summary>
+
+1. Two writers can finish in the opposite order to how they started, and writing values could leave the older one cached; a delete can't be out of order, and the next read loads what's true. A reader that loaded the old row just before your write can still put it back just after your delete. The TTL limits how long that lasts.
+2. Three reads: call 1 (miss), call 3 (expired), and call 4 (deleted by `UpdateSeats`). Call 2 is a hit. (`UpdateSeats` writes the repository, which isn't a read.)
+3. Any Redis error other than `redis.Nil` fails the request, so the cache going down takes the site with it. Log a warning and fall back to the database, exactly as on a miss.
+4. One with `Group.Do` (the first caller loads, the other nine wait for its answer), ten without it. The cached count can be 30 seconds old, so two passengers could both get the "last" seat; the booking checks and decrements seats in a Postgres transaction.
+
+</details>
+
 ## When you're stuck
 
 - **`repository read 3 times for 3 Gets, want 1`**: nothing reaches Redis. Check `Set` runs on a miss and that you return early on a hit.

@@ -81,6 +81,46 @@ Blank out passwords, live API keys and bearer tokens in log lines before they le
 go run ./tools/kata 83
 ```
 
+## Check yourself
+
+1. Why does `Chain` stop on a "forbidden" error instead of trying the next source? And why does `FakeVault` answer "forbidden", not "not found", for a path outside the token's grant?
+2. Predict the output with `type Secret string` and its `String`, `GoString` and `LogValue` methods (run it against your solution):
+
+   ```go
+   type Config struct {
+       User     string
+       Password Secret
+   }
+   c := Config{"twende", Secret("pg-pass")}
+   fmt.Printf("%+v\n", c)
+   b, _ := json.Marshal(c)
+   fmt.Println(string(b))
+   slog.New(slog.NewJSONHandler(os.Stdout, nil)).Info("config", "pw", c.Password, "cfg", c)
+   ```
+
+3. Spot the bug. After rotating to `k2`, every passenger is logged out:
+
+   ```go
+   func (r *Keyring) Rotate(k Key) {
+       r.mu.Lock()
+       defer r.mu.Unlock()
+       r.current = k
+   }
+   ```
+
+   And why compare MACs with `hmac.Equal` and not `==`?
+4. A Daraja key turns up in a log line. In what order do you rotate it, look for damage and clean up history, and why that order?
+
+<details>
+<summary>Answers</summary>
+
+1. Falling through to an older copy elsewhere would hide the problem, and quietly use a secret that may be stale. Answering "not found" outside the grant would let a stolen token map which secrets exist; "forbidden" says nothing, and the denied read is audited.
+2. `{User:twende Password:[REDACTED]}`. Then `{"User":"twende","Password":"pg-pass"}`: `encoding/json` doesn't call `String`, so the secret leaks. In the log line, `pw` is `"[REDACTED]"` but `cfg` shows `"Password":"pg-pass"`: the JSON handler only calls `LogValue` on the top-level value, then encodes the struct with `encoding/json`. Logging a whole config is still a leak, which is why Day 84 adds a test for exactly that.
+3. The old key is thrown away, so every token it signed fails `Verify`. Keep it: `old := r.current; r.previous = &old; r.current = k`, and verify with whichever key the ID names. `==` stops at the first byte that differs, so timing tells an attacker how many bytes they got right; `hmac.Equal` takes the same time either way.
+4. Rotate first, so the leaked key stops working; then look for damage (what was done with it); then clean up history and add scanning. Cleaning up first leaves the attacker with a working key while you tidy.
+
+</details>
+
 ## When you're stuck
 
 - **`fmt.Sprintf("%#v") printed the secret`**: `%#v` ignores `String`; it calls `GoString`.

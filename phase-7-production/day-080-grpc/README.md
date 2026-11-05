@@ -104,6 +104,36 @@ Keep running seat totals per route from a stream of bookings and answer "top k" 
 go run ./tools/kata 80
 ```
 
+## Check yourself
+
+1. You no longer need the `phone` field (number 3) in a message. Why must you never reuse number 3 for a new field, and what do you write instead?
+2. Predict the status code for each call to `BookSeat` on a 14-seat trip where seat 3 is taken: seat 3; seat 15; trip `"999-0000"`; and a client whose context deadline passed before the server answered. Which of these should a client retry?
+3. Spot the bug. After the operations screen closes, the server's goroutine count keeps growing:
+
+   ```go
+   func (s *Server) WatchSeats(req *seatpb.WatchSeatsRequest, stream seatpb.SeatService_WatchSeatsServer) error {
+       ch := s.register(req.GetTripId())
+       for u := range ch {
+           if err := stream.Send(u); err != nil {
+               return err
+           }
+       }
+       return nil
+   }
+   ```
+
+4. Why does `BookSeat` send to each watcher with `select` and `default`? And why does `Client` wrap every call in `context.WithTimeout`?
+
+<details>
+<summary>Answers</summary>
+
+1. The number, not the name, is what goes over the wire. An old client still sending field 3 would have its phone number read as the new field. Mark it `reserved 3;` so nobody can reuse it, and add the new field with a new number.
+2. `AlreadyExists`, `InvalidArgument`, `NotFound`, `DeadlineExceeded`. None of the first three can succeed on a retry. `DeadlineExceeded` (and `Unavailable`) may, but a booking retried after a deadline may already have happened, so it needs an idempotency key.
+3. It never watches `stream.Context()`, so when the client goes away the loop waits on `ch` for ever, and the channel is never removed. `defer` the removal, and `select` on `stream.Context().Done()` (return nil) and the channel.
+4. One slow watcher with a full buffer would otherwise block every booking; with `default` the update is dropped for that watcher instead. Without a deadline, a client can wait for ever on a stuck server, and every service that calls it hangs too.
+
+</details>
+
 ## When you're stuck
 
 - **`code = Unimplemented desc = GetTrip is not written yet`**: that method still has the starter body.

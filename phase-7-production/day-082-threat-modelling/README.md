@@ -87,6 +87,38 @@ Treat the threat model as a graph and find how many hops each sensitive asset is
 go run ./tools/kata 82
 ```
 
+## Check yourself
+
+1. Why does a flow that crosses a trust boundary without authentication get an extra Spoofing threat? Which Twende flow is the worst example, and what's the fix?
+2. Predict the score and level (`Level`: 17 and up critical, 10 and up high, 5 and up medium, else low):
+
+   ```go
+   Score(4, 5) // fake M-Pesa callback
+   Score(3, 3) // "I never booked that seat"
+   Score(5, 2)
+   Score(2, 5)
+   Score(0, 5)
+   ```
+
+   `Score(5, 2)` and `Score(2, 5)` tie. Which does `Prioritise` put first, and why?
+3. Spot the bug. A review finds that the model's threat list never mentions the M-Pesa callback, though the diagram has the arrow:
+
+   ```go
+   {From: "M-Pesa", To: "Booking API", Data: "payment callback", Authenticated: true},
+   ```
+
+4. A passenger reads someone else's booking by changing the ID in the URL. Which STRIDE letter is that, which OWASP row does it match, and what's the fix?
+
+<details>
+<summary>Answers</summary>
+
+1. Anyone on the other side of the boundary can send to that arrow and claim to be the sender. The M-Pesa callback is the worst: it's just an HTTPS POST, so anyone who finds the URL can say "payment received". Fix: confirm each transaction with M-Pesa's own API, check the amount and phone match the booking, accept each receipt once, and keep the URL unguessable and limited to Safaricom's published addresses.
+2. `20` critical, `9` medium, `10` high, `10` high, and `ErrScale` (ratings run from 1 to 5). `Score(2, 5)` comes first: ties go to the higher impact, because a rare disaster beats a frequent annoyance.
+3. The callback isn't authenticated (it's not signed), so marking it `Authenticated: true` tells the model a lie, and the boundary-crossing Spoofing threat disappears. The model is only as honest as its inputs; a reviewer should ask "authenticated how?" for every `true`.
+4. Elevation of privilege (doing more than allowed), OWASP A01 broken access control. Fix: the object-level check from Day 59 (answer like a missing booking) and a test grid of every route against every role.
+
+</details>
+
 ## When you're stuck
 
 - **`error "duplicate component" doesn't name "API"`**: wrap with `%w` and add the name: `fmt.Errorf("%w: %q", ErrDuplicate, c.Name)`.

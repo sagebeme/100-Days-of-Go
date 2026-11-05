@@ -77,6 +77,41 @@ Replay adds, removes and lookups on a consistent hashing ring, the trick caches 
 go run ./tools/kata 77
 ```
 
+## Check yourself
+
+1. Why is the Postgres primary the box to estimate first, and not the API servers? What has to be true of the API servers for "add another one" to work?
+2. Predict the output (run it against your solution):
+
+   ```go
+   fmt.Println(1000 * 3 / 86400)
+   fmt.Println(AverageRPS(1000, 3) > 0)
+   fmt.Println(Concurrency(200, 50*time.Millisecond))
+   fmt.Println(ServersNeeded(1000, 300, 0.3))
+   ```
+
+3. Spot the bug. With 98 samples of 20 ms and two of 2 s, this "p99" says the service is fine:
+
+   ```go
+   var sum time.Duration
+   for _, d := range samples {
+       sum += d
+   }
+   fmt.Println("typical latency:", sum/time.Duration(len(samples)))
+   ```
+
+   What does it print, and what does `Summarise` say instead?
+4. With the nearest-rank method, what are p50 and p75 of `[40ms, 10ms, 30ms, 20ms]`? And why does `Percentile` sort a copy?
+
+<details>
+<summary>Answers</summary>
+
+1. You can add API servers behind the load balancer, but there's one primary that takes every write, and you can't just copy it. Adding servers only works if they're stateless: no sessions in memory and no files on local disk, so any server can answer any request.
+2. `0` (integer division throws the fraction away), `true` (about 0.035, because `AverageRPS` converts to `float64` first), `10` (200 a second × 0.05 s, Little's law), and `5` (300 × 0.7 = 210 usable each; 1000 ÷ 210 is 4.76, rounded up).
+3. It prints `59.6ms`, an average that looks fine. `Summarise` gives `P50: 20ms, P95: 20ms, P99: 2s`: one passenger in fifty waits two seconds, and the average hides them.
+4. Sorted: 10, 20, 30, 40. p50 is rank ⌈0.5 × 4⌉ = 2, so 20 ms; p75 is rank 3, so 30 ms. Sorting in place would reorder the caller's slice, which they didn't ask for.
+
+</details>
+
 ## When you're stuck
 
 - **`AverageRPS(200000, 6) = 13, want 13.888889`**: you divided ints. Convert with `float64(dailyUsers)` before the division.
