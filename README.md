@@ -75,6 +75,15 @@ Run a day's tests from the repo root:
 go test ./phase-1-terminal/day-001-mpesa-sms/starter
 ```
 
+Phase 6 (Days 65 to 76) is TypeScript and React, so its starters hold `*.test.ts` and `*.test.tsx` files instead of `_test.go`. Those run with Vitest from the `phase-6-frontend` folder, after a one-off `npm ci` there:
+
+```bash
+cd phase-6-frontend && npm ci
+npm test -- day-066
+```
+
+[phase-6-frontend/README.md](phase-6-frontend/README.md) has the rest. Their katas are still Go, judged with `go run ./tools/kata` as usual.
+
 Judge a day's kata:
 
 ```bash
