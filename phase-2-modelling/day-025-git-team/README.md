@@ -122,6 +122,23 @@ Read the commit headers since the last release and work out the next version: a 
 go run ./tools/kata 25
 ```
 
+## Check yourself
+
+1. Predict what `LintCommit` returns for `"feat(API): Add export."`, `"Fixed stuff."` and `"fix: handle empty CSV"`.
+2. Your branch is behind `main`. When should you `git rebase origin/main`, and when should you `git merge origin/main` instead?
+3. After a rebase, why push with `--force-with-lease` rather than `--force`?
+4. You committed `.env` with a real API key, then ran `git rm --cached .env` and committed again. Is the key safe now? What must you do?
+
+<details>
+<summary>Answers</summary>
+
+1. Two problems (`scope "API" must be lowercase letters, digits and hyphens` and `description must not end with a full stop`); one problem (`header must look like type(scope): description`); and an empty list: it's fine.
+2. Rebase only your own branch before it's merged: it rewrites your commits into a straight line. Merge when the branch is shared with someone else, because rebasing changes commit IDs under them. Never rebase `main`.
+3. `--force-with-lease` refuses if someone else pushed to the branch since you last fetched. `--force` would silently throw their commits away.
+4. No. The key is still in the history, where anyone with the repo can read it. Rotate the key straight away (make a new one and revoke the old), and keep `.env` in `.gitignore`.
+
+</details>
+
 ## When you're stuck
 
 - **`"feat(api)!: x"` gives the type `feat(api)!`**: cut off the `!` first, then the `(scope)`.

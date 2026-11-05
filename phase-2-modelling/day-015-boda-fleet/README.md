@@ -83,6 +83,40 @@ A list of trips comes in, one line per trip. Add them up per rider with a struct
 go run ./tools/kata 15
 ```
 
+## Check yourself
+
+1. `Ride` has a pointer receiver and `Label` a value receiver. What goes wrong if `Ride` is changed to `func (b Bike) Ride(...)`?
+2. Predict the output:
+
+   ```go
+   f := Fleet{Bikes: []Bike{{Plate: "A"}}}
+   for _, b := range f.Bikes {
+   	b.Rider = "Njoroge"
+   }
+   fmt.Println(f.Bikes[0].Label())
+   ```
+
+3. Spot the bug. On a fleet holding only bike `"A"`, this prints `0`, not `500`. Why?
+
+   ```go
+   p := f.Find("A")
+   f.Add(Bike{Plate: "B"})
+   p.Ride(10, 500)
+   fmt.Println(f.TotalEarnings())
+   ```
+
+4. Why does `DueForService` start with `due := []string{}` rather than `var due []string`?
+
+<details>
+<summary>Answers</summary>
+
+1. The method gets a copy of the bike, so the odometer, earnings and trips change on the copy and are thrown away. The caller's bike never changes, and `TestRide` fails.
+2. `A (no rider)`. `range` hands you a copy of each element; to change the bike in the slice, write `f.Bikes[i].Rider`.
+3. `append` had no room, so it copied the bikes into a new, bigger array. `p` still points into the old array, so the ride lands on a bike the fleet no longer holds. Don't keep a pointer into a slice across an `append`: call `Find` again.
+4. An empty fleet then returns an empty slice instead of `nil`. Tests that compare with `[]string{}`, and JSON (`[]` rather than `null`), tell the two apart.
+
+</details>
+
 ## When you're stuck
 
 - **`TestRide` says the odometer didn't change**: your method has a value receiver `(b Bike)`, so it changed a copy. Use `(b *Bike)`.

@@ -73,6 +73,23 @@ Count what a duka sold today and print the top `k` items, with a tie-break. It's
 go run ./tools/kata 18
 ```
 
+## Check yourself
+
+1. If the constraint were `type Number interface { int | int64 | float64 }` (no `~`), what happens to `Sum([]Ksh{230, 185})`?
+2. Inside a generic function, why doesn't `return T{}` compile, and what do you write instead?
+3. Predict: does `Sum(nil)` compile? What does `Sum[int](nil)` return?
+4. Spot the bug in `StockValue`: `it.Price * it.Qty`, where `Price` is `Ksh` and `Qty` is `int`.
+
+<details>
+<summary>Answers</summary>
+
+1. It doesn't compile: `Ksh does not satisfy Number (possibly missing ~ for int in Number)`. `~int` means "int or any type defined from int".
+2. `T` might be `int` or `string`, which have no composite literal. `var zero T` gives the zero value of whatever `T` is.
+3. No: `cannot infer T`, because `nil` has no element type. `Sum[int](nil)` names it and returns `0`.
+4. `mismatched types Ksh and int`. That's the point of `type Ksh int`: you can't mix shillings and quantities by accident. Convert on purpose with `Ksh(it.Qty)`.
+
+</details>
+
 ## When you're stuck
 
 - **`invalid operation: operator + not defined on total (variable of type T constrained by any)`**: `any` doesn't promise `+`. Use the `Number` constraint.

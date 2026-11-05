@@ -86,6 +86,35 @@ Decode a JSON export of Lipa na M-Pesa payments with tagged structs, skip the re
 go run ./tools/kata 23
 ```
 
+## Check yourself
+
+1. Predict the output:
+
+   ```go
+   type P struct {
+   	Name string
+   	age  int
+   	Tags []string
+   	PIN  string `json:"-"`
+   }
+   b, _ := json.Marshal(P{Name: "Kip", age: 30, PIN: "1234"})
+   fmt.Println(string(b))
+   ```
+
+2. Why does `Save` write to a temporary file and `os.Rename` it, instead of writing straight to `ledger.json`?
+3. A ledger file says `"ammount_ksh": 500`. What does `Load` do with `DisallowUnknownFields`, and what would happen without it?
+4. `Load` wraps the read error with `fmt.Errorf("load: %w", err)`. Why does `LoadOrNew` still recognise a missing file?
+
+<details>
+<summary>Answers</summary>
+
+1. `{"Name":"Kip","Tags":null}`. `age` is unexported, so it's skipped; `PIN` has `json:"-"`; and a `nil` slice becomes `null`.
+2. If the program crashes halfway, a direct write leaves a half-written, broken ledger. Renaming within one folder is atomic, so readers see the whole old file or the whole new one.
+3. It returns an error: `json: unknown field "ammount_ksh"`. Without it the typo is ignored and `Amount` quietly stays 0.
+4. `%w` keeps the original error inside, and `os.ReadFile`'s error wraps `fs.ErrNotExist`, so `errors.Is(err, fs.ErrNotExist)` still finds it.
+
+</details>
+
 ## When you're stuck
 
 - **The JSON has `"Name"` and `"Amount"`**: a tag is missing or misspelled. Tags use backquotes and no spaces: `` `json:"name"` ``. Run `go vet`; it catches many broken tags.
