@@ -69,6 +69,38 @@ Clean up a list of phone numbers typed every possible way, using today's rules, 
 go run ./tools/kata 69
 ```
 
+## Check yourself
+
+1. The browser already checks every field with the same rules. Why must the Go API check them again, and what goes wrong when the two sides' rules drift apart?
+2. Predict what `normalisePhone` returns for each (the regexes are `/^0([17]\d{8})$/` and `/^\+?254([17]\d{8})$/`, after removing spaces and dashes):
+
+   ```ts
+   normalisePhone("0712-345-678");
+   normalisePhone("254 712 345 678");
+   normalisePhone("(0712)345678");
+   normalisePhone("+2540712345678");
+   ```
+
+3. Spot the bug. Leaving the Seats box empty sends `seats: 0`, and someone types `2.5` and gets past the check:
+
+   ```ts
+   const seats = parseInt(values.seats) || 0;
+   if (seats < 1 || seats > 14) errors.seats = "Book between 1 and 14 seats";
+   ```
+
+   (Hint: what does `parseInt("2.5")` give?)
+4. The server answers `422 {"errors":{"seats":"Only 3 seats left on 111"}}`. Where does that message go, and which two attributes connect it to the Seats input for a screen reader?
+
+<details>
+<summary>Answers</summary>
+
+1. Anyone can skip the browser and send any JSON with `curl`, so only the server's checks protect anything. The browser's checks are for speed. When rules drift, the browser accepts a value the server rejects (and the message may go nowhere), or refuses a value the server would take.
+2. `"254712345678"`, `"254712345678"`, `null` (brackets aren't removed), `null` (an extra 0 after 254).
+3. `parseInt("2.5")` is `2`, so a fractional value passes as 2, and an empty box becomes 0, which gives the right message but for the wrong reason. Convert with `Number`, treat `""` as `NaN`, and check `Number.isInteger(seats)` along with the range, as the server does.
+4. Under the Seats field, in `<p id="seats-error">`, like a browser-side error. The input gets `aria-invalid="true"` and `aria-describedby="seats-error"`, so the screen reader reads the message with the field.
+
+</details>
+
 ## When you're stuck
 
 - **`A component is changing an uncontrolled input to be controlled`**: a `value` started as `undefined`. Give every field a starting string, even `""`.

@@ -69,6 +69,40 @@ A till log where the first word of each line decides what follows: the same unio
 go run ./tools/kata 65
 ```
 
+## Check yourself
+
+1. TypeScript types disappear when the code runs. Why does that mean `parseRoute` has to check every field with `typeof`, even though `fetch` results are "typed" as `Route[]` in your code?
+2. Predict the output (run it with `node -e` if you like):
+
+   ```ts
+   console.log(typeof null);
+   console.log(0 ?? "Ask the conductor");
+   console.log(0 || "Ask the conductor");
+   console.log([{ number: "58", fareKsh: 150 }].find((r) => r.number === "999")?.fareKsh);
+   ```
+
+3. Spot the bug. With three lookups that each take 100 ms, the second test fails because this takes 300 ms:
+
+   ```ts
+   async function totalFare(numbers: string[], lookup: (n: string) => Promise<number>) {
+     let total = 0;
+     for (const n of numbers) total += await lookup(n);
+     return total;
+   }
+   ```
+
+4. What does the `default` branch that assigns `p` to a `never` variable buy you in `describePayment`?
+
+<details>
+<summary>Answers</summary>
+
+1. The checker only sees your source code. At run time the server can send anything, and nothing compares it with your types. A wrong field turns into `undefined` far from where it came in. Checking with `typeof` at the edge, like Go's decoder, turns bad data into one clear error.
+2. `object` (a long-standing JavaScript quirk, which is why `parseRoute` checks for `null` itself), `0`, `Ask the conductor`, `undefined`. `??` only replaces `null` and `undefined`, while `||` replaces any falsy value, including a real Ksh0.
+3. `await` inside the loop waits for each lookup before starting the next one. Start them all, then wait once: `(await Promise.all(numbers.map(lookup))).reduce((a, b) => a + b, 0)`.
+4. Exhaustiveness. Inside `default`, TypeScript has ruled out every known kind, so `p` has type `never`. If someone adds `{ kind: "card" }` to the union and forgets a `case`, `p` is no longer `never` and the assignment becomes a compile error, not a wrong answer at run time.
+
+</details>
+
 ## When you're stuck
 
 - **`'p.phone' does not exist on type 'Payment'`**: you read a field before narrowing. Check `p.kind` first; inside that branch the field exists.

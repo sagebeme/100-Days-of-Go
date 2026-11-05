@@ -72,6 +72,29 @@ Compare what's live with a new build and work out what to upload, what to delete
 go run ./tools/kata 75
 ```
 
+## Check yourself
+
+1. Someone puts `VITE_MPESA_CONSUMER_SECRET` in `.env.production` "because it's not committed". Who can read it once the site is live, and where should it be instead?
+2. Predict what `findLeaks` returns, and what the WebSocket URL is:
+
+   ```ts
+   findLeaks({ VITE_API_URL: "...", VITE_MPESA_CONSUMER_SECRET: "...", JWT_SECRET: "...", VITE_ADMIN_TOKEN: "..." });
+   "https://api.twende.example".replace(/^http/, "ws") + "/ws/seats";
+   ```
+
+3. Spot the bug. On production, refreshing `https://twende.example/bookings/K7Q2M9XA` gives a 404, but clicking to the same page from the home page works. What's missing on the host?
+4. Why does `parseConfig` collect every problem and throw once, and why refuse to start rather than fall back to `http://localhost:8080`? What does `/config.json` let you do that build-time config can't?
+
+<details>
+<summary>Answers</summary>
+
+1. Everyone: Vite writes every `VITE_` value into the JavaScript, which anyone can download and search. Secrets belong only on the Go server, read from its environment.
+2. `["VITE_ADMIN_TOKEN", "VITE_MPESA_CONSUMER_SECRET"]` (sorted; `JWT_SECRET` isn't exposed, so it isn't a leak). `"wss://api.twende.example/ws/seats"`.
+3. The SPA fallback. There's no file at `/bookings/K7Q2M9XA`; clicking works because React changes the URL without asking the server. The host must answer paths without a file with `index.html` (on Netlify, `/* /index.html 200`), while still giving a real 404 for missing `/assets/` files.
+4. One failed deploy then shows every problem at once, not one per attempt. A production page silently calling localhost fails for every passenger in a confusing way; one that refuses to start never goes out. `/config.json` is filled by the server at run time, so the same tested build can move from staging to production.
+
+</details>
+
 ## When you're stuck
 
 - **`import.meta.env.VITE_API_URL` is `undefined` in the build**: the variable was set after the build, or without the `VITE_` prefix, or in a `.env` file outside the folder being built. Build-time means the value must exist when `npm run build` runs.

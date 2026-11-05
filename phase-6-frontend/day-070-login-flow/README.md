@@ -62,6 +62,29 @@ Simulate a client that shares one refresh between all the requests that hit an e
 go run ./tools/kata 70
 ```
 
+## Check yourself
+
+1. Why does the refresh token live in an `HttpOnly` cookie and the access token in a `#token` field, and never either of them in `localStorage`?
+2. Predict what happens. A laptop wakes up and the page sends three API calls with an expired access token. All three get 401. The server rotates refresh tokens (each works once). If each call runs its own `POST /api/refresh`, what does the passenger see? What does `refresh()` do instead?
+3. Spot the bug. Logged in, `GET /api/me/bookings` works in curl with a cookie but the page's cross-origin refresh comes back 401 every time:
+
+   ```ts
+   const res = await fetch(`${API_URL}/api/refresh`, { method: "POST" });
+   ```
+
+   And on the server, `Access-Control-Allow-Origin: *`. What two things are wrong?
+4. `RequireAuth` hides the bookings page from logged-out users. Is that what protects the bookings? What does?
+
+<details>
+<summary>Answers</summary>
+
+1. Any script on the page (an XSS bug, a bad npm package) can read `localStorage`, so a 30-day token would leak. `HttpOnly` cookies can't be read by scripts at all. The access token has to be readable to send it, so it lives only in memory and lasts minutes; after a reload `restore()` gets a new one from the cookie.
+2. The first refresh succeeds and rotates the token; the other two send a token that's already used, get 401, and the passenger is logged out, apparently at random. `refresh()` is a single flight: it keeps the running promise in `#refreshing` and hands that same promise to every caller, so there's one refresh and three retries.
+3. Without `credentials: "include"`, a cross-origin fetch doesn't send the cookie. And with credentials, browsers refuse `Access-Control-Allow-Origin: *`: the server must echo the exact origin and send `Access-Control-Allow-Credentials: true`.
+4. No. Anyone can edit the JavaScript in their own browser. The real protection is the Go API answering 401 to `/api/me/bookings` without a valid token. `RequireAuth` is for convenience only.
+
+</details>
+
 ## When you're stuck
 
 - **The cookie never appears and every refresh is 401**: the login request needs `credentials: "include"`, and so does every request after it. Without it, the browser ignores `Set-Cookie` on a cross-origin response.

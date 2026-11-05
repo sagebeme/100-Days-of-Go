@@ -66,6 +66,40 @@ Go through a week of CI results and report which tests are flaky and which are b
 go run ./tools/kata 73
 ```
 
+## Check yourself
+
+1. Why does the fake answer by `"METHOD /path"` and return a 404 naming the request it doesn't know, instead of a chain of `mockResolvedValueOnce` calls?
+2. Predict `fake.calls` after this, with only `"GET /api/trips"` faked:
+
+   ```ts
+   await fake.fetch("http://localhost:8080/api/trips?route=58");
+   await fake.fetch("http://localhost:8080/api/trips", { method: "post" });
+   await fake.fetch("http://localhost:8080/api/nope", { method: "DELETE" });
+   ```
+
+   Which of the three get a 404?
+3. Spot the bug. This test passes on your laptop and fails on CI about once a week:
+
+   ```ts
+   it("shows the trips", async () => {
+     render(<TripList />);
+     await new Promise((r) => setTimeout(r, 100));
+     expect(screen.getByRole("list")).toBeInTheDocument();
+   });
+   ```
+
+4. You change `t.seatsLeft > 0` to `t.seatsLeft >= 0` and every test still passes. What does that tell you? And why use `vi.useFakeTimers({ toFake: ["Date"] })` rather than faking every timer for "leaves in 12 min"?
+
+<details>
+<summary>Answers</summary>
+
+1. A fake that routes by method and path reads like the API, doesn't depend on the order of calls, and its 404 says exactly which request you forgot to fake. A chain of mocks answers whatever comes next, so a reordered or extra request gets the wrong answer and the test fails somewhere unrelated.
+2. `["GET /api/trips", "POST /api/trips", "DELETE /api/nope"]`. The query string isn't part of the path, and `Request` upper-cases standard methods like `post`. The last two get a 404: only `GET` is faked for `/api/trips`.
+3. It sleeps and hopes 100 ms is enough; on a slow CI machine it isn't. Wait for the result instead: `expect(await screen.findByRole("list")).toBeInTheDocument()`, which retries until it appears or times out.
+4. The tests don't cover the filter, so a bug there would ship: write the test that catches it (step 5). Faking only `Date` freezes "now" but leaves real timers running, so user-event and promises still work.
+
+</details>
+
 ## When you're stuck
 
 - **`TypeError: Failed to parse URL from /api/trips`**: `Request` needs an absolute URL outside a browser page. The component uses `API_URL`, so check you're passing `input` through unchanged.
