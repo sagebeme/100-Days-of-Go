@@ -11,6 +11,7 @@ Every day has two parts:
 
 Learn: values, types, if and switch, loops, functions, slices, maps, strings and runes, packages, go test, reading input
 Ends with: a text adventure in sheng
+Recap: [phase-1-terminal/RECAP.md](phase-1-terminal/RECAP.md)
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
@@ -33,6 +34,7 @@ Ends with: a text adventure in sheng
 
 Learn: structs, methods, interfaces, errors, generics, table tests, modules, env variables and config, flags, files and JSON, git
 Ends with: a CLI M-Pesa budget tracker
+Recap: [phase-2-modelling/RECAP.md](phase-2-modelling/RECAP.md)
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
@@ -53,6 +55,7 @@ Ends with: a CLI M-Pesa budget tracker
 
 Learn: Big-O, arrays and strings, two pointers, sliding window, sorting, binary search, stacks, queues, hashing, recursion, trees, graphs, greedy, dynamic programming
 Ends with: a timed mock HackerRank test
+Recap: [phase-3-algorithms/RECAP.md](phase-3-algorithms/RECAP.md)
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
@@ -75,6 +78,7 @@ Ends with: a timed mock HackerRank test
 
 Learn: goroutines, channels, select, context, sync, worker pools, the race detector
 Ends with: a concurrent price scraper
+Recap: [phase-4-concurrency/RECAP.md](phase-4-concurrency/RECAP.md)
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
@@ -91,6 +95,7 @@ Ends with: a concurrent price scraper
 
 Learn: net/http, HTTP methods and status codes, routing, JSON APIs, validation, Postgres, migrations, auth, OWASP Top 10, CORS, security headers, logging, Docker, CI, deploying
 Ends with: a deployed matatu-booking API
+Recap: [phase-5-backend/RECAP.md](phase-5-backend/RECAP.md)
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
@@ -115,6 +120,7 @@ Ends with: a deployed matatu-booking API
 
 Learn: TypeScript, React, Vite, fetching from your Go API, forms, auth flows, WebSockets, accessibility, front-end tests
 Ends with: a full-stack booking app
+Recap: [phase-6-frontend/RECAP.md](phase-6-frontend/RECAP.md)
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
@@ -135,6 +141,7 @@ Ends with: a full-stack booking app
 
 Learn: system design, caching, queues, gRPC, observability, threat modelling, code review, secrets
 Ends with: a design doc and a hardened service
+Recap: [phase-7-production/RECAP.md](phase-7-production/RECAP.md)
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|
@@ -151,6 +158,7 @@ Ends with: a design doc and a hardened service
 
 Learn: no walkthrough: a brief, tests, and you
 Ends with: sixteen projects of your own
+Recap: [phase-8-portfolio/RECAP.md](phase-8-portfolio/RECAP.md)
 
 | Day | Project | What it teaches | Status |
 |---|---|---|---|

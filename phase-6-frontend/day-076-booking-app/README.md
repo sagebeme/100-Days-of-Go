@@ -102,3 +102,5 @@ go run ./tools/kata 76
 - **"the seat map is fetched again" counts 3**: the effect ran twice for one change. Check its dependencies don't include a function or object made fresh on every render.
 - **`act(...)` warnings in the output**: a state update landed after the test finished. Await the thing the test is waiting for (`findBy...`), and ignore updates from effects that were cleaned up.
 - **Still stuck?** Open `solution/`, read it once, close it, then write your own version from memory.
+
+**That's the end of Phase 6.** Before you move on, read [the Phase 6 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

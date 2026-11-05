@@ -120,3 +120,5 @@ go run ./tools/kata 26
 - **`-strict=false` doesn't beat `PESA_STRICT=true`**: same cause. `fs.Visit` counts `-strict=false` as set.
 - **A failed run still printed a report**: check every setting and read every file before you print anything.
 - **Still stuck?** Open the files in `solution/`, read them once, close them, then write your own version from memory.
+
+**That's the end of Phase 2.** Before you move on, read [the Phase 2 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

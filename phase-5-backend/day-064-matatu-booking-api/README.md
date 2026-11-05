@@ -170,3 +170,5 @@ go run ./tools/kata 64
 - **On Render or Fly, everyone hits the rate limit at once**: they all share the proxy's IP. Set `CLIENT_IP_HEADER`. Never read that header when the app isn't behind a proxy that sets it, because then the client chooses its own IP.
 - **Stretch goals:** a `PGStore`; refresh tokens with rotation from [Day 58](../day-058-sessions-and-jwts/); an `Idempotency-Key` on `POST /bookings/{id}/pay`, so a retry over a bad connection can't charge twice; evicting idle IPs from the limiter (Day 61's `Evict`); booking cancellation.
 - **Still stuck?** Open `solution/`, read the file for the part you're on once, close it, then write your own version from memory.
+
+**That's the end of Phase 5.** Before you move on, read [the Phase 5 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

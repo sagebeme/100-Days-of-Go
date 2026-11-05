@@ -100,3 +100,5 @@ These hints name the technique. In a real test, nobody would tell you, so try ea
 - **Problem 7, wrong answer on a test with a winding road:** you only moved right and down. Traffic can make going back up faster.
 - **Problem 7, too slow:** check that you skip stale heap entries, and that you mark cells as numbers `r*C + c` in a slice, not as keys in a map.
 - **Still stuck when the timer goes?** That's information, not failure: note which days to revisit. Then open `solution/mock.go` and `kata/solution/main.go`, read each answer once, close them, and write your own version from memory.
+
+**That's the end of Phase 3.** Before you move on, read [the Phase 3 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

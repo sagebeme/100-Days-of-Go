@@ -123,3 +123,5 @@ go run ./tools/kata 48
 - **`Failed = ["Moved Away" "Broken JSON" ...]`**: sort it with `slices.Sort`.
 - **A race report on a map**: don't write the `Cheapest` map from the workers. Keep per-shop results in a slice slot each, and merge after `wg.Wait()`.
 - **Still stuck?** Open `solution/pricewatcher.go`, read it once, close it, then write your own version from memory.
+
+**That's the end of Phase 4.** Before you move on, read [the Phase 4 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

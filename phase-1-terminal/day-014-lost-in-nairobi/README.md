@@ -117,3 +117,5 @@ go run ./tools/kata 14
 - **The player ends up in room `""`**: you used `exits[room][way]` without checking `ok`. A missing key returns `""`, so return the old room when `ok` is false.
 - **`declared and not used: text`** in your loop: print the text that `Step` returns. Use `room, text = Step(room, line)` with `=`, not `:=`, so you update the `room` outside the loop.
 - **Still stuck?** Open `solution/adventure.go` and `solution/cmd/play/main.go`, read them once, close them, then write your own version from memory.
+
+**That's the end of Phase 1.** Before you move on, read [the Phase 1 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.

@@ -166,4 +166,6 @@ This day is the portfolio, so the last checklist is the whole course's:
 - **Tests and CI**: this tool gets its own CI badge too. Green badges everywhere are the quickest signal that you finish things.
 - **What you'd do next**: a short "Now" section on the site: what you're learning, the next project you'll ship, the open-source issue you're working on. Update it every month.
 
+**That's the end of Phase 8.** [The Phase 8 recap](../RECAP.md) has the key ideas, a short self-test, and one last project: a brief you write yourself.
+
 You started with a single M-Pesa SMS on [Day 1](../../phase-1-terminal/day-001-mpesa-sms/). A hundred days later you can design, build, test, secure, speed up and ship a service, and explain how you did it. Ship it, and go and get the job.

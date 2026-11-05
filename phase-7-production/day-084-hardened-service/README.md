@@ -138,3 +138,5 @@ go run ./tools/kata 84
 - **`Run returned ... while a request was still in flight`**: `srv.Close` drops connections. Use `srv.Shutdown` with a `ShutdownGrace` timeout, and set your draining flag before calling it.
 - **`/readyz still 200 after shutdown began`**: keep an `atomic.Bool` on the server, set it in `Run` when the context is done, and check it first in `/readyz`.
 - **Still stuck?** Open `solution/`, read it once, close it, then write your own version from memory. Then compare your `DESIGN.md` with what you built.
+
+**That's the end of Phase 7.** Before you move on, read [the Phase 7 recap](../RECAP.md): the key ideas in one page, a short self-test, and one project to build with no steps.
