@@ -50,6 +50,31 @@ In a merry-go-round chama the payout rotates: each month the person at the front
 go run ./tools/kata 6
 ```
 
+## Check yourself
+
+1. Predict the output:
+
+   ```go
+   var s []int
+   fmt.Println(s == nil, len(s))
+   s = append(s, 1)
+   fmt.Println(s, len(s))
+   ```
+
+2. Spot the bug: inside `RunningBalance`, the line `append(balances, sum)`.
+3. Why does `Defaulters` range over `names` with the index, instead of `for _, name := range names`?
+4. What do `Total(nil)` and `RunningBalance(nil)` return?
+
+<details>
+<summary>Answers</summary>
+
+1. `true 0`, then `[1] 1`. A `nil` slice has length 0, and `append` works on it.
+2. It doesn't compile: `append(balances, sum) (value of type []int) is not used`. `append` returns the new slice; you must keep it with `balances = append(balances, sum)`.
+3. `names` and `paid` are parallel slices: `paid[i]` belongs to `names[i]`. You need `i` to read the right member's payment.
+4. `0`, and a `nil` slice (length 0). The loops run zero times, so the starting values come back.
+
+</details>
+
 ## When you're stuck
 
 - **`append(balances, sum) (value of type []int) is not used`**: `append` doesn't change the slice in place. Keep its result: `balances = append(balances, sum)`.

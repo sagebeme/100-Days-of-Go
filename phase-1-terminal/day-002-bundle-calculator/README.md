@@ -50,6 +50,36 @@ You log how many megabytes you use each day. Print the total and the average per
 go run ./tools/kata 2
 ```
 
+## Check yourself
+
+1. Predict the output:
+
+   ```go
+   x := 3.9
+   fmt.Println(7/2, 7%2, float64(7)/2, int(x))
+   ```
+
+2. Spot the bug. `PricePerGB(50, 350)` returns `0` instead of `146.29`. Why?
+
+   ```go
+   func PricePerGB(price, mb int) float64 {
+   	return float64(price / mb * 1024)
+   }
+   ```
+
+3. What does `GBToMB(0.001)` return, and why isn't it rounded up?
+4. `int(x)` compiles when `x := 3.9`, but `int(3.9)` written straight into the code is a compile error. Why the difference?
+
+<details>
+<summary>Answers</summary>
+
+1. `3 1 3.5 3`. Int division drops the remainder, `%` gives it, converting first gives a real division, and `int` cuts off the decimals.
+2. `price / mb` is int division done first: `50 / 350` is `0`, and `0 * 1024` is still `0`. Converting at the end is too late. Convert before dividing: `float64(price) / (float64(mb) / 1024)`.
+3. `1`. `0.001 * 1024` is `1.024`, and `int` throws away the fraction. It never rounds.
+4. `3.9` on its own is a constant, and Go refuses to convert a constant to a type that can't hold it exactly. A `float64` variable is converted at run time, and that conversion truncates.
+
+</details>
+
 ## When you're stuck
 
 - **`invalid operation: gb * mbPerGB (mismatched types float64 and int)`**: you multiplied a `float64` by an `int` variable. Convert the variable with `float64(mbPerGB)`, or write the number straight in: `gb * 1024`.

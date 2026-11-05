@@ -57,6 +57,32 @@ Every M-Pesa transaction has a 10-character code like `QFT1ABC2DE`. Read a list 
 go run ./tools/kata 9
 ```
 
+## Check yourself
+
+1. Today you index the string byte by byte (`s[i]`), but on Day 8 that was the bug. Why is it fine here?
+2. Predict `Clean("712345678")`, `Clean("+0712345678")` and `Clean("0712 345 67")`.
+3. Spot the bug. What does this `SameNumber("abc", "xyz")` return?
+
+   ```go
+   func SameNumber(a, b string) bool {
+   	ca, _ := Clean(a)
+   	cb, _ := Clean(b)
+   	return ca == cb
+   }
+   ```
+
+4. Why do the error messages use `%q` instead of `%s`?
+
+<details>
+<summary>Answers</summary>
+
+1. A valid phone number is plain ASCII, where one byte is one character. Any byte that isn't a digit, space, hyphen or a leading `+` is refused anyway, so a multi-byte letter just becomes an error.
+2. `"254712345678", nil` (9 digits are kept as the local part); an error, because a number with `+` must start `+254`; and an error saying it isn't a mobile number: it has 9 digits, so all of them become the local part, and that starts with `0`.
+3. `true`. Both calls fail and return `""`, and `"" == ""`. Two invalid numbers must never count as the same person: return `false` when either one fails.
+4. `%q` puts the value in quotes and escapes anything invisible, so `" 0712"` or a stray tab is obvious in the message.
+
+</details>
+
 ## When you're stuck
 
 - **`invalid operation: c >= "0" (mismatched types byte and untyped string)`**: `"0"` is a string. Use single quotes, `'0'`, for a single character.

@@ -67,6 +67,29 @@ An M-Pesa statement shows its amounts in one column, with commas, lined up on th
 go run ./tools/kata 11
 ```
 
+## Check yourself
+
+1. Predict: `fmt.Sprintf("[%5d][%-6s][%.4s][%02d]", 42, "Kip", "Nairobi", 5)`
+2. Predict the output, and say why the shop keeps money in cents:
+
+   ```go
+   a, b := 0.1, 0.2
+   fmt.Println(a+b, a+b == 0.3)
+   ```
+
+3. `Commas` handles the sign before it walks the digits. What would `Commas(-123)` return if it walked `strconv.Itoa(-123)` directly?
+4. Spot the bug: `Receipt` returns `b.String()` without calling `w.Flush()`. What does it return?
+
+<details>
+<summary>Answers</summary>
+
+1. `[   42][Kip   ][Nair][05]`.
+2. `0.30000000000000004 false`. A `float64` can't hold `0.1` exactly, so totals drift by tiny amounts. Whole cents in an `int` are always exact.
+3. `-,123`. The `-` counts as one of the four "digits", so a comma lands after it.
+4. An empty string, or a partial one. `tabwriter` holds lines back until it knows every column's width, and only `Flush` writes them out.
+
+</details>
+
 ## When you're stuck
 
 - **`Commas(1000)` gives `"1000"` or `",1,000"`**: print the comma before a digit only when `i > 0` and the digits left divide by 3.

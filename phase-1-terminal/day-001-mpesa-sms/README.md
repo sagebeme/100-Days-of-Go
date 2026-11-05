@@ -51,6 +51,32 @@ Every day ends with a short puzzle in the format HackerRank uses: your program r
 go run ./tools/kata 1
 ```
 
+## Check yourself
+
+1. Why does `"Ksh" + amount` refuse to compile when `amount` is an `int`, and what do you use instead?
+2. Predict the output: `fmt.Println(fmt.Sprintf("%s%d.00", "Ksh", 1250))`
+3. Spot the bug. This won't compile. Why?
+
+   ```go
+   func BuildConfirmation(code string, amount int, name string) string {
+   	message := code + " Confirmed."
+   	extra := " sent to " + name
+   	return message
+   }
+   ```
+
+4. What do you gain by making `status` a `const` instead of a variable?
+
+<details>
+<summary>Answers</summary>
+
+1. `+` only joins two values of the same type, and Go never turns an `int` into a string for you. `fmt.Sprintf` with `%d` formats the number into the text.
+2. `Ksh1250.00`. `%s` and `%d` sit next to each other with no space, and `.00` is plain text.
+3. `extra` is declared and never used, which is a compile error in Go (`declared and not used: extra`). Unused function parameters are fine; unused local variables are not.
+4. Nothing can change it by accident: assigning to a constant is a compile error. It also tells the reader the value is fixed.
+
+</details>
+
 ## When you're stuck
 
 - **`undefined: fmt`**: add `import "fmt"` on the line after `package mpesasms`.

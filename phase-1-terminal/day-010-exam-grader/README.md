@@ -57,6 +57,23 @@ Read a class list of names and scores and print it as an order of merit: highest
 go run ./tools/kata 10
 ```
 
+## Check yourself
+
+1. Why does `Median` copy the scores before sorting them?
+2. Predict `Mean([]int{1, 2})`, and what `total / len(scores)` with ints would give instead.
+3. Spot the bug: in `Grade`, the cases are written `score >= 40` (D) first, then `score >= 50` (C), and so on up to A. What grade does 90 get?
+4. Why does `Rank` sort tied scores by name? What happens to the tests if it doesn't?
+
+<details>
+<summary>Answers</summary>
+
+1. `sort.Ints` sorts in place. Without a copy you'd reorder the caller's slice behind their back.
+2. `1.5`. Int division would give `1`, because it drops the fraction.
+3. `"D"`. The first true case wins, and 90 is `>= 40`. Check from the highest band down.
+4. Map order is random and `sort.Slice` isn't stable, so tied names could come out in a different order on every run. The tests would pass sometimes and fail other times. A tie-break makes the order fixed.
+
+</details>
+
 ## When you're stuck
 
 - **`Mean([50 51]) = 50, want 50.5`**: you divided two ints. Convert both to `float64` before dividing.

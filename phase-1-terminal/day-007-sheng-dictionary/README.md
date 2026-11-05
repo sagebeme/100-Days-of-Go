@@ -57,6 +57,40 @@ Read a stream of words from a group chat and print the word that came up the mos
 go run ./tools/kata 7
 ```
 
+## Check yourself
+
+1. Predict the output:
+
+   ```go
+   m := map[string]int{}
+   m["poa"]++
+   fmt.Println(m["poa"], m["rada"])
+   _, ok := m["rada"]
+   fmt.Println(ok)
+   ```
+
+2. Why does `Lookup` use `meaning, ok := dict[word]` instead of checking `dict[word] != ""`?
+3. Spot the bug. This panics the first time it runs:
+
+   ```go
+   var counts map[string]int
+   for _, w := range words {
+   	counts[w]++
+   }
+   ```
+
+4. Why does `Unknown` need a `seen` set as well as `dict`?
+
+<details>
+<summary>Answers</summary>
+
+1. `1 0`, then `false`. A missing key reads as the zero value, and the comma-ok form tells you it wasn't really there.
+2. A word could be stored with an empty meaning, and a missing word also reads as `""`. Only `ok` tells the two apart.
+3. `counts` is a `nil` map. Reading from it is fine, but writing panics with `assignment to entry in nil map`. Create it with `make(map[string]int)`.
+4. The same unknown word can appear more than once (`rada, rada`), and it should be listed only once. `seen` remembers which ones are already in the result.
+
+</details>
+
 ## When you're stuck
 
 - **`panic: assignment to entry in nil map`**: you wrote to a map you only declared with `var counts map[string]int`. Make it first: `counts := make(map[string]int)`.
