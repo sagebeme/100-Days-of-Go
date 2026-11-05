@@ -72,6 +72,37 @@ Given job titles and prefixes, print the first three titles in alphabetical orde
 go run ./tools/kata 94
 ```
 
+## Check yourself
+
+1. Why does a good HTML form post answer `303 See Other` and not `200` with the job page? And why does the search form use `GET`?
+2. Predict the output (title 3 points, tag 2, company 1, each distinct query word counted once):
+
+   ```go
+   fmt.Printf("%q\n", Tokenize("M-Pesa Go/Backend dev, Nairobi!"))
+   j := Normalize(Job{Title: "Go Developer", Company: "Go Ventures", Tags: []string{"Go", "backend"}})
+   fmt.Println(Score(j, Tokenize("go go")), Score(j, Tokenize("backend")), Score(j, Tokenize("dev")))
+   ```
+
+3. Spot the bug. A job titled `<script>alert(1)</script>` runs in every visitor's browser:
+
+   ```go
+   import "text/template"
+
+   var page = template.Must(template.New("job").Parse(`<h1>{{.Title}}</h1>`))
+   ```
+
+4. A visitor is logged in to Kazi Board, and a stranger's site has a hidden form that POSTs to `/jobs`. What stops it, and why isn't `SameSite` on the cookie the whole answer?
+
+<details>
+<summary>Answers</summary>
+
+1. After a `303`, the browser loads the job page with a `GET`, so refreshing it doesn't post the job twice. A `GET` search puts `q` in the URL, so results can be bookmarked and shared, and Next and Previous links can carry it.
+2. `["m" "pesa" "go" "backend" "dev" "nairobi"]`, then `6 2 0`: "go" is in the title, a tag and the company (3 + 2 + 1, counted once though typed twice); "backend" is a tag; "dev" isn't a whole word anywhere ("developer" doesn't count).
+3. `text/template` doesn't escape for HTML. Use `html/template`, which escapes each value for where it lands (`&lt;script&gt;` in text, URL-escaping in an `href`).
+4. `http.NewCrossOriginProtection()` around the whole mux refuses the POST because the browser marks it `Sec-Fetch-Site: cross-site`. `SameSite` only covers cookies, treats sibling subdomains as the same site, and older browsers ignore it; checking where the request came from covers what cookies can't.
+
+</details>
+
 ## When you're stuck
 
 - **`pattern "GET /jobs/new" conflicts with pattern "GET /jobs/{id}"`**: it doesn't, in Go 1.22 and later: the more specific pattern wins. If you see a conflict, check that both use the same method.

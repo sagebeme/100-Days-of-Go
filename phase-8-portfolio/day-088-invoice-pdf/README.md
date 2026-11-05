@@ -98,6 +98,42 @@ Given a header size and the body length of each object, print the xref table and
 go run ./tools/kata 88
 ```
 
+## Check yourself
+
+1. Why is money whole cents in `int64` and never `float64`? Why add 50 before dividing by 100 for the VAT?
+2. Predict the output (run it against your solution; `Line` is `{Description, Qty, UnitCents}`, VAT is 16%):
+
+   ```go
+   t := ComputeTotals([]Line{{"Nails, box", 3, 333}})
+   fmt.Printf("%+v %s\n", t, FormatKsh(t.Total))
+   fmt.Println(FormatKsh(5), FormatKsh(-150050))
+   fmt.Println(Escape(`Kamau (Builders) \ Sons`))
+   fmt.Println(ValidKRAPIN("p051234567q"))
+   ```
+
+3. Spot the bug. Adobe Reader says the file is damaged and rebuilds it, though Chrome opens it fine:
+
+   ```go
+   for i, obj := range objects {
+       offsets[i] = buf.Len()
+       fmt.Fprintf(&buf, "%d 0 obj\n%s\nendobj\n", i+1, obj)
+   }
+   fmt.Fprintf(&buf, "xref\n0 %d\n0000000000 65535 f\n", len(objects)+1)
+   ```
+
+   Hint: count the bytes in each xref line.
+4. What happens if a buyer's name is `Kamau (Builders` and you don't escape it? Why is that the PDF version of an injection bug?
+
+<details>
+<summary>Answers</summary>
+
+1. `float64` can't hold most decimal fractions exactly, so sums drift by a cent and totals don't add up. Integer division rounds down; adding 50 first rounds to the nearest cent (`(s*16 + 50) / 100`).
+2. `{Subtotal:999 VAT:160 Total:1159} Ksh 11.59` (999 × 0.16 is 159.84, rounded to 160). Then `Ksh 0.05 -Ksh 1,500.50`, then `Kamau \(Builders\) \\ Sons`, then `false` (the PIN letters are capitals).
+3. Every xref entry must be exactly 20 bytes, and the free entry here is missing its trailing space before the newline: `0000000000 65535 f \n`. One byte off and readers can't trust the table. (Some readers repair it, which is why it "works" in Chrome.)
+4. The unescaped `(` opens a nested string that never closes, so everything after it is read as part of the text, and the rest of the page breaks. Text from the invoice is data inside PDF syntax; without escaping, data can change the structure, just as unescaped input can change SQL or HTML.
+
+</details>
+
 ## When you're stuck
 
 - **The reader says the file is damaged, or `pdfinfo` prints `Syntax Error: Couldn't find trailer dictionary` or warns about the xref**: an offset is off. Record `buf.Len()` immediately before writing `N 0 obj`, not after.

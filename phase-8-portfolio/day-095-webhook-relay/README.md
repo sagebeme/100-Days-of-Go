@@ -76,6 +76,49 @@ Given event IDs with timestamps, print `ACCEPT` or `DUPLICATE` for each, where a
 go run ./tools/kata 95
 ```
 
+## Check yourself
+
+1. Why does the provider sign `"<timestamp>.<body>"` and not the body alone? What does the 5-minute window stop that the signature alone doesn't?
+2. Predict the results (run them against your solution). `sig := Sign(secret, t, body)` at time `t`, with a 5-minute tolerance:
+
+   ```go
+   Verify(secret, sig, body, t.Add(4*time.Minute), 5*time.Minute)
+   Verify(secret, sig, body, t.Add(-6*time.Minute), 5*time.Minute)
+   Verify(secret, sig, []byte(`{"id":"evt_002"}`), t, 5*time.Minute)
+   ```
+
+   And which of 400, 404, 408, 409, 429 and 503 does `Retryable` retry?
+3. Spot the bug. An attacker sends a forged copy of `evt_001` a moment before the real one arrives, and the real repayment is never forwarded:
+
+   ```go
+   func (rl *Relay) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+       body, _ := io.ReadAll(http.MaxBytesReader(w, r.Body, MaxBody))
+       var ev Event
+       json.Unmarshal(body, &ev)
+       if rl.seen.Seen(ev.ID, rl.now()) {
+           writeJSON(w, 200, map[string]string{"status": "duplicate"})
+           return
+       }
+       if err := Verify(rl.secret, r.Header.Get(SignatureHeader), body, rl.now(), rl.tolerance); err != nil {
+           writeJSON(w, 401, map[string]string{"error": "invalid signature"})
+           return
+       }
+       ...
+   }
+   ```
+
+4. Why does `ServeHTTP` queue the event and answer 202 instead of delivering to all three subscribers before answering? And why is `Backoff`'s sleep injected?
+
+<details>
+<summary>Answers</summary>
+
+1. With the timestamp inside the signed text, an attacker can't take an old signature and glue a fresh timestamp onto it. The window stops replays: without it, a captured request could be sent again tomorrow and would still verify.
+2. `nil` (inside the window), an error (outside the window: it's checked both ways), an error (the body changed, so the signature doesn't match). `Retryable` retries 408, 429 and 503 (and any 5xx); 400, 404 and 409 won't get better on a retry.
+3. It checks the ID before the signature, and `Seen` records it: the forged request marks `evt_001` as seen, so the real one is answered "duplicate" and dropped. Verify the raw bytes first, then parse, and only remember the ID once the request is accepted (`Forget` it if queueing fails).
+4. The provider waits for the answer and retries on a timeout; delivering to three slow services first would make it time out and send repeats. Answering fast and delivering in `Run` keeps the provider happy. Injecting the sleep (and the clock and HTTP client) means a test with several retries runs instantly and never touches the network.
+
+</details>
+
 ## When you're stuck
 
 - **Every signature is `ErrBadSignature`, even your own**: you're signing different bytes from the ones you verify. Verify the raw body exactly as read, before any JSON decoding, and build the signed string the same way in both places: `strconv.FormatInt(t, 10) + "." + body`.

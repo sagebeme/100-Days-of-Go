@@ -93,6 +93,44 @@ Count the runs of consecutive days whose totals add up to exactly `K`. The obvio
 go run ./tools/kata 98
 ```
 
+## Check yourself
+
+1. Why measure with `benchstat` over several runs instead of running the benchmark once before and once after? And why do the allocation guards count allocations rather than time?
+2. Read the original `Summarise` and predict which of these costs grow with the number of *lines*, and which with lines × counterparties:
+   - `regexp.MustCompile(...)` inside the loop
+   - the `for j := range totals` search comparing `fmt.Sprintf("%s", totals[j].Name) == name`
+   - copying and `sort.Slice`-ing `totals` after every line
+
+   Which one would you fix first, and how do you check your guess?
+3. Spot the bug in this "optimisation": it's much faster, and a correctness test fails.
+
+   ```go
+   index := map[string]int{}
+   for i, line := range lines {
+       ...
+       j, ok := index[m[3]]
+       if !ok {
+           totals = append(totals, Total{Name: name})
+           j = len(totals) - 1
+           index[m[3]] = j
+       }
+       ...
+   }
+   ```
+
+   Hint: compare the key with what's stored in `Name`.
+4. Plain `go tool pprof -top` puts Go's memory allocator at the top. Why does `-top -cum` help, and what does a big allocator share tell you?
+
+<details>
+<summary>Answers</summary>
+
+1. One run can be off because of other programs, CPU frequency or the garbage collector; `benchstat` compares several runs and gives a `p=` value that says whether the difference is real or noise. Allocation counts are the same on every machine, so a test on them can't be flaky.
+2. Compiling the regex once per line grows with lines (and is heavy each time). The linear search, with a `Sprintf` allocation per comparison, grows with lines × counterparties. Sorting after every line grows with lines × counterparties × log(counterparties) and copies the slice each time. Profile first and fix the top cost: here a map from name to index, the regex compiled once outside the loop, and one sort at the end. The profile, not your guess, decides.
+3. The map is keyed on the raw field `m[3]`, but the name is trimmed and upper-cased first, so `Mama Mboga` and `MAMA MBOGA ` become two totals where the original had one. Key the map on `name`, the same value it compares.
+4. `-cum` counts the time in the functions each function calls, so `Summarise` and what it calls rise to the top and you see which of your lines cause the cost. Lots of time in the allocator means the code allocates too much: look for allocations inside the loop.
+
+</details>
+
 ## When you're stuck
 
 - **The profile is all `regexp.compile`**: the pattern is compiled again for every line. Compile it once in a package-level `var`, or drop the regex: four fields split by commas are easy to check by hand with `strings.Cut`.

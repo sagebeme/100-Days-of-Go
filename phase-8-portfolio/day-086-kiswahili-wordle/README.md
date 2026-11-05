@@ -83,6 +83,41 @@ Given the guesses and patterns so far, count the words that could still be the a
 go run ./tools/kata 86
 ```
 
+## Check yourself
+
+1. Why does `Score` go through the word twice, greens first and then yellows? What would one pass get wrong?
+2. Predict the patterns (`G` green, `Y` yellow, `.` grey):
+
+   ```go
+   Pattern(Score("simba", "mamba"))
+   Pattern(Score("kaaka", "kanga"))
+   Pattern(Score("aaaaa", "tunda"))
+   Pattern(Score("nauli", "tunda"))
+   ```
+
+3. Spot the bug. Students in Kisumu get yesterday's word until 3 a.m.:
+
+   ```go
+   func Daily(t time.Time) string {
+       start := time.Date(2026, 1, 1, 0, 0, 0, 0, time.UTC)
+       days := int(t.Sub(start).Hours() / 24)
+       return Words()[days%len(Words())]
+   }
+   ```
+
+   What else goes wrong for a date before 2026?
+4. A guess of `lion` or of a word not in the list uses up no try. Why does that matter to a Form 2 student, and how do sentinel errors let `cmd/wordle` tell those cases apart?
+
+<details>
+<summary>Answers</summary>
+
+1. A letter that's green must use up its copy in the answer before any yellows are given out. In one pass, an early guess letter can take a yellow for a copy that a later position needed for a green, so a letter gets marked twice when the answer has it once.
+2. `..GGG`, `GG..G` (the answer's only two a's are used by greens, so the a at position 3 gets nothing), `....G`, `YYY..`.
+3. It counts days in UTC, so in Kenya (UTC+3) the day changes at 3 a.m. Count whole days in `t`'s own time zone (build `start` in `t.Location()`, or compare calendar dates). Before 2026, `days` is negative, so `days % n` is negative and indexing panics: wrap it with `((days % n) + n) % n`.
+4. A typo shouldn't cost a try, or the game punishes spelling slips rather than guessing. With `ErrWrongLength`, `ErrNotAWord` and `ErrGameOver` checked with `errors.Is`, the CLI can show the right Kiswahili message and ask again.
+
+</details>
+
 ## When you're stuck
 
 - **`mamba` against `nyama` gives `YYY.G`, not `YY..G`**: you marked the second `m` yellow too. `nyama` has only one `m`, and the first `m` already used it. Count the answer's spare letters once, before the yellow pass, and take one away for each yellow.

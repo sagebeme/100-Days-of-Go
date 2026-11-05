@@ -98,6 +98,41 @@ Given every request's time in a day, sorted, find the 60-second window with the 
 go run ./tools/kata 92
 ```
 
+## Check yourself
+
+1. The log is 4 GB and the server has 1 GB of RAM. What in `Analyse` keeps memory flat whatever the file's size? Name two things.
+2. Predict the output. 95 requests take 50 ms and 5 take 10 s, added to a `Histogram`:
+
+   ```go
+   fmt.Println(h.Percentile(50), h.Percentile(95), h.Percentile(96), h.Percentile(99))
+   ```
+
+   And what's the mean?
+3. Spot the bug. One 1 MB line in a corrupted log stops the whole run with `bufio.Scanner: token too long`:
+
+   ```go
+   sc := bufio.NewScanner(r)
+   for sc.Scan() {
+       e, err := ParseLine(sc.Text())
+       ...
+   }
+   if err := sc.Err(); err != nil {
+       return Report{}, err
+   }
+   ```
+
+4. Why are paths counted without the query string, and why are ties in the top list broken by path?
+
+<details>
+<summary>Answers</summary>
+
+1. It reads with a `bufio.Reader` of a fixed size, line by line, and never keeps lines; and latencies go into a histogram of one counter per millisecond instead of a list of every request. Over-long lines are skipped without being kept.
+2. `50ms 50ms 10s 10s`. p95 is rank ⌈0.95 × 100⌉ = 95, which is still a 50 ms request; p96 is the first slow one. The mean is 547.5 ms, which describes nobody's experience.
+3. `bufio.Scanner` has a maximum token size, and a longer line is an error that ends the scan, so one bad line kills the run. Read with `bufio.Reader.ReadSlice`: on `bufio.ErrBufferFull`, count the line as malformed, skip to the next newline, and carry on. Only a real read error should stop it.
+4. `/stk/push?amount=100` and `/stk/push?amount=200` are the same endpoint; with queries, every request is its own row (and queries can hold tokens). With ties broken by path, the output is the same on every run, so scripts and diffs can trust it.
+
+</details>
+
 ## When you're stuck
 
 - **`bufio.Scanner: token too long`**: `Scanner` gives up on a line over its buffer and stops the whole scan. Use `bufio.Reader.ReadSlice`, and on `bufio.ErrBufferFull` keep reading until the newline, then count the line as malformed.

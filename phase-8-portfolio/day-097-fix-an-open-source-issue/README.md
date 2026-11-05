@@ -89,6 +89,40 @@ Read amounts typed in every format and print them in one standard form, or `INVA
 go run ./tools/kata 97
 ```
 
+## Check yourself
+
+1. Why write a failing test with the exact input from the issue *before* touching `Parse`? What does it prove after the fix?
+2. Predict what the current (unfixed) `Parse` returns, in cents:
+
+   ```go
+   Parse("Ksh 1,200.5")
+   Parse("1,200.50")
+   Parse("0.5")
+   Parse("-3.5")
+   ```
+
+   In one sentence: why does `"5"` become 5 cents?
+3. Spot the problem. This PR fixes the bug, and the maintainer asks you to split it up:
+
+   ```
+   pesa: fix decimals, rename ungroup to stripGroups, run gofumpt, add Format options
+    pesa.go        | 214 ++++++++------
+    pesa_test.go   |  96 +++---
+    format.go      |  58 +++++
+   ```
+
+4. After you open the PR, a maintainer asks for a change. Do you push a new commit or force-push? And what goes in `PR_DESCRIPTION.md` besides "Fixes #42"?
+
+<details>
+<summary>Answers</summary>
+
+1. A fix without a failing test first is a guess: the test proves you reproduced the bug the user saw. Afterwards it proves the fix works, and it stays as a regression test so the bug can't come back unnoticed.
+2. `120005`, `120050`, `5`, `-305`. The digits after the point are parsed as a whole number of cents, so one digit means tenths of a shilling but is read as cents; a one-digit fraction needs multiplying by 10.
+3. Four ideas in one PR: a fix, a rename, a reformat and a feature. It's slow to review and risky to merge, and the reformat hides the real change. One fix per PR, in the project's style, with no drive-by changes: the fix and its test, and nothing else.
+4. Usually a new commit, unless `CONTRIBUTING.md` asks for a force-push, so the reviewer can see what changed since they last looked. The description says what it fixes, the cause, the fix and why this way, how you tested it, and what's out of scope.
+
+</details>
+
 ## When you're stuck
 
 - **Your test passes before the fix**: it doesn't use the issue's input. Use `"Ksh 1,200.5"` exactly, and check the number of cents, not just that there's no error.
