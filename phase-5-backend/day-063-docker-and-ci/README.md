@@ -84,6 +84,32 @@ Given CI jobs and their `needs:`, print the order to run them in, smallest name 
 go run ./tools/kata 63
 ```
 
+## Check yourself
+
+1. The database goes down. Which endpoint should fail, `/healthz` or `/readyz`, and what does the platform do in each case? Why would failing the other one make things worse?
+2. Predict what happens. The binary is built with plain `go build` (cgo on, the default) and copied into a `gcr.io/distroless/static` image. The container starts and prints `exec /api: no such file or directory`. Why, when the file is clearly there?
+3. Spot the bug. Every small code change rebuilds all the dependencies:
+
+   ```dockerfile
+   FROM golang:1.25 AS build
+   WORKDIR /src
+   COPY . .
+   RUN go mod download
+   RUN CGO_ENABLED=0 go build -o /api ./cmd/api
+   ```
+
+4. On `SIGTERM`, why does the server flip an `atomic.Bool` so `/readyz` answers 503 before it calls `Shutdown`? And why does CI give pull requests from forks no secrets?
+
+<details>
+<summary>Answers</summary>
+
+1. `/readyz`. The platform stops sending traffic to that instance but doesn't restart it. If `/healthz` checked the database, the platform would restart every container in a loop, which can't fix a database outage and drops the requests that didn't need the database.
+2. With cgo on, the binary is linked to the C library, and the loader it names doesn't exist in the static image. "No such file" refers to that missing loader, not your binary. Build with `CGO_ENABLED=0` for a static binary.
+3. `COPY . .` comes before `go mod download`, so any source change breaks the cache for the download layer. Copy `go.mod` and `go.sum` first, run `go mod download`, then copy the rest.
+4. Draining first lets the load balancer see the 503 and move traffic away while the server still answers the requests it has; then `Shutdown` waits for them to finish. A fork's pull request runs code anyone wrote, so with secrets it could print them; that's also why the workflow has `permissions: contents: read`.
+
+</details>
+
 ## When you're stuck
 
 - **`go: go.mod requires go >= 1.26.0 (running go 1.2x)`** during `docker build`: the builder image is older than `go.mod` needs. Use `golang:1.26` or newer.

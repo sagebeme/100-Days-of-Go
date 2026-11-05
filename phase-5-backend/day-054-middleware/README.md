@@ -67,6 +67,23 @@ The duration in every log line is only useful when you sum it up, and averages l
 go run ./tools/kata 54
 ```
 
+## Check yourself
+
+1. Middleware `a` and `b` each log "in" before calling `next` and "out" after. Predict the order of the lines for `Chain(h, a, b)`.
+2. Why must `Logger` sit outside `Recover` in the chain?
+3. Predict what `RequestID` does with an incoming `X-Request-ID` of `trace-42`, of `"bad\nid"`, and of 65 letters. Why reject the second?
+4. Predict `MaskPhone("254712345678")`. Why mask phones, and log `r.URL.Path` instead of `r.URL.String()`?
+
+<details>
+<summary>Answers</summary>
+
+1. `a in, b in, h, b out, a out`. `Chain(h, a, b)` is `a(b(h))`: the first middleware sees the request first and the response last.
+2. `Recover` turns a panic into a `500`. `Logger` has to be wrapped around it to see and log that `500`; inside, the panic would skip past its logging.
+3. It keeps `trace-42`, and replaces the other two with a fresh random ID. A newline in an ID could forge a fake extra log line, and an unlimited length lets a client stuff the logs.
+4. `2547*****678`. Logs are read by more people than the database and kept in more places; full phone numbers and query strings (which can hold tokens) don't belong there.
+
+</details>
+
 ## When you're stuck
 
 - **The chain runs in reverse**: you wrapped from the first middleware to the last, so the first ended up innermost. Loop from `len(mws)-1` down to 0.

@@ -130,6 +130,32 @@ Replay a log of bookings and cancellations under the one-seat-one-booking rule: 
 go run ./tools/kata 64
 ```
 
+## Check yourself
+
+1. Otieno asks for Wanjiku's booking, `GET /bookings/7`. Why does he get 404 and not 403, and why can't `require(ReadBooking)` make that check on its own?
+2. Why does the API read the user's role from the store on every request instead of putting it in the token? What goes wrong the other way after `PUT /users/{phone}/role`?
+3. Spot the bug. A body over 1 MB answers 400, but the test wants 413:
+
+   ```go
+   r.Body = http.MaxBytesReader(w, r.Body, 1<<20)
+   if err := json.NewDecoder(r.Body).Decode(&in); err != nil {
+       writeError(w, 400, "bad JSON")
+       return
+   }
+   ```
+
+4. Behind Render, the limiter takes the *first* `X-Forwarded-For` entry. What can a client do? And why does `POST /bookings/{id}/pay` answer 502 when the payer fails, leaving the booking unpaid?
+
+<details>
+<summary>Answers</summary>
+
+1. 403 would tell him booking 7 exists and belongs to someone else. Answering exactly like a missing booking leaks nothing. `require(ReadBooking)` only knows his role (passengers may read bookings); the check that he made this booking needs the loaded booking, so it happens in the handler.
+2. A role in a token stays valid until the token expires, so a demoted conductor keeps conductor powers. Reading it from the store means a role change takes effect on the next request.
+3. The size error is a `*http.MaxBytesError`, and the code treats it like any other JSON error. Check `errors.As(err, &maxErr)` first and answer 413 (the given `decode` does this).
+4. Render adds to whatever `X-Forwarded-For` the client sent, so the client controls the first entry and can dodge the limit with a new fake IP each time. Use the last entry, or a header the platform sets and the client can't fake. 502 says "a service behind me failed", which is true and isn't the client's fault; keeping the booking unpaid means the passenger can try again and is never marked paid without a payment.
+
+</details>
+
 ## When you're stuck
 
 - **Every test fails with `register 0700000001: 404`**: `Handler` still returns an empty mux. Register the routes, then wrap them.

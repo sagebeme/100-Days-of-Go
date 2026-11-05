@@ -86,6 +86,32 @@ Go's server reads `GET /trips?route=125 HTTP/1.1` and fills in `r.Method`, `r.UR
 go run ./tools/kata 49
 ```
 
+## Check yourself
+
+1. Why is the home route `"GET /{$}"` and not `"GET /"`? What would `GET /nope` return with `"GET /"`?
+2. Predict the status and the `Allow` header for `POST /health`. Which code writes them?
+3. Spot the bug. What status and `Content-Type` does the client get, and what does the server log?
+
+   ```go
+   func(w http.ResponseWriter, r *http.Request) {
+   	fmt.Fprint(w, `{"ok":true}`)
+   	w.Header().Set("Content-Type", "application/json")
+   	w.WriteHeader(http.StatusCreated)
+   }
+   ```
+
+4. Why does `NewServer` set four timeouts instead of using `http.ListenAndServe`, and what does `srv.Shutdown` do that just exiting doesn't?
+
+<details>
+<summary>Answers</summary>
+
+1. A pattern ending in `/` matches every path below it, so `GET /nope` would answer `200 Karibu!` instead of `404`. `{$}` means this exact path only.
+2. `405 Method Not Allowed` with `Allow: GET, HEAD`. The mux writes them itself, because the path matches and the method doesn't (a `GET` pattern also serves `HEAD`).
+3. `200` with `text/plain; charset=utf-8`, and the log says `superfluous response.WriteHeader call`. The first `Write` sends the headers and a `200`; anything set after that is dropped. Set headers, then `WriteHeader`, then write the body.
+4. With no timeouts a slow or malicious client can hold a connection open forever, and enough of them use up the server. `Shutdown` stops taking new connections and waits for requests already running to finish, so nobody's booking is cut off halfway.
+
+</details>
+
 ## When you're stuck
 
 - **`listen tcp :8080: bind: address already in use`**: another program, often your server from earlier, already has the port. Stop it, or run with `PORT=9000`.

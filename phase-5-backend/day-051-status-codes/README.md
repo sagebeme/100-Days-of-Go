@@ -87,6 +87,23 @@ Status codes are also what you read when something goes wrong in production. The
 go run ./tools/kata 51
 ```
 
+## Check yourself
+
+1. Choose `400` or `422` for each: a body of `{"seat":5,`; seat 15 on a 14-seat trip; `GET /trips/abc`.
+2. Choose `401` or `403` for each: no `Authorization` header; a clerk's valid token on `DELETE /bookings/1`. Which one sends `WWW-Authenticate`?
+3. Spot the bug: `writeError(w, 500, err.Error())`. What does the client see when the database is down, and what should `fail` do instead?
+4. The limiter says wait 1.2 seconds. What does `Retry-After` say? Why does the limit check come before decoding the body?
+
+<details>
+<summary>Answers</summary>
+
+1. `400` (the JSON can't be read), `422` (it reads fine, but a value breaks a rule), `400` (the ID isn't a number).
+2. `401` for no header, because logging in would fix it, and it carries `WWW-Authenticate: Bearer realm="bookings"`. `403` for the clerk: logged in, and still not allowed.
+3. The raw error, which can hold SQL, table names and hostnames: a leak (OWASP A05). Log the real error with the method and path, and send a generic `something went wrong`.
+4. `2`: whole seconds, rounded up, and at least 1. Checking first means a flood of broken or huge requests is still limited, and the server doesn't do any work for a client that's over its limit.
+
+</details>
+
 ## When you're stuck
 
 - **`StatusFor` returns 500 for a wrapped `ErrNotFound`**: you compared with `==`. `fmt.Errorf("trip 7: %w", ErrNotFound) == ErrNotFound` is false. Use `errors.Is`.

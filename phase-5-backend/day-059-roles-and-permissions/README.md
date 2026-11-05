@@ -64,6 +64,23 @@ Answer "may this user do this?" from a list of grants, users and roles that inhe
 go run ./tools/kata 59
 ```
 
+## Check yourself
+
+1. Choose `401` or `403`: `POST /trips` with no token; `POST /trips` with Wanjiku's passenger token.
+2. `Require(ReadBooking, ...)` lets every passenger through to `GET /bookings/{id}`. Why isn't that enough, and what's this bug called?
+3. Otieno asks for Wanjiku's booking 2. Why answer `404` rather than `403`?
+4. What does `Can(Role("superuser"), CreateTrip)` return, and why is a `"*"` "allow everything" rule a bad idea?
+
+<details>
+<summary>Answers</summary>
+
+1. `401` with `WWW-Authenticate: Bearer` (logging in would fix it), then `403` (she's known, and passengers can't create trips).
+2. It only checks the role, not whether this booking is hers. Without `CanViewBooking` after loading it, any passenger can read any booking by changing the number: IDOR, also called BOLA.
+3. A `403` tells an attacker that booking 2 exists. Answering exactly as for a missing booking gives nothing away.
+4. `false`: an unknown role has no row in the table, and missing means denied. A wildcard would grant every action added in the future too, before anyone has decided who should have it.
+
+</details>
+
 ## When you're stuck
 
 - **Every route answers 401, even with a good token**: `Authenticate` isn't wrapping the mux, so no user is ever in the context. `NewServer` should return `Authenticate(auth, mux)`.

@@ -74,6 +74,23 @@ Every JSON parser starts by checking that brackets close in the right order, ski
 go run ./tools/kata 52
 ```
 
+## Check yourself
+
+1. Predict the status and error for a body `{"route_id":125,...}`, and for `{"routeID":125,...}`.
+2. Why does `DecodeJSON` call `Decode` a second time, and what must it return?
+3. A client sends `"departs": "2026-11-02T04:30:00Z"`. What does the API send back, and is it the same moment?
+4. Why parse `Content-Type` with `mime.ParseMediaType` instead of `r.Header.Get("Content-Type") == "application/json"`?
+
+<details>
+<summary>Answers</summary>
+
+1. `400` with `body has unknown field "route_id"`. The second is accepted (`201`): field matching is case-insensitive, so `routeID` fills `routeId`.
+2. `Decode` stops after the first JSON value, so `{...}{...}` would otherwise pass. The second call must return `io.EOF`, meaning nothing more was sent; anything else is `body must hold a single JSON value`.
+3. `"2026-11-02T07:30:00+03:00"`. It's the same instant, written in Nairobi time with its offset so the front end doesn't have to guess.
+4. Clients often send `application/json; charset=utf-8`, which `==` would reject with a `415`. `ParseMediaType` splits off the parameters.
+
+</details>
+
 ## When you're stuck
 
 - **`json: unknown field "seat"` reaches the client as is**: that's the decoder's message, not yours. Match the prefix with `strings.HasPrefix` and build your own message.
