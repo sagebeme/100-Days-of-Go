@@ -114,6 +114,8 @@ Then open `http://localhost:8000/site/`. After adding or renaming a day, refresh
 
 To put it online, import the repo into Netlify or Vercel. `netlify.toml` and `vercel.json` are already set up, and `/` goes to `/site/`.
 
+It's also published to GitHub Pages at <https://sagebeme.github.io/100-Days-of-Go/> on every push to `main`, by `.github/workflows/pages.yml`. That workflow checks the site's day list, then `tools/build-pages.sh` copies `site/` and each day's README into one folder and publishes it. For this to work, Pages must be set to **GitHub Actions** in the repo's Settings → Pages → Build and deployment → Source. On a fork, the address is `https://<your-username>.github.io/100-Days-of-Go/`.
+
 ## For contributors
 
 ```bash
