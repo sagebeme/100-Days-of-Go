@@ -37,6 +37,8 @@ Check your Go version:
 go version
 ```
 
+[reference/setup.md](reference/setup.md) walks through installing Go and Node on Linux, macOS, Windows and WSL, running Postgres and Redis in Docker for Phases 5 and 7, and fixing the usual setup errors.
+
 ## Getting started
 
 ```bash
@@ -97,6 +99,7 @@ cp .env.example .env
 
 ## Reference
 
+- [Setting up your machine](reference/setup.md)
 - [HTTP methods, headers and status codes](reference/http.md)
 - [Env variables and config](reference/env-and-config.md)
 - [OWASP Top 10 checklist for Go](reference/owasp-checklist.md)
