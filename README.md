@@ -52,6 +52,8 @@ cd phase-1-terminal/day-001-mpesa-sms
 
 Read its `README.md`, write your code in `starter/`, and run the tests.
 
+Before you start, read [How we write code in this course](reference/coding-rules.md). It's one page: ten habits, like checking every error and running `gofmt` and `go vet` before you call a day done, that you'll use from Day 1 to Day 100.
+
 ## How each day works
 
 ```
@@ -97,6 +99,7 @@ cp .env.example .env
 
 ## Reference
 
+- [How we write code in this course](reference/coding-rules.md)
 - [HTTP methods, headers and status codes](reference/http.md)
 - [Env variables and config](reference/env-and-config.md)
 - [OWASP Top 10 checklist for Go](reference/owasp-checklist.md)

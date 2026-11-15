@@ -34,7 +34,7 @@ Acceptance criteria:
 - New today: `net/netip`, whose `Addr` has `IsPrivate`, `IsLoopback` and `IsLinkLocalUnicast` built in.
 
 ```go
-addr, _ := netip.ParseAddr("169.254.169.254")
+addr := netip.MustParseAddr("169.254.169.254") // Must: panics on a bad literal, so only for fixed strings
 addr.IsLinkLocalUnicast() // true: the cloud metadata address
 netip.MustParseAddr("::ffff:10.0.0.1").Unmap().IsPrivate() // true
 ```
