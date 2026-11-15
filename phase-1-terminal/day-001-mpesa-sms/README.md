@@ -43,6 +43,8 @@ go test ./phase-1-terminal/day-001-mpesa-sms/starter
 
 `ok` means you're done. `FAIL` shows what your function returned next to what the test wanted.
 
+Keep [How we write code in this course](../../reference/coding-rules.md) open as you go. It's one page of habits you'll use every day, starting today with "change only what the task needs" and "run the tests before you call it done".
+
 ## The kata: Till Total
 
 Every day ends with a short puzzle in the format HackerRank uses: your program reads its input from the keyboard (standard input) and prints its answer. Instructions are in `kata/README.md`. Write it in `kata/main.go` and judge it with:
